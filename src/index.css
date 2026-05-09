@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif:
+    "Bodoni Moda", "Playfair Display", "Cormorant Garamond", "Cinzel", ui-serif, Georgia, Cambria,
+    "Times New Roman", Times, serif;
+
+  --color-dark: #0a0b0a;
+  --color-light: #efe7d2;
+  --color-gold: #cfbe91;
+  --color-border: #333330;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+::selection {
+  background-color: var(--color-gold);
+  color: var(--color-dark);
+}
+
+.lux-glass {
+  background: rgba(10, 11, 10, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.elegant-border {
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* Subtle link underline effect */
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.hover-underline-animation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: currentColor;
+  transform-origin: bottom right;
+  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
