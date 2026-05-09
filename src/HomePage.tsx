@@ -2,12 +2,9 @@ import { useState } from "react";
 import { motion, useScroll, useSpring } from "motion/react";
 import {
   ArrowRight,
-  ArrowUpRight,
   Instagram,
   Facebook,
-  Quote,
   Phone,
-  Play,
 } from "lucide-react";
 
 const TiktokIcon = ({ size = 24, className = "" }) => (
@@ -576,8 +573,8 @@ export default function HomePage() {
             className="absolute bottom-8 left-6 md:bottom-12 md:left-12 z-20 pointer-events-none"
           >
             <h1 className="font-serif text-[4.5rem] leading-[0.85] md:text-[8rem] lg:text-[10vw] xl:text-[11vw] uppercase tracking-tight text-[#efe7d2] drop-shadow-2xl">
-              <ShinyText text="1001" className="lining-nums" color="#efe7d2" shineColor="#cfbe91" speed={3} /> <br /> 
-              <ShinyText text="Nuits" color="#efe7d2" shineColor="#cfbe91" speed={3} delay={0.5} />
+              <ShinyText text="1001" className="lining-nums inline-block" color="#efe7d2" shineColor="#cfbe91" speed={3} /> <br /> 
+              <ShinyText text="NUITS" className="inline-block" color="#efe7d2" shineColor="#cfbe91" speed={3} delay={0.5} />
             </h1>
           </motion.div>
 
@@ -895,7 +892,7 @@ export default function HomePage() {
       >
         {/* Top Marquee */}
         <div className="absolute top-0 left-0 right-0 pointer-events-none opacity-[0.5] h-1/4 flex items-start justify-center -z-0">
-          <CurvedLoop marqueeText="1001 NUIT ✦ 1001 NIGHTS ✦ 1001 NUIT ✦ 1001 NIGHTS" speed={0.4} curveAmount={200} direction="left" className="text-[3.5rem] md:text-[4.5rem] font-serif italic tracking-[0.35em] font-light text-[#000000]" />
+          <CurvedLoop marqueeText="1001 NUITS ✦ 1001 NIGHTS ✦ 1001 NUITS ✦ 1001 NIGHTS" speed={0.4} curveAmount={200} direction="left" className="text-[3.5rem] md:text-[4.5rem] font-serif italic tracking-[0.35em] font-light text-[#000000]" />
         </div>
 
         {/* Content Container */}
@@ -968,7 +965,7 @@ export default function HomePage() {
 
         {/* Bottom Marquee */}
         <div className="absolute bottom-0 left-0 right-0 pointer-events-none opacity-[0.5] h-1/4 flex items-end justify-center -z-0">
-          <CurvedLoop marqueeText="1001 NUIT ✦ 1001 NIGHTS ✦ 1001 NUIT ✦ 1001 NIGHTS" speed={0.4} curveAmount={-200} direction="right" className="text-[3.5rem] md:text-[4.5rem] font-serif italic tracking-[0.35em] font-light text-[#000000]" />
+          <CurvedLoop marqueeText="1001 NUITS ✦ 1001 NIGHTS ✦ 1001 NUITS ✦ 1001 NIGHTS" speed={0.4} curveAmount={-200} direction="right" className="text-[3.5rem] md:text-[4.5rem] font-serif italic tracking-[0.35em] font-light text-[#000000]" />
         </div>
       </section>
 
@@ -983,8 +980,8 @@ export default function HomePage() {
             transition={{ duration: 0.8 }}
             className="w-full lg:w-1/2 relative"
           >
-             <div className="relative aspect-[4/3] w-full rounded-[2.5rem] overflow-hidden">
-               <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&q=80&w=1200" alt="Private Dining Room" className="w-full h-full object-cover grayscale opacity-90 transition-all duration-[5s] hover:grayscale-0 hover:scale-105" />
+              <div className="relative aspect-[4/3] w-full rounded-[2.5rem] overflow-hidden">
+               <img src="https://images.unsplash.com/photo-1551632436-bbf4c106ad01?auto=format&fit=crop&q=80&w=1200" alt="Private Dining Room" className="w-full h-full object-cover grayscale opacity-90 transition-all duration-[5s] hover:grayscale-0 hover:scale-105" />
                <div className="absolute inset-0 bg-[#0a0b0a]/20"></div>
              </div>
           </motion.div>
@@ -1167,8 +1164,9 @@ export default function HomePage() {
         className="bg-[#0a0b0a] text-[#efe7d2] pt-16 border-t border-[#333330] text-center pb-8"
       >
         <h2 className="font-serif text-4xl tracking-[0.2em] text-[#efe7d2] mb-8">
-          <ShinyText text="1001" className="lining-nums" color="#efe7d2" shineColor="#cfbe91" speed={3} />
-          <ShinyText text=" NUIT" color="#efe7d2" shineColor="#cfbe91" speed={3} />
+          <ShinyText text="1001" className="lining-nums inline-block" color="#efe7d2" shineColor="#cfbe91" speed={3} />
+          <span className="inline-block w-3"></span>
+          <ShinyText text="NUITS" className="inline-block" color="#efe7d2" shineColor="#cfbe91" speed={3} />
         </h2>
         <div className="flex flex-wrap justify-center items-center gap-6 text-[10px] uppercase tracking-[0.2em] opacity-50 mb-12">
           <span>11602 Bd de Salaberry, QC</span>
@@ -1184,7 +1182,7 @@ export default function HomePage() {
           <span>{lang === "fr" ? "Sans alcool" : "No alcohol"}</span>
         </div>
         <p className="text-[10px] uppercase tracking-widest opacity-30">
-          © {new Date().getFullYear()} 1001 Nuit.{" "}
+          © {new Date().getFullYear()} 1001 Nuits.{" "}
           {lang === "fr" ? "Tous droits réservés." : "All rights reserved."}
         </p>
       </motion.footer>

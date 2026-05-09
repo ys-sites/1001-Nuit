@@ -34,7 +34,7 @@ export default function Navbar({
           className="font-serif text-[18px] md:text-2xl whitespace-nowrap tracking-[0.2em] uppercase mr-3 md:mr-6 lg:mr-10 text-[#efe7d2] hover:opacity-80 transition-opacity cursor-pointer flex items-baseline gap-1"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
-          <span className="lining-nums">1001</span> <span>NUIT</span>
+          <span className="lining-nums">1001</span> <span>NUITS</span>
         </div>
       </div>
 
