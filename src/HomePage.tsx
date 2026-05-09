@@ -26,441 +26,737 @@ import CurvedLoop from "./components/ui/CurvedLoop";
 
 const MENU_CATEGORIES = [
   {
-    title_en: "APPETIZERS & SIDES",
-    title_fr: "ENTRÉES & ACCOMPAGNEMENTS",
+    title_en: "SIGNATURE SNACK",
+    title_fr: "COLLATION SIGNATURE",
     items: [
       {
         id: "T01",
         name_fr: "Takoyaki (6 pièces)",
         name_en: "Takoyaki (6 pcs)",
         price: "$8.99",
-        desc_fr: "Boulettes de poulpe classiques style Hong Kong.",
-        desc_en: "Classic Hong Kong street style octopus balls.",
-        image: "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&q=80&w=400",
-      },
+        desc_fr: "Boulettes de poulpe classiques.",
+        desc_en: "Classic octopus balls.",
+        image: "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&q=80&w=400"
+      }
+    ]
+  },
+  {
+    title_en: "SNACKS & SIDES",
+    title_fr: "ENTRÉES & ACCOMPAGNEMENTS",
+    items: [
       {
         id: "B01",
-        name_fr: "Soupe udon au bœuf au cari",
-        name_en: "Curry Beef Brisket Udon Soup",
+        name_fr: "Soupe udon au bœuf braisé au cari",
+        name_en: "Curry Beef Brisket Udon in Soup",
         price: "$17.99",
-        desc_fr: "Poitrine de bœuf tendre, cari savoureux.",
-        desc_en: "Tender beef brisket in a savory curry broth.",
-        image: "https://images.unsplash.com/photo-1552611052-33e04de081de?auto=format&fit=crop&q=80&w=400",
+        desc_fr: "",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1552611052-33e04de081de?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "B02",
-        name_fr: "Cuisse de poulet frit croustillant",
-        name_en: "Crispy Fried Chicken Leg",
+        name_fr: "Cuisse de poulet frit croustillant avec salade de pommes de terre ou frites",
+        name_en: "Crispy Fried Chicken Leg with Potato Salad or Fries",
         price: "$15.99",
-        desc_fr: "Avec salade de pommes de terre ou frites.",
-        desc_en: "Served with potato salad or fries.",
-        image: "https://images.unsplash.com/photo-1626082927389-6cd0b61cff9c?auto=format&fit=crop&q=80&w=400",
+        desc_fr: "",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1626082927389-6cd0b61cff9c?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "B03",
-        name_fr: "Toast aux crevettes",
-        name_en: "Shrimp Toast",
+        name_fr: "Toast aux crevettes avec salade de pommes de terre ou frites",
+        name_en: "Shrimp Toast with Potato Salad or Fries",
         price: "$14.99",
-        desc_fr: "Pain croustillant aux crevettes avec salade.",
-        desc_en: "Crispy bread with shrimp paste, served with salad.",
-        image: "https://images.unsplash.com/photo-1541014741259-df5290ce50fb?auto=format&fit=crop&q=80&w=400",
+        desc_fr: "",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1541014741259-df5290ce50fb?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "B04",
-        name_fr: "Poutine style Hong Kong",
-        name_en: "Hong Kong Style Poutine",
+        name_fr: "Poutine style Hong Kong au double fromage et sauce à la viande",
+        name_en: "Poutine in Hong Kong Style (Double Cheese & Meat Sauce)",
         price: "$16.99",
-        desc_fr: "Double fromage et sauce à la viande.",
-        desc_en: "Double cheese and meat sauce.",
-        image: "https://images.unsplash.com/photo-1586805608485-add336722759?auto=format&fit=crop&q=80&w=400",
+        desc_fr: "",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1586805608485-add336722759?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "B05",
-        name_fr: "Ailes de poulet croustillantes",
-        name_en: "Crispy Chicken Wings",
+        name_fr: "Ailes de poulet croustillantes avec salade de pommes de terre ou frites",
+        name_en: "Crispy Chicken Wings with Potato Salad or Fries",
         price: "$15.99",
-        desc_fr: "Servies avec salade de pommes de terre ou frites.",
-        desc_en: "Served with potato salad or fries.",
-        image: "https://images.unsplash.com/photo-1567620832903-9fc6debc209f?auto=format&fit=crop&q=80&w=400",
+        desc_fr: "",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1567620832903-9fc6debc209f?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "B07",
-        name_fr: "Boulettes de poisson au cari",
-        name_en: "HK Style Curry Fish Balls",
+        name_fr: "Boulettes de poulet au cari style Hong Kong (15 mcx)",
+        name_en: "Fish Balls in Hong Kong Style Curry (15 pcs)",
         price: "$8.99",
-        desc_fr: "15 morceaux, sauce cari authentique.",
-        desc_en: "15 pieces, authentic curry sauce.",
-        image: "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?auto=format&fit=crop&q=80&w=400",
+        desc_fr: "",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?auto=format&fit=crop&q=80&w=400"
+      },
+      {
+        id: "B08",
+        name_fr: "Soupe de wontons avec nouilles aux œufs ou nouilles de riz",
+        name_en: "Wonton Noodle Soup (Egg Noodles or Flat Rice Noodles)",
+        price: "$16.99",
+        desc_fr: "",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?auto=format&fit=crop&q=80&w=400"
+      },
+      {
+        id: "B10",
+        name_fr: "Boulettes de bœuf au cari style Hong Kong (12 mcx)",
+        name_en: "Beef Balls in Hong Kong Style Curry (12 pcs)",
+        price: "$10.99",
+        desc_fr: "",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?auto=format&fit=crop&q=80&w=400"
+      },
+      {
+        id: "B11",
+        name_fr: "Boulettes de poisson et de bœuf au cari style Hong Kong (12 mcx)",
+        name_en: "Fish & Beef Balls in Hong Kong Style Curry (12 pcs)",
+        price: "$12.99",
+        desc_fr: "",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?auto=format&fit=crop&q=80&w=400"
+      },
+      {
+        id: "B13",
+        name_fr: "Ailes de poulet avec frites (sauce beurre ou miel et ail)",
+        name_en: "Chicken Wings with Fries (Butter Sauce or Honey Garlic)",
+        price: "$16.99",
+        desc_fr: "",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1567620832903-9fc6debc209f?auto=format&fit=crop&q=80&w=400"
+      },
+      {
+        id: "B16",
+        name_fr: "Poulet Général Tao",
+        name_en: "General Tso's Chicken",
+        price: "$21.99",
+        desc_fr: "",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1525118844146-24a73f84edce?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "B17",
         name_fr: "Calmars frits",
         name_en: "Deep Fried Calamari",
         price: "$18.99",
-        desc_fr: "Calamars croustillants et tendres.",
-        desc_en: "Crispy and tender fried calamari.",
-        image: "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&q=80&w=400",
+        desc_fr: "",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&q=80&w=400"
       },
-    ],
+      {
+        id: "B18",
+        name_fr: "Bouchées de poulet au gingembre et oignons verts",
+        name_en: "Ginger and Scallion Chicken Bites",
+        price: "$19.99",
+        desc_fr: "",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1567620832903-9fc6debc209f?auto=format&fit=crop&q=80&w=400"
+      }
+    ]
   },
   {
-    title_en: "MAIN DISHES",
+    title_en: "SANDWICHES",
+    title_fr: "SANDWICHS",
+    items: [
+      {
+        id: "S09",
+        name_fr: "Sandwich club (poulet pané, concombre, jambon, tomate, fromage)",
+        name_en: "Club Sandwich (Chicken Cutlet, Cucumber, Ham, Tomato, Cheese)",
+        price: "$14.99",
+        desc_fr: "",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&q=80&w=400"
+      },
+      {
+        id: "S14",
+        name_fr: "Sandwich au bœuf, oignons verts et œufs",
+        name_en: "Scallion Beef and Eggs Sandwich",
+        price: "$10.99",
+        desc_fr: "",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1550507992-eb63ffee0847?auto=format&fit=crop&q=80&w=400"
+      },
+      {
+        id: "S19",
+        name_fr: "Sandwich au luncheon meat halal et œufs",
+        name_en: "Halal Luncheon Meat and Eggs Sandwich",
+        price: "$9.99",
+        desc_fr: "",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1550507992-eb63ffee0847?auto=format&fit=crop&q=80&w=400"
+      },
+      {
+        id: "S20",
+        name_fr: "Sandwich aux tomates et œufs",
+        name_en: "Tomato and Eggs Sandwich",
+        price: "$9.99",
+        desc_fr: "",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1550507992-eb63ffee0847?auto=format&fit=crop&q=80&w=400"
+      }
+    ]
+  },
+  {
+    title_en: "TOAST / FRENCH TOAST",
+    title_fr: "RÔTIES / PAIN DORÉ",
+    items: [
+      {
+        id: "S10",
+        name_fr: "Rôtie épaisse au bœuf épicé et œufs brouillés",
+        name_en: "Spiced Diced Beef and Scrambled Eggs Toast",
+        price: "$13.99",
+        desc_fr: "五香牛肉滑蛋厚多士",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1506084868730-342b1f45ff9d?auto=format&fit=crop&q=80&w=400"
+      },
+      {
+        id: "S11",
+        name_fr: "Rôtie épaisse au bœuf satay et œufs satay",
+        name_en: "Satay Beef and Scrambled Eggs Toast",
+        price: "$13.99",
+        desc_fr: "沙爹牛肉滑蛋厚多士",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1506084868730-342b1f45ff9d?auto=format&fit=crop&q=80&w=400"
+      },
+      {
+        id: "S15",
+        name_fr: "Rôtie au charbon avec beurre d'arachide",
+        name_en: "Charcoal Toast with Peanut Butter",
+        price: "$8.99",
+        desc_fr: "花生酱黑炭厚多士",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&q=80&w=400"
+      },
+      {
+        id: "S16",
+        name_fr: "Rôtie au charbon avec Milo et lait condensé",
+        name_en: "Charcoal Toast with Milo & Condensed Milk",
+        price: "$8.99",
+        desc_fr: "美禄炼奶黑炭厚多士",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&q=80&w=400"
+      },
+      {
+        id: "S17",
+        name_fr: "Pain doré au beurre d'arachide et lait condensé",
+        name_en: "French Toast with Peanut Butter & Condensed Milk",
+        price: "$12.99",
+        desc_fr: "花生炼奶西多士",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&q=80&w=400"
+      },
+      {
+        id: "S21",
+        name_fr: "Rôtie au charbon avec beurre et lait condensé",
+        name_en: "Charcoal Toast with Butter & Condensed Milk",
+        price: "$8.99",
+        desc_fr: "牛油炼奶黑炭厚多士",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&q=80&w=400"
+      },
+      {
+        id: "S22",
+        name_fr: "Rôtie au charbon avec œufs",
+        name_en: "Charcoal Toast with Eggs",
+        price: "$9.99",
+        desc_fr: "黑炭厚多士",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&q=80&w=400"
+      },
+      {
+        id: "S23",
+        name_fr: "Rôtie style \"Lau Nai Wah\" à l'Ovaltine et lait condensé",
+        name_en: "Toast with Ovaltine & Condensed Milk",
+        price: "$9.99",
+        desc_fr: "漏奶华",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1506084868730-342b1f45ff9d?auto=format&fit=crop&q=80&w=400"
+      }
+    ]
+  },
+  {
+    title_en: "MAIN DISH",
     title_fr: "PLATS PRINCIPAUX",
     items: [
       {
         id: "C01",
-        name_fr: "Riz frit crevettes sakura et poulet",
-        name_en: "Sakura Shrimp & Chicken Fried Rice",
+        name_fr: "Riz frit aux crevettes sakura et poulet",
+        name_en: "Sakura Shrimp and Chicken Fried Rice",
         price: "$22.99",
-        desc_fr: "Crevettes sakura de première qualité.",
-        desc_en: "Fried rice with premium sakura shrimp.",
-        image: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&q=80&w=400",
+        desc_fr: "樱花虾鸡拉炒饭",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "C02",
-        name_fr: "Bœuf BBQ avec 2 œufs sur riz",
-        name_en: "BBQ Beef with 2 Eggs on Rice",
+        name_fr: "Bœuf BBQ avec 2 œufs au plat sur riz au gras de bœuf ou riz blanc",
+        name_en: "BBQ Beef with 2 Sunny Side Up Eggs on Beef Tallow or White Rice",
         price: "$23.99",
-        desc_fr: "Bœuf BBQ avec œufs sur riz au gras de bœuf.",
-        desc_en: "BBQ beef with eggs on beef tallow rice.",
-        image: "https://images.unsplash.com/photo-1546833999-296e4630f148?auto=format&fit=crop&q=80&w=400",
+        desc_fr: "韶然销魂牛油拥饭(可改白饭)",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1546833999-296e4630f148?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "C03",
         name_fr: "Poulet sauce poivre noir sur riz",
-        name_en: "Chicken Black Pepper on Rice",
+        name_en: "Chicken with Black Pepper Sauce on Rice",
         price: "$21.99",
-        desc_fr: "Savoureuse sauce au poivre noir.",
-        desc_en: "Savory black pepper sauce.",
-        image: "https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&q=80&w=400",
+        desc_fr: "黑椒汁鸡扒饭",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "C04",
-        name_fr: "Crevettes, bœuf & œufs brouillés",
-        name_en: "Prawns, Beef & Scrambled Eggs",
+        name_fr: "Crevettes, bœuf et œufs brouillés sur riz",
+        name_en: "Prawns and Beef with Scrambled Eggs on Rice",
         price: "$24.99",
-        desc_fr: "Sur riz, œufs brouillés veloutés.",
-        desc_en: "Silky scrambled eggs over rice.",
-        image: "https://images.unsplash.com/photo-1552611052-33e04de081de?auto=format&fit=crop&q=80&w=400",
+        desc_fr: "香葱大虾牛肉滑蛋饭",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1544378730-8b5104b18790?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "C05",
-        name_fr: "Bœuf épicé en dés",
-        name_en: "Spiced Diced Beef & Eggs",
+        name_fr: "Bœuf épicé en dés avec œufs brouillés sur riz",
+        name_en: "Spiced Diced Beef and Scrambled Eggs on Rice",
         price: "$22.99",
-        desc_fr: "Avec œufs brouillés sur riz.",
-        desc_en: "With scrambled eggs on rice.",
-        image: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&q=80&w=400",
+        desc_fr: "五香牛肉丁滑蛋饭",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&q=80&w=400"
+      },
+      {
+        id: "C06",
+        name_fr: "Spaghetti sauté au bœuf sauce poivre noir",
+        name_en: "Stir-fried Spaghetti with Beef in Black Pepper Sauce",
+        price: "$22.99",
+        desc_fr: "黑椒牛肉炒意粉",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&q=80&w=400"
+      },
+      {
+        id: "C07",
+        name_fr: "Bœuf haché et œufs brouillés sur riz",
+        name_en: "Scrambled Eggs and Minced Beef on Rice",
+        price: "$21.99",
+        desc_fr: "滑蛋免治肉饭",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1544378730-8b5104b18790?auto=format&fit=crop&q=80&w=400"
+      },
+      {
+        id: "C08",
+        name_fr: "Poulet sauce aux oignons sur riz",
+        name_en: "Chicken with Onion Sauce on Rice",
+        price: "$21.99",
+        desc_fr: "洋葱鸡扒饭",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "C09",
-        name_fr: "Côtes de bœuf AAA poivre noir",
-        name_en: "AAA Beef Ribs Black Pepper",
+        name_fr: "Côtes de bœuf AAA sauce poivre noir avec œuf au plat sur riz",
+        name_en: "Black Pepper Beef Ribs with Sunny Side Up Egg on Rice",
         price: "$26.99",
-        desc_fr: "Servies avec œuf au plat sur riz.",
-        desc_en: "Served with sunny side up egg on rice.",
-        image: "https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&q=80&w=400",
+        desc_fr: "AAA黑椒牛仔骨煎蛋饭",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "C10",
-        name_fr: "Nouilles de riz sautées au bœuf",
-        name_en: "Beef Stir-fried Flat Rice Noodles",
+        name_fr: "Côtes de riz plates sautées au bœuf style Hong Kong",
+        name_en: "Hong Kong Style Stir-fried Beef Flat Rice Noodles",
         price: "$23.99",
-        desc_fr: "Style Hong Kong authentique au wok.",
-        desc_en: "Authentic HK style wok-fried noodles.",
-        image: "https://images.unsplash.com/photo-1512058560366-cd242959828d?auto=format&fit=crop&q=80&w=400",
+        desc_fr: "干炒牛河",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "C11",
-        name_fr: "Pad Thai (Poulet/Bœuf/Crevettes)",
-        name_en: "Pad Thai (Chicken/Beef/Shrimp)",
-        price: "$23.99",
-        desc_fr: "Pad Thai classique, un favori du menu.",
-        desc_en: "Classic Pad Thai, a menu favorite.",
-        image: "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&q=80&w=400",
+        name_fr: "Pad thaï (poulet / bœuf / crevettes)",
+        name_en: "Pad Thai (Chicken / Beef / Shrimp)",
+        price: "$12.99 / $23.99 / $23.99",
+        desc_fr: "炒泰式河粉 (鸡／牛／虾)",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&q=80&w=400"
       },
-    ],
+      {
+        id: "C12",
+        name_fr: "Riz frit à l'ananas (poulet / bœuf / crevettes)",
+        name_en: "Pineapple Fried Rice (Chicken / Beef / Shrimp)",
+        price: "$23.99 / $25.99",
+        desc_fr: "菠萝炒饭(鸡／牛／虾)",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&q=80&w=400"
+      }
+    ]
   },
   {
-    title_en: "BAKED & INSTANT",
-    title_fr: "GRATINÉS & INSTANT",
+    title_en: "BAKED HONG KONG STYLE – DOUBLE FROMAGE",
+    title_fr: "PLATS GRATINÉS STYLE HONG KONG – DOUBLE FROMAGE",
     items: [
       {
         id: "F01",
-        name_fr: "Gratin cari bœuf braisé",
-        name_en: "Baked Curry Beef Brisket",
+        name_fr: "Gratin au cari de bœuf braisé",
+        name_en: "Curry Beef Brisket",
         price: "$22.99",
-        desc_fr: "Riz ou spaghetti, double fromage.",
-        desc_en: "Rice or spaghetti, double cheese.",
-        image: "https://images.unsplash.com/photo-1580476262798-bddd9f4b7369?auto=format&fit=crop&q=80&w=400",
+        desc_fr: "Au choix : riz au spaghetti",
+        desc_en: "Choice of: Rice or Spaghetti",
+        image: "https://images.unsplash.com/photo-1580476262798-bddd9f4b7369?auto=format&fit=crop&q=80&w=400"
+      },
+      {
+        id: "F02",
+        name_fr: "Gratin au poulet sauce crémeuse",
+        name_en: "Chicken with Creamy Sauce",
+        price: "$19.99",
+        desc_fr: "Au choix : riz au spaghetti",
+        desc_en: "Choice of: Rice or Spaghetti",
+        image: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&q=80&w=400"
+      },
+      {
+        id: "F03",
+        name_fr: "Gratin au poulet sauce poivre noir",
+        name_en: "Black Pepper Chicken Steak",
+        price: "$19.99",
+        desc_fr: "Au choix : riz au spaghetti",
+        desc_en: "Choice of: Rice or Spaghetti",
+        image: "https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "F04",
-        name_fr: 'Gratin "duo" - spaghetti',
-        name_en: "Bolognese & Tomato Chicken",
+        name_fr: "Gratin \"duo\" – spaghetti bolognaise et poulet sauce tomate sur riz",
+        name_en: "Bolognese Spaghetti and Tomato Chicken Steak on Rice",
         price: "$21.99",
-        desc_fr: "Bolognaise et poulet sauce tomate.",
-        desc_en: "Bolognese and tomato chicken.",
-        image: "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&q=80&w=400",
+        desc_fr: "鸳鸯两煎",
+        desc_en: "Choice of: Rice or Spaghetti",
+        image: "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&q=80&w=400"
+      },
+      {
+        id: "F05",
+        name_fr: "Gratin à la sauce bolognaise",
+        name_en: "Bolognese",
+        price: "$18.99",
+        desc_fr: "Au choix : riz au spaghetti",
+        desc_en: "Choice of: Rice or Spaghetti",
+        image: "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "F06",
-        name_fr: "Gratin spécial bœuf",
-        name_en: "Curry Brisket & Pepper Ribs",
+        name_fr: "Gratin spécial bœuf (cari de bœuf braisé & côtes sauce poivre noir)",
+        name_en: "Curry Beef Brisket + Black Pepper Beef Ribs",
         price: "$24.99",
-        desc_fr: "Mélange spécial gratiné.",
-        desc_en: "Special gratin mix.",
-        image: "https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&q=80&w=400",
+        desc_fr: "Au choix : riz au spaghetti",
+        desc_en: "Choice of: Rice or Spaghetti",
+        image: "https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&q=80&w=400"
       },
       {
-        id: "M01",
-        name_fr: "Nouilles Lo Ding bœuf braisé",
-        name_en: "Beef Brisket Lo Ding",
-        price: "$18.99",
-        desc_fr: "Nouilles instantanées au bœuf braisé.",
-        desc_en: "Instant noodles with savory beef.",
-        image: "https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?auto=format&fit=crop&q=80&w=400",
-      },
-      {
-        id: "M02",
-        name_fr: "Nouilles Lo Ding poulet soja",
-        name_en: "Soy Sauce Chicken Lo Ding",
-        price: "$15.99",
-        desc_fr: "Poulet sauce soja et œufs brouillés.",
-        desc_en: "Soy sauce chicken and scrambled eggs.",
-        image: "https://images.unsplash.com/photo-1512058560366-cd242959828d?auto=format&fit=crop&q=80&w=400",
-      },
-      {
-        id: "M03",
-        name_fr: "Nouilles Lo Ding bœuf satay",
-        name_en: "Satay Beef Lo Ding",
-        price: "$15.99",
-        desc_fr: "Bœuf satay et œufs brouillés.",
-        desc_en: "Satay beef and scrambled eggs.",
-        image: "https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&q=80&w=400",
-      },
-    ],
-  },
-  {
-    title_en: "SIZZLING PLATES",
-    title_fr: "PLAQUES CHAUDES",
-    items: [
-      {
-        id: "SP01",
-        name_fr: "Côtelettes d'agneau sur plaque",
-        name_en: "Sizzling Lamb Chops",
-        price: "$39.99",
-        desc_fr: "Côtelettes d'agneau grillées, servies grésillantes.",
-        desc_en: "Grilled lamb chops, served sizzling hot.",
-        image: "https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&q=80&w=400",
-      },
-      {id: "SP02", name_fr: "Contre-filet Angus AAA sur plaque", name_en: "AAA Angus Striploin Steak", price: "$36.99", desc_fr: "Bœuf premium servi sur plaque chauffante.", desc_en: "Premium beef served on a hot sizzling plate.", image: "https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&q=80&w=400"},
-      {
-        id: "SP03",
-        name_fr: "Poulet à l'ail sur plaque chaude",
-        name_en: "Sizzling Garlic Chicken",
-        price: "$28.99",
-        desc_fr: "Poulet infusé à l'ail.",
-        desc_en: "Sizzling garlic-infused chicken.",
-        image: "https://images.unsplash.com/photo-1598514982205-f36b96d1e8d4?auto=format&fit=crop&q=80&w=400",
-      },
-      {
-        id: "SP04",
-        name_fr: "Sole panée et poulet sur plaque",
-        name_en: "Breaded Sole & Chicken Combo",
-        price: "$31.99",
-        desc_fr: "Duo de poisson and poulet sur plaque.",
-        desc_en: "Fish and chicken combo on sizzling plate.",
-        image: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&q=80&w=400",
-      },
-    ],
-  },
-  {
-    title_en: "CURRY SPECIALS",
-    title_fr: "SPÉCIALITÉS AU CARI",
-    items: [
-      {
-        id: "E01",
-        name_fr: "Cari de bœuf braisé (Bol)",
-        name_en: "Curry Beef Brisket (Bowl)",
-        price: "$29.99",
-        desc_fr: "Sans accompagnement, le goût pur du cari.",
-        desc_en: "The pure taste of our signature curry.",
-        image: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&q=80&w=400",
-      },
-      {
-        id: "E04",
-        name_fr: "Cari de bœuf braisé sur riz",
-        name_en: "Curry Beef Brisket on Rice",
-        price: "$22.99",
-        desc_fr: "Notre cari signature style Hong Kong.",
-        desc_en: "Our signature Hong Kong style curry.",
-        image: "https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?auto=format&fit=crop&q=80&w=400",
-      },
-      {
-        id: "E05",
-        name_fr: "Cari de poulet sur riz",
-        name_en: "Curry Chicken on Rice",
-        price: "$18.99",
-        desc_fr: "Poulet tendre et sauce cari riche.",
-        desc_en: "Tender chicken in a rich curry sauce.",
-        image: "https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?auto=format&fit=crop&q=80&w=400",
-      },
-      {
-        id: "E06",
-        name_fr: "Cari de bœuf sur riz",
-        name_en: "Curry Beef on Rice",
+        id: "F07",
+        name_fr: "Gratin de filet de poisson sauce crémeuse aux champignons",
+        name_en: "Cutlet Fish Fillet with Creamy Mushroom Sauce",
         price: "$21.99",
-        desc_fr: "Tranches de bœuf tendres au cari.",
-        desc_en: "Tender sliced beef in curry.",
-        image: "https://images.unsplash.com/photo-1544378730-8b5104b18790?auto=format&fit=crop&q=80&w=400",
-      },
-      {
-        id: "E08",
-        name_fr: "Cari d'agneau sur riz",
-        name_en: "Curry Lamb Chop on Rice",
-        price: "$27.99",
-        desc_fr: "Côtelettes d'agneau dans un riche cari.",
-        desc_en: "Lamb chops in a rich, spicy curry.",
-        image: "https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&q=80&w=400",
-      },
-    ],
-  },
-  {
-    title_en: "TOAST & SANDWICH",
-    title_fr: "RÔTIES & SANDWICH",
-    items: [
-      {
-        id: "S09",
-        name_fr: "Sandwich club",
-        name_en: "Club Sandwich",
-        price: "$14.99",
-        desc_fr: "Poulet pané, concombre, jambon, tomate, fromage.",
-        desc_en: "Chicken cutlet, cucumber, ham, tomato, cheese.",
-        image: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&q=80&w=400",
-      },
-      {
-        id: "S14",
-        name_fr: "Sandwich bœuf & œufs",
-        name_en: "Beef & Egg Sandwich",
-        price: "$10.99",
-        desc_fr: "Bœuf, oignons verts et œufs.",
-        desc_en: "Beef, scallions and eggs sandwich.",
-        image: "https://images.unsplash.com/photo-1550507992-eb63ffee0847?auto=format&fit=crop&q=80&w=400",
-      },
-      {
-        id: "S10",
-        name_fr: "Rôtie bœuf épicé & œufs",
-        name_en: "Spiced Beef & Egg Toast",
-        price: "$13.99",
-        desc_fr: "Bœuf épicé et œufs brouillés.",
-        desc_en: "Spiced beef and scrambled eggs toast.",
-        image: "https://images.unsplash.com/photo-1506084868730-342b1f45ff9d?auto=format&fit=crop&q=80&w=400",
-      },
-      {
-        id: "S15",
-        name_fr: "Rôtie au charbon - Beurre d'arachide",
-        name_en: "Charcoal Toast - Peanut Butter",
-        price: "$8.99",
-        desc_fr: "Toast unique au charbon avec beurre d'arachide.",
-        desc_en: "Unique charcoal toast with peanut butter.",
-        image: "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&q=80&w=400",
-      },
-      {
-        id: "S17",
-        name_fr: "Pain doré beurre arachide & lait",
-        name_en: "French Toast PB & Condensed Milk",
-        price: "$12.99",
-        desc_fr: "Le classique pain doré hongkongais.",
-        desc_en: "The classic Hong Kong style French toast.",
-        image: "https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&q=80&w=400",
-      },
-      {
-        id: "S23",
-        name_fr: 'Rôtie style "Lau Nai Wah"',
-        name_en: "Ovaltine & Condensed Milk Toast",
-        price: "$9.99",
-        desc_fr: "Avec Ovaltine et lait condensé.",
-        desc_en: "With Ovaltine and condensed milk.",
-        image: "https://images.unsplash.com/photo-1506084868730-342b1f45ff9d?auto=format&fit=crop&q=80&w=400",
-      },
-    ],
+        desc_fr: "Au choix : riz au spaghetti",
+        desc_en: "Choice of: Rice or Spaghetti",
+        image: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&q=80&w=400"
+      }
+    ]
   },
   {
     title_en: "VEGETARIAN",
-    title_fr: "VÉGÉTARIEN",
+    title_fr: "PLATS VÉGÉTARIENS",
     items: [
       {
         id: "V01",
-        name_fr: "Vermicelles de riz sautés",
-        name_en: "Vegetarian Stir-fried Vermicelli",
+        name_fr: "Vermicelles de riz sautés végétariens",
+        name_en: "Vegetarian Stir-fried Rice Vermicelli",
         price: "$14.99",
-        desc_fr: "Légumes frais et vermicelles de riz.",
-        desc_en: "Fresh vegetables and rice vermicelli.",
-        image: "https://images.unsplash.com/photo-1512058560366-cd242959828d?auto=format&fit=crop&q=80&w=400",
+        desc_fr: "素炒米粉",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&q=80&w=400"
+      },
+      {
+        id: "V02",
+        name_fr: "Riz frit végétarien (ananas en option)",
+        name_en: "Vegetarian Fried Rice (Pineapple Optional)",
+        price: "$13.99",
+        desc_fr: "炒饭（素，可加菠萝）",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&q=80&w=400"
+      },
+      {
+        id: "V03",
+        name_fr: "Tofu tendre doré poêlé",
+        name_en: "Pan-fried Golden Soft Tofu",
+        price: "$12.99",
+        desc_fr: "煎黄金嫩豆腐",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "V04",
         name_fr: "Mapo tofu végétarien",
         name_en: "Vegetarian Mapo Tofu",
         price: "$15.99",
-        desc_fr: "Tofu épicé style Szechuan sans viande.",
-        desc_en: "Spicy Szechuan style tofu without meat.",
-        image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=400",
+        desc_fr: "麻婆豆腐（素）",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "V05",
         name_fr: "Tofu braisé à la sauce soya",
         name_en: "Braised Tofu in Soy Sauce",
         price: "$13.99",
-        desc_fr: "Tofu tendre et savoureux.",
-        desc_en: "Tender and savory braised tofu.",
-        image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=400",
-      },
-    ],
+        desc_fr: "红烧豆腐",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=400"
+      }
+    ]
   },
   {
-    title_en: "DRINKS",
-    title_fr: "BOISSONS",
+    title_en: "INSTANT",
+    title_fr: "INSTANT",
+    items: [
+      {
+        id: "M01",
+        name_fr: "Nouilles Lo Ding au curry et poitrine de bœuf braisée",
+        name_en: "Curry Beef Brisket Lo Ding",
+        price: "$18.99",
+        desc_fr: "咖喱牛腩汤捞一丁",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?auto=format&fit=crop&q=80&w=400"
+      },
+      {
+        id: "M02",
+        name_fr: "Nouilles Lo Ding au poulet sauce soja et œufs brouillés",
+        name_en: "Soy Sauce Chicken & Scrambled Egg Lo Ding",
+        price: "$15.99",
+        desc_fr: "豉油皇鸡滑蛋汤捞一丁",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1512058560366-cd242959828d?auto=format&fit=crop&q=80&w=400"
+      },
+      {
+        id: "M03",
+        name_fr: "Nouilles Lo Ding au bœuf satay et œufs brouillés",
+        name_en: "Satay Beef & Scrambled Egg Lo Ding",
+        price: "$15.99",
+        desc_fr: "豉油皇沙爹牛肉滑蛋捞一丁",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&q=80&w=400"
+      },
+      {
+        id: "M04",
+        name_fr: "Nouilles Lo Ding au luncheon meat halal et œufs brouillés",
+        name_en: "Halal Luncheon Meat & Scrambled Egg Lo Ding",
+        price: "$15.99",
+        desc_fr: "Halal 午餐肉滑蛋捞一丁",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&q=80&w=400"
+      }
+    ]
+  },
+  {
+    title_en: "SIZZLING PLATES",
+    title_fr: "PLATS SUR PLAQUE CHAUDE",
+    items: [
+      {
+        id: "SP01",
+        name_fr: "Côtelettes d'agneau sur plaque chaude",
+        name_en: "Sizzling Lamb Chops",
+        price: "$39.99",
+        desc_fr: "铁板羊扒 (préparation env. 20 min / 稍候约20分钟)",
+        desc_en: "prep time approx. 20 min",
+        image: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=400"
+      },
+      {
+        id: "SP02",
+        name_fr: "Contre-filet AAA Angus sur plaque chaude",
+        name_en: "AAA Angus Striploin Steak",
+        price: "$36.99",
+        desc_fr: "AAA安格斯西冷牛扒 (préparation env. 20 min / 稍候约20分钟)",
+        desc_en: "prep time approx. 20 min",
+        image: "https://images.unsplash.com/photo-1546833999-296e4630f148?auto=format&fit=crop&q=80&w=400"
+      },
+      {
+        id: "SP03",
+        name_fr: "Poulet à l'ail sur plaque chaude",
+        name_en: "Sizzling Garlic Chicken Chop",
+        price: "$28.99",
+        desc_fr: "铁板蒜蓉鸡扒 (préparation env. 20 min / 稍候约20分钟)",
+        desc_en: "prep time approx. 20 min",
+        image: "https://images.unsplash.com/photo-1598514982205-f36b96d1e8dd?auto=format&fit=crop&q=80&w=400"
+      },
+      {
+        id: "SP04",
+        name_fr: "Filet de sole pané et poulet sur plaque chaude",
+        name_en: "Sizzling Breaded Sole & Chicken Chop",
+        price: "$31.99",
+        desc_fr: "铁板吉列龙利鸡扒 (préparation env. 20 min / 稍候约20分钟)",
+        desc_en: "prep time approx. 20 min",
+        image: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&q=80&w=400"
+      }
+    ]
+  },
+  {
+    title_en: "CURRY – STYLE HONG KONG",
+    title_fr: "CARI – STYLE HONG KONG",
+    items: [
+      {
+        id: "E01",
+        name_fr: "Cari de bœuf braisé (sans accompagnement)",
+        name_en: "Curry Beef Brisket (Only)",
+        price: "$29.99",
+        desc_fr: "咖喱牛腩净食",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&q=80&w=400"
+      },
+      {
+        id: "E02",
+        name_fr: "Cari de côtelettes d'agneau (sans accompagnement)",
+        name_en: "Curry Lamb Chop (Only)",
+        price: "$33.99",
+        desc_fr: "咖喱羊排净食",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=400"
+      },
+      {
+        id: "E03",
+        name_fr: "Cari de légumes variés avec œuf sur riz",
+        name_en: "Curry Mixed Vegetables with Egg on Rice",
+        price: "$16.99",
+        desc_fr: "咖喱杂菜蛋饭",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&q=80&w=400"
+      },
+      {
+        id: "E04",
+        name_fr: "Cari de bœuf braisé sur riz",
+        name_en: "Curry Beef Brisket on Rice",
+        price: "$22.99",
+        desc_fr: "咖喱牛腩饭",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&q=80&w=400"
+      },
+      {
+        id: "E05",
+        name_fr: "Cari de poulet sur riz",
+        name_en: "Curry Chicken Steak on Rice",
+        price: "$18.99",
+        desc_fr: "咖喱鸡扒饭",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&q=80&w=400"
+      },
+      {
+        id: "E06",
+        name_fr: "Cari de bœuf sur riz",
+        name_en: "Curry Beef on Rice",
+        price: "$21.99",
+        desc_fr: "咖喱牛肉饭",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1546833999-296e4630f148?auto=format&fit=crop&q=80&w=400"
+      },
+      {
+        id: "E07",
+        name_fr: "Cari de cuisse de poulet frit sur riz",
+        name_en: "Curry Chicken Leg on Rice",
+        price: "$19.99",
+        desc_fr: "咖喱生炸鸡腿饭",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1626082927389-6cd0b61cff9c?auto=format&fit=crop&q=80&w=400"
+      },
+      {
+        id: "E08",
+        name_fr: "Cari de côtelettes d'agneau sur riz",
+        name_en: "Curry Lamb Chop on Rice",
+        price: "$27.99",
+        desc_fr: "咖喱羊排饭",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=400"
+      }
+    ]
+  },
+  {
+    title_en: "DRINK",
+    title_fr: "DRINK",
     items: [
       {
         id: "G03",
-        name_fr: "Thé au lait HK",
-        name_en: "HK Style Milk Tea",
+        name_fr: "Thé au lait à la hongkongaise",
+        name_en: "Hong Kong Style Milk Tea",
         price: "$5.99",
-        desc_fr: "Thé au lait riche et onctueux.",
-        desc_en: "Rich and smooth milk tea.",
-        image: "https://images.unsplash.com/photo-1611077544046-e5c9e29a3e2a?auto=format&fit=crop&q=80&w=400",
+        desc_fr: "港式奶茶",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&q=80&w=400"
+      },
+      {
+        id: "G04",
+        name_fr: "Café",
+        name_en: "Coffee",
+        price: "$4.99",
+        desc_fr: "咖啡",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "G05",
-        name_fr: "Café & thé mélangés",
-        name_en: "Yuenyeung (Coffee & Tea Mix)",
+        name_fr: "Café et thé au lait mélangés (Yuenyeung)",
+        name_en: "Coffee & Milk Tea Mix",
         price: "$5.99",
-        desc_fr: "Mélange classique café et thé.",
-        desc_en: "Classic coffee and tea blend.",
-        image: "https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&q=80&w=400",
+        desc_fr: "鸳鸯",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&q=80&w=400"
+      },
+      {
+        id: "G07",
+        name_fr: "Thé au citron à la hongkongaise",
+        name_en: "Hong Kong Style Lemon Tea",
+        price: "$5.99",
+        desc_fr: "港式柠檬茶",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&q=80&w=400"
+      },
+      {
+        id: "G08",
+        name_fr: "Eau au citron",
+        name_en: "Lemon Water",
+        price: "$4.99",
+        desc_fr: "柠檬水",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&q=80&w=400"
+      },
+      {
+        id: "G09",
+        name_fr: "Limonade au miel",
+        name_en: "Honey Lemonade",
+        price: "$5.99",
+        desc_fr: "蜂蜜柠檬",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "G10",
-        name_fr: 'Thé au lait "Teddy Bear"',
+        name_fr: "Thé au lait \"Teddy Bear\"",
         name_en: "Teddy Bear Milk Tea",
         price: "$6.99",
-        desc_fr: "Avec un ourson en glace.",
-        desc_en: "With an adorable ice teddy bear.",
-        image: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&q=80&w=400",
+        desc_fr: "熊熊丝袜奶茶",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "G11",
-        name_fr: "Thé glacé citron Teddy Bear",
-        name_en: "Teddy Bear Lemon Iced Tea",
+        name_fr: "Thé glacé au citron \"Teddy Bear\"",
+        name_en: "Teddy Bear Lemon Tea",
         price: "$6.99",
-        desc_fr: "Rafraîchissant avec un ourson en glace.",
-        desc_en: "Refreshing with an ice teddy bear.",
-        image: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&q=80&w=400",
-      },
-    ],
-  },
+        desc_fr: "熊熊柠檬红茶",
+        desc_en: "",
+        image: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&q=80&w=400"
+      }
+    ]
+  }
 ];
 
 const MINI_MENU = [
@@ -762,7 +1058,14 @@ export default function HomePage() {
           </motion.div>
 
           {/* Complimentary Drink Notice */}
-          {["MAIN DISHES", "BAKED & INSTANT", "SIZZLING PLATES", "CURRY SPECIALS", "VEGETARIAN"].includes(MENU_CATEGORIES[activeCategory].title_en) && (
+          {[
+            "MAIN DISH",
+            "BAKED HONG KONG STYLE – DOUBLE FROMAGE",
+            "INSTANT",
+            "SIZZLING PLATES",
+            "CURRY – STYLE HONG KONG",
+            "VEGETARIAN"
+          ].includes(MENU_CATEGORIES[activeCategory].title_en) && (
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
