@@ -23,25 +23,11 @@ import Navbar from "./components/Navbar";
 import ShinyText from "./components/ui/ShinyText";
 import BlurText from "./components/ui/BlurText";
 import CurvedLoop from "./components/ui/CurvedLoop";
+import ReservationForm from "./components/ReservationForm";
 
 const MENU_CATEGORIES = [
   {
-    title_en: "SIGNATURE SNACK",
-    title_fr: "COLLATION SIGNATURE",
-    items: [
-      {
-        id: "T01",
-        name_fr: "Takoyaki (6 pièces)",
-        name_en: "Takoyaki (6 pcs)",
-        price: "$8.99",
-        desc_fr: "Boulettes de poulpe classiques.",
-        desc_en: "Classic octopus balls.",
-        image: "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&q=80&w=400"
-      }
-    ]
-  },
-  {
-    title_en: "SNACKS & SIDES",
+    title_en: "SNACKS & SIDES 小食",
     title_fr: "ENTRÉES & ACCOMPAGNEMENTS",
     items: [
       {
@@ -162,9 +148,23 @@ const MENU_CATEGORIES = [
         image: "https://images.unsplash.com/photo-1567620832903-9fc6debc209f?auto=format&fit=crop&q=80&w=400"
       }
     ]
+  },{
+    title_en: "SIGNATURE SNACK 招牌小吃",
+    title_fr: "COLLATION SIGNATURE",
+    items: [
+      {
+        id: "T01",
+        name_fr: "Takoyaki (6 pièces)",
+        name_en: "Takoyaki (6 pcs)",
+        price: "$8.99",
+        desc_fr: "Boulettes de poulpe classiques.",
+        desc_en: "Classic octopus balls.",
+        image: "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&q=80&w=400"
+      }
+    ]
   },
   {
-    title_en: "SANDWICHES",
+    title_en: "SANDWICHES 三文治",
     title_fr: "SANDWICHS",
     items: [
       {
@@ -206,7 +206,7 @@ const MENU_CATEGORIES = [
     ]
   },
   {
-    title_en: "TOAST / FRENCH TOAST",
+    title_en: "TOAST / FRENCH TOAST 多士／西多士",
     title_fr: "RÔTIES / PAIN DORÉ",
     items: [
       {
@@ -284,7 +284,7 @@ const MENU_CATEGORIES = [
     ]
   },
   {
-    title_en: "MAIN DISH",
+    title_en: "MAIN DISH 主食",
     title_fr: "PLATS PRINCIPAUX",
     items: [
       {
@@ -398,7 +398,7 @@ const MENU_CATEGORIES = [
     ]
   },
   {
-    title_en: "BAKED HONG KONG STYLE – DOUBLE FROMAGE",
+    title_en: "BAKED HONG KONG STYLE – DOUBLE FROMAGE 港式雙重芝士焗飯／焗意粉",
     title_fr: "PLATS GRATINÉS STYLE HONG KONG – DOUBLE FROMAGE",
     items: [
       {
@@ -467,7 +467,7 @@ const MENU_CATEGORIES = [
     ]
   },
   {
-    title_en: "VEGETARIAN",
+    title_en: "VEGETARIAN 素食專區",
     title_fr: "PLATS VÉGÉTARIENS",
     items: [
       {
@@ -518,7 +518,7 @@ const MENU_CATEGORIES = [
     ]
   },
   {
-    title_en: "INSTANT",
+    title_en: "INSTANT 面",
     title_fr: "INSTANT",
     items: [
       {
@@ -560,7 +560,7 @@ const MENU_CATEGORIES = [
     ]
   },
   {
-    title_en: "SIZZLING PLATES",
+    title_en: "SIZZLING PLATES 鐵板系列",
     title_fr: "PLATS SUR PLAQUE CHAUDE",
     items: [
       {
@@ -602,7 +602,7 @@ const MENU_CATEGORIES = [
     ]
   },
   {
-    title_en: "CURRY – STYLE HONG KONG",
+    title_en: "CURRY – STYLE HONG KONG 港式咖喱",
     title_fr: "CARI – STYLE HONG KONG",
     items: [
       {
@@ -680,7 +680,7 @@ const MENU_CATEGORIES = [
     ]
   },
   {
-    title_en: "DRINK",
+    title_en: "DRINK 飲品",
     title_fr: "DRINK",
     items: [
       {
@@ -890,13 +890,15 @@ export default function HomePage() {
           {/* Social Badges bottom right - Desktop only */}
           <div className="absolute bottom-10 right-10 z-20 hidden md:flex items-center gap-3">
             {[
-              { icon: Instagram, link: "#" },
-              { icon: Facebook, link: "#" },
-              { icon: TiktokIcon, link: "#" },
+              { icon: Instagram, link: "https://www.instagram.com/1001nu1t/" },
+              { icon: Facebook, link: "https://www.facebook.com/share/1J1KukJuHs/?mibextid=wwXIfr" },
+              { icon: TiktokIcon, link: "https://www.tiktok.com/@1001nu1t" },
             ].map((social, idx) => (
               <a
                 key={idx}
                 href={social.link}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-[52px] h-[52px] flex items-center justify-center rounded-full bg-[#0a0b0a]/60 backdrop-blur-md border border-[#333330] hover:bg-white hover:text-black transition-colors duration-300"
               >
                 <social.icon size={18} strokeWidth={1.5} />
@@ -1065,7 +1067,7 @@ export default function HomePage() {
             "SIZZLING PLATES",
             "CURRY – STYLE HONG KONG",
             "VEGETARIAN"
-          ].includes(MENU_CATEGORIES[activeCategory].title_en) && (
+          ].some(t => MENU_CATEGORIES[activeCategory].title_en.startsWith(t)) && (
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -1103,8 +1105,15 @@ export default function HomePage() {
                 {/* Item Details */}
                 <div className="flex-1 flex flex-col justify-center sm:pt-4 w-full">
                   <div className="flex justify-between items-end gap-3 w-full">
-                    <h4 className="font-serif text-[1.4rem] sm:text-2xl tracking-wide text-[#1a1c19] whitespace-nowrap overflow-hidden text-ellipsis">
-                      {lang === "fr" ? item.name_fr : item.name_en}
+                    <h4 className="font-serif text-[1.4rem] sm:text-2xl tracking-wide text-[#1a1c19] whitespace-nowrap overflow-hidden text-ellipsis flex items-baseline gap-3">
+                      {item.id && !item.id.includes("T01") && (
+                        <span className="text-xs sm:text-sm font-sans font-bold text-[#8a7a4a] tracking-widest uppercase align-middle shrink-0">
+                          {item.id}.
+                        </span>
+                      )}
+                      <span>
+                        {lang === "fr" ? item.name_fr : item.name_en}
+                      </span>
                     </h4>
                     <div className="flex-1 border-b-[1.5px] border-dotted border-[#1a1c19]/30 mx-2 relative top-[-8px]"></div>
                     <span className="font-serif text-[1.4rem] sm:text-2xl tracking-wider text-[#1a1c19]">
@@ -1315,9 +1324,16 @@ export default function HomePage() {
               />
             </div>
             <div>
-              <a href="mailto:events@1001nuits.com" className="inline-block uppercase tracking-[0.15em] text-sm font-bold border-b border-[#cfbe91] pb-1 text-[#cfbe91] hover:text-[#efe7d2] hover:border-[#efe7d2] transition-colors">
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.dispatchEvent(new CustomEvent('set-booking-type', { detail: 'event' }));
+                  document.getElementById('reservation')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="inline-block uppercase tracking-[0.15em] text-sm font-bold border-b border-[#cfbe91] pb-1 text-[#cfbe91] hover:text-[#efe7d2] hover:border-[#efe7d2] transition-colors"
+              >
                 {lang === "fr" ? "Se Renseigner" : "Inquire Now"}
-              </a>
+              </button>
             </div>
           </motion.div>
         
@@ -1351,40 +1367,27 @@ export default function HomePage() {
             whileInView={{ opacity: 1, scale: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="bg-white text-[#1a1c19] p-12 md:p-24 rounded-[3rem] shadow-2xl border border-[#1a1c19]/5"
+            className="mb-12"
           >
-            <div className="w-20 h-20 mx-auto rounded-full bg-[#1a1c19] text-[#efe7d2] flex items-center justify-center mb-8">
-              <Phone size={32} />
-            </div>
-            <h2 className="font-serif text-5xl md:text-7xl uppercase tracking-widest leading-[1] mb-6 text-[#1a1c19]">
+            <h2 className="font-serif text-5xl md:text-7xl uppercase tracking-widest leading-[1] mb-4 text-[#1a1c19]">
               <ShinyText text={lang === "fr" ? "Rejoignez-nous" : "Join Us"} color="#1a1c19" shineColor="#cfbe91" speed={3} /> <br />
               <span className="text-[#cfbe91] italic normal-case font-light drop-shadow-sm">
                 {lang === "fr" ? "pour le souper" : "for Dinner"}
               </span>
             </h2>
-            <div className="mb-12 max-w-lg mx-auto">
+            <div className="max-w-lg mx-auto">
               <BlurText 
                 text={lang === "fr"
-                  ? "Nous gérons exclusivement nos réservations de manière personnelle pour garantir la meilleure expérience possible. Veuillez nous appeler pour réserver votre table."
-                  : "We exclusively handle our bookings personally to ensure the best possible experience. Please give us a call to secure your table."}
+                  ? "Veuillez remplir le formulaire ci-dessous pour réserver votre table ou organiser un événement avec nous."
+                  : "Please fill out the form below to secure your table or arrange an event with us."}
                 delay={20}
                 animateBy="words"
                 className="text-sm md:text-lg font-medium opacity-70 leading-relaxed justify-center"
               />
             </div>
-
-            <a
-              href="tel:+15141234567"
-              className="inline-flex items-center gap-6 bg-[#1a1c19] text-[#efe7d2] pl-8 pr-3 py-3 rounded-full hover:bg-[#333330] transition-all duration-300 group shadow-lg hover:shadow-xl hover:pr-4 hover:pl-7"
-            >
-              <span className="font-sans font-medium tracking-[0.15em] text-lg mt-0.5">
-                (514) 123-4567
-              </span>
-              <div className="w-12 h-12 rounded-full bg-[#efe7d2] text-[#1a1c19] flex items-center justify-center group-hover:scale-105 transition-transform">
-                <ArrowRight size={20} />
-              </div>
-            </a>
           </motion.div>
+
+          <ReservationForm lang={lang} />
         </div>
       </section>
 
@@ -1466,11 +1469,30 @@ export default function HomePage() {
         transition={{ duration: 0.8 }}
         className="bg-[#0a0b0a] text-[#efe7d2] pt-16 border-t border-[#333330] text-center pb-8"
       >
-        <h2 className="font-serif text-4xl tracking-[0.2em] text-[#efe7d2] mb-8">
+        <h2 className="font-serif text-4xl tracking-[0.2em] text-[#efe7d2] mb-6">
           <ShinyText text="1001" className="lining-nums inline-block" color="#efe7d2" shineColor="#cfbe91" speed={3} />
           <span className="inline-block w-3"></span>
           <ShinyText text="NUITS" className="inline-block" color="#efe7d2" shineColor="#cfbe91" speed={3} />
         </h2>
+        
+        <div className="flex justify-center items-center gap-4 mb-8">
+          {[
+            { icon: Instagram, link: "https://www.instagram.com/1001nu1t/" },
+            { icon: Facebook, link: "https://www.facebook.com/share/1J1KukJuHs/?mibextid=wwXIfr" },
+            { icon: TiktokIcon, link: "https://www.tiktok.com/@1001nu1t" },
+          ].map((social, idx) => (
+            <a
+              key={idx}
+              href={social.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 flex items-center justify-center rounded-full bg-[#1a1c19] border border-[#333330] hover:bg-[#cfbe91] hover:text-[#1a1c19] hover:border-[#cfbe91] transition-all duration-300 shadow-md"
+            >
+              <social.icon size={18} strokeWidth={1.5} />
+            </a>
+          ))}
+        </div>
+
         <div className="flex flex-wrap justify-center items-center gap-6 text-[10px] uppercase tracking-[0.2em] opacity-50 mb-12">
           <span>11602 Bd de Salaberry, QC</span>
           <span className="text-[#cfbe91]">•</span>
