@@ -26,19 +26,19 @@ export default function Navbar({
       )}
     >
       <div className="flex items-center">
-        <button className="p-2.5 mr-3 md:mr-5 border border-[#333330] rounded-[14px] hover:bg-white/10 transition-colors">
+        <button className="p-2 mr-2 md:mr-4 border border-[#333330] rounded-[14px] hover:bg-white/10 transition-colors">
           <Menu size={20} className="text-[#efe7d2]" />
         </button>
 
         <div
-          className="font-serif text-[18px] md:text-2xl whitespace-nowrap tracking-[0.2em] uppercase mr-3 md:mr-6 lg:mr-10 text-[#efe7d2] hover:opacity-80 transition-opacity cursor-pointer flex items-baseline gap-1"
+          className="font-serif text-[18px] md:text-xl xl:text-2xl whitespace-nowrap tracking-[0.2em] uppercase mr-3 lg:mr-4 xl:mr-10 text-[#efe7d2] hover:opacity-80 transition-opacity cursor-pointer flex items-baseline gap-1"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
           <span className="lining-nums">1001</span> <span>NUITS</span>
         </div>
       </div>
 
-      <div className="hidden lg:flex items-center gap-8 xl:gap-12 text-[11px] font-bold tracking-[0.2em] uppercase text-[#efe7d2]">
+      <div className="hidden lg:flex items-center gap-4 xl:gap-8 text-[9px] xl:text-[10px] font-bold tracking-[0.15em] xl:tracking-[0.2em] uppercase text-[#efe7d2] whitespace-nowrap">
         <button
           onClick={() => scrollTo("menu")}
           className="transition-colors hover-underline-animation hover:text-[#cfbe91]"
@@ -55,7 +55,7 @@ export default function Navbar({
           onClick={() => scrollTo("about")}
           className="transition-colors hover-underline-animation hover:text-[#cfbe91]"
         >
-          {lang === "fr" ? "Notre Restaurant" : "Our Restaurant"}
+          {lang === "fr" ? "Restaurant" : "Our Restaurant"}
         </button>
         <button
           onClick={() => scrollTo("private-events")}
@@ -71,13 +71,13 @@ export default function Navbar({
         </button>
       </div>
 
-      <div className="flex items-center gap-2 md:gap-4 ml-auto">
+      <div className="flex items-center gap-2 md:gap-3 ml-auto">
         {setLang && (
-          <div className="flex bg-[#1a1c19]/80 border border-[#333330] rounded-full p-1 text-[10px] md:text-xs tracking-widest font-bold font-sans">
+          <div className="flex bg-[#1a1c19]/80 border border-[#333330] rounded-full p-1 text-[10px] tracking-widest font-bold font-sans">
             <button
               onClick={() => setLang("en")}
               className={cn(
-                "px-3 py-1.5 md:px-4 md:py-2 rounded-full transition-all uppercase whitespace-nowrap",
+                "px-2 py-1 md:px-3 md:py-1.5 rounded-full transition-all uppercase whitespace-nowrap",
                 lang === "en"
                   ? "bg-[#cfbe91] text-[#0a0b0a]"
                   : "text-[#efe7d2] hover:text-[#cfbe91]",
@@ -88,7 +88,7 @@ export default function Navbar({
             <button
               onClick={() => setLang("fr")}
               className={cn(
-                "px-3 py-1.5 md:px-4 md:py-2 rounded-full transition-all uppercase whitespace-nowrap",
+                "px-2 py-1 md:px-3 md:py-1.5 rounded-full transition-all uppercase whitespace-nowrap",
                 lang === "fr"
                   ? "bg-[#cfbe91] text-[#0a0b0a]"
                   : "text-[#efe7d2] hover:text-[#cfbe91]",
