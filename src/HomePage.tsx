@@ -944,7 +944,7 @@ export default function HomePage() {
           <motion.div 
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, margin: "0px 0px -80px 0px" }}
+            viewport={{ once: true, margin: "0px 0px -80px 0px" }}
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
             className="grid grid-cols-2 md:flex md:flex-wrap md:justify-center gap-3 md:gap-4 mb-16 md:mb-20 max-w-lg md:max-w-none mx-auto"
           >
@@ -968,7 +968,7 @@ export default function HomePage() {
             key={`header-${activeCategory}`}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, margin: "0px 0px -80px 0px" }}
+            viewport={{ once: true, margin: "0px 0px -80px 0px" }}
             transition={{ duration: 0.5 }}
             className="flex items-center justify-center gap-4 mb-16"
           >
@@ -1017,7 +1017,7 @@ export default function HomePage() {
                 key={item.id}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: false, margin: "0px 0px -80px 0px" }}
+                viewport={{ once: true, margin: "0px 0px -80px 0px" }}
                 transition={{ delay: idx * 0.1, duration: 0.6 }}
                 className="flex flex-col gap-8 group"
               >
@@ -1125,7 +1125,7 @@ export default function HomePage() {
           <motion.div
             initial={{ opacity: 0, y: 60, scale: 0.97 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
-            viewport={{ once: false, margin: "-100px 0px -80px 0px" }}
+            viewport={{ once: true, margin: "-100px 0px -80px 0px" }}
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
             className="flex-1 relative order-2 lg:order-1"
           >
@@ -1139,7 +1139,7 @@ export default function HomePage() {
               <motion.div
                 initial={{ opacity: 0, y: 40, scale: 0.95 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                viewport={{ once: false, margin: "0px 0px -80px 0px" }}
+                viewport={{ once: true, margin: "0px 0px -80px 0px" }}
                 transition={{ duration: 0.9, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
                 className="absolute -bottom-10 -right-10 w-2/3 max-w-[240px] aspect-square rounded-[2rem] overflow-hidden border-[12px] border-[#faf8f5] shadow-2xl"
               >
@@ -1211,7 +1211,7 @@ export default function HomePage() {
           <motion.div
             initial={{ opacity: 0, y: 60, scale: 0.97 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
-            viewport={{ once: false, margin: "0px 0px -80px 0px" }}
+            viewport={{ once: true, margin: "0px 0px -80px 0px" }}
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
             className="w-full lg:w-1/2 relative"
           >
@@ -1357,7 +1357,7 @@ export default function HomePage() {
       <motion.footer
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: false, margin: "0px 0px -80px 0px" }}
+        viewport={{ once: true, margin: "0px 0px -80px 0px" }}
         transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
         className="bg-[#0a0b0a] text-[#efe7d2] pt-16 border-t border-[#333330] text-center pb-8"
       >
