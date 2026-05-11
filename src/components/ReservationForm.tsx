@@ -25,9 +25,9 @@ export default function ReservationForm({ lang }: ReservationFormProps) {
 
   useEffect(() => {
     const handleSetBookingType = (e: any) => {
-      if (e.detail === 'event' || e.detail === 'dining') {
-        setBookingType(e.detail);
-        setFormData(prev => ({ ...prev, guests: e.detail === 'event' ? '40' : '2' }));
+      if (e.detail === 'dining') {
+        setBookingType('dining');
+        setFormData(prev => ({ ...prev, guests: '2' }));
       }
     };
     document.addEventListener('set-booking-type', handleSetBookingType);
@@ -126,27 +126,21 @@ export default function ReservationForm({ lang }: ReservationFormProps) {
             setFormData(prev => ({ ...prev, guests: '2' }));
           }}
           className={`flex-1 py-3 px-6 rounded-full text-sm font-bold tracking-widest uppercase transition-all duration-300 ${
-            bookingType === 'dining' 
-              ? 'bg-[#cfbe91] text-black shadow-md' 
+            bookingType === 'dining'
+              ? 'bg-[#cfbe91] text-black shadow-md'
               : 'text-[#1a1c19]/60 hover:text-[#1a1c19]'
           }`}
         >
           {lang === 'fr' ? 'Souper' : 'Dining In'}
         </button>
-        <button
-          type="button"
-          onClick={() => {
-            setBookingType('event');
-            setFormData(prev => ({ ...prev, guests: '40' }));
-          }}
-          className={`flex-1 py-3 px-6 rounded-full text-sm font-bold tracking-widest uppercase transition-all duration-300 ${
-            bookingType === 'event' 
-              ? 'bg-[#cfbe91] text-black shadow-md' 
-              : 'text-[#1a1c19]/60 hover:text-[#1a1c19]'
-          }`}
-        >
-          {lang === 'fr' ? 'Événement' : 'Event Booking'}
-        </button>
+        <div className="flex-1 relative flex items-center justify-center">
+          <span className="flex-1 py-3 px-6 rounded-full text-sm font-bold tracking-widest uppercase text-[#1a1c19]/30 cursor-not-allowed text-center select-none">
+            {lang === 'fr' ? 'Événement' : 'Event Booking'}
+          </span>
+          <span className="absolute -top-2 right-2 text-[8px] font-bold uppercase tracking-widest bg-[#cfbe91]/80 text-black px-2 py-0.5 rounded-full">
+            {lang === 'fr' ? 'Bientôt' : 'Soon'}
+          </span>
+        </div>
       </div>
 
       <p className="text-sm text-[#1a1c19]/80 text-center mb-8 border border-[#cfbe91]/30 bg-[#f8f6f0] p-4 rounded-xl leading-relaxed">

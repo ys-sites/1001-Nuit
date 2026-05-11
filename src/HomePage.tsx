@@ -889,7 +889,7 @@ export default function HomePage() {
             className="relative w-full flex-1 aspect-[4/3] md:aspect-auto rounded-[2rem] md:rounded-[2.5rem] overflow-hidden group block cursor-pointer"
           >
             <img
-              src="https://images.unsplash.com/photo-1544025162-831e5bb574d7?auto=format&fit=crop&q=80&w=800"
+              src="/reservation.png"
               alt="Reservation"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-[10s] group-hover:scale-105"
             />
@@ -1252,7 +1252,6 @@ export default function HomePage() {
               <button
                 onClick={(e) => {
                   e.preventDefault();
-                  document.dispatchEvent(new CustomEvent('set-booking-type', { detail: 'event' }));
                   document.getElementById('reservation')?.scrollIntoView({ behavior: 'smooth' });
                 }}
                 className="inline-block uppercase tracking-[0.15em] text-sm font-bold border-b border-[#cfbe91] pb-1 text-[#cfbe91] hover:text-[#efe7d2] hover:border-[#efe7d2] transition-colors"
@@ -1409,8 +1408,6 @@ export default function HomePage() {
         </div>
 
         <div className="flex flex-wrap justify-center items-center gap-6 text-[10px] uppercase tracking-[0.2em] opacity-50 mb-12">
-          <span>11602 Bd de Salaberry, QC</span>
-          <span className="text-[#cfbe91]">•</span>
           <span>
             {lang === "fr"
               ? "Viande halal abattue à la main"
