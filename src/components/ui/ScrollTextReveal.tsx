@@ -38,8 +38,9 @@ function tick() {
     const rect = reg.wrap.getBoundingClientRect();
     const state = reg.getState();
 
-    if (scrollDir === "down" && state === "dispersed") {
-      // Start rise-up ~120px before element fully enters viewport
+    if (scrollDir === "down" && (state === "dispersed" || state === "dispersing")) {
+      // Start rise-up ~120px before element fully enters viewport;
+      // also interrupt an in-progress dispersion if user reverses direction
       if (rect.top < vh + 120 && rect.bottom > 0) {
         reg.riseUp();
       }
@@ -186,16 +187,23 @@ export default function ScrollTextReveal({
     // ── Rise-up ───────────────────────────────────────────────────────────
     const riseUp = () => {
       if (state.current === "stable" || state.current === "rising") return;
-      // Abort any live dispersion
+
+      const wasDispersing = state.current === "dispersing";
+
+      // Abort any live dispersion — canvas hides, particles cleared
       if (rafRef.current) { cancelAnimationFrame(rafRef.current); rafRef.current = null; }
       cv.style.display = "none";
       psRef.current = [];
 
       state.current = "rising";
-      // Ensure element is reset to below-screen position before transitioning
       text.style.transition = "none";
-      text.style.transform  = "translateY(60px)";
       text.style.opacity    = "0";
+
+      if (!wasDispersing) {
+        // Coming from fully dispersed: slide in from below
+        text.style.transform = "translateY(60px)";
+      }
+      // Coming from dispersing: text is already at translateY(0), just fade in — no blank frame
 
       // One rAF to let the browser apply the reset before starting the transition
       requestAnimationFrame(() => {
