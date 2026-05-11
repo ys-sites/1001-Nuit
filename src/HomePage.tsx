@@ -471,7 +471,7 @@ const MENU_CATEGORIES = [
   },
   {
     title_en: "INSTANT 面",
-    title_fr: "INSTANT 面",
+    title_fr: "NOUILLES INSTANTANÉES 面",
     items: [
       {
         id: "M01",
@@ -617,7 +617,7 @@ const MENU_CATEGORIES = [
   },
   {
     title_en: "DRINK 飲品",
-    title_fr: "DRINK 飲品",
+    title_fr: "BOISSONS 飲品",
     items: [
       {
         id: "G03",
