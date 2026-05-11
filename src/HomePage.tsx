@@ -815,8 +815,8 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Social Badges bottom right - Desktop only */}
-          <div className="absolute bottom-10 right-10 z-20 hidden md:flex items-center gap-3">
+          {/* Social Badges bottom right */}
+          <div className="absolute bottom-5 right-5 md:bottom-10 md:right-10 z-20 flex items-center gap-2 md:gap-3">
             {[
               { icon: Instagram, link: "https://www.instagram.com/1001nu1t/" },
               { icon: Facebook, link: "https://www.facebook.com/share/1J1KukJuHs/?mibextid=wwXIfr" },
@@ -827,9 +827,9 @@ export default function HomePage() {
                 href={social.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-[52px] h-[52px] flex items-center justify-center rounded-full bg-[#0a0b0a]/60 backdrop-blur-md border border-[#333330] hover:bg-white hover:text-black transition-colors duration-300"
+                className="w-10 h-10 md:w-[52px] md:h-[52px] flex items-center justify-center rounded-full bg-[#0a0b0a]/60 backdrop-blur-md border border-[#333330] hover:bg-white hover:text-black transition-colors duration-300"
               >
-                <social.icon size={18} strokeWidth={1.5} />
+                <social.icon size={16} strokeWidth={1.5} />
               </a>
             ))}
           </div>
