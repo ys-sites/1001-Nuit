@@ -175,33 +175,29 @@ export default function ReservationForm({ lang }: ReservationFormProps) {
         </div>
       </div>
 
-      {/* Opening schedule — dining only */}
+      {/* Dining not yet open */}
       {bookingType === 'dining' && (
-        <div className="flex flex-wrap justify-center gap-2 mb-6">
-          {[
-            { days: lang === 'fr' ? 'Lun – Mer' : 'Mon – Wed', hours: '17:00 – 22:30' },
-            { days: lang === 'fr' ? 'Jeu – Sam' : 'Thu – Sat', hours: '17:00 – 23:30' },
-            { days: lang === 'fr' ? 'Dimanche' : 'Sunday',     hours: '16:00 – 22:00' },
-          ].map(({ days, hours }) => (
-            <span key={days} className="flex items-center gap-1.5 text-xs font-medium bg-[#f3f0e8] border border-[#cfbe91]/40 px-3 py-1.5 rounded-full text-[#1a1c19]/70">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#cfbe91] inline-block shrink-0" />
-              <span className="font-bold text-[#1a1c19]">{days}</span>
-              <span>{hours}</span>
-            </span>
-          ))}
+        <div className="flex flex-col items-center text-center gap-5 py-10">
+          <div className="w-14 h-14 rounded-full bg-[#f3f0e8] border border-[#cfbe91]/40 flex items-center justify-center">
+            <Calendar size={24} className="text-[#cfbe91]" />
+          </div>
+          <div>
+            <p className="font-serif text-2xl text-[#1a1c19] mb-2">
+              {lang === 'fr' ? 'Bientôt disponible' : 'Available Soon'}
+            </p>
+            <p className="text-sm text-[#1a1c19]/55 leading-relaxed max-w-xs mx-auto">
+              {lang === 'fr'
+                ? 'Les réservations pour le souper seront disponibles dès notre date d\'ouverture officielle. Revenez nous voir très bientôt !'
+                : 'Dining reservations will be available starting on our official opening date. Check back with us very soon!'}
+            </p>
+          </div>
+          <span className="text-[10px] uppercase tracking-[0.25em] font-bold text-[#cfbe91] bg-[#f3f0e8] border border-[#cfbe91]/30 px-4 py-1.5 rounded-full">
+            {lang === 'fr' ? 'Ouverture prochaine' : 'Opening soon'}
+          </span>
         </div>
       )}
 
-      <p className="text-sm text-[#1a1c19]/80 text-center mb-8 border border-[#cfbe91]/30 bg-[#f8f6f0] p-4 rounded-xl leading-relaxed">
-        {lang === 'fr' 
-          ? 'Pour vérifier s\'il y a une réservation disponible aujourd\'hui, vous pouvez toujours nous appeler au '
-          : 'If you ever want to know if there is a reservation today, you can always call us to verify at '}
-        <a href="tel:+15141234567" className="font-bold text-[#1a1c19] border-b-2 border-[#cfbe91] hover:text-[#cfbe91] transition-colors inline-block whitespace-nowrap">
-          (514) 123-4567
-        </a>
-      </p>
-
-      <form onSubmit={handleSubmit} className="space-y-6">
+      {bookingType === 'event' && <form onSubmit={handleSubmit} className="space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           
           {/* Name */}
@@ -366,7 +362,7 @@ export default function ReservationForm({ lang }: ReservationFormProps) {
             ? (lang === 'fr' ? 'Envoi en cours...' : 'Sending...') 
             : (lang === 'fr' ? 'Confirmer la réservation' : 'Confirm Booking')}
         </button>
-      </form>
+      </form>}
     </div>
   );
 }
