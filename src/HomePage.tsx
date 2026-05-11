@@ -697,43 +697,6 @@ const MINI_MENU = [
   },
 ];
 
-const TESTIMONIALS = [
-  {
-    name: "Sarah A.",
-    text_en:
-      "The best Halal Hong Kong style food I've ever had. Highly recommended!",
-    text_fr:
-      "La meilleure nourriture halal hongkongaise que j'aie jamais goûtée. Je recommande vivement !",
-  },
-  {
-    name: "Michael T.",
-    text_en:
-      "Absolutely incredible braised beef curry. A hidden gem in the city.",
-    text_fr:
-      "Un curry de bœuf braisé absolument incroyable. Une perle rare en ville.",
-  },
-  {
-    name: "Emma R.",
-    text_en:
-      "The ambiance, the service, and above all, the exquisite flavors. 10/10.",
-    text_fr:
-      "L'ambiance, le service et par-dessus tout des saveurs exquises. 10/10.",
-  },
-  {
-    name: "David K.",
-    text_en:
-      "Truly authentic flavors. The sizzling plates are a must-try experience.",
-    text_fr:
-      "Des saveurs vraiment authentiques. Les plaques chauffantes sont une expérience à ne pas manquer.",
-  },
-  {
-    name: "Sophia L.",
-    text_en:
-      "The milk tea here brings me right back to the streets of Hong Kong.",
-    text_fr:
-      "Le thé au lait ici me ramène directement dans les rues de Hong Kong.",
-  },
-];
 
 export default function HomePage() {
   const [activeCategory, setActiveCategory] = useState(0);
@@ -1076,36 +1039,20 @@ export default function HomePage() {
             </h2>
           </ScrollTextReveal>
 
-          <div className="flex overflow-hidden relative w-full pt-4 pb-20">
-            <motion.div
-              className="flex gap-6 md:gap-8 px-4"
-              animate={{ x: ["0%", "-50%"] }}
-              transition={{ duration: 40, ease: "linear", repeat: Infinity }}
-            >
-              {[...TESTIMONIALS, ...TESTIMONIALS, ...TESTIMONIALS].map(
-                (testimonial, idx) => (
-                  <div
-                    key={idx}
-                    className="w-[300px] md:w-[380px] flex-shrink-0 flex flex-col bg-white rounded-[2rem] shadow-sm border border-[#1a1c19]/5 overflow-hidden group hover:shadow-md transition-shadow duration-500"
-                  >
-                    <div className="p-8 md:p-10 flex flex-col h-full bg-white">
-                      <p className="font-serif text-lg leading-relaxed text-[#1a1c19]/90 mb-8 flex-grow">
-                        "
-                        {lang === "fr"
-                          ? testimonial.text_fr
-                          : testimonial.text_en}
-                        "
-                      </p>
-                      <div className="flex flex-col">
-                        <span className="text-lg font-serif italic tracking-wide text-[#1a1c19]">
-                          {testimonial.name}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                ),
-              )}
-            </motion.div>
+          <div className="flex flex-col items-center justify-center gap-6 py-12 pb-20 px-6">
+            <div className="flex gap-1">
+              {[...Array(5)].map((_, i) => (
+                <svg key={i} className="w-6 h-6 text-[#cfbe91]/40" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p className="font-serif text-2xl md:text-3xl text-[#1a1c19]/25 italic text-center max-w-md leading-snug">
+              {lang === "fr" ? "Les avis arrivent bientôt…" : "Reviews on their way…"}
+            </p>
+            <p className="text-xs uppercase tracking-[0.25em] text-[#1a1c19]/30 font-bold">
+              {lang === "fr" ? "Nouveau restaurant — Ouvrez la marche" : "New restaurant — Be the first to review"}
+            </p>
           </div>
         </div>
       </section>
