@@ -86,6 +86,38 @@ export default function ReservationForm({ lang }: ReservationFormProps) {
   const minGuests = bookingType === 'dining' ? 1 : 40;
   const maxGuests = bookingType === 'dining' ? 100 : 500;
 
+  const getTimeSlotsForDate = (dateStr: string) => {
+    if (!dateStr) return [];
+    // Use noon to avoid DST/timezone edge cases
+    const day = new Date(dateStr + 'T12:00:00').getDay(); // 0=Sun, 1=Mon … 6=Sat
+    if (day === 0) {
+      // Sunday: 16:00 – 22:00
+      return ['16:00','16:30','17:00','17:30','18:00','18:30','19:00','19:30','20:00','20:30','21:00'];
+    }
+    if (day >= 4) {
+      // Thu–Sat: 17:00 – 23:30
+      return ['17:00','17:30','18:00','18:30','19:00','19:30','20:00','20:30','21:00','21:30','22:00','22:30'];
+    }
+    // Mon–Wed: 17:00 – 22:30
+    return ['17:00','17:30','18:00','18:30','19:00','19:30','20:00','20:30','21:00','21:30'];
+  };
+
+  const timeSlots = getTimeSlotsForDate(formData.date);
+
+  // Reset time if selected slot isn't valid for the newly chosen date
+  useEffect(() => {
+    if (formData.time && timeSlots.length > 0 && !timeSlots.includes(formData.time)) {
+      setFormData(prev => ({ ...prev, time: '' }));
+    }
+  }, [formData.date]);
+
+  const formatTime = (t: string) => {
+    const [h, m] = t.split(':').map(Number);
+    const suffix = h >= 12 ? 'PM' : 'AM';
+    const h12 = h > 12 ? h - 12 : h === 0 ? 12 : h;
+    return `${t} (${h12}:${m === 0 ? '00' : m} ${suffix})`;
+  };
+
 
   if (status === 'success') {
     return (
@@ -142,6 +174,23 @@ export default function ReservationForm({ lang }: ReservationFormProps) {
           </span>
         </div>
       </div>
+
+      {/* Opening schedule — dining only */}
+      {bookingType === 'dining' && (
+        <div className="flex flex-wrap justify-center gap-2 mb-6">
+          {[
+            { days: lang === 'fr' ? 'Lun – Mer' : 'Mon – Wed', hours: '17:00 – 22:30' },
+            { days: lang === 'fr' ? 'Jeu – Sam' : 'Thu – Sat', hours: '17:00 – 23:30' },
+            { days: lang === 'fr' ? 'Dimanche' : 'Sunday',     hours: '16:00 – 22:00' },
+          ].map(({ days, hours }) => (
+            <span key={days} className="flex items-center gap-1.5 text-xs font-medium bg-[#f3f0e8] border border-[#cfbe91]/40 px-3 py-1.5 rounded-full text-[#1a1c19]/70">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#cfbe91] inline-block shrink-0" />
+              <span className="font-bold text-[#1a1c19]">{days}</span>
+              <span>{hours}</span>
+            </span>
+          ))}
+        </div>
+      )}
 
       <p className="text-sm text-[#1a1c19]/80 text-center mb-8 border border-[#cfbe91]/30 bg-[#f8f6f0] p-4 rounded-xl leading-relaxed">
         {lang === 'fr' 
@@ -217,22 +266,32 @@ export default function ReservationForm({ lang }: ReservationFormProps) {
               <Clock size={14} />
               {lang === 'fr' ? 'Heure' : 'Time'}
             </label>
-            <select 
+            <select
               required name="time" value={formData.time} onChange={handleInputChange}
               className="w-full bg-[#f8f6f0] border-none rounded-xl px-4 py-3 text-[#1a1c19] focus:ring-2 focus:ring-[#cfbe91] transition-shadow appearance-none"
             >
               <option value="" disabled>-- : --</option>
-              <option value="17:00">17:00 (5:00 PM)</option>
-              <option value="17:30">17:30 (5:30 PM)</option>
-              <option value="18:00">18:00 (6:00 PM)</option>
-              <option value="18:30">18:30 (6:30 PM)</option>
-              <option value="19:00">19:00 (7:00 PM)</option>
-              <option value="19:30">19:30 (7:30 PM)</option>
-              <option value="20:00">20:00 (8:00 PM)</option>
-              <option value="20:30">20:30 (8:30 PM)</option>
-              <option value="21:00">21:00 (9:00 PM)</option>
-              <option value="21:30">21:30 (9:30 PM)</option>
+              {timeSlots.length > 0
+                ? timeSlots.map(t => <option key={t} value={t}>{formatTime(t)}</option>)
+                : <>
+                    <option value="17:00">{formatTime('17:00')}</option>
+                    <option value="17:30">{formatTime('17:30')}</option>
+                    <option value="18:00">{formatTime('18:00')}</option>
+                    <option value="18:30">{formatTime('18:30')}</option>
+                    <option value="19:00">{formatTime('19:00')}</option>
+                    <option value="19:30">{formatTime('19:30')}</option>
+                    <option value="20:00">{formatTime('20:00')}</option>
+                    <option value="20:30">{formatTime('20:30')}</option>
+                    <option value="21:00">{formatTime('21:00')}</option>
+                    <option value="21:30">{formatTime('21:30')}</option>
+                  </>
+              }
             </select>
+            {formData.date && timeSlots.length === 0 && (
+              <p className="text-[10px] text-red-500 mt-1">
+                {lang === 'fr' ? 'Aucun créneau disponible ce jour.' : 'No available slots on this day.'}
+              </p>
+            )}
           </div>
 
           {/* Guests */}
