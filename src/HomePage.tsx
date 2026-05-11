@@ -844,7 +844,7 @@ export default function HomePage() {
             className="relative w-full flex-1 aspect-[4/3] md:aspect-auto rounded-[2rem] md:rounded-[2.5rem] overflow-hidden group block cursor-pointer"
           >
             <img
-              src="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?auto=format&fit=crop&q=80&w=800"
+              src="/menu.avif"
               alt="Menu"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-[10s] group-hover:scale-105"
             />
@@ -1188,6 +1188,14 @@ export default function HomePage() {
                 animateBy="words"
                 className="text-[#1a1c19]/80"
               />
+              <BlurText 
+                text={lang === "en"
+                  ? "Our chefs are straight from Hong Kong with more than 20 years of experience, bringing genuine technique and flavor to every plate."
+                  : "Nos chefs viennent directement de Hong Kong et possèdent plus de 20 ans d'expérience culinaire, apportant authenticité et savoir-faire à chaque plat."}
+                delay={20}
+                animateBy="words"
+                className="text-[#1a1c19]/80"
+              />
             </div>
           </motion.div>
         </div>
@@ -1412,6 +1420,14 @@ export default function HomePage() {
           <span>{lang === "fr" ? "Sans porc" : "No pork"}</span>
           <span className="text-[#cfbe91]">•</span>
           <span>{lang === "fr" ? "Sans alcool" : "No alcohol"}</span>
+        </div>
+        <div className="text-[12px] opacity-80 mb-4">
+          <a
+            href="mailto:1001nuitmtl@gmail.com"
+            className="text-[#cfbe91] hover:text-[#efe7d2] transition-colors"
+          >
+            1001nuitmtl@gmail.com
+          </a>
         </div>
         <p className="text-[10px] uppercase tracking-widest opacity-30">
           © {new Date().getFullYear()} 1001 Nuits.{" "}
