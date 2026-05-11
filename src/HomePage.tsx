@@ -24,11 +24,13 @@ import ShinyText from "./components/ui/ShinyText";
 import BlurText from "./components/ui/BlurText";
 import CurvedLoop from "./components/ui/CurvedLoop";
 import ReservationForm from "./components/ReservationForm";
+import ScrollTextReveal from "./components/ui/ScrollTextReveal";
+
 
 const MENU_CATEGORIES = [
   {
     title_en: "SNACKS & SIDES 小食",
-    title_fr: "ENTRÉES & ACCOMPAGNEMENTS",
+    title_fr: "ENTRÉES & ACCOMPAGNEMENTS 小食",
     items: [
       {
         id: "B01",
@@ -137,7 +139,7 @@ const MENU_CATEGORIES = [
     ]
   },{
     title_en: "SIGNATURE SNACK 招牌小吃",
-    title_fr: "COLLATION SIGNATURE",
+    title_fr: "COLLATION SIGNATURE 招牌小吃",
     items: [
       {
         id: "T01",
@@ -151,7 +153,7 @@ const MENU_CATEGORIES = [
   },
   {
     title_en: "SANDWICHES 三文治",
-    title_fr: "SANDWICHS",
+    title_fr: "SANDWICHS 三文治",
     items: [
       {
         id: "S09",
@@ -189,7 +191,7 @@ const MENU_CATEGORIES = [
   },
   {
     title_en: "TOAST / FRENCH TOAST 多士／西多士",
-    title_fr: "RÔTIES / PAIN DORÉ",
+    title_fr: "RÔTIES / PAIN DORÉ 多士／西多士",
     items: [
       {
         id: "S10",
@@ -259,7 +261,7 @@ const MENU_CATEGORIES = [
   },
   {
     title_en: "MAIN DISH 主食",
-    title_fr: "PLATS PRINCIPAUX",
+    title_fr: "PLATS PRINCIPAUX 主食",
     items: [
       {
         id: "C01",
@@ -361,7 +363,7 @@ const MENU_CATEGORIES = [
   },
   {
     title_en: "BAKED HONG KONG STYLE – DOUBLE FROMAGE 港式雙重芝士焗飯／焗意粉",
-    title_fr: "PLATS GRATINÉS STYLE HONG KONG – DOUBLE FROMAGE",
+    title_fr: "PLATS GRATINÉS STYLE HONG KONG – DOUBLE FROMAGE 港式雙重芝士焗飯／焗意粉",
     items: [
       {
         id: "F01",
@@ -423,7 +425,7 @@ const MENU_CATEGORIES = [
   },
   {
     title_en: "VEGETARIAN 素食專區",
-    title_fr: "PLATS VÉGÉTARIENS",
+    title_fr: "PLATS VÉGÉTARIENS 素食專區",
     items: [
       {
         id: "V01",
@@ -469,7 +471,7 @@ const MENU_CATEGORIES = [
   },
   {
     title_en: "INSTANT 面",
-    title_fr: "INSTANT",
+    title_fr: "INSTANT 面",
     items: [
       {
         id: "M01",
@@ -507,7 +509,7 @@ const MENU_CATEGORIES = [
   },
   {
     title_en: "SIZZLING PLATES 鐵板系列",
-    title_fr: "PLATS SUR PLAQUE CHAUDE",
+    title_fr: "PLATS SUR PLAQUE CHAUDE 鐵板系列",
     items: [
       {
         id: "SP01",
@@ -545,7 +547,7 @@ const MENU_CATEGORIES = [
   },
   {
     title_en: "CURRY – STYLE HONG KONG 港式咖喱",
-    title_fr: "CARI – STYLE HONG KONG",
+    title_fr: "CARI – STYLE HONG KONG 港式咖喱",
     items: [
       {
         id: "E01",
@@ -615,7 +617,7 @@ const MENU_CATEGORIES = [
   },
   {
     title_en: "DRINK 飲品",
-    title_fr: "DRINK",
+    title_fr: "DRINK 飲品",
     items: [
       {
         id: "G03",
@@ -940,10 +942,10 @@ export default function HomePage() {
         <div className="max-w-5xl mx-auto px-6 md:px-12">
           {/* Tabs */}
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            viewport={{ once: false, margin: "0px 0px -80px 0px" }}
+            transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
             className="grid grid-cols-2 md:flex md:flex-wrap md:justify-center gap-3 md:gap-4 mb-16 md:mb-20 max-w-lg md:max-w-none mx-auto"
           >
             {MENU_CATEGORIES.map((cat, idx) => (
@@ -966,7 +968,7 @@ export default function HomePage() {
             key={`header-${activeCategory}`}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false, margin: "0px 0px -80px 0px" }}
             transition={{ duration: 0.5 }}
             className="flex items-center justify-center gap-4 mb-16"
           >
@@ -1015,7 +1017,7 @@ export default function HomePage() {
                 key={item.id}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: false, margin: "0px 0px -80px 0px" }}
                 transition={{ delay: idx * 0.1, duration: 0.6 }}
                 className="flex flex-col gap-8 group"
               >
@@ -1058,27 +1060,21 @@ export default function HomePage() {
 
 
         <div className="w-full relative z-10 overflow-hidden">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16 px-6 md:px-12"
-          >
+          <ScrollTextReveal className="text-center mb-16 px-6 md:px-12" textColor="#1a1c19">
             <div className="flex items-center justify-center gap-4 mb-4">
               <span className="text-[#1a1c19]/60 uppercase tracking-[0.2em] text-xs font-bold">
                 {lang === "fr" ? "Avis" : "Testimonials"}
               </span>
             </div>
             <h2 className="font-serif text-4xl md:text-5xl tracking-tight text-[#1a1c19] mb-4">
-              <ShinyText 
-                text={lang === "fr" ? "Ce que disent nos convives" : "What our guests say"} 
-                color="#1a1c19" 
-                shineColor="#cfbe91" 
-                speed={3} 
+              <ShinyText
+                text={lang === "fr" ? "Ce que disent nos convives" : "What our guests say"}
+                color="#1a1c19"
+                shineColor="#cfbe91"
+                speed={3}
               />
             </h2>
-          </motion.div>
+          </ScrollTextReveal>
 
           <div className="flex overflow-hidden relative w-full pt-4 pb-20">
             <motion.div
@@ -1127,10 +1123,10 @@ export default function HomePage() {
         {/* Content Container */}
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col lg:flex-row items-center gap-20 md:gap-32 min-h-[75vh] relative z-10 py-24">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            initial={{ opacity: 0, y: 60, scale: 0.97 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: false, margin: "-100px 0px -80px 0px" }}
+            transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
             className="flex-1 relative order-2 lg:order-1"
           >
             {/* Image Composition */}
@@ -1141,10 +1137,10 @@ export default function HomePage() {
                 className="w-full h-full object-cover rounded-[2.5rem] shadow-xl"
               />
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.4 }}
+                initial={{ opacity: 0, y: 40, scale: 0.95 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                viewport={{ once: false, margin: "0px 0px -80px 0px" }}
+                transition={{ duration: 0.9, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
                 className="absolute -bottom-10 -right-10 w-2/3 max-w-[240px] aspect-square rounded-[2rem] overflow-hidden border-[12px] border-[#faf8f5] shadow-2xl"
               >
                 <img
@@ -1156,21 +1152,23 @@ export default function HomePage() {
             </div>
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true, margin: "-100px 0px 0px 0px" }}
+            transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
             className="flex-1 flex flex-col justify-center lg:mt-0 order-1 lg:order-2 backdrop-blur-md bg-white/30 p-8 md:p-12 lg:p-16 rounded-[4rem] border border-white/20 shadow-sm"
           >
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-12 h-[1px] bg-[#1a1c19]/30"></div>
-              <span className="text-[#1a1c19]/60 uppercase tracking-[0.2em] text-xs font-bold">
-                {lang === "fr" ? "Notre Histoire" : "Our Story"}
-              </span>
-            </div>
-            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl uppercase tracking-widest leading-[0.9] mb-8 text-[#1a1c19]">
-              <ShinyText text={lang === "fr" ? "Notre Héritage" : "Our Heritage"} color="#1a1c19" shineColor="#cfbe91" speed={3} />
-            </h2>
+            <ScrollTextReveal delay={0.35} textColor="#1a1c19" className="mb-8">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-[1px] bg-[#1a1c19]/30"></div>
+                <span className="text-[#1a1c19]/60 uppercase tracking-[0.2em] text-xs font-bold">
+                  {lang === "fr" ? "Notre Histoire" : "Our Story"}
+                </span>
+              </div>
+              <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl uppercase tracking-widest leading-[0.9] text-[#1a1c19]">
+                <ShinyText text={lang === "fr" ? "Notre Héritage" : "Our Heritage"} color="#1a1c19" shineColor="#cfbe91" speed={3} />
+              </h2>
+            </ScrollTextReveal>
             <div className="space-y-5 text-[#1a1c19]/80 font-medium leading-relaxed max-w-md text-sm md:text-base">
               <BlurText 
                 text={lang === "en" 
@@ -1211,33 +1209,33 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col lg:flex-row-reverse items-center gap-16 md:gap-24">
           
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 60, scale: 0.97 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: false, margin: "0px 0px -80px 0px" }}
+            transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
             className="w-full lg:w-1/2 relative"
           >
               <div className="relative aspect-[4/3] w-full rounded-[2.5rem] overflow-hidden">
-               <img src="https://images.unsplash.com/photo-1551632436-bbf4c106ad01?auto=format&fit=crop&q=80&w=1200" alt="Private Dining Room" className="w-full h-full object-cover grayscale opacity-90 transition-all duration-[5s] hover:grayscale-0 hover:scale-105" />
+               <img src="/event.png" alt="Private Dining Room" className="w-full h-full object-cover grayscale opacity-90 transition-all duration-[5s] hover:grayscale-0 hover:scale-105" />
                <div className="absolute inset-0 bg-[#0a0b0a]/20"></div>
              </div>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true, margin: "-100px 0px 0px 0px" }}
+            transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.12 }}
             className="w-full lg:w-1/2 flex flex-col gap-8"
           >
-            <div>
+            <ScrollTextReveal delay={0.3} textColor="#efe7d2">
               <span className="text-[#cfbe91] uppercase tracking-[0.2em] font-bold text-sm mb-4 block">
                 {lang === "fr" ? "Événements Privés" : "Private Events"}
               </span>
               <h2 className="font-serif text-4xl md:text-5xl text-[#efe7d2] leading-tight text-balance">
                 <ShinyText text={lang === "fr" ? "Des Célébrations Inoubliables" : "Unforgettable Celebrations"} color="#efe7d2" shineColor="#cfbe91" speed={3} />
               </h2>
-            </div>
+            </ScrollTextReveal>
             <div className="flex flex-col gap-6 text-[#efe7d2]/70 text-lg leading-relaxed">
               <BlurText 
                 text={lang === "fr" 
@@ -1286,13 +1284,7 @@ export default function HomePage() {
           </motion.div>
         </div>
         <div className="max-w-4xl mx-auto px-6 md:px-12 text-center relative z-10 w-full">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95, y: 30 }}
-            whileInView={{ opacity: 1, scale: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="mb-12"
-          >
+          <ScrollTextReveal className="mb-12" textColor="#1a1c19">
             <h2 className="font-serif text-5xl md:text-7xl uppercase tracking-widest leading-[1] mb-4 text-[#1a1c19]">
               <ShinyText text={lang === "fr" ? "Rejoignez-nous" : "Join Us"} color="#1a1c19" shineColor="#cfbe91" speed={3} /> <br />
               <span className="text-[#cfbe91] italic normal-case font-light drop-shadow-sm">
@@ -1300,7 +1292,7 @@ export default function HomePage() {
               </span>
             </h2>
             <div className="max-w-lg mx-auto">
-              <BlurText 
+              <BlurText
                 text={lang === "fr"
                   ? "Veuillez remplir le formulaire ci-dessous pour réserver votre table ou organiser un événement avec nous."
                   : "Please fill out the form below to secure your table or arrange an event with us."}
@@ -1309,7 +1301,7 @@ export default function HomePage() {
                 className="text-sm md:text-lg font-medium opacity-70 leading-relaxed justify-center"
               />
             </div>
-          </motion.div>
+          </ScrollTextReveal>
 
           <ReservationForm lang={lang} />
         </div>
@@ -1322,13 +1314,7 @@ export default function HomePage() {
       >
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-16">
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="flex flex-col gap-6"
-            >
+            <ScrollTextReveal className="flex flex-col gap-6" textColor="#1a1c19">
               <h3 className="font-serif text-3xl uppercase tracking-widest text-[#1a1c19]">
                 {lang === "fr" ? "Heures d'ouverture" : "Hours"}
               </h3>
@@ -1350,37 +1336,29 @@ export default function HomePage() {
                   <span>16:00 - 22:00</span>
                 </div>
               </div>
-            </motion.div>
+            </ScrollTextReveal>
 
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              className="flex flex-col gap-6"
-            >
+            <ScrollTextReveal className="flex flex-col gap-6" textColor="#1a1c19" delay={0.1}>
               <h3 className="font-serif text-3xl uppercase tracking-widest text-[#1a1c19]">
                 {lang === "fr" ? "Emplacement" : "Location"}
               </h3>
               <div className="flex flex-col gap-3 font-medium text-[#1a1c19]/80">
-                <p>
-                  DDO Montreal
-                </p>
+                <p>DDO Montreal</p>
                 <p className="italic text-[#1a1c19]/60 text-sm">
                   {lang === "fr" ? "L'emplacement sera bientôt disponible" : "Location will be available soon"}
                 </p>
               </div>
-            </motion.div>
+            </ScrollTextReveal>
           </div>
         </div>
       </section>
 
       {/* Footer */}
       <motion.footer
-        initial={{ opacity: 0, y: 30 }}
+        initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
+        viewport={{ once: false, margin: "0px 0px -80px 0px" }}
+        transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
         className="bg-[#0a0b0a] text-[#efe7d2] pt-16 border-t border-[#333330] text-center pb-8"
       >
         <h2 className="font-serif text-4xl tracking-[0.2em] text-[#efe7d2] mb-6">
