@@ -1357,21 +1357,11 @@ export default function HomePage() {
               </h3>
               <div className="flex flex-col gap-3 font-medium text-[#1a1c19]/80">
                 <p>
-                  11602 Bd de Salaberry, <br />
-                  Dollard-des-Ormeaux, QC H9B 2R8
-                  <br />
-                  Canada
+                  DDO Montreal
                 </p>
-                <div className="mt-4">
-                  <span className="block text-sm uppercase tracking-[0.15em] font-bold text-[#1a1c19]/60 mb-2">
-                    {lang === "fr" ? "Stationnement" : "Parking"}
-                  </span>
-                  <p>
-                    {lang === "fr"
-                      ? "Service de voiturier disponible à l'entrée principale. Parking public à 2 minutes à pied."
-                      : "Valet parking available at the main entrance. Public parking within 2 minutes walking distance."}
-                  </p>
-                </div>
+                <p className="italic text-[#1a1c19]/60 text-sm">
+                  {lang === "fr" ? "L'emplacement sera bientôt disponible" : "Location will be available soon"}
+                </p>
               </div>
             </motion.div>
           </div>
