@@ -917,8 +917,8 @@ export default function HomePage() {
                 onClick={() => setActiveCategory(idx)}
                 className={`py-3 px-2 md:px-5 md:py-2.5 rounded-[12px] md:rounded-lg border text-[10px] sm:text-xs font-bold md:tracking-[0.1em] transition-colors uppercase leading-tight ${
                   activeCategory === idx
-                    ? "border-[#1a1c19] bg-[#1a1c19] text-[#efe7d2]"
-                    : "border-[#1a1c19]/20 text-[#1a1c19] hover:border-[#1a1c19]"
+                    ? "border-[#cfbe91] bg-[#cfbe91] text-[#1a1c19] shadow-sm"
+                    : "border-[#1a1c19]/20 text-[#1a1c19] hover:border-[#cfbe91] hover:text-[#1a1c19]"
                 }`}
               >
                 {lang === "fr" ? cat.title_fr : cat.title_en}
