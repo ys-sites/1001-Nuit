@@ -1168,33 +1168,33 @@ export default function HomePage() {
               <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl uppercase tracking-widest leading-[0.9] text-[#1a1c19]">
                 <ShinyText text={lang === "fr" ? "Notre Héritage" : "Our Heritage"} color="#1a1c19" shineColor="#cfbe91" speed={3} />
               </h2>
+              <div className="space-y-5 text-[#1a1c19]/80 font-medium leading-relaxed max-w-md text-sm md:text-base mt-6">
+                <BlurText
+                  text={lang === "en"
+                    ? "Founded on the belief that culinary excellence shouldn't compromise on dietary principles, 1001 Nuits brings authentic Hong Kong style dining crafted exclusively with halal ingredients."
+                    : "Fondé sur la conviction que l'excellence culinaire ne doit pas faire de compromis avec ses principes diététiques, 1001 Nuits propose une cuisine authentique de style hongkongais élaborée exclusivement avec des ingrédients halal."}
+                  delay={20}
+                  animateBy="words"
+                  className="text-[#1a1c19]/80"
+                />
+                <BlurText
+                  text={lang === "en"
+                    ? "Every dish is a carefully balanced masterpiece—hand-slaughtered halal meat, free of pork and alcohol, without losing the signature taste that makes Hong Kong cuisine world-renowned."
+                    : "Chaque plat est un chef-d'œuvre soigneusement équilibré : viande halal abattue à la main, sans porc ni alcool, tout en préservant le goût distinctif qui rend la cuisine hongkongaise célèbre dans le monde entier."}
+                  delay={20}
+                  animateBy="words"
+                  className="text-[#1a1c19]/80"
+                />
+                <BlurText
+                  text={lang === "en"
+                    ? "Our chefs are straight from Hong Kong with more than 20 years of experience, bringing genuine technique and flavor to every plate."
+                    : "Nos chefs viennent directement de Hong Kong et possèdent plus de 20 ans d'expérience culinaire, apportant authenticité et savoir-faire à chaque plat."}
+                  delay={20}
+                  animateBy="words"
+                  className="text-[#1a1c19]/80"
+                />
+              </div>
             </ScrollTextReveal>
-            <div className="space-y-5 text-[#1a1c19]/80 font-medium leading-relaxed max-w-md text-sm md:text-base">
-              <BlurText 
-                text={lang === "en" 
-                  ? "Founded on the belief that culinary excellence shouldn't compromise on dietary principles, 1001 Nuits brings authentic Hong Kong style dining crafted exclusively with halal ingredients."
-                  : "Fondé sur la conviction que l'excellence culinaire ne doit pas faire de compromis avec ses principes diététiques, 1001 Nuits propose une cuisine authentique de style hongkongais élaborée exclusivement avec des ingrédients halal."}
-                delay={20}
-                animateBy="words"
-                className="text-[#1a1c19]/80"
-              />
-              <BlurText 
-                text={lang === "en"
-                  ? "Every dish is a carefully balanced masterpiece—hand-slaughtered halal meat, free of pork and alcohol, without losing the signature taste that makes Hong Kong cuisine world-renowned."
-                  : "Chaque plat est un chef-d'œuvre soigneusement équilibré : viande halal abattue à la main, sans porc ni alcool, tout en préservant le goût distinctif qui rend la cuisine hongkongaise célèbre dans le monde entier."}
-                delay={20}
-                animateBy="words"
-                className="text-[#1a1c19]/80"
-              />
-              <BlurText 
-                text={lang === "en"
-                  ? "Our chefs are straight from Hong Kong with more than 20 years of experience, bringing genuine technique and flavor to every plate."
-                  : "Nos chefs viennent directement de Hong Kong et possèdent plus de 20 ans d'expérience culinaire, apportant authenticité et savoir-faire à chaque plat."}
-                delay={20}
-                animateBy="words"
-                className="text-[#1a1c19]/80"
-              />
-            </div>
           </motion.div>
         </div>
 
@@ -1235,28 +1235,28 @@ export default function HomePage() {
               <h2 className="font-serif text-4xl md:text-5xl text-[#efe7d2] leading-tight text-balance">
                 <ShinyText text={lang === "fr" ? "Des Célébrations Inoubliables" : "Unforgettable Celebrations"} color="#efe7d2" shineColor="#cfbe91" speed={3} />
               </h2>
+              <div className="flex flex-col gap-6 text-[#efe7d2]/70 text-lg leading-relaxed mt-6">
+                <BlurText
+                  text={lang === "fr"
+                    ? "Qu'il s'agisse d'une réunion d'affaires intime, d'un dîner de répétition ou d'une réception fastueuse, nos salles à manger privées offrent le cadre idéal. Nous proposons des menus personnalisés avec des ingrédients halal finement sélectionnés, et un service dédié pour faire de votre événement une expérience inoubliable."
+                    : "Whether it is an intimate business gathering, a rehearsal dinner, or a lavish reception, our private dining rooms provide the perfect backdrop. We offer custom menus crafted with the finest halal ingredients, and dedicated service to make your event an unforgettable experience."}
+                  delay={20}
+                  animateBy="words"
+                  className="text-[#efe7d2]/70"
+                />
+              </div>
+              <div className="mt-6">
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById('reservation')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="inline-block uppercase tracking-[0.15em] text-sm font-bold border-b border-[#cfbe91] pb-1 text-[#cfbe91] hover:text-[#efe7d2] hover:border-[#efe7d2] transition-colors"
+                >
+                  {lang === "fr" ? "Se Renseigner" : "Inquire Now"}
+                </button>
+              </div>
             </ScrollTextReveal>
-            <div className="flex flex-col gap-6 text-[#efe7d2]/70 text-lg leading-relaxed">
-              <BlurText 
-                text={lang === "fr" 
-                  ? "Qu'il s'agisse d'une réunion d'affaires intime, d'un dîner de répétition ou d'une réception fastueuse, nos salles à manger privées offrent le cadre idéal. Nous proposons des menus personnalisés avec des ingrédients halal finement sélectionnés, et un service dédié pour faire de votre événement une expérience inoubliable." 
-                  : "Whether it is an intimate business gathering, a rehearsal dinner, or a lavish reception, our private dining rooms provide the perfect backdrop. We offer custom menus crafted with the finest halal ingredients, and dedicated service to make your event an unforgettable experience."}
-                delay={20}
-                animateBy="words"
-                className="text-[#efe7d2]/70"
-              />
-            </div>
-            <div>
-              <button
-                onClick={(e) => {
-                  e.preventDefault();
-                  document.getElementById('reservation')?.scrollIntoView({ behavior: 'smooth' });
-                }}
-                className="inline-block uppercase tracking-[0.15em] text-sm font-bold border-b border-[#cfbe91] pb-1 text-[#cfbe91] hover:text-[#efe7d2] hover:border-[#efe7d2] transition-colors"
-              >
-                {lang === "fr" ? "Se Renseigner" : "Inquire Now"}
-              </button>
-            </div>
           </motion.div>
         
         </div>

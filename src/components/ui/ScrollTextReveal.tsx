@@ -39,8 +39,8 @@ function tick() {
     const state = reg.getState();
 
     if (scrollDir === "down" && state === "dispersed") {
-      // Element enters viewport from below while scrolling down → rise up
-      if (rect.top < vh && rect.bottom > 0) {
+      // Start rise-up ~120px before element fully enters viewport
+      if (rect.top < vh + 120 && rect.bottom > 0) {
         reg.riseUp();
       }
     }
@@ -136,13 +136,13 @@ function samplePixels(el: HTMLElement, fallback: string): Particle[] {
       const i = (py * W + px) * 4;
       if (data[i + 3] < 100) continue;
       const angle = Math.random() * Math.PI * 2;
-      const speed = 2 + Math.random() * 10;
+      const speed = 1 + Math.random() * 5;
       out.push({
         x: px, y: py,
         vx: Math.cos(angle) * speed,
-        vy: Math.sin(angle) * speed - 1.5, // faint upward bias
+        vy: Math.sin(angle) * speed - 0.8,
         alpha: 1,
-        decay: 0.01 + Math.random() * 0.02,
+        decay: 0.005 + Math.random() * 0.008,
         r: data[i], g: data[i + 1], b: data[i + 2],
       });
     }
@@ -246,7 +246,7 @@ export default function ScrollTextReveal({
           if (p.alpha <= 0) continue;
           alive++;
           p.x += p.vx;   p.y += p.vy;
-          p.vx *= 0.97;  p.vy *= 0.97;
+          p.vx *= 0.985; p.vy *= 0.985;
           p.alpha -= p.decay;
           ctx2d.globalAlpha = Math.max(0, p.alpha);
           ctx2d.fillStyle   = `rgb(${p.r},${p.g},${p.b})`;
