@@ -37,7 +37,6 @@ const MENU_CATEGORIES = [
         price: "$17.99",
         desc_fr: "",
         desc_en: "",
-        image: "/Curry Beef Brisket Udon in Soup.png"
       },
       {
         id: "B02",
@@ -46,7 +45,6 @@ const MENU_CATEGORIES = [
         price: "$15.99",
         desc_fr: "",
         desc_en: "",
-        image: "/Crispy Fried Chicken Leg with Potato Salad or Fries.png"
       },
       {
         id: "B03",
@@ -55,7 +53,6 @@ const MENU_CATEGORIES = [
         price: "$14.99",
         desc_fr: "",
         desc_en: "",
-        image: "/Shrimp Toast with Potato Salad or Fries.png"
       },
       {
         id: "B04",
@@ -64,7 +61,6 @@ const MENU_CATEGORIES = [
         price: "$16.99",
         desc_fr: "",
         desc_en: "",
-        image: "/Poutine in Hong Kong Style (Double Cheese & Meat Sauce).png"
       },
       {
         id: "B05",
@@ -73,7 +69,6 @@ const MENU_CATEGORIES = [
         price: "$15.99",
         desc_fr: "",
         desc_en: "",
-        image: "/Crispy Chicken Wings with Potato Salad or Fries.png"
       },
       {
         id: "B07",
@@ -82,7 +77,6 @@ const MENU_CATEGORIES = [
         price: "$8.99",
         desc_fr: "",
         desc_en: "",
-        image: "/Fish Balls in Hong Kong Style Curry (15 pcs).png"
       },
       {
         id: "B08",
@@ -91,7 +85,6 @@ const MENU_CATEGORIES = [
         price: "$16.99",
         desc_fr: "",
         desc_en: "",
-        image: "/Wonton Noodle Soup (Egg Noodles or Flat Rice Noodles).png"
       },
       {
         id: "B10",
@@ -100,7 +93,6 @@ const MENU_CATEGORIES = [
         price: "$10.99",
         desc_fr: "",
         desc_en: "",
-        image: "/Beef Balls in Hong Kong Style Curry (12 pcs).png"
       },
       {
         id: "B11",
@@ -109,7 +101,6 @@ const MENU_CATEGORIES = [
         price: "$12.99",
         desc_fr: "",
         desc_en: "",
-        image: "/Fish & Beef Balls in Hong Kong Style Curry (12 pcs).png"
       },
       {
         id: "B13",
@@ -118,7 +109,6 @@ const MENU_CATEGORIES = [
         price: "$16.99",
         desc_fr: "",
         desc_en: "",
-        image: "/Chicken Wings with Fries (Butter Sauce or Honey Garlic).png"
       },
       {
         id: "B16",
@@ -127,7 +117,6 @@ const MENU_CATEGORIES = [
         price: "$21.99",
         desc_fr: "",
         desc_en: "",
-        image: "https://images.unsplash.com/photo-1525118844146-24a73f84edce?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "B17",
@@ -136,7 +125,6 @@ const MENU_CATEGORIES = [
         price: "$18.99",
         desc_fr: "",
         desc_en: "",
-        image: "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "B18",
@@ -145,7 +133,6 @@ const MENU_CATEGORIES = [
         price: "$19.99",
         desc_fr: "",
         desc_en: "",
-        image: "https://images.unsplash.com/photo-1567620832903-9fc6debc209f?auto=format&fit=crop&q=80&w=400"
       }
     ]
   },{
@@ -159,7 +146,6 @@ const MENU_CATEGORIES = [
         price: "$8.99",
         desc_fr: "Boulettes de poulpe classiques.",
         desc_en: "Classic octopus balls.",
-        image: "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&q=80&w=400"
       }
     ]
   },
@@ -174,7 +160,6 @@ const MENU_CATEGORIES = [
         price: "$14.99",
         desc_fr: "",
         desc_en: "",
-        image: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "S14",
@@ -183,7 +168,6 @@ const MENU_CATEGORIES = [
         price: "$10.99",
         desc_fr: "",
         desc_en: "",
-        image: "https://images.unsplash.com/photo-1550507992-eb63ffee0847?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "S19",
@@ -192,7 +176,6 @@ const MENU_CATEGORIES = [
         price: "$9.99",
         desc_fr: "",
         desc_en: "",
-        image: "https://images.unsplash.com/photo-1550507992-eb63ffee0847?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "S20",
@@ -201,7 +184,6 @@ const MENU_CATEGORIES = [
         price: "$9.99",
         desc_fr: "",
         desc_en: "",
-        image: "https://images.unsplash.com/photo-1550507992-eb63ffee0847?auto=format&fit=crop&q=80&w=400"
       }
     ]
   },
@@ -216,7 +198,6 @@ const MENU_CATEGORIES = [
         price: "$13.99",
         desc_fr: "五香牛肉滑蛋厚多士",
         desc_en: "",
-        image: "https://images.unsplash.com/photo-1506084868730-342b1f45ff9d?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "S11",
@@ -225,7 +206,6 @@ const MENU_CATEGORIES = [
         price: "$13.99",
         desc_fr: "沙爹牛肉滑蛋厚多士",
         desc_en: "",
-        image: "https://images.unsplash.com/photo-1506084868730-342b1f45ff9d?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "S15",
@@ -234,7 +214,6 @@ const MENU_CATEGORIES = [
         price: "$8.99",
         desc_fr: "花生酱黑炭厚多士",
         desc_en: "",
-        image: "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "S16",
@@ -243,7 +222,6 @@ const MENU_CATEGORIES = [
         price: "$8.99",
         desc_fr: "美禄炼奶黑炭厚多士",
         desc_en: "",
-        image: "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "S17",
@@ -252,7 +230,6 @@ const MENU_CATEGORIES = [
         price: "$12.99",
         desc_fr: "花生炼奶西多士",
         desc_en: "",
-        image: "https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "S21",
@@ -261,7 +238,6 @@ const MENU_CATEGORIES = [
         price: "$8.99",
         desc_fr: "牛油炼奶黑炭厚多士",
         desc_en: "",
-        image: "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "S22",
@@ -270,7 +246,6 @@ const MENU_CATEGORIES = [
         price: "$9.99",
         desc_fr: "黑炭厚多士",
         desc_en: "",
-        image: "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "S23",
@@ -279,7 +254,6 @@ const MENU_CATEGORIES = [
         price: "$9.99",
         desc_fr: "漏奶华",
         desc_en: "",
-        image: "https://images.unsplash.com/photo-1506084868730-342b1f45ff9d?auto=format&fit=crop&q=80&w=400"
       }
     ]
   },
@@ -294,7 +268,6 @@ const MENU_CATEGORIES = [
         price: "$22.99",
         desc_fr: "樱花虾鸡拉炒饭",
         desc_en: "",
-        image: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "C02",
@@ -303,7 +276,6 @@ const MENU_CATEGORIES = [
         price: "$23.99",
         desc_fr: "韶然销魂牛油拥饭(可改白饭)",
         desc_en: "",
-        image: "https://images.unsplash.com/photo-1546833999-296e4630f148?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "C03",
@@ -312,7 +284,6 @@ const MENU_CATEGORIES = [
         price: "$21.99",
         desc_fr: "黑椒汁鸡扒饭",
         desc_en: "",
-        image: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "C04",
@@ -321,7 +292,6 @@ const MENU_CATEGORIES = [
         price: "$24.99",
         desc_fr: "香葱大虾牛肉滑蛋饭",
         desc_en: "",
-        image: "https://images.unsplash.com/photo-1544378730-8b5104b18790?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "C05",
@@ -330,7 +300,6 @@ const MENU_CATEGORIES = [
         price: "$22.99",
         desc_fr: "五香牛肉丁滑蛋饭",
         desc_en: "",
-        image: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "C06",
@@ -339,7 +308,6 @@ const MENU_CATEGORIES = [
         price: "$22.99",
         desc_fr: "黑椒牛肉炒意粉",
         desc_en: "",
-        image: "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "C07",
@@ -348,7 +316,6 @@ const MENU_CATEGORIES = [
         price: "$21.99",
         desc_fr: "滑蛋免治肉饭",
         desc_en: "",
-        image: "https://images.unsplash.com/photo-1544378730-8b5104b18790?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "C08",
@@ -357,7 +324,6 @@ const MENU_CATEGORIES = [
         price: "$21.99",
         desc_fr: "洋葱鸡扒饭",
         desc_en: "",
-        image: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "C09",
@@ -366,7 +332,6 @@ const MENU_CATEGORIES = [
         price: "$26.99",
         desc_fr: "AAA黑椒牛仔骨煎蛋饭",
         desc_en: "",
-        image: "https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "C10",
@@ -375,7 +340,6 @@ const MENU_CATEGORIES = [
         price: "$23.99",
         desc_fr: "干炒牛河",
         desc_en: "",
-        image: "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "C11",
@@ -384,7 +348,6 @@ const MENU_CATEGORIES = [
         price: "$12.99 / $23.99 / $23.99",
         desc_fr: "炒泰式河粉 (鸡／牛／虾)",
         desc_en: "",
-        image: "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "C12",
@@ -393,7 +356,6 @@ const MENU_CATEGORIES = [
         price: "$23.99 / $25.99",
         desc_fr: "菠萝炒饭(鸡／牛／虾)",
         desc_en: "",
-        image: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&q=80&w=400"
       }
     ]
   },
@@ -408,7 +370,6 @@ const MENU_CATEGORIES = [
         price: "$22.99",
         desc_fr: "Au choix : riz au spaghetti",
         desc_en: "Choice of: Rice or Spaghetti",
-        image: "https://images.unsplash.com/photo-1580476262798-bddd9f4b7369?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "F02",
@@ -417,7 +378,6 @@ const MENU_CATEGORIES = [
         price: "$19.99",
         desc_fr: "Au choix : riz au spaghetti",
         desc_en: "Choice of: Rice or Spaghetti",
-        image: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "F03",
@@ -426,7 +386,6 @@ const MENU_CATEGORIES = [
         price: "$19.99",
         desc_fr: "Au choix : riz au spaghetti",
         desc_en: "Choice of: Rice or Spaghetti",
-        image: "https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "F04",
@@ -435,7 +394,6 @@ const MENU_CATEGORIES = [
         price: "$21.99",
         desc_fr: "鸳鸯两煎",
         desc_en: "Choice of: Rice or Spaghetti",
-        image: "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "F05",
@@ -444,7 +402,6 @@ const MENU_CATEGORIES = [
         price: "$18.99",
         desc_fr: "Au choix : riz au spaghetti",
         desc_en: "Choice of: Rice or Spaghetti",
-        image: "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "F06",
@@ -453,7 +410,6 @@ const MENU_CATEGORIES = [
         price: "$24.99",
         desc_fr: "Au choix : riz au spaghetti",
         desc_en: "Choice of: Rice or Spaghetti",
-        image: "https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "F07",
@@ -462,7 +418,6 @@ const MENU_CATEGORIES = [
         price: "$21.99",
         desc_fr: "Au choix : riz au spaghetti",
         desc_en: "Choice of: Rice or Spaghetti",
-        image: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&q=80&w=400"
       }
     ]
   },
@@ -477,7 +432,6 @@ const MENU_CATEGORIES = [
         price: "$14.99",
         desc_fr: "素炒米粉",
         desc_en: "",
-        image: "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "V02",
@@ -486,7 +440,6 @@ const MENU_CATEGORIES = [
         price: "$13.99",
         desc_fr: "炒饭（素，可加菠萝）",
         desc_en: "",
-        image: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "V03",
@@ -495,7 +448,6 @@ const MENU_CATEGORIES = [
         price: "$12.99",
         desc_fr: "煎黄金嫩豆腐",
         desc_en: "",
-        image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "V04",
@@ -504,7 +456,6 @@ const MENU_CATEGORIES = [
         price: "$15.99",
         desc_fr: "麻婆豆腐（素）",
         desc_en: "",
-        image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "V05",
@@ -513,7 +464,6 @@ const MENU_CATEGORIES = [
         price: "$13.99",
         desc_fr: "红烧豆腐",
         desc_en: "",
-        image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=400"
       }
     ]
   },
@@ -528,7 +478,6 @@ const MENU_CATEGORIES = [
         price: "$18.99",
         desc_fr: "咖喱牛腩汤捞一丁",
         desc_en: "",
-        image: "https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "M02",
@@ -537,7 +486,6 @@ const MENU_CATEGORIES = [
         price: "$15.99",
         desc_fr: "豉油皇鸡滑蛋汤捞一丁",
         desc_en: "",
-        image: "https://images.unsplash.com/photo-1512058560366-cd242959828d?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "M03",
@@ -546,7 +494,6 @@ const MENU_CATEGORIES = [
         price: "$15.99",
         desc_fr: "豉油皇沙爹牛肉滑蛋捞一丁",
         desc_en: "",
-        image: "https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "M04",
@@ -555,7 +502,6 @@ const MENU_CATEGORIES = [
         price: "$15.99",
         desc_fr: "Halal 午餐肉滑蛋捞一丁",
         desc_en: "",
-        image: "https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&q=80&w=400"
       }
     ]
   },
@@ -570,7 +516,6 @@ const MENU_CATEGORIES = [
         price: "$39.99",
         desc_fr: "铁板羊扒 (préparation env. 20 min / 稍候约20分钟)",
         desc_en: "prep time approx. 20 min",
-        image: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "SP02",
@@ -579,7 +524,6 @@ const MENU_CATEGORIES = [
         price: "$36.99",
         desc_fr: "AAA安格斯西冷牛扒 (préparation env. 20 min / 稍候约20分钟)",
         desc_en: "prep time approx. 20 min",
-        image: "https://images.unsplash.com/photo-1546833999-296e4630f148?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "SP03",
@@ -588,7 +532,6 @@ const MENU_CATEGORIES = [
         price: "$28.99",
         desc_fr: "铁板蒜蓉鸡扒 (préparation env. 20 min / 稍候约20分钟)",
         desc_en: "prep time approx. 20 min",
-        image: "https://images.unsplash.com/photo-1598514982205-f36b96d1e8dd?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "SP04",
@@ -597,7 +540,6 @@ const MENU_CATEGORIES = [
         price: "$31.99",
         desc_fr: "铁板吉列龙利鸡扒 (préparation env. 20 min / 稍候约20分钟)",
         desc_en: "prep time approx. 20 min",
-        image: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&q=80&w=400"
       }
     ]
   },
@@ -612,7 +554,6 @@ const MENU_CATEGORIES = [
         price: "$29.99",
         desc_fr: "咖喱牛腩净食",
         desc_en: "",
-        image: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "E02",
@@ -621,7 +562,6 @@ const MENU_CATEGORIES = [
         price: "$33.99",
         desc_fr: "咖喱羊排净食",
         desc_en: "",
-        image: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "E03",
@@ -630,7 +570,6 @@ const MENU_CATEGORIES = [
         price: "$16.99",
         desc_fr: "咖喱杂菜蛋饭",
         desc_en: "",
-        image: "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "E04",
@@ -639,7 +578,6 @@ const MENU_CATEGORIES = [
         price: "$22.99",
         desc_fr: "咖喱牛腩饭",
         desc_en: "",
-        image: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "E05",
@@ -648,7 +586,6 @@ const MENU_CATEGORIES = [
         price: "$18.99",
         desc_fr: "咖喱鸡扒饭",
         desc_en: "",
-        image: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "E06",
@@ -657,7 +594,6 @@ const MENU_CATEGORIES = [
         price: "$21.99",
         desc_fr: "咖喱牛肉饭",
         desc_en: "",
-        image: "https://images.unsplash.com/photo-1546833999-296e4630f148?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "E07",
@@ -666,7 +602,6 @@ const MENU_CATEGORIES = [
         price: "$19.99",
         desc_fr: "咖喱生炸鸡腿饭",
         desc_en: "",
-        image: "https://images.unsplash.com/photo-1626082927389-6cd0b61cff9c?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "E08",
@@ -675,7 +610,6 @@ const MENU_CATEGORIES = [
         price: "$27.99",
         desc_fr: "咖喱羊排饭",
         desc_en: "",
-        image: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=400"
       }
     ]
   },
@@ -690,7 +624,6 @@ const MENU_CATEGORIES = [
         price: "$5.99",
         desc_fr: "港式奶茶",
         desc_en: "",
-        image: "https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "G04",
@@ -699,7 +632,6 @@ const MENU_CATEGORIES = [
         price: "$4.99",
         desc_fr: "咖啡",
         desc_en: "",
-        image: "https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "G05",
@@ -708,7 +640,6 @@ const MENU_CATEGORIES = [
         price: "$5.99",
         desc_fr: "鸳鸯",
         desc_en: "",
-        image: "https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "G07",
@@ -717,7 +648,6 @@ const MENU_CATEGORIES = [
         price: "$5.99",
         desc_fr: "港式柠檬茶",
         desc_en: "",
-        image: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "G08",
@@ -726,7 +656,6 @@ const MENU_CATEGORIES = [
         price: "$4.99",
         desc_fr: "柠檬水",
         desc_en: "",
-        image: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "G09",
@@ -735,7 +664,6 @@ const MENU_CATEGORIES = [
         price: "$5.99",
         desc_fr: "蜂蜜柠檬",
         desc_en: "",
-        image: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "G10",
@@ -744,7 +672,6 @@ const MENU_CATEGORIES = [
         price: "$6.99",
         desc_fr: "熊熊丝袜奶茶",
         desc_en: "",
-        image: "https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&q=80&w=400"
       },
       {
         id: "G11",
@@ -753,7 +680,6 @@ const MENU_CATEGORIES = [
         price: "$6.99",
         desc_fr: "熊熊柠檬红茶",
         desc_en: "",
-        image: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&q=80&w=400"
       }
     ]
   }
@@ -1091,17 +1017,8 @@ export default function HomePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1, duration: 0.6 }}
-                className="flex flex-col sm:flex-row items-center sm:items-start gap-8 group"
+                className="flex flex-col gap-8 group"
               >
-                {/* Item Image */}
-                <div className="w-full sm:w-[220px] h-[160px] flex-shrink-0 rounded-2xl overflow-hidden bg-[#f0ece6] shadow-sm border border-[#1a1c19]/5">
-                  <img
-                    src={item.image}
-                    alt={lang === "fr" ? item.name_fr : item.name_en}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                </div>
-
                 {/* Item Details */}
                 <div className="flex-1 flex flex-col justify-center sm:pt-4 w-full">
                   <div className="flex justify-between items-end gap-3 w-full">
