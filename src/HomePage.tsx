@@ -1268,19 +1268,9 @@ export default function HomePage() {
               <div className="flex flex-col gap-3 font-medium text-[#1a1c19]/80">
                 <div className="flex justify-between border-b border-[#1a1c19]/10 pb-2">
                   <span>
-                    {lang === "fr" ? "Lundi - Mercredi" : "Monday - Wednesday"}
+                    {lang === "fr" ? "Tous les jours" : "Every day"}
                   </span>
-                  <span>17:00 - 22:30</span>
-                </div>
-                <div className="flex justify-between border-b border-[#1a1c19]/10 pb-2">
-                  <span>
-                    {lang === "fr" ? "Jeudi - Samedi" : "Thursday - Saturday"}
-                  </span>
-                  <span>17:00 - 23:30</span>
-                </div>
-                <div className="flex justify-between border-b border-[#1a1c19]/10 pb-2">
-                  <span>{lang === "fr" ? "Dimanche" : "Sunday"}</span>
-                  <span>16:00 - 22:00</span>
+                  <span>11:00 - 21:00</span>
                 </div>
               </div>
             </ScrollTextReveal>
