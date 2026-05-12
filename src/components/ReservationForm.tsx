@@ -85,9 +85,28 @@ export default function ReservationForm({ lang }: ReservationFormProps) {
   }
 
   return (
-    <div className="bg-white/80 backdrop-blur-md p-8 md:p-10 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-[#1a1c19]/5 max-w-2xl mx-auto text-left relative z-10">
+    <div className="bg-white/80 backdrop-blur-md p-8 md:p-10 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-[#1a1c19]/5 max-w-2xl mx-auto text-center relative z-10">
 
-      <form onSubmit={handleSubmit} className="space-y-6">
+      <div className="flex flex-col items-center gap-5 py-10">
+        <div className="w-14 h-14 rounded-full bg-[#f3f0e8] border border-[#cfbe91]/40 flex items-center justify-center">
+          <GlassWater size={24} className="text-[#cfbe91]" />
+        </div>
+        <div>
+          <p className="font-serif text-2xl text-[#1a1c19] mb-2">
+            {lang === 'fr' ? 'Bientôt disponible' : 'Available Soon'}
+          </p>
+          <p className="text-sm text-[#1a1c19]/55 leading-relaxed max-w-xs mx-auto">
+            {lang === 'fr'
+              ? "Les réservations d'événements privés seront disponibles dès notre date d'ouverture officielle."
+              : 'Private event bookings will be available starting on our official opening date.'}
+          </p>
+        </div>
+        <span className="text-[10px] uppercase tracking-[0.25em] font-bold text-[#cfbe91] bg-[#f3f0e8] border border-[#cfbe91]/30 px-4 py-1.5 rounded-full">
+          {lang === 'fr' ? 'Ouverture prochaine' : 'Opening soon'}
+        </span>
+      </div>
+
+      {false && <form onSubmit={handleSubmit} className="space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
           {/* Name */}
@@ -233,7 +252,7 @@ export default function ReservationForm({ lang }: ReservationFormProps) {
             ? (lang === 'fr' ? 'Envoi en cours...' : 'Sending...')
             : (lang === 'fr' ? 'Envoyer la demande' : 'Send Inquiry')}
         </button>
-      </form>
+      </form>}
     </div>
   );
 }
