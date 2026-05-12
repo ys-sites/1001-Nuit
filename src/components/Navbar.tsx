@@ -38,7 +38,7 @@ export default function Navbar({
         </div>
       </div>
 
-      <div className="hidden lg:flex items-center gap-4 xl:gap-8 text-[9px] xl:text-[10px] font-bold tracking-[0.15em] xl:tracking-[0.2em] uppercase text-[#efe7d2] whitespace-nowrap">
+      <div className="hidden lg:flex items-center gap-6 xl:gap-10 text-[11px] xl:text-[13px] font-bold tracking-[0.15em] xl:tracking-[0.18em] uppercase text-[#efe7d2] whitespace-nowrap">
         <button
           onClick={() => scrollTo("menu")}
           className="transition-colors hover-underline-animation hover:text-[#cfbe91]"
