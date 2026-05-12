@@ -1233,16 +1233,16 @@ export default function HomePage() {
         <div className="max-w-4xl mx-auto px-6 md:px-12 text-center relative z-10 w-full">
           <ScrollTextReveal className="mb-12" textColor="#1a1c19">
             <h2 className="font-serif text-5xl md:text-7xl uppercase tracking-widest leading-[1] mb-4 text-[#1a1c19]">
-              <ShinyText text={lang === "fr" ? "Rejoignez-nous" : "Join Us"} color="#1a1c19" shineColor="#cfbe91" speed={3} /> <br />
+              <ShinyText text={lang === "fr" ? "Réservez" : "Book"} color="#1a1c19" shineColor="#cfbe91" speed={3} /> <br />
               <span className="text-[#cfbe91] italic normal-case font-light drop-shadow-sm">
-                {lang === "fr" ? "pour le souper" : "for Dinner"}
+                {lang === "fr" ? "votre événement" : "your event"}
               </span>
             </h2>
             <div className="max-w-lg mx-auto">
               <BlurText
                 text={lang === "fr"
-                  ? "Veuillez remplir le formulaire ci-dessous pour réserver votre table ou organiser un événement avec nous."
-                  : "Please fill out the form below to secure your table or arrange an event with us."}
+                  ? "Remplissez le formulaire ci-dessous pour organiser votre événement privé avec nous."
+                  : "Fill out the form below to arrange your private event with us."}
                 delay={20}
                 animateBy="words"
                 className="text-sm md:text-lg font-medium opacity-70 leading-relaxed justify-center"

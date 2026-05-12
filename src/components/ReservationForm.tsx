@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { Calendar, Clock, Users, User, Mail, Phone, MessageSquare, GlassWater } from 'lucide-react';
 
@@ -9,7 +9,6 @@ interface ReservationFormProps {
 const WEBHOOK_URL = "https://services.leadconnectorhq.com/hooks/o7aUwpKbtkP4AOP0pEjC/webhook-trigger/57c2af5a-fa80-4563-ba86-b2cf036df995";
 
 export default function ReservationForm({ lang }: ReservationFormProps) {
-  const [bookingType, setBookingType] = useState<'dining' | 'event'>('dining');
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
 
   const [formData, setFormData] = useState({
@@ -18,23 +17,11 @@ export default function ReservationForm({ lang }: ReservationFormProps) {
     phone: '',
     date: '',
     time: '',
-    guests: '2',
+    guests: '40',
     eventType: '',
     requests: ''
   });
 
-  useEffect(() => {
-    const handleSetBookingType = (e: any) => {
-      if (e.detail === 'dining') {
-        setBookingType('dining');
-        setFormData(prev => ({ ...prev, guests: '2' }));
-      }
-    };
-    document.addEventListener('set-booking-type', handleSetBookingType);
-    return () => document.removeEventListener('set-booking-type', handleSetBookingType);
-  }, []);
-
-  // Calculate tomorrow's date for the min date attribute
   const tomorrow = new Date();
   tomorrow.setDate(tomorrow.getDate() + 1);
   const minDate = tomorrow.toISOString().split('T')[0];
@@ -47,33 +34,20 @@ export default function ReservationForm({ lang }: ReservationFormProps) {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('submitting');
-    
     try {
       const response = await fetch(WEBHOOK_URL, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           ...formData,
-          bookingType,
+          bookingType: 'event',
           language: lang,
           submittedAt: new Date().toISOString()
         })
       });
-
       if (response.ok) {
         setStatus('success');
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          date: '',
-          time: '',
-          guests: '2',
-          eventType: '',
-          requests: ''
-        });
+        setFormData({ name: '', email: '', phone: '', date: '', time: '', guests: '40', eventType: '', requests: '' });
       } else {
         setStatus('error');
       }
@@ -83,35 +57,9 @@ export default function ReservationForm({ lang }: ReservationFormProps) {
     }
   };
 
-  const minGuests = bookingType === 'dining' ? 1 : 40;
-  const maxGuests = bookingType === 'dining' ? 100 : 500;
-
-  const getTimeSlotsForDate = (_dateStr: string) => {
-    // Every day: 11:00 – 21:00
-    return ['11:00','11:30','12:00','12:30','13:00','13:30','14:00','14:30','15:00','15:30',
-            '16:00','16:30','17:00','17:30','18:00','18:30','19:00','19:30','20:00','20:30'];
-  };
-
-  const timeSlots = getTimeSlotsForDate(formData.date);
-
-  // Reset time if selected slot isn't valid for the newly chosen date
-  useEffect(() => {
-    if (formData.time && timeSlots.length > 0 && !timeSlots.includes(formData.time)) {
-      setFormData(prev => ({ ...prev, time: '' }));
-    }
-  }, [formData.date]);
-
-  const formatTime = (t: string) => {
-    const [h, m] = t.split(':').map(Number);
-    const suffix = h >= 12 ? 'PM' : 'AM';
-    const h12 = h > 12 ? h - 12 : h === 0 ? 12 : h;
-    return `${t} (${h12}:${m === 0 ? '00' : m} ${suffix})`;
-  };
-
-
   if (status === 'success') {
     return (
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}
         className="bg-green-50 text-green-900 p-8 rounded-2xl text-center border border-green-200"
       >
@@ -122,11 +70,11 @@ export default function ReservationForm({ lang }: ReservationFormProps) {
           {lang === 'fr' ? 'Demande envoyée avec succès' : 'Request sent successfully'}
         </h3>
         <p className="opacity-80">
-          {lang === 'fr' 
-            ? 'Nous vous contacterons bientôt pour confirmer votre réservation.' 
+          {lang === 'fr'
+            ? 'Nous vous contacterons bientôt pour confirmer votre réservation.'
             : 'We will contact you shortly to confirm your reservation.'}
         </p>
-        <button 
+        <button
           onClick={() => setStatus('idle')}
           className="mt-6 text-sm font-bold uppercase tracking-wider text-green-700 hover:text-green-900"
         >
@@ -138,65 +86,17 @@ export default function ReservationForm({ lang }: ReservationFormProps) {
 
   return (
     <div className="bg-white/80 backdrop-blur-md p-8 md:p-10 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-[#1a1c19]/5 max-w-2xl mx-auto text-left relative z-10">
-      
-      {/* Type Selector */}
-      <div className="flex bg-[#f3f0e8] p-1 rounded-full mb-8">
-        <button
-          type="button"
-          onClick={() => {
-            setBookingType('dining');
-            setFormData(prev => ({ ...prev, guests: '2' }));
-          }}
-          className={`flex-1 py-3 px-6 rounded-full text-sm font-bold tracking-widest uppercase transition-all duration-300 ${
-            bookingType === 'dining'
-              ? 'bg-[#cfbe91] text-black shadow-md'
-              : 'text-[#1a1c19]/60 hover:text-[#1a1c19]'
-          }`}
-        >
-          {lang === 'fr' ? 'Souper' : 'Dining In'}
-        </button>
-        <div className="flex-1 relative flex items-center justify-center">
-          <span className="flex-1 py-3 px-6 rounded-full text-sm font-bold tracking-widest uppercase text-[#1a1c19]/30 cursor-not-allowed text-center select-none">
-            {lang === 'fr' ? 'Événement' : 'Event Booking'}
-          </span>
-          <span className="absolute -top-2 right-2 text-[8px] font-bold uppercase tracking-widest bg-[#cfbe91]/80 text-black px-2 py-0.5 rounded-full">
-            {lang === 'fr' ? 'Bientôt' : 'Soon'}
-          </span>
-        </div>
-      </div>
 
-      {/* Dining not yet open */}
-      {bookingType === 'dining' && (
-        <div className="flex flex-col items-center text-center gap-5 py-10">
-          <div className="w-14 h-14 rounded-full bg-[#f3f0e8] border border-[#cfbe91]/40 flex items-center justify-center">
-            <Calendar size={24} className="text-[#cfbe91]" />
-          </div>
-          <div>
-            <p className="font-serif text-2xl text-[#1a1c19] mb-2">
-              {lang === 'fr' ? 'Bientôt disponible' : 'Available Soon'}
-            </p>
-            <p className="text-sm text-[#1a1c19]/55 leading-relaxed max-w-xs mx-auto">
-              {lang === 'fr'
-                ? 'Les réservations pour le souper seront disponibles dès notre date d\'ouverture officielle. Revenez nous voir très bientôt !'
-                : 'Dining reservations will be available starting on our official opening date. Check back with us very soon!'}
-            </p>
-          </div>
-          <span className="text-[10px] uppercase tracking-[0.25em] font-bold text-[#cfbe91] bg-[#f3f0e8] border border-[#cfbe91]/30 px-4 py-1.5 rounded-full">
-            {lang === 'fr' ? 'Ouverture prochaine' : 'Opening soon'}
-          </span>
-        </div>
-      )}
-
-      {bookingType === 'event' && <form onSubmit={handleSubmit} className="space-y-6">
+      <form onSubmit={handleSubmit} className="space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          
+
           {/* Name */}
           <div className="space-y-2">
             <label className="text-xs font-bold uppercase tracking-wider text-[#1a1c19]/60 flex items-center gap-2">
               <User size={14} />
               {lang === 'fr' ? 'Nom complet' : 'Full Name'}
             </label>
-            <input 
+            <input
               type="text" required name="name" value={formData.name} onChange={handleInputChange}
               className="w-full bg-[#f8f6f0] border-none rounded-xl px-4 py-3 text-[#1a1c19] focus:ring-2 focus:ring-[#cfbe91] transition-shadow placeholder:text-[#1a1c19]/30"
               placeholder={lang === 'fr' ? 'Jean-Paul' : 'John Doe'}
@@ -209,27 +109,25 @@ export default function ReservationForm({ lang }: ReservationFormProps) {
               <Phone size={14} />
               {lang === 'fr' ? 'Téléphone' : 'Phone Number'}
             </label>
-            <input 
+            <input
               type="tel" required name="phone" value={formData.phone} onChange={handleInputChange}
               className="w-full bg-[#f8f6f0] border-none rounded-xl px-4 py-3 text-[#1a1c19] focus:ring-2 focus:ring-[#cfbe91] transition-shadow placeholder:text-[#1a1c19]/30"
               placeholder="(514) 123-4567"
             />
           </div>
 
-          {/* Email (Full Width) */}
-          {bookingType === 'event' && (
-            <div className="space-y-2 md:col-span-2">
-              <label className="text-xs font-bold uppercase tracking-wider text-[#1a1c19]/60 flex items-center gap-2">
-                <Mail size={14} />
-                {lang === 'fr' ? 'Courriel' : 'Email Address'}
-              </label>
-              <input 
-                type="email" required name="email" value={formData.email} onChange={handleInputChange}
-                className="w-full bg-[#f8f6f0] border-none rounded-xl px-4 py-3 text-[#1a1c19] focus:ring-2 focus:ring-[#cfbe91] transition-shadow placeholder:text-[#1a1c19]/30"
-                placeholder={lang === 'fr' ? 'jean@exemple.com' : 'john@example.com'}
-              />
-            </div>
-          )}
+          {/* Email */}
+          <div className="space-y-2 md:col-span-2">
+            <label className="text-xs font-bold uppercase tracking-wider text-[#1a1c19]/60 flex items-center gap-2">
+              <Mail size={14} />
+              {lang === 'fr' ? 'Courriel' : 'Email Address'}
+            </label>
+            <input
+              type="email" required name="email" value={formData.email} onChange={handleInputChange}
+              className="w-full bg-[#f8f6f0] border-none rounded-xl px-4 py-3 text-[#1a1c19] focus:ring-2 focus:ring-[#cfbe91] transition-shadow placeholder:text-[#1a1c19]/30"
+              placeholder={lang === 'fr' ? 'jean@exemple.com' : 'john@example.com'}
+            />
+          </div>
 
           {/* Date */}
           <div className="space-y-2">
@@ -237,7 +135,7 @@ export default function ReservationForm({ lang }: ReservationFormProps) {
               <Calendar size={14} />
               {lang === 'fr' ? 'Date' : 'Date'}
             </label>
-            <input 
+            <input
               type="date" required min={minDate} name="date" value={formData.date} onChange={handleInputChange}
               className="w-full bg-[#f8f6f0] border-none rounded-xl px-4 py-3 text-[#1a1c19] focus:ring-2 focus:ring-[#cfbe91] transition-shadow"
             />
@@ -257,27 +155,14 @@ export default function ReservationForm({ lang }: ReservationFormProps) {
               className="w-full bg-[#f8f6f0] border-none rounded-xl px-4 py-3 text-[#1a1c19] focus:ring-2 focus:ring-[#cfbe91] transition-shadow appearance-none"
             >
               <option value="" disabled>-- : --</option>
-              {timeSlots.length > 0
-                ? timeSlots.map(t => <option key={t} value={t}>{formatTime(t)}</option>)
-                : <>
-                    <option value="17:00">{formatTime('17:00')}</option>
-                    <option value="17:30">{formatTime('17:30')}</option>
-                    <option value="18:00">{formatTime('18:00')}</option>
-                    <option value="18:30">{formatTime('18:30')}</option>
-                    <option value="19:00">{formatTime('19:00')}</option>
-                    <option value="19:30">{formatTime('19:30')}</option>
-                    <option value="20:00">{formatTime('20:00')}</option>
-                    <option value="20:30">{formatTime('20:30')}</option>
-                    <option value="21:00">{formatTime('21:00')}</option>
-                    <option value="21:30">{formatTime('21:30')}</option>
-                  </>
-              }
+              {['11:00','11:30','12:00','12:30','13:00','13:30','14:00','14:30','15:00','15:30',
+                '16:00','16:30','17:00','17:30','18:00','18:30','19:00','19:30','20:00','20:30'].map(t => {
+                const [h, m] = t.split(':').map(Number);
+                const suffix = h >= 12 ? 'PM' : 'AM';
+                const h12 = h > 12 ? h - 12 : h === 0 ? 12 : h;
+                return <option key={t} value={t}>{`${t} (${h12}:${m === 0 ? '00' : m} ${suffix})`}</option>;
+              })}
             </select>
-            {formData.date && timeSlots.length === 0 && (
-              <p className="text-[10px] text-red-500 mt-1">
-                {lang === 'fr' ? 'Aucun créneau disponible ce jour.' : 'No available slots on this day.'}
-              </p>
-            )}
           </div>
 
           {/* Guests */}
@@ -286,55 +171,51 @@ export default function ReservationForm({ lang }: ReservationFormProps) {
               <Users size={14} />
               {lang === 'fr' ? 'Invités' : 'Guests'}
             </label>
-            <input 
-              type="number" required min={minGuests} max={maxGuests} name="guests" value={formData.guests} onChange={handleInputChange}
+            <input
+              type="number" required min={40} max={500} name="guests" value={formData.guests} onChange={handleInputChange}
               className="w-full bg-[#f8f6f0] border-none rounded-xl px-4 py-3 text-[#1a1c19] focus:ring-2 focus:ring-[#cfbe91] transition-shadow"
             />
             <p className="text-[10px] text-[#1a1c19]/50 mt-1">
-              {lang === 'fr' 
-                ? `${minGuests === 1 ? 'Maximum' : 'De '+minGuests+' à'} ${maxGuests} personnes` 
-                : `${minGuests === 1 ? 'Maximum' : 'From '+minGuests+' to'} ${maxGuests} people`}
+              {lang === 'fr' ? 'De 40 à 500 personnes' : 'From 40 to 500 people'}
             </p>
           </div>
 
-          {/* Event Type (Only if event booking) */}
-          {bookingType === 'event' && (
-            <div className="space-y-2">
-              <label className="text-xs font-bold uppercase tracking-wider text-[#1a1c19]/60 flex items-center gap-2">
-                <GlassWater size={14} />
-                {lang === 'fr' ? "Type d'événement" : 'Event Type'}
-              </label>
-              <select 
-                required name="eventType" value={formData.eventType} onChange={handleInputChange}
-                className="w-full bg-[#f8f6f0] border-none rounded-xl px-4 py-3 text-[#1a1c19] focus:ring-2 focus:ring-[#cfbe91] transition-shadow appearance-none"
-              >
-                <option value="" disabled>{lang === 'fr' ? 'Sélectionner...' : 'Select...'}</option>
-                <option value="birthday">{lang === 'fr' ? 'Anniversaire' : 'Birthday'}</option>
-                <option value="corporate">{lang === 'fr' ? 'Événement corporatif' : 'Corporate Event'}</option>
-                <option value="wedding">{lang === 'fr' ? 'Mariage / Fiançailles' : 'Wedding / Engagement'}</option>
-                <option value="other">{lang === 'fr' ? 'Autre' : 'Other'}</option>
-              </select>
-            </div>
-          )}
+          {/* Event Type */}
+          <div className="space-y-2">
+            <label className="text-xs font-bold uppercase tracking-wider text-[#1a1c19]/60 flex items-center gap-2">
+              <GlassWater size={14} />
+              {lang === 'fr' ? "Type d'événement" : 'Event Type'}
+            </label>
+            <select
+              required name="eventType" value={formData.eventType} onChange={handleInputChange}
+              className="w-full bg-[#f8f6f0] border-none rounded-xl px-4 py-3 text-[#1a1c19] focus:ring-2 focus:ring-[#cfbe91] transition-shadow appearance-none"
+            >
+              <option value="" disabled>{lang === 'fr' ? 'Sélectionner...' : 'Select...'}</option>
+              <option value="birthday">{lang === 'fr' ? 'Anniversaire' : 'Birthday'}</option>
+              <option value="corporate">{lang === 'fr' ? 'Événement corporatif' : 'Corporate Event'}</option>
+              <option value="wedding">{lang === 'fr' ? 'Mariage / Fiançailles' : 'Wedding / Engagement'}</option>
+              <option value="other">{lang === 'fr' ? 'Autre' : 'Other'}</option>
+            </select>
+          </div>
 
-          {/* Special Requests (Full Width) */}
-          <div className={`space-y-2 ${bookingType === 'dining' ? 'md:col-span-1' : 'md:col-span-2'}`}>
+          {/* Special Requests */}
+          <div className="space-y-2 md:col-span-2">
             <label className="text-xs font-bold uppercase tracking-wider text-[#1a1c19]/60 flex items-center gap-2">
               <MessageSquare size={14} />
               {lang === 'fr' ? 'Demandes spéciales' : 'Special Requests'}
             </label>
-            <textarea 
-              name="requests" value={formData.requests} onChange={handleInputChange} rows={1}
+            <textarea
+              name="requests" value={formData.requests} onChange={handleInputChange} rows={2}
               className="w-full bg-[#f8f6f0] border-none rounded-xl px-4 py-3 text-[#1a1c19] focus:ring-2 focus:ring-[#cfbe91] transition-shadow placeholder:text-[#1a1c19]/30 resize-none"
-              placeholder={lang === 'fr' ? 'Allergies, chaises hautes, etc.' : 'Allergies, high chairs, etc.'}
+              placeholder={lang === 'fr' ? 'Décrivez votre événement, besoins particuliers…' : 'Describe your event, any special requirements…'}
             />
           </div>
         </div>
 
         {status === 'error' && (
           <p className="text-red-600 text-sm font-medium bg-red-50 p-3 rounded-lg border border-red-100">
-            {lang === 'fr' 
-              ? 'Une erreur est survenue lors de l\'envoi. Veuillez réessayer.' 
+            {lang === 'fr'
+              ? "Une erreur est survenue lors de l'envoi. Veuillez réessayer."
               : 'An error occurred while sending. Please try again.'}
           </p>
         )}
@@ -343,16 +224,16 @@ export default function ReservationForm({ lang }: ReservationFormProps) {
           type="submit"
           disabled={status === 'submitting'}
           className={`w-full py-4 px-8 rounded-xl font-bold tracking-widest uppercase transition-all duration-300 shadow-xl ${
-            status === 'submitting' 
-              ? 'bg-[#1a1c19]/50 text-white cursor-not-allowed' 
+            status === 'submitting'
+              ? 'bg-[#1a1c19]/50 text-white cursor-not-allowed'
               : 'bg-[#cfbe91] text-black hover:bg-[#bda871] hover:-translate-y-1 hover:shadow-2xl'
           }`}
         >
-          {status === 'submitting' 
-            ? (lang === 'fr' ? 'Envoi en cours...' : 'Sending...') 
-            : (lang === 'fr' ? 'Confirmer la réservation' : 'Confirm Booking')}
+          {status === 'submitting'
+            ? (lang === 'fr' ? 'Envoi en cours...' : 'Sending...')
+            : (lang === 'fr' ? 'Envoyer la demande' : 'Send Inquiry')}
         </button>
-      </form>}
+      </form>
     </div>
   );
 }
