@@ -809,7 +809,7 @@ export default function HomePage() {
             transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
             className="absolute bottom-8 left-6 md:bottom-12 md:left-12 z-20 pointer-events-none"
           >
-            <h1 className="font-serif text-[4.5rem] leading-[0.85] md:text-[8rem] lg:text-[10vw] xl:text-[11vw] uppercase tracking-tight text-[#efe7d2] drop-shadow-2xl">
+            <h1 className="font-serif text-[3.2rem] sm:text-[4.5rem] leading-[0.85] md:text-[8rem] lg:text-[10vw] xl:text-[11vw] uppercase tracking-tight text-[#efe7d2] drop-shadow-2xl">
               <ShinyText text="1001" className="lining-nums inline-block" color="#efe7d2" shineColor="#cfbe91" speed={3} /> <br /> 
               <ShinyText text="NUITS" className="inline-block" color="#efe7d2" shineColor="#cfbe91" speed={3} delay={0.5} />
             </h1>
@@ -1024,7 +1024,7 @@ export default function HomePage() {
           )}
 
           {/* Menu Items */}
-          <div className="flex flex-col gap-12">
+          <div className="flex flex-col gap-6 sm:gap-10">
             {MENU_CATEGORIES[activeCategory].items.map((item, idx) => (
               <motion.div
                 key={item.id}
@@ -1032,33 +1032,31 @@ export default function HomePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "0px 0px -80px 0px" }}
                 transition={{ delay: idx * 0.1, duration: 0.6 }}
-                className="flex flex-col gap-8 group"
+                className="flex flex-col gap-2 group"
               >
                 {/* Item Details */}
-                <div className="flex-1 flex flex-col justify-center sm:pt-4 w-full">
-                  <div className="flex justify-between items-end gap-3 w-full">
-                    <h4 className="font-serif text-[1.4rem] sm:text-2xl tracking-wide text-[#1a1c19] flex items-baseline gap-3 shrink-0">
+                <div className="flex-1 flex flex-col justify-center w-full">
+                  <div className="flex items-end gap-2 w-full min-w-0">
+                    <h4 className="font-serif text-[1.05rem] sm:text-[1.4rem] md:text-2xl tracking-wide text-[#1a1c19] shrink min-w-0">
                       {item.id && !item.id.includes("T01") && (
-                        <span className="text-xs sm:text-sm font-sans font-bold text-[#8a7a4a] tracking-widest uppercase align-middle shrink-0">
+                        <span className="text-[10px] sm:text-xs font-sans font-bold text-[#8a7a4a] tracking-widest uppercase mr-1.5">
                           {item.id}.
                         </span>
                       )}
-                      <span>
-                        {lang === "fr" ? item.name_fr : item.name_en}
-                      </span>
+                      {lang === "fr" ? item.name_fr : item.name_en}
                     </h4>
-                    <div className="flex-1 border-b-[1.5px] border-dotted border-[#1a1c19]/30 mx-2 relative top-[-8px] min-w-[16px]"></div>
-                    <span className="font-serif text-[1.4rem] sm:text-2xl tracking-wider text-[#1a1c19] shrink-0">
+                    <div className="flex-1 border-b-[1.5px] border-dotted border-[#1a1c19]/30 mx-1 sm:mx-2 relative top-[-5px] sm:top-[-8px] min-w-[8px] shrink-0"></div>
+                    <span className="font-serif text-[1.05rem] sm:text-[1.4rem] md:text-2xl tracking-wider text-[#1a1c19] shrink-0">
                       {item.price}
                     </span>
                   </div>
                   {(item as any).name_zh && (
-                    <p className="font-serif text-[1.4rem] sm:text-2xl tracking-wide text-[#1a1c19]/50 mt-1">
+                    <p className="font-serif text-[1.05rem] sm:text-[1.4rem] md:text-2xl tracking-wide text-[#1a1c19]/50 mt-1">
                       {(item as any).name_zh}
                     </p>
                   )}
                   {(lang === "fr" ? item.desc_fr : item.desc_en) && (
-                    <p className="text-[13px] md:text-sm text-[#1a1c19]/70 mt-3 font-medium tracking-wide">
+                    <p className="text-[12px] sm:text-[13px] md:text-sm text-[#1a1c19]/70 mt-2 font-medium tracking-wide">
                       {lang === "fr" ? item.desc_fr : item.desc_en}
                     </p>
                   )}
@@ -1121,7 +1119,7 @@ export default function HomePage() {
       >
         {/* Top Marquee */}
         <div className="absolute top-0 left-0 right-0 pointer-events-none opacity-[0.5] h-1/4 flex items-start justify-center -z-0">
-          <CurvedLoop marqueeText="1001 NUITS ✦ 1001 NIGHTS ✦ 1001 NUITS ✦ 1001 NIGHTS" speed={0.4} curveAmount={200} direction="left" className="text-[3.5rem] md:text-[4.5rem] font-serif italic tracking-[0.35em] font-light text-[#000000]" />
+          <CurvedLoop marqueeText="1001 NUITS ✦ 1001 NIGHTS ✦ 1001 NUITS ✦ 1001 NIGHTS" speed={0.4} curveAmount={200} direction="left" className="text-[1.6rem] sm:text-[2.5rem] md:text-[4.5rem] font-serif italic tracking-[0.35em] font-light text-[#000000]" />
         </div>
 
         {/* Content Container */}
@@ -1145,7 +1143,7 @@ export default function HomePage() {
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true, margin: "0px 0px -80px 0px" }}
                 transition={{ duration: 0.9, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                className="absolute -bottom-10 -right-10 w-2/3 max-w-[240px] aspect-square rounded-[2rem] overflow-hidden border-[12px] border-[#faf8f5] shadow-2xl"
+                className="absolute -bottom-6 -right-4 sm:-bottom-10 sm:-right-10 w-1/2 sm:w-2/3 max-w-[180px] sm:max-w-[240px] aspect-square rounded-[2rem] overflow-hidden border-[8px] sm:border-[12px] border-[#faf8f5] shadow-2xl"
               >
                 <img
                   src="https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&q=80&w=800"
@@ -1204,7 +1202,7 @@ export default function HomePage() {
 
         {/* Bottom Marquee */}
         <div className="absolute bottom-0 left-0 right-0 pointer-events-none opacity-[0.5] h-1/4 flex items-end justify-center -z-0">
-          <CurvedLoop marqueeText="1001 NUITS ✦ 1001 NIGHTS ✦ 1001 NUITS ✦ 1001 NIGHTS" speed={0.4} curveAmount={-200} direction="right" className="text-[3.5rem] md:text-[4.5rem] font-serif italic tracking-[0.35em] font-light text-[#000000]" />
+          <CurvedLoop marqueeText="1001 NUITS ✦ 1001 NIGHTS ✦ 1001 NUITS ✦ 1001 NIGHTS" speed={0.4} curveAmount={-200} direction="right" className="text-[1.6rem] sm:text-[2.5rem] md:text-[4.5rem] font-serif italic tracking-[0.35em] font-light text-[#000000]" />
         </div>
       </section>
 

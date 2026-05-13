@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { createPortal } from "react-dom";
 import { Menu, X } from "lucide-react";
 import { cn } from "../lib/utils";
 
@@ -108,8 +109,8 @@ export default function Navbar({
         </div>
       </div>
 
-      {/* Mobile Menu Overlay */}
-      {menuOpen && (
+      {/* Mobile Menu Overlay — rendered via portal to escape overflow:hidden + transform parent */}
+      {menuOpen && createPortal(
         <div className="fixed inset-0 z-[200] bg-[#0a0b0a]/97 backdrop-blur-2xl flex flex-col lg:hidden">
           <div className="flex justify-between items-center p-6 border-b border-[#333330]">
             <div
@@ -172,7 +173,8 @@ export default function Navbar({
               </div>
             </div>
           )}
-        </div>
+        </div>,
+        document.body
       )}
     </>
   );
