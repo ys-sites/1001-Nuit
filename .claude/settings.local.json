@@ -24,7 +24,8 @@
       "PowerShell(Get-ChildItem \"C:\\\\Users\\\\Sharafath\\\\Desktop\\\\Website\\\\1001 Nuit\\\\src\" -Recurse -Name | Where-Object { $_ -match \"\\\\.\\(html|css|tsx|ts|jsx|js\\)$\" } | Select-Object -First 60)",
       "Bash(git add *)",
       "Bash(git commit -m ' *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Bash(npx tsc *)"
     ]
   }
 }

@@ -201,19 +201,19 @@ export default function ScrollTextReveal({
 
       if (!wasDispersing) {
         // Coming from fully dispersed: slide in from below
-        text.style.transform = "translateY(60px)";
+        text.style.transform = "translateY(30px)";
       }
       // Coming from dispersing: text is already at translateY(0), just fade in — no blank frame
 
       // One rAF to let the browser apply the reset before starting the transition
       requestAnimationFrame(() => {
         text.style.transition =
-          `opacity 0.7s ease ${delay}s, transform 0.85s cubic-bezier(0.16,1,0.3,1) ${delay}s`;
+          `opacity 0.35s ease ${delay}s, transform 0.43s cubic-bezier(0.16,1,0.3,1) ${delay}s`;
         text.style.opacity   = "1";
         text.style.transform = "translateY(0px)";
 
         // Promote to stable after the full animation duration has elapsed
-        const ms = (delay + 0.85) * 1000 + 50;
+        const ms = (delay + 0.43) * 1000 + 50;
         setTimeout(() => {
           if (state.current === "rising") state.current = "stable";
         }, ms);
@@ -242,7 +242,7 @@ export default function ScrollTextReveal({
       if (!ctx2d || psRef.current.length === 0) {
         cv.style.display  = "none";
         state.current     = "dispersed";
-        text.style.transform = "translateY(60px)";
+        text.style.transform = "translateY(30px)";
         return;
       }
 
@@ -270,7 +270,7 @@ export default function ScrollTextReveal({
           psRef.current        = [];
           state.current        = "dispersed";
           // Pre-position for next rise-up
-          text.style.transform = "translateY(60px)";
+          text.style.transform = "translateY(30px)";
         }
       };
 
@@ -307,7 +307,7 @@ export default function ScrollTextReveal({
       <div
         ref={textRef}
         className={className}
-        style={{ opacity: 0, transform: "translateY(60px)" }}
+        style={{ opacity: 0, transform: "translateY(30px)" }}
       >
         {children}
       </div>

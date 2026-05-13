@@ -198,7 +198,8 @@ const MENU_CATEGORIES = [
         name_fr: "Rôtie épaisse au bœuf épicé et œufs brouillés",
         name_en: "Spiced Diced Beef and Scrambled Eggs Toast",
         price: "$13.99",
-        desc_fr: "五香牛肉滑蛋厚多士",
+        name_zh: "五香牛肉滑蛋厚多士",
+        desc_fr: "",
         desc_en: "",
       },
       {
@@ -206,7 +207,8 @@ const MENU_CATEGORIES = [
         name_fr: "Rôtie épaisse au bœuf satay et œufs satay",
         name_en: "Satay Beef and Scrambled Eggs Toast",
         price: "$13.99",
-        desc_fr: "沙爹牛肉滑蛋厚多士",
+        name_zh: "沙爹牛肉滑蛋厚多士",
+        desc_fr: "",
         desc_en: "",
       },
       {
@@ -214,7 +216,8 @@ const MENU_CATEGORIES = [
         name_fr: "Rôtie au charbon avec beurre d'arachide",
         name_en: "Charcoal Toast with Peanut Butter",
         price: "$8.99",
-        desc_fr: "花生酱黑炭厚多士",
+        name_zh: "花生酱黑炭厚多士",
+        desc_fr: "",
         desc_en: "",
       },
       {
@@ -222,7 +225,8 @@ const MENU_CATEGORIES = [
         name_fr: "Rôtie au charbon avec Milo et lait condensé",
         name_en: "Charcoal Toast with Milo & Condensed Milk",
         price: "$8.99",
-        desc_fr: "美禄炼奶黑炭厚多士",
+        name_zh: "美禄炼奶黑炭厚多士",
+        desc_fr: "",
         desc_en: "",
       },
       {
@@ -230,7 +234,8 @@ const MENU_CATEGORIES = [
         name_fr: "Pain doré au beurre d'arachide et lait condensé",
         name_en: "French Toast with Peanut Butter & Condensed Milk",
         price: "$12.99",
-        desc_fr: "花生炼奶西多士",
+        name_zh: "花生炼奶西多士",
+        desc_fr: "",
         desc_en: "",
       },
       {
@@ -238,7 +243,8 @@ const MENU_CATEGORIES = [
         name_fr: "Rôtie au charbon avec beurre et lait condensé",
         name_en: "Charcoal Toast with Butter & Condensed Milk",
         price: "$8.99",
-        desc_fr: "牛油炼奶黑炭厚多士",
+        name_zh: "牛油炼奶黑炭厚多士",
+        desc_fr: "",
         desc_en: "",
       },
       {
@@ -246,7 +252,8 @@ const MENU_CATEGORIES = [
         name_fr: "Rôtie au charbon avec œufs",
         name_en: "Charcoal Toast with Eggs",
         price: "$9.99",
-        desc_fr: "黑炭厚多士",
+        name_zh: "黑炭厚多士",
+        desc_fr: "",
         desc_en: "",
       },
       {
@@ -254,7 +261,8 @@ const MENU_CATEGORIES = [
         name_fr: "Rôtie style \"Lau Nai Wah\" à l'Ovaltine et lait condensé",
         name_en: "Toast with Ovaltine & Condensed Milk",
         price: "$9.99",
-        desc_fr: "漏奶华",
+        name_zh: "漏奶华",
+        desc_fr: "",
         desc_en: "",
       }
     ]
@@ -268,7 +276,8 @@ const MENU_CATEGORIES = [
         name_fr: "Riz frit aux crevettes sakura et poulet",
         name_en: "Sakura Shrimp and Chicken Fried Rice",
         price: "$22.99",
-        desc_fr: "樱花虾鸡拉炒饭",
+        name_zh: "樱花虾鸡拉炒饭",
+        desc_fr: "",
         desc_en: "",
       },
       {
@@ -276,7 +285,8 @@ const MENU_CATEGORIES = [
         name_fr: "Bœuf BBQ avec 2 œufs au plat sur riz au gras de bœuf ou riz blanc",
         name_en: "BBQ Beef with 2 Sunny Side Up Eggs on Beef Tallow or White Rice",
         price: "$23.99",
-        desc_fr: "韶然销魂牛油拥饭(可改白饭)",
+        name_zh: "韶然销魂牛油拥饭(可改白饭)",
+        desc_fr: "",
         desc_en: "",
       },
       {
@@ -284,7 +294,8 @@ const MENU_CATEGORIES = [
         name_fr: "Poulet sauce poivre noir sur riz",
         name_en: "Chicken with Black Pepper Sauce on Rice",
         price: "$21.99",
-        desc_fr: "黑椒汁鸡扒饭",
+        name_zh: "黑椒汁鸡扒饭",
+        desc_fr: "",
         desc_en: "",
       },
       {
@@ -292,7 +303,8 @@ const MENU_CATEGORIES = [
         name_fr: "Crevettes, bœuf et œufs brouillés sur riz",
         name_en: "Prawns and Beef with Scrambled Eggs on Rice",
         price: "$24.99",
-        desc_fr: "香葱大虾牛肉滑蛋饭",
+        name_zh: "香葱大虾牛肉滑蛋饭",
+        desc_fr: "",
         desc_en: "",
       },
       {
@@ -300,7 +312,8 @@ const MENU_CATEGORIES = [
         name_fr: "Bœuf épicé en dés avec œufs brouillés sur riz",
         name_en: "Spiced Diced Beef and Scrambled Eggs on Rice",
         price: "$22.99",
-        desc_fr: "五香牛肉丁滑蛋饭",
+        name_zh: "五香牛肉丁滑蛋饭",
+        desc_fr: "",
         desc_en: "",
       },
       {
@@ -308,7 +321,8 @@ const MENU_CATEGORIES = [
         name_fr: "Spaghetti sauté au bœuf sauce poivre noir",
         name_en: "Stir-fried Spaghetti with Beef in Black Pepper Sauce",
         price: "$22.99",
-        desc_fr: "黑椒牛肉炒意粉",
+        name_zh: "黑椒牛肉炒意粉",
+        desc_fr: "",
         desc_en: "",
       },
       {
@@ -316,7 +330,8 @@ const MENU_CATEGORIES = [
         name_fr: "Bœuf haché et œufs brouillés sur riz",
         name_en: "Scrambled Eggs and Minced Beef on Rice",
         price: "$21.99",
-        desc_fr: "滑蛋免治肉饭",
+        name_zh: "滑蛋免治肉饭",
+        desc_fr: "",
         desc_en: "",
       },
       {
@@ -324,7 +339,8 @@ const MENU_CATEGORIES = [
         name_fr: "Poulet sauce aux oignons sur riz",
         name_en: "Chicken with Onion Sauce on Rice",
         price: "$21.99",
-        desc_fr: "洋葱鸡扒饭",
+        name_zh: "洋葱鸡扒饭",
+        desc_fr: "",
         desc_en: "",
       },
       {
@@ -332,7 +348,8 @@ const MENU_CATEGORIES = [
         name_fr: "Côtes de bœuf AAA sauce poivre noir avec œuf au plat sur riz",
         name_en: "Black Pepper Beef Ribs with Sunny Side Up Egg on Rice",
         price: "$26.99",
-        desc_fr: "AAA黑椒牛仔骨煎蛋饭",
+        name_zh: "AAA黑椒牛仔骨煎蛋饭",
+        desc_fr: "",
         desc_en: "",
       },
       {
@@ -340,7 +357,8 @@ const MENU_CATEGORIES = [
         name_fr: "Côtes de riz plates sautées au bœuf style Hong Kong",
         name_en: "Hong Kong Style Stir-fried Beef Flat Rice Noodles",
         price: "$23.99",
-        desc_fr: "干炒牛河",
+        name_zh: "干炒牛河",
+        desc_fr: "",
         desc_en: "",
       },
       {
@@ -348,7 +366,8 @@ const MENU_CATEGORIES = [
         name_fr: "Pad thaï (poulet / bœuf / crevettes)",
         name_en: "Pad Thai (Chicken / Beef / Shrimp)",
         price: "$12.99 / $23.99 / $23.99",
-        desc_fr: "炒泰式河粉 (鸡／牛／虾)",
+        name_zh: "炒泰式河粉 (鸡／牛／虾)",
+        desc_fr: "",
         desc_en: "",
       },
       {
@@ -356,7 +375,8 @@ const MENU_CATEGORIES = [
         name_fr: "Riz frit à l'ananas (poulet / bœuf / crevettes)",
         name_en: "Pineapple Fried Rice (Chicken / Beef / Shrimp)",
         price: "$23.99 / $25.99",
-        desc_fr: "菠萝炒饭(鸡／牛／虾)",
+        name_zh: "菠萝炒饭(鸡／牛／虾)",
+        desc_fr: "",
         desc_en: "",
       }
     ]
@@ -394,7 +414,8 @@ const MENU_CATEGORIES = [
         name_fr: "Gratin \"duo\" – spaghetti bolognaise et poulet sauce tomate sur riz",
         name_en: "Bolognese Spaghetti and Tomato Chicken Steak on Rice",
         price: "$21.99",
-        desc_fr: "鸳鸯两煎",
+        name_zh: "鸳鸯两煎",
+        desc_fr: "Au choix : riz ou spaghetti",
         desc_en: "Choice of: Rice or Spaghetti",
       },
       {
@@ -432,7 +453,8 @@ const MENU_CATEGORIES = [
         name_fr: "Vermicelles de riz sautés végétariens",
         name_en: "Vegetarian Stir-fried Rice Vermicelli",
         price: "$14.99",
-        desc_fr: "素炒米粉",
+        name_zh: "素炒米粉",
+        desc_fr: "",
         desc_en: "",
       },
       {
@@ -440,7 +462,8 @@ const MENU_CATEGORIES = [
         name_fr: "Riz frit végétarien (ananas en option)",
         name_en: "Vegetarian Fried Rice (Pineapple Optional)",
         price: "$13.99",
-        desc_fr: "炒饭（素，可加菠萝）",
+        name_zh: "炒饭（素，可加菠萝）",
+        desc_fr: "",
         desc_en: "",
       },
       {
@@ -448,7 +471,8 @@ const MENU_CATEGORIES = [
         name_fr: "Tofu tendre doré poêlé",
         name_en: "Pan-fried Golden Soft Tofu",
         price: "$12.99",
-        desc_fr: "煎黄金嫩豆腐",
+        name_zh: "煎黄金嫩豆腐",
+        desc_fr: "",
         desc_en: "",
       },
       {
@@ -456,7 +480,8 @@ const MENU_CATEGORIES = [
         name_fr: "Mapo tofu végétarien",
         name_en: "Vegetarian Mapo Tofu",
         price: "$15.99",
-        desc_fr: "麻婆豆腐（素）",
+        name_zh: "麻婆豆腐（素）",
+        desc_fr: "",
         desc_en: "",
       },
       {
@@ -464,7 +489,8 @@ const MENU_CATEGORIES = [
         name_fr: "Tofu braisé à la sauce soya",
         name_en: "Braised Tofu in Soy Sauce",
         price: "$13.99",
-        desc_fr: "红烧豆腐",
+        name_zh: "红烧豆腐",
+        desc_fr: "",
         desc_en: "",
       }
     ]
@@ -478,7 +504,8 @@ const MENU_CATEGORIES = [
         name_fr: "Nouilles Lo Ding au curry et poitrine de bœuf braisée",
         name_en: "Curry Beef Brisket Lo Ding",
         price: "$18.99",
-        desc_fr: "咖喱牛腩汤捞一丁",
+        name_zh: "咖喱牛腩汤捞一丁",
+        desc_fr: "",
         desc_en: "",
       },
       {
@@ -486,7 +513,8 @@ const MENU_CATEGORIES = [
         name_fr: "Nouilles Lo Ding au poulet sauce soja et œufs brouillés",
         name_en: "Soy Sauce Chicken & Scrambled Egg Lo Ding",
         price: "$15.99",
-        desc_fr: "豉油皇鸡滑蛋汤捞一丁",
+        name_zh: "豉油皇鸡滑蛋汤捞一丁",
+        desc_fr: "",
         desc_en: "",
       },
       {
@@ -494,7 +522,8 @@ const MENU_CATEGORIES = [
         name_fr: "Nouilles Lo Ding au bœuf satay et œufs brouillés",
         name_en: "Satay Beef & Scrambled Egg Lo Ding",
         price: "$15.99",
-        desc_fr: "豉油皇沙爹牛肉滑蛋捞一丁",
+        name_zh: "豉油皇沙爹牛肉滑蛋捞一丁",
+        desc_fr: "",
         desc_en: "",
       },
       {
@@ -502,7 +531,8 @@ const MENU_CATEGORIES = [
         name_fr: "Nouilles Lo Ding au luncheon meat halal et œufs brouillés",
         name_en: "Halal Luncheon Meat & Scrambled Egg Lo Ding",
         price: "$15.99",
-        desc_fr: "Halal 午餐肉滑蛋捞一丁",
+        name_zh: "Halal 午餐肉滑蛋捞一丁",
+        desc_fr: "",
         desc_en: "",
       }
     ]
@@ -516,32 +546,36 @@ const MENU_CATEGORIES = [
         name_fr: "Côtelettes d'agneau sur plaque chaude",
         name_en: "Sizzling Lamb Chops",
         price: "$39.99",
-        desc_fr: "铁板羊扒 (préparation env. 20 min / 稍候约20分钟)",
-        desc_en: "prep time approx. 20 min",
+        name_zh: "铁板羊扒",
+        desc_fr: "",
+        desc_en: "",
       },
       {
         id: "SP02",
         name_fr: "Contre-filet AAA Angus sur plaque chaude",
         name_en: "AAA Angus Striploin Steak",
         price: "$36.99",
-        desc_fr: "AAA安格斯西冷牛扒 (préparation env. 20 min / 稍候约20分钟)",
-        desc_en: "prep time approx. 20 min",
+        name_zh: "AAA安格斯西冷牛扒",
+        desc_fr: "",
+        desc_en: "",
       },
       {
         id: "SP03",
         name_fr: "Poulet à l'ail sur plaque chaude",
         name_en: "Sizzling Garlic Chicken Chop",
         price: "$28.99",
-        desc_fr: "铁板蒜蓉鸡扒 (préparation env. 20 min / 稍候约20分钟)",
-        desc_en: "prep time approx. 20 min",
+        name_zh: "铁板蒜蓉鸡扒",
+        desc_fr: "",
+        desc_en: "",
       },
       {
         id: "SP04",
         name_fr: "Filet de sole pané et poulet sur plaque chaude",
         name_en: "Sizzling Breaded Sole & Chicken Chop",
         price: "$31.99",
-        desc_fr: "铁板吉列龙利鸡扒 (préparation env. 20 min / 稍候约20分钟)",
-        desc_en: "prep time approx. 20 min",
+        name_zh: "铁板吉列龙利鸡扒",
+        desc_fr: "",
+        desc_en: "",
       }
     ]
   },
@@ -554,7 +588,8 @@ const MENU_CATEGORIES = [
         name_fr: "Cari de bœuf braisé (sans accompagnement)",
         name_en: "Curry Beef Brisket (Only)",
         price: "$29.99",
-        desc_fr: "咖喱牛腩净食",
+        name_zh: "咖喱牛腩净食",
+        desc_fr: "",
         desc_en: "",
       },
       {
@@ -562,7 +597,8 @@ const MENU_CATEGORIES = [
         name_fr: "Cari de côtelettes d'agneau (sans accompagnement)",
         name_en: "Curry Lamb Chop (Only)",
         price: "$33.99",
-        desc_fr: "咖喱羊排净食",
+        name_zh: "咖喱羊排净食",
+        desc_fr: "",
         desc_en: "",
       },
       {
@@ -570,7 +606,8 @@ const MENU_CATEGORIES = [
         name_fr: "Cari de légumes variés avec œuf sur riz",
         name_en: "Curry Mixed Vegetables with Egg on Rice",
         price: "$16.99",
-        desc_fr: "咖喱杂菜蛋饭",
+        name_zh: "咖喱杂菜蛋饭",
+        desc_fr: "",
         desc_en: "",
       },
       {
@@ -578,7 +615,8 @@ const MENU_CATEGORIES = [
         name_fr: "Cari de bœuf braisé sur riz",
         name_en: "Curry Beef Brisket on Rice",
         price: "$22.99",
-        desc_fr: "咖喱牛腩饭",
+        name_zh: "咖喱牛腩饭",
+        desc_fr: "",
         desc_en: "",
       },
       {
@@ -586,7 +624,8 @@ const MENU_CATEGORIES = [
         name_fr: "Cari de poulet sur riz",
         name_en: "Curry Chicken Steak on Rice",
         price: "$18.99",
-        desc_fr: "咖喱鸡扒饭",
+        name_zh: "咖喱鸡扒饭",
+        desc_fr: "",
         desc_en: "",
       },
       {
@@ -594,7 +633,8 @@ const MENU_CATEGORIES = [
         name_fr: "Cari de bœuf sur riz",
         name_en: "Curry Beef on Rice",
         price: "$21.99",
-        desc_fr: "咖喱牛肉饭",
+        name_zh: "咖喱牛肉饭",
+        desc_fr: "",
         desc_en: "",
       },
       {
@@ -602,7 +642,8 @@ const MENU_CATEGORIES = [
         name_fr: "Cari de cuisse de poulet frit sur riz",
         name_en: "Curry Chicken Leg on Rice",
         price: "$19.99",
-        desc_fr: "咖喱生炸鸡腿饭",
+        name_zh: "咖喱生炸鸡腿饭",
+        desc_fr: "",
         desc_en: "",
       },
       {
@@ -610,7 +651,8 @@ const MENU_CATEGORIES = [
         name_fr: "Cari de côtelettes d'agneau sur riz",
         name_en: "Curry Lamb Chop on Rice",
         price: "$27.99",
-        desc_fr: "咖喱羊排饭",
+        name_zh: "咖喱羊排饭",
+        desc_fr: "",
         desc_en: "",
       }
     ]
@@ -624,7 +666,8 @@ const MENU_CATEGORIES = [
         name_fr: "Thé au lait à la hongkongaise",
         name_en: "Hong Kong Style Milk Tea",
         price: "$5.99",
-        desc_fr: "港式奶茶",
+        name_zh: "港式奶茶",
+        desc_fr: "",
         desc_en: "",
       },
       {
@@ -632,7 +675,8 @@ const MENU_CATEGORIES = [
         name_fr: "Café",
         name_en: "Coffee",
         price: "$4.99",
-        desc_fr: "咖啡",
+        name_zh: "咖啡",
+        desc_fr: "",
         desc_en: "",
       },
       {
@@ -640,7 +684,8 @@ const MENU_CATEGORIES = [
         name_fr: "Café et thé au lait mélangés (Yuenyeung)",
         name_en: "Coffee & Milk Tea Mix",
         price: "$5.99",
-        desc_fr: "鸳鸯",
+        name_zh: "鸳鸯",
+        desc_fr: "",
         desc_en: "",
       },
       {
@@ -648,7 +693,8 @@ const MENU_CATEGORIES = [
         name_fr: "Thé au citron à la hongkongaise",
         name_en: "Hong Kong Style Lemon Tea",
         price: "$5.99",
-        desc_fr: "港式柠檬茶",
+        name_zh: "港式柠檬茶",
+        desc_fr: "",
         desc_en: "",
       },
       {
@@ -656,7 +702,8 @@ const MENU_CATEGORIES = [
         name_fr: "Eau au citron",
         name_en: "Lemon Water",
         price: "$4.99",
-        desc_fr: "柠檬水",
+        name_zh: "柠檬水",
+        desc_fr: "",
         desc_en: "",
       },
       {
@@ -664,7 +711,8 @@ const MENU_CATEGORIES = [
         name_fr: "Limonade au miel",
         name_en: "Honey Lemonade",
         price: "$5.99",
-        desc_fr: "蜂蜜柠檬",
+        name_zh: "蜂蜜柠檬",
+        desc_fr: "",
         desc_en: "",
       },
       {
@@ -672,7 +720,8 @@ const MENU_CATEGORIES = [
         name_fr: "Thé au lait \"Teddy Bear\"",
         name_en: "Teddy Bear Milk Tea",
         price: "$6.99",
-        desc_fr: "熊熊丝袜奶茶",
+        name_zh: "熊熊丝袜奶茶",
+        desc_fr: "",
         desc_en: "",
       },
       {
@@ -680,7 +729,8 @@ const MENU_CATEGORIES = [
         name_fr: "Thé glacé au citron \"Teddy Bear\"",
         name_en: "Teddy Bear Lemon Tea",
         price: "$6.99",
-        desc_fr: "熊熊柠檬红茶",
+        name_zh: "熊熊柠檬红茶",
+        desc_fr: "",
         desc_en: "",
       }
     ]
@@ -845,37 +895,12 @@ export default function HomePage() {
             </div>
           </motion.div>
 
-          {/* Reservation Block */}
-          <motion.div
-            onClick={() => scrollTo("reservation")}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="relative w-full flex-1 aspect-[4/3] md:aspect-auto rounded-[2rem] md:rounded-[2.5rem] overflow-hidden group block cursor-pointer"
-          >
-            <img
-              src="/reservation.png"
-              alt="Reservation"
-              className="absolute inset-0 w-full h-full object-cover transition-transform duration-[10s] group-hover:scale-105"
-            />
-            <div className="absolute inset-0 bg-[#0a0b0a]/30 group-hover:bg-[#0a0b0a]/10 transition-colors duration-500 z-0"></div>
-
-            <div className="absolute bottom-6 right-6 z-10 bg-[#0a0b0a]/80 backdrop-blur-md border border-[#333330] rounded-full pl-6 py-2.5 pr-2.5 flex items-center gap-5 group-hover:bg-white group-hover:text-black group-hover:border-white transition-all duration-300">
-              <span className="text-[10px] tracking-[0.2em] font-medium uppercase mt-0.5">
-                {lang === "fr" ? "Réservation" : "Reservation"}
-              </span>
-              <div className="w-8 h-8 rounded-full border border-current flex items-center justify-center">
-                <ArrowRight size={14} />
-              </div>
-            </div>
-          </motion.div>
-
           {/* Our Restaurant Block */}
           <motion.div
             onClick={() => scrollTo("about")}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
             className="relative w-full flex-1 aspect-[4/3] md:aspect-auto rounded-[2rem] md:rounded-[2.5rem] overflow-hidden group block cursor-pointer"
           >
             <img
@@ -888,6 +913,31 @@ export default function HomePage() {
             <div className="absolute bottom-6 right-6 z-10 bg-[#0a0b0a]/80 backdrop-blur-md border border-[#333330] rounded-full pl-6 py-2.5 pr-2.5 flex items-center gap-5 group-hover:bg-white group-hover:text-black group-hover:border-white transition-all duration-300">
               <span className="text-[10px] tracking-[0.2em] font-medium uppercase mt-0.5">
                 {lang === "fr" ? "Notre Restaurant" : "Our Restaurant"}
+              </span>
+              <div className="w-8 h-8 rounded-full border border-current flex items-center justify-center">
+                <ArrowRight size={14} />
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Reservation Block */}
+          <motion.div
+            onClick={() => scrollTo("reservation")}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+            className="relative w-full flex-1 aspect-[4/3] md:aspect-auto rounded-[2rem] md:rounded-[2.5rem] overflow-hidden group block cursor-pointer"
+          >
+            <img
+              src="/reservation.png"
+              alt="Reservation"
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-[10s] group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-[#0a0b0a]/30 group-hover:bg-[#0a0b0a]/10 transition-colors duration-500 z-0"></div>
+
+            <div className="absolute bottom-6 right-6 z-10 bg-[#0a0b0a]/80 backdrop-blur-md border border-[#333330] rounded-full pl-6 py-2.5 pr-2.5 flex items-center gap-5 group-hover:bg-white group-hover:text-black group-hover:border-white transition-all duration-300">
+              <span className="text-[10px] tracking-[0.2em] font-medium uppercase mt-0.5">
+                {lang === "fr" ? "Réservation" : "Reservation"}
               </span>
               <div className="w-8 h-8 rounded-full border border-current flex items-center justify-center">
                 <ArrowRight size={14} />
@@ -987,7 +1037,7 @@ export default function HomePage() {
                 {/* Item Details */}
                 <div className="flex-1 flex flex-col justify-center sm:pt-4 w-full">
                   <div className="flex justify-between items-end gap-3 w-full">
-                    <h4 className="font-serif text-[1.4rem] sm:text-2xl tracking-wide text-[#1a1c19] whitespace-nowrap overflow-hidden text-ellipsis flex items-baseline gap-3">
+                    <h4 className="font-serif text-[1.4rem] sm:text-2xl tracking-wide text-[#1a1c19] flex items-baseline gap-3 shrink-0">
                       {item.id && !item.id.includes("T01") && (
                         <span className="text-xs sm:text-sm font-sans font-bold text-[#8a7a4a] tracking-widest uppercase align-middle shrink-0">
                           {item.id}.
@@ -997,14 +1047,21 @@ export default function HomePage() {
                         {lang === "fr" ? item.name_fr : item.name_en}
                       </span>
                     </h4>
-                    <div className="flex-1 border-b-[1.5px] border-dotted border-[#1a1c19]/30 mx-2 relative top-[-8px]"></div>
-                    <span className="font-serif text-[1.4rem] sm:text-2xl tracking-wider text-[#1a1c19]">
+                    <div className="flex-1 border-b-[1.5px] border-dotted border-[#1a1c19]/30 mx-2 relative top-[-8px] min-w-[16px]"></div>
+                    <span className="font-serif text-[1.4rem] sm:text-2xl tracking-wider text-[#1a1c19] shrink-0">
                       {item.price}
                     </span>
                   </div>
-                  <p className="text-[13px] md:text-sm text-[#1a1c19]/70 mt-3 font-medium tracking-wide">
-                    {lang === "fr" ? item.desc_fr : item.desc_en}
-                  </p>
+                  {(item as any).name_zh && (
+                    <p className="font-serif text-[1.4rem] sm:text-2xl tracking-wide text-[#1a1c19]/50 mt-1">
+                      {(item as any).name_zh}
+                    </p>
+                  )}
+                  {(lang === "fr" ? item.desc_fr : item.desc_en) && (
+                    <p className="text-[13px] md:text-sm text-[#1a1c19]/70 mt-3 font-medium tracking-wide">
+                      {lang === "fr" ? item.desc_fr : item.desc_en}
+                    </p>
+                  )}
                 </div>
               </motion.div>
             ))}
@@ -1120,7 +1177,7 @@ export default function HomePage() {
                   text={lang === "en"
                     ? "Founded on the belief that culinary excellence shouldn't compromise on dietary principles, 1001 Nuits brings authentic Hong Kong style dining crafted exclusively with halal ingredients."
                     : "Fondé sur la conviction que l'excellence culinaire ne doit pas faire de compromis avec ses principes diététiques, 1001 Nuits propose une cuisine authentique de style hongkongais élaborée exclusivement avec des ingrédients halal."}
-                  delay={20}
+                  delay={10}
                   animateBy="words"
                   className="text-[#1a1c19]/80"
                 />
@@ -1128,7 +1185,7 @@ export default function HomePage() {
                   text={lang === "en"
                     ? "Every dish is a carefully balanced masterpiece—hand-slaughtered halal meat, free of pork and alcohol, without losing the signature taste that makes Hong Kong cuisine world-renowned."
                     : "Chaque plat est un chef-d'œuvre soigneusement équilibré : viande halal abattue à la main, sans porc ni alcool, tout en préservant le goût distinctif qui rend la cuisine hongkongaise célèbre dans le monde entier."}
-                  delay={20}
+                  delay={10}
                   animateBy="words"
                   className="text-[#1a1c19]/80"
                 />
@@ -1136,7 +1193,7 @@ export default function HomePage() {
                   text={lang === "en"
                     ? "Our chefs are straight from Hong Kong with more than 20 years of experience, bringing genuine technique and flavor to every plate."
                     : "Nos chefs viennent directement de Hong Kong et possèdent plus de 20 ans d'expérience culinaire, apportant authenticité et savoir-faire à chaque plat."}
-                  delay={20}
+                  delay={10}
                   animateBy="words"
                   className="text-[#1a1c19]/80"
                 />
@@ -1187,7 +1244,7 @@ export default function HomePage() {
                   text={lang === "fr"
                     ? "Qu'il s'agisse d'une réunion d'affaires intime, d'un dîner de répétition ou d'une réception fastueuse, nos salles à manger privées offrent le cadre idéal. Nous proposons des menus personnalisés avec des ingrédients halal finement sélectionnés, et un service dédié pour faire de votre événement une expérience inoubliable."
                     : "Whether it is an intimate business gathering, a rehearsal dinner, or a lavish reception, our private dining rooms provide the perfect backdrop. We offer custom menus crafted with the finest halal ingredients, and dedicated service to make your event an unforgettable experience."}
-                  delay={20}
+                  delay={10}
                   animateBy="words"
                   className="text-[#efe7d2]/70"
                 />

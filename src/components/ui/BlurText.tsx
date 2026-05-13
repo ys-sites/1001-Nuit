@@ -23,7 +23,7 @@ const BlurText = ({
   animationTo,
   easing = (t: number) => t,
   onAnimationComplete,
-  stepDuration = 0.35
+  stepDuration = 0.18
 }: {
   text?: string;
   delay?: number;
@@ -59,7 +59,7 @@ const BlurText = ({
 
   const defaultFrom = useMemo(
     () =>
-      direction === 'top' ? { filter: 'blur(10px)', opacity: 0, y: -50 } : { filter: 'blur(10px)', opacity: 0, y: 50 },
+      direction === 'top' ? { filter: 'blur(10px)', opacity: 0, y: -25 } : { filter: 'blur(10px)', opacity: 0, y: 25 },
     [direction]
   );
 
