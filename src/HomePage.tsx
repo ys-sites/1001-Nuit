@@ -156,14 +156,6 @@ const MENU_CATEGORIES = [
     title_fr: "SANDWICHS 三文治",
     items: [
       {
-        id: "S09",
-        name_fr: "Sandwich club (poulet pané, concombre, jambon, tomate, fromage)",
-        name_en: "Club Sandwich (Chicken Cutlet, Cucumber, Ham, Tomato, Cheese)",
-        price: "$14.99",
-        desc_fr: "",
-        desc_en: "",
-      },
-      {
         id: "S14",
         name_fr: "Sandwich au bœuf, oignons verts et œufs",
         name_en: "Scallion Beef and Eggs Sandwich",

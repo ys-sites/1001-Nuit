@@ -144,15 +144,6 @@ const menuStr = `const MENU_CATEGORIES = [
     title_fr: "SANDWICHS",
     items: [
       {
-        id: "S09",
-        name_fr: "Sandwich club (poulet pané, concombre, jambon, tomate, fromage)",
-        name_en: "Club Sandwich (Chicken Cutlet, Cucumber, Ham, Tomato, Cheese)",
-        price: "$14.99",
-        desc_fr: "",
-        desc_en: "",
-        image: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&q=80&w=400"
-      },
-      {
         id: "S14",
         name_fr: "Sandwich au bœuf, oignons verts et œufs",
         name_en: "Scallion Beef and Eggs Sandwich",
