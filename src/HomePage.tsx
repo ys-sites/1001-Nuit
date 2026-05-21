@@ -27,6 +27,33 @@ import CurvedLoop from "./components/ui/CurvedLoop";
 import ReservationForm from "./components/ReservationForm";
 import ScrollTextReveal from "./components/ui/ScrollTextReveal";
 
+const REVIEWS = [
+  {
+    author: "Adnan Chaudhry",
+    text: "Great food and great ambience. Definitely would come back.",
+    rating: 5,
+  },
+  {
+    author: "Ilsa Rehmat",
+    text: "The food was absolutely delicious! Everything tasted fresh, flavorful, and perfectly cooked. Would definitely visit again :)",
+    rating: 5,
+  },
+  {
+    author: "Mrs. Hassani",
+    text: "We are happy to have a halal Asian restaurant in the neighborhood! We tried Pad Thai and Curry braised beef Udon soup and both were so delicious! And personally love their Taro milk tea.",
+    rating: 5,
+  },
+  {
+    author: "Huda Haq",
+    text: "Flavorful fresh dishes with great friendly service!",
+    rating: 5,
+  },
+  {
+    author: "Sarah Khan",
+    text: "As a Muslim kid growing up in the West Island, what an absolute treat not be scared about anything on the menu. Super family friendly vibes and delicious as well.",
+    rating: 5,
+  },
+];
 
 const MENU_CATEGORIES = [
   {
@@ -1376,33 +1403,14 @@ export default function HomePage() {
           </div>
 
           <div className="grid gap-8 md:grid-cols-3">
-            {[
-              {
-                quote: lang === "fr"
-                  ? "Service rapide, plats halal délicieux et décor unique — une vraie expérience 5 étoiles à Montréal."
-                  : "Fast service, delicious halal dishes, and unique decor — a true 5-star experience in Montreal.",
-                author: lang === "fr" ? "- Amélie, Montréal" : "- Amélie, Montreal",
-              },
-              {
-                quote: lang === "fr"
-                  ? "1001 Nuit dépasse nos attentes : ambiance chaleureuse, menu créatif, et un accueil parfait."
-                  : "1001 Nuit exceeded our expectations: warm atmosphere, creative menu, and perfect hospitality.",
-                author: lang === "fr" ? "- Karim, DDO" : "- Karim, DDO",
-              },
-              {
-                quote: lang === "fr"
-                  ? "Un restaurant halal à recommander absolument. La réservation en ligne est fluide et le repas est exquis."
-                  : "A halal restaurant we absolutely recommend. The online booking is smooth and the meal is exquisite.",
-                author: lang === "fr" ? "- Sofia, Laval" : "- Sofia, Laval",
-              },
-            ].map((review, index) => (
+            {REVIEWS.map((review, index) => (
               <div key={index} className="rounded-[2rem] border border-[#efe7d2]/10 bg-[#161713]/80 p-8 shadow-[0_24px_80px_rgba(0,0,0,0.25)]">
                 <div className="flex justify-center gap-1 mb-5">
-                  {[...Array(5)].map((_, starIndex) => (
+                  {[...Array(review.rating)].map((_, starIndex) => (
                     <Star key={starIndex} size={20} className="text-[#cfbe91]" />
                   ))}
                 </div>
-                <p className="text-base leading-relaxed text-[#efe7d2]/90 mb-6">{review.quote}</p>
+                <p className="text-base leading-relaxed text-[#efe7d2]/90 mb-6">{review.text}</p>
                 <p className="text-sm uppercase tracking-[0.25em] text-[#efe7d2]/60">{review.author}</p>
               </div>
             ))}
