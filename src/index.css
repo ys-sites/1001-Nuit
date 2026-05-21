@@ -101,11 +101,11 @@ h6,
 }
 
 .animate-marquee {
-  animation: marquee 42s linear infinite;
+  animation: marquee 60s linear infinite;
 }
 
 .animate-marquee-reverse {
-  animation: marquee 42s linear infinite reverse;
+  animation: marquee 60s linear infinite reverse;
 }
 
 .pause-on-hover:hover {

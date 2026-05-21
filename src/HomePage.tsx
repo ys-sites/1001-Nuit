@@ -73,6 +73,11 @@ const REVIEWS = [
     text: "Tasty food we enjoyed all the dishes — mango matcha latte at the end was a hit. I recommend.",
     rating: 5,
   },
+  {
+    author: "Richard D",
+    text: "Amazing staff and delicious food",
+    rating: 5,
+  },
 ];
 
 const MENU_CATEGORIES = [
@@ -1158,14 +1163,14 @@ export default function HomePage() {
         <div className="w-full relative flex flex-col gap-8 md:gap-12 mt-12 overflow-hidden py-10 pointer-events-none">
           <div className="flex w-max gap-8 md:gap-12 animate-marquee pause-on-hover pointer-events-auto group">
             {reviewLoop.map((review, index) => (
-              <div key={`row1-${index}`} className="w-[320px] md:w-[420px] p-8 md:p-10 shrink-0 bg-white flex flex-col justify-between border border-[#cfbe91]/20 shadow-xl rounded-bl-[3rem] rounded-tr-[3rem] relative group-hover:opacity-50 hover:!opacity-100 transition-all duration-500 hover:-translate-y-2">
+              <div key={`row1-${index}`} className="w-[320px] md:w-[420px] p-8 md:p-10 shrink-0 bg-white flex flex-col justify-between border border-[#e4d5ac]/40 shadow-[0_24px_60px_rgba(0,0,0,0.08)] rounded-[2.5rem] relative group-hover:opacity-80 hover:-translate-y-1 transition-all duration-500">
                 <div>
                   <div className="flex gap-1 mb-6 text-[#cfbe91]">
                     {[...Array(5)].map((_, starIndex) => (
                       <Star key={starIndex} size={16} className="fill-[#cfbe91] text-[#cfbe91]" />
                     ))}
                   </div>
-                  <p className="font-serif text-lg md:text-xl text-[#1a1c19]/90 leading-relaxed italic relative z-10 max-w-sm max-h-[10rem] overflow-hidden">
+                  <p className="font-serif text-lg md:text-xl text-[#1a1c19]/90 leading-relaxed italic relative z-10 max-w-sm">
                     "{review.text}"
                   </p>
                 </div>
@@ -1177,30 +1182,9 @@ export default function HomePage() {
               </div>
             ))}
           </div>
-
-          <div className="flex w-max gap-8 md:gap-12 pl-[300px] animate-marquee-reverse pause-on-hover pointer-events-auto group">
-            {[...[...reviewLoop].reverse()].map((review, index) => (
-              <div key={`row2-${index}`} className="w-[320px] md:w-[420px] p-8 md:p-10 shrink-0 bg-[#1a1c19] text-[#faf8f5] flex flex-col justify-between border border-[#cfbe91]/10 shadow-xl rounded-br-[3rem] rounded-tl-[3rem] relative group-hover:opacity-50 hover:!opacity-100 transition-all duration-500 hover:-translate-y-2">
-                <div>
-                  <div className="flex gap-1 mb-6 text-[#cfbe91]">
-                    {[...Array(5)].map((_, starIndex) => (
-                      <Star key={starIndex} size={16} className="fill-[#cfbe91] text-[#cfbe91]" />
-                    ))}
-                  </div>
-                  <p className="font-serif text-lg md:text-xl text-[#faf8f5]/80 leading-relaxed italic relative z-10 max-w-sm max-h-[10rem] overflow-hidden">
-                    "{review.text}"
-                  </p>
-                </div>
-                <div className="mt-8 pt-6 border-t border-[#cfbe91]/10">
-                  <p className="font-sans font-bold text-[#cfbe91] uppercase tracking-wider text-xs">
-                    — {review.author}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
+
       {/* About Section */}
       <section
         id="about"
