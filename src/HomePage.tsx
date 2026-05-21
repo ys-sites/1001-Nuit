@@ -780,6 +780,8 @@ export default function HomePage() {
   const [activeCategory, setActiveCategory] = useState(0);
   const [lang, setLang] = useState<"en" | "fr">("en");
 
+  const reviewLoop = [...REVIEWS, ...REVIEWS];
+
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -1117,39 +1119,37 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-3">
-            {REVIEWS.map((review, index) => (
-              <motion.div
-                key={`${review.author}-${index}`}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "0px 0px -80px 0px" }}
-                transition={{ duration: 0.6, delay: index * 0.08, ease: [0.16, 1, 0.3, 1] }}
-                className="group rounded-[2.5rem] border border-[#efe7d2] bg-white p-8 shadow-[0_20px_60px_rgba(0,0,0,0.08)]"
-              >
-                <div className="mb-4 flex items-center justify-between gap-3">
-                  <div className="flex gap-1 text-[#cfbe91]">
-                    {[...Array(review.rating)].map((_, starIndex) => (
-                      <Star key={starIndex} size={16} />
-                    ))}
+          <div className="relative overflow-hidden rounded-[3rem] border border-[#1a1c19]/10 bg-[#fbf7ee] p-6 shadow-[0_24px_80px_rgba(0,0,0,0.12)]">
+            <div className="review-loop-track flex gap-8">
+              {reviewLoop.map((review, index) => (
+                <div
+                  key={`${review.author}-${index}`}
+                  className="review-loop-card min-w-[320px] max-w-[320px] flex-shrink-0 rounded-[2.5rem] border border-[#efe7d2] bg-white p-8 shadow-[0_20px_60px_rgba(0,0,0,0.08)]"
+                >
+                  <div className="mb-4 flex items-center justify-between gap-3">
+                    <div className="flex gap-1 text-[#cfbe91]">
+                      {[...Array(review.rating)].map((_, starIndex) => (
+                        <Star key={starIndex} size={16} className="text-[#cfbe91]" />
+                      ))}
+                    </div>
+                    <span className="text-[0.65rem] uppercase tracking-[0.35em] text-[#a38d5c]/80">
+                      Review
+                    </span>
                   </div>
-                  <span className="text-[0.65rem] uppercase tracking-[0.35em] text-[#a38d5c]/80">
-                    Review
-                  </span>
+                  <div className="relative mb-6 text-[#1a1c19] min-h-[7rem]">
+                    <span className="absolute -left-3 -top-3 text-[5rem] text-[#cfbe91]/20">“</span>
+                    <p className="relative text-base leading-relaxed">
+                      {review.text}
+                    </p>
+                  </div>
+                  <div className="border-t border-[#efe7d2] pt-4">
+                    <p className="text-sm uppercase tracking-[0.25em] text-[#1a1c19]/80">
+                      {review.author}
+                    </p>
+                  </div>
                 </div>
-                <div className="relative mb-6 text-[#1a1c19] min-h-[7rem]">
-                  <span className="absolute -left-3 -top-3 text-[5rem] text-[#cfbe91]/20">“</span>
-                  <p className="relative text-base leading-relaxed">
-                    {review.text}
-                  </p>
-                </div>
-                <div className="border-t border-[#efe7d2] pt-4">
-                  <p className="text-sm uppercase tracking-[0.25em] text-[#1a1c19]/80">
-                    {review.author}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
