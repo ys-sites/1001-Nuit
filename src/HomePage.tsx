@@ -1171,10 +1171,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-              <p className="text-xs uppercase tracking-[0.3em] text-[#1a1c19]/50">
-                {lang === "fr" ? "Survolez pour mettre en pause" : "Hover to pause"}
-              </p>
+            <div className="flex justify-center">
               <div className="inline-flex items-center gap-2 rounded-full bg-[#1a1c19]/10 px-4 py-2 text-xs uppercase tracking-[0.28em] text-[#1a1c19]/80">
                 <Star size={14} className="text-[#cfbe91]" />
                 5-Star Google Reviews
