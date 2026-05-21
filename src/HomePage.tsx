@@ -53,6 +53,21 @@ const REVIEWS = [
     text: "As a Muslim kid growing up in the West Island, what an absolute treat not be scared about anything on the menu. Super family friendly vibes and delicious as well.",
     rating: 5,
   },
+  {
+    author: "S",
+    text: "Went on the opening night, food was delicious! There was a bit of a delay in receiving the food but nothing crazy. General Tao chicken and Hong Kong noodles were my favorite, looking forward to coming back.",
+    rating: 5,
+  },
+  {
+    author: "Dania Farooq",
+    text: "This is one of the best halal restaurants in the city. The food, the ambience, the staff — everything is perfect and amazing. Eagerly looking forward to the next outing.",
+    rating: 5,
+  },
+  {
+    author: "Abdullah Akbar",
+    text: "Brought my wife here on opening night. Food was great, came out hot and tasted delicious! Only downside was that the service was a bit messy, though I’m sure that was because it was opening night and everyone was a bit overwhelmed. I truly wish the best for the owner and everyone involved in this business and I’ll be sure to bring the rest of my family next time, inshallah!",
+    rating: 5,
+  },
 ];
 
 const MENU_CATEGORIES = [
