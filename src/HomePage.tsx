@@ -780,6 +780,7 @@ export default function HomePage() {
   const [activeCategory, setActiveCategory] = useState(0);
   const [lang, setLang] = useState<"en" | "fr">("en");
   const [activeReview, setActiveReview] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
@@ -796,11 +797,12 @@ export default function HomePage() {
   };
 
   useEffect(() => {
+    if (isPaused) return;
     const interval = setInterval(() => {
       setActiveReview((current) => (current + 1) % REVIEWS.length);
     }, 5000);
     return () => clearInterval(interval);
-  }, []);
+  }, [isPaused]);
 
   return (
     <div className="w-full bg-[#0a0b0a] font-sans selection:bg-[#cfbe91] selection:text-[#0a0b0a]">
@@ -1410,7 +1412,15 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="relative overflow-hidden rounded-[2rem] border border-[#efe7d2]/10 bg-[#161713]/80 p-8 shadow-[0_24px_80px_rgba(0,0,0,0.25)]">
+          <div
+            className="relative overflow-hidden rounded-[2rem] border border-[#efe7d2]/10 bg-[#161713]/80 p-8 shadow-[0_24px_80px_rgba(0,0,0,0.25)]"
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+          >
+            <div className="absolute top-4 left-4 inline-flex items-center gap-2 rounded-full border border-[#cfbe91]/30 bg-[#cfbe91]/10 px-4 py-2 text-xs uppercase tracking-[0.25em] text-[#efe7d2] shadow-[0_0_45px_rgba(207,190,145,0.12)] backdrop-blur-sm">
+              <Star size={14} className="text-[#cfbe91]" />
+              <span className="font-semibold">Google 5.0</span>
+            </div>
             <motion.div
               key={activeReview}
               initial={{ opacity: 0, y: 30 }}
@@ -1418,6 +1428,7 @@ export default function HomePage() {
               exit={{ opacity: 0, y: -30 }}
               transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
               className="min-h-[240px]"
+              whileHover={{ scale: 1.01 }}
             >
               <div className="flex justify-center gap-1 mb-5">
                 {[...Array(REVIEWS[activeReview].rating)].map((_, starIndex) => (
@@ -1428,18 +1439,23 @@ export default function HomePage() {
               <p className="text-sm uppercase tracking-[0.25em] text-[#efe7d2]/60">{REVIEWS[activeReview].author}</p>
             </motion.div>
 
-            <div className="mt-8 flex justify-center gap-3">
-              {REVIEWS.map((_, dotIndex) => (
-                <button
-                  key={dotIndex}
-                  type="button"
-                  aria-label={`Show review ${dotIndex + 1}`}
-                  onClick={() => setActiveReview(dotIndex)}
-                  className={`h-3 w-3 rounded-full transition-all duration-300 ${
-                    dotIndex === activeReview ? "bg-[#cfbe91]" : "bg-[#efe7d2]/30"
-                  }`}
-                />
-              ))}
+            <div className="mt-8 flex flex-col items-center gap-3">
+              <div className="flex flex-wrap justify-center gap-3">
+                {REVIEWS.map((_, dotIndex) => (
+                  <button
+                    key={dotIndex}
+                    type="button"
+                    aria-label={`Show review ${dotIndex + 1}`}
+                    onClick={() => setActiveReview(dotIndex)}
+                    className={`h-3 w-3 rounded-full transition-all duration-300 ${
+                      dotIndex === activeReview ? "bg-[#cfbe91] shadow-[0_0_20px_rgba(207,190,145,0.35)]" : "bg-[#efe7d2]/30"
+                    }`}
+                  />
+                ))}
+              </div>
+              <p className="text-xs uppercase tracking-[0.3em] text-[#efe7d2]/50">
+                {lang === "fr" ? "Survolez pour mettre en pause" : "Hover to pause the loop"}
+              </p>
             </div>
           </div>
         </div>
