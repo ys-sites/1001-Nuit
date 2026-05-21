@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, useScroll, useSpring } from "motion/react";
 import {
   ArrowRight,
@@ -779,6 +779,7 @@ const MINI_MENU = [
 export default function HomePage() {
   const [activeCategory, setActiveCategory] = useState(0);
   const [lang, setLang] = useState<"en" | "fr">("en");
+  const [activeReview, setActiveReview] = useState(0);
 
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
@@ -793,6 +794,13 @@ export default function HomePage() {
       el.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveReview((current) => (current + 1) % REVIEWS.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="w-full bg-[#0a0b0a] font-sans selection:bg-[#cfbe91] selection:text-[#0a0b0a]">
@@ -1393,27 +1401,46 @@ export default function HomePage() {
               {lang === "fr" ? "Avis client" : "Customer Reviews"}
             </p>
             <h2 className="font-serif text-4xl md:text-5xl uppercase tracking-[0.2em] mb-4">
-              {lang === "fr" ? "Ce que disent nos clients" : "What Our Guests Are Saying"}
+              {lang === "fr" ? "Avis en boucle" : "Reviews in a Loop"}
             </h2>
             <p className="text-base md:text-lg leading-relaxed text-[#efe7d2]/80 max-w-3xl mx-auto">
               {lang === "fr"
-                ? "Découvrez les avis 5 étoiles de nos clients satisfaits et ressentez l’ambiance unique de 1001 Nuit avant même votre réservation."
-                : "See the 5-star reviews from happy guests and feel the unique 1001 Nuit experience before booking your table."}
+                ? "Les avis 5 étoiles défilent automatiquement pour montrer les retours réels de nos clients sur Google."
+                : "The 5-star reviews slide automatically to showcase real guest feedback from Google."}
             </p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-3">
-            {REVIEWS.map((review, index) => (
-              <div key={index} className="rounded-[2rem] border border-[#efe7d2]/10 bg-[#161713]/80 p-8 shadow-[0_24px_80px_rgba(0,0,0,0.25)]">
-                <div className="flex justify-center gap-1 mb-5">
-                  {[...Array(review.rating)].map((_, starIndex) => (
-                    <Star key={starIndex} size={20} className="text-[#cfbe91]" />
-                  ))}
-                </div>
-                <p className="text-base leading-relaxed text-[#efe7d2]/90 mb-6">{review.text}</p>
-                <p className="text-sm uppercase tracking-[0.25em] text-[#efe7d2]/60">{review.author}</p>
+          <div className="relative overflow-hidden rounded-[2rem] border border-[#efe7d2]/10 bg-[#161713]/80 p-8 shadow-[0_24px_80px_rgba(0,0,0,0.25)]">
+            <motion.div
+              key={activeReview}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -30 }}
+              transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+              className="min-h-[240px]"
+            >
+              <div className="flex justify-center gap-1 mb-5">
+                {[...Array(REVIEWS[activeReview].rating)].map((_, starIndex) => (
+                  <Star key={starIndex} size={22} className="text-[#cfbe91]" />
+                ))}
               </div>
-            ))}
+              <p className="text-lg md:text-xl leading-relaxed text-[#efe7d2]/90 mb-6">{REVIEWS[activeReview].text}</p>
+              <p className="text-sm uppercase tracking-[0.25em] text-[#efe7d2]/60">{REVIEWS[activeReview].author}</p>
+            </motion.div>
+
+            <div className="mt-8 flex justify-center gap-3">
+              {REVIEWS.map((_, dotIndex) => (
+                <button
+                  key={dotIndex}
+                  type="button"
+                  aria-label={`Show review ${dotIndex + 1}`}
+                  onClick={() => setActiveReview(dotIndex)}
+                  className={`h-3 w-3 rounded-full transition-all duration-300 ${
+                    dotIndex === activeReview ? "bg-[#cfbe91]" : "bg-[#efe7d2]/30"
+                  }`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </section>
