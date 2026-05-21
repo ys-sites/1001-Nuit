@@ -1113,62 +1113,89 @@ export default function HomePage() {
       </section>
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="py-24 md:py-32 w-full border-t border-[#1a1c19]/5 bg-[#faf8f5] text-[#1a1c19]">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <div className="text-center mb-16">
-            <span className="text-[#1a1c19]/60 uppercase tracking-[0.2em] text-xs font-bold">
-              {lang === "fr" ? "Avis" : "Testimonials"}
-            </span>
-            <h2 className="font-serif text-4xl md:text-5xl tracking-tight text-[#1a1c19] mb-4">
-              <ShinyText
-                text={lang === "fr" ? "Ce que disent nos convives" : "What our guests say"}
-                color="#1a1c19"
-                shineColor="#cfbe91"
-                speed={3}
-              />
-            </h2>
-            <p className="text-sm text-[#1a1c19]/70 max-w-2xl mx-auto">
-              {lang === "fr"
-                ? "Découvrez les avis authentiques de nos clients, chacun présenté dans un bloc clair et élégant."
-                : "Discover honest guest reviews, each presented in a clean, elegant block."}
-            </p>
+      <section id="testimonials" className="w-full py-24 md:py-32 bg-[#faf8f5] text-[#1a1c19] overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 mb-16 text-center">
+          <p className="text-[#cfbe91] font-bold tracking-[0.25em] text-sm uppercase mb-4">
+            {lang === "fr" ? "Témoignages" : "Testimonials"}
+          </p>
+          <h2 className="font-serif text-4xl md:text-5xl mb-10">
+            <ShinyText
+              text={lang === "fr" ? "Avis Clients" : "Client Reviews"}
+              color="#1a1c19"
+              shineColor="#cfbe91"
+              speed={3}
+            />
+          </h2>
+
+          <a
+            href="https://www.google.com/maps/search/1001+Nuits"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-4 bg-white border border-[#cfbe91]/30 rounded-2xl p-5 md:p-6 hover:border-[#cfbe91] transition-all group shadow-md max-w-2xl w-full text-left mx-auto"
+          >
+            <div className="w-11 h-11 rounded-xl bg-[#cfbe91]/15 flex items-center justify-center shrink-0 group-hover:bg-[#cfbe91]/25 transition-colors">
+              <Star size={20} className="fill-[#cfbe91] text-[#cfbe91]" />
+            </div>
+            <div className="flex-1">
+              <p className="font-serif text-[#1a1c19] font-semibold text-base leading-snug">
+                {lang === "fr" ? "Vous avez apprécié votre expérience ? Laissez-nous un avis Google 5 étoiles !" : "Enjoyed your experience? Leave us a 5-star Google review!"}
+              </p>
+              <p className="text-[#1a1c19]/60 text-sm mt-1 font-sans">
+                {lang === "fr" ? "Aidez d'autres convives à nous découvrir." : "It helps more guests discover us."}
+              </p>
+            </div>
+            <div className="shrink-0 flex items-center gap-2 bg-[#cfbe91] text-[#0a0b0a] font-bold text-xs tracking-wider uppercase px-4 py-2.5 rounded-xl group-hover:bg-[#d7c683] transition-colors whitespace-nowrap">
+              {lang === "fr" ? "Nous noter" : "Review Us"}
+            </div>
+          </a>
+        </div>
+
+        <div className="w-full relative flex flex-col gap-8 md:gap-12 mt-12 overflow-hidden py-10 pointer-events-none">
+          <div className="flex w-max gap-8 md:gap-12 animate-marquee pause-on-hover pointer-events-auto group">
+            {reviewLoop.map((review, index) => (
+              <div key={`row1-${index}`} className="w-[320px] md:w-[420px] p-8 md:p-10 shrink-0 bg-white flex flex-col justify-between border border-[#cfbe91]/20 shadow-xl rounded-bl-[3rem] rounded-tr-[3rem] relative group-hover:opacity-50 hover:!opacity-100 transition-all duration-500 hover:-translate-y-2">
+                <div>
+                  <div className="flex gap-1 mb-6 text-[#cfbe91]">
+                    {[...Array(5)].map((_, starIndex) => (
+                      <Star key={starIndex} size={16} className="fill-[#cfbe91] text-[#cfbe91]" />
+                    ))}
+                  </div>
+                  <p className="font-serif text-lg md:text-xl text-[#1a1c19]/90 leading-relaxed italic relative z-10 max-w-sm max-h-[10rem] overflow-hidden">
+                    "{review.text}"
+                  </p>
+                </div>
+                <div className="mt-8 pt-6 border-t border-[#cfbe91]/20">
+                  <p className="font-sans font-bold text-[#1a1c19] uppercase tracking-wider text-xs">
+                    — {review.author}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
 
-          <div className="relative overflow-visible rounded-[3rem] border border-[#1a1c19]/10 bg-[#fbf7ee] p-6 shadow-[0_24px_80px_rgba(0,0,0,0.12)]">
-            <div className="review-loop-track flex gap-8">
-              {reviewLoop.map((review, index) => (
-                <div
-                  key={`${review.author}-${index}`}
-                  className="review-loop-card min-w-[320px] flex-shrink-0 rounded-[2.5rem] border border-[#efe7d2] bg-white p-8 shadow-[0_20px_60px_rgba(0,0,0,0.08)]"
-                >
-                  <div className="mb-4 flex items-center justify-between gap-3">
-                    <div className="flex gap-1 text-[#cfbe91]">
-                      {[...Array(review.rating)].map((_, starIndex) => (
-                        <Star key={starIndex} size={16} className="text-[#cfbe91]" />
-                      ))}
-                    </div>
-                    <span className="text-[0.65rem] uppercase tracking-[0.35em] text-[#a38d5c]/80">
-                      Review
-                    </span>
+          <div className="flex w-max gap-8 md:gap-12 pl-[300px] animate-marquee-reverse pause-on-hover pointer-events-auto group">
+            {[...[...reviewLoop].reverse()].map((review, index) => (
+              <div key={`row2-${index}`} className="w-[320px] md:w-[420px] p-8 md:p-10 shrink-0 bg-[#1a1c19] text-[#faf8f5] flex flex-col justify-between border border-[#cfbe91]/10 shadow-xl rounded-br-[3rem] rounded-tl-[3rem] relative group-hover:opacity-50 hover:!opacity-100 transition-all duration-500 hover:-translate-y-2">
+                <div>
+                  <div className="flex gap-1 mb-6 text-[#cfbe91]">
+                    {[...Array(5)].map((_, starIndex) => (
+                      <Star key={starIndex} size={16} className="fill-[#cfbe91] text-[#cfbe91]" />
+                    ))}
                   </div>
-                  <div className="relative mb-6 text-[#1a1c19] min-h-[7rem]">
-                    <span className="absolute -left-3 -top-3 text-[5rem] text-[#cfbe91]/20">“</span>
-                    <p className="relative text-base leading-relaxed whitespace-normal break-words">
-                      {review.text}
-                    </p>
-                  </div>
-                  <div className="border-t border-[#efe7d2] pt-4">
-                    <p className="text-sm uppercase tracking-[0.25em] text-[#1a1c19]/80">
-                      {review.author}
-                    </p>
-                  </div>
+                  <p className="font-serif text-lg md:text-xl text-[#faf8f5]/80 leading-relaxed italic relative z-10 max-w-sm max-h-[10rem] overflow-hidden">
+                    "{review.text}"
+                  </p>
                 </div>
-              ))}
-            </div>
+                <div className="mt-8 pt-6 border-t border-[#cfbe91]/10">
+                  <p className="font-sans font-bold text-[#cfbe91] uppercase tracking-wider text-xs">
+                    — {review.author}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
-
       {/* About Section */}
       <section
         id="about"
