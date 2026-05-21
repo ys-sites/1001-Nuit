@@ -38,6 +38,8 @@ export default function Navbar({
             <Menu size={20} className="text-[#efe7d2]" />
           </button>
 
+          <img src="/logo.svg" alt="1001 Nuits logo" className="w-10 h-10 md:w-12 md:h-12 mr-3 hidden lg:block" />
+
           <div
             className="font-serif text-[18px] md:text-xl xl:text-2xl whitespace-nowrap tracking-[0.2em] uppercase mr-3 lg:mr-4 xl:mr-10 text-[#efe7d2] hover:opacity-80 transition-opacity cursor-pointer flex items-baseline gap-1"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
@@ -114,10 +116,15 @@ export default function Navbar({
         <div className="fixed inset-0 z-[200] bg-[#0a0b0a]/97 backdrop-blur-2xl flex flex-col lg:hidden">
           <div className="flex justify-between items-center p-6 border-b border-[#333330]">
             <div
-              className="font-serif text-xl tracking-[0.2em] uppercase text-[#efe7d2] cursor-pointer flex items-baseline gap-1"
-              onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); setMenuOpen(false); }}
+              className="flex items-center gap-3"
             >
-              <span className="lining-nums">1001</span> <span>NUITS</span>
+              <img src="/logo.svg" alt="1001 Nuits logo" className="w-10 h-10 md:w-12 md:h-12" />
+              <div
+                className="font-serif text-xl tracking-[0.2em] uppercase text-[#efe7d2] cursor-pointer flex items-baseline gap-1"
+                onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); setMenuOpen(false); }}
+              >
+                <span className="lining-nums">1001</span> <span>NUITS</span>
+              </div>
             </div>
             <button
               onClick={() => setMenuOpen(false)}
