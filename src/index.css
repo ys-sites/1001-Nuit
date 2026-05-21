@@ -88,6 +88,7 @@ h6,
   animation: review-loop 45s linear infinite reverse;
   will-change: transform;
   padding-inline: 1rem;
+  overflow: visible;
 }
 
 .review-loop-track:hover {
@@ -99,4 +100,5 @@ h6,
   flex-direction: column;
   vertical-align: top;
   overflow-wrap: anywhere;
+  overflow: visible;
 }
