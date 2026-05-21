@@ -1107,7 +1107,6 @@ export default function HomePage() {
         <div className="absolute top-0 right-0 w-64 h-64 border border-[#1a1c19]/5 rounded-full blur-[1px] -translate-y-1/2 translate-x-1/2"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 border border-[#1a1c19]/5 rounded-full blur-[1px] translate-y-1/2 -translate-x-1/2"></div>
 
-
         <div className="w-full relative z-10 overflow-hidden">
           <ScrollTextReveal className="text-center mb-16 px-6 md:px-12" textColor="#1a1c19">
             <div className="flex items-center justify-center gap-4 mb-4">
@@ -1123,22 +1122,61 @@ export default function HomePage() {
                 speed={3}
               />
             </h2>
+            <p className="text-sm text-[#1a1c19]/70 max-w-2xl mx-auto">
+              {lang === "fr"
+                ? "Tous les avis Google 5 étoiles défilent automatiquement dans cette section témoignage."
+                : "All real Google 5-star reviews now scroll continuously in this testimonial section."}
+            </p>
           </ScrollTextReveal>
 
-          <div className="flex flex-col items-center justify-center gap-6 py-12 pb-20 px-6">
-            <div className="flex gap-1">
-              {[...Array(5)].map((_, i) => (
-                <svg key={i} className="w-6 h-6 text-[#cfbe91]/40" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                </svg>
-              ))}
+          <div
+            className="relative overflow-hidden rounded-[2.5rem] border border-[#1a1c19]/10 bg-[#111311]/95 p-6 shadow-[0_24px_80px_rgba(0,0,0,0.25)]"
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+          >
+            <div className="absolute top-5 left-5 inline-flex items-center gap-2 rounded-full border border-[#cfbe91]/25 bg-[#cfbe91]/10 px-4 py-2 text-xs uppercase tracking-[0.28em] text-[#efe7d2] shadow-[0_0_40px_rgba(207,190,145,0.14)] backdrop-blur-sm">
+              <Star size={14} className="text-[#cfbe91]" />
+              <span className="font-semibold">Google 5.0</span>
             </div>
-            <p className="font-serif text-2xl md:text-3xl text-[#1a1c19]/25 italic text-center max-w-md leading-snug">
-              {lang === "fr" ? "Les avis arrivent bientôt…" : "Reviews on their way…"}
-            </p>
-            <p className="text-xs uppercase tracking-[0.25em] text-[#1a1c19]/30 font-bold">
-              {lang === "fr" ? "Nouveau restaurant — Ouvrez la marche" : "New restaurant — Be the first to review"}
-            </p>
+
+            <div className="relative overflow-hidden">
+              <div
+                className="flex items-stretch gap-6 marquee-review"
+                style={{ animationPlayState: isPaused ? "paused" : "running" }}
+              >
+                {reviewLoop.map((review, index) => (
+                  <div
+                    key={`${review.author}-${index}`}
+                    className="min-w-[320px] max-w-[320px] flex-shrink-0 rounded-[2rem] border border-[#cfbe91]/10 bg-[#161713]/95 p-8 shadow-[0_20px_60px_rgba(0,0,0,0.28)]"
+                  >
+                    <div className="mb-4 flex items-center justify-between gap-3">
+                      <div className="flex gap-1 text-[#cfbe91]">
+                        {[...Array(review.rating)].map((_, starIndex) => (
+                          <Star key={starIndex} size={16} />
+                        ))}
+                      </div>
+                      <span className="text-[0.65rem] uppercase tracking-[0.35em] text-[#efe7d2]/70">
+                        Verified
+                      </span>
+                    </div>
+                    <p className="mb-6 text-base leading-relaxed text-[#efe7d2]/90">
+                      {review.text}
+                    </p>
+                    <div className="border-t border-[#efe7d2]/10 pt-4">
+                      <p className="text-sm uppercase tracking-[0.25em] text-[#cfbe91]/80">
+                        {review.author}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-8 flex justify-center">
+              <p className="text-xs uppercase tracking-[0.3em] text-[#efe7d2]/50">
+                {lang === "fr" ? "Survolez pour mettre en pause" : "Hover to pause"}
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -1384,74 +1422,6 @@ export default function HomePage() {
                 </p>
               </div>
             </ScrollTextReveal>
-          </div>
-        </div>
-      </section>
-
-      {/* Review Section */}
-      <section className="py-24 w-full bg-[#121311] text-[#efe7d2]">
-        <div className="max-w-6xl mx-auto px-6 md:px-12">
-          <div className="text-center mb-12">
-            <p className="text-[#cfbe91] uppercase tracking-[0.3em] text-sm mb-4">
-              {lang === "fr" ? "Avis client" : "Customer Reviews"}
-            </p>
-            <h2 className="font-serif text-4xl md:text-5xl uppercase tracking-[0.2em] mb-4">
-              {lang === "fr" ? "Avis en boucle" : "Reviews in a Loop"}
-            </h2>
-            <p className="text-base md:text-lg leading-relaxed text-[#efe7d2]/80 max-w-3xl mx-auto">
-              {lang === "fr"
-                ? "Les avis 5 étoiles défilent automatiquement pour montrer les retours réels de nos clients sur Google."
-                : "The 5-star reviews slide automatically to showcase real guest feedback from Google."}
-            </p>
-          </div>
-
-          <div
-            className="relative overflow-hidden rounded-[2.5rem] border border-[#efe7d2]/10 bg-[#161713]/80 p-6 shadow-[0_24px_80px_rgba(0,0,0,0.25)]"
-            onMouseEnter={() => setIsPaused(true)}
-            onMouseLeave={() => setIsPaused(false)}
-          >
-            <div className="absolute top-5 left-5 inline-flex items-center gap-2 rounded-full border border-[#cfbe91]/25 bg-[#cfbe91]/10 px-4 py-2 text-xs uppercase tracking-[0.28em] text-[#efe7d2] shadow-[0_0_40px_rgba(207,190,145,0.14)] backdrop-blur-sm">
-              <Star size={14} className="text-[#cfbe91]" />
-              <span className="font-semibold">Google 5.0</span>
-            </div>
-
-            <div className="relative overflow-hidden">
-              <div
-                className="flex items-stretch gap-6 marquee-review"
-                style={{ animationPlayState: isPaused ? "paused" : "running" }}
-              >
-                {reviewLoop.map((review, index) => (
-                  <div
-                    key={`${review.author}-${index}`}
-                    className="min-w-[320px] max-w-[320px] flex-shrink-0 rounded-[2.2rem_0.8rem_1.5rem_0.6rem] border border-[#cfbe91]/12 bg-[#111311]/95 p-8 shadow-[0_20px_60px_rgba(0,0,0,0.28)]"
-                  >
-                    <div className="mb-6 flex items-center justify-between gap-4">
-                      <div className="flex gap-1 text-[#cfbe91]">
-                        {[...Array(review.rating)].map((_, starIndex) => (
-                          <Star key={starIndex} size={16} />
-                        ))}
-                      </div>
-                      <span className="text-[0.65rem] uppercase tracking-[0.35em] text-[#efe7d2]/70">
-                        Verified
-                      </span>
-                    </div>
-                    <div className="mb-6 relative text-base leading-relaxed text-[#efe7d2]/90">
-                      <span className="absolute -left-3 -top-3 text-6xl text-[#cfbe91]/20">“</span>
-                      <p className="relative z-10">{review.text}</p>
-                    </div>
-                    <div className="border-t border-[#efe7d2]/10 pt-4">
-                      <p className="text-sm uppercase tracking-[0.25em] text-[#cfbe91]/80">{review.author}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="mt-8 flex justify-center">
-              <p className="text-xs uppercase tracking-[0.3em] text-[#efe7d2]/50">
-                {lang === "fr" ? "Survolez pour mettre en pause" : "Hover to pause"}
-              </p>
-            </div>
           </div>
         </div>
       </section>
