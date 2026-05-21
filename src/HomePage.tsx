@@ -779,9 +779,6 @@ const MINI_MENU = [
 export default function HomePage() {
   const [activeCategory, setActiveCategory] = useState(0);
   const [lang, setLang] = useState<"en" | "fr">("en");
-  const [isPaused, setIsPaused] = useState(false);
-
-  const reviewLoop = [...REVIEWS, ...REVIEWS];
 
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
@@ -1099,21 +1096,12 @@ export default function HomePage() {
       </section>
 
       {/* Testimonials Section */}
-      <section
-        id="testimonials"
-        className="py-24 md:py-32 w-full border-t border-[#1a1c19]/5 relative overflow-hidden bg-[#faf8f5] text-[#1a1c19]"
-      >
-        {/* Subtle decorative elements */}
-        <div className="absolute top-0 right-0 w-64 h-64 border border-[#1a1c19]/5 rounded-full blur-[1px] -translate-y-1/2 translate-x-1/2"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 border border-[#1a1c19]/5 rounded-full blur-[1px] translate-y-1/2 -translate-x-1/2"></div>
-
-        <div className="w-full relative z-10 overflow-hidden">
-          <ScrollTextReveal className="text-center mb-16 px-6 md:px-12" textColor="#1a1c19">
-            <div className="flex items-center justify-center gap-4 mb-4">
-              <span className="text-[#1a1c19]/60 uppercase tracking-[0.2em] text-xs font-bold">
-                {lang === "fr" ? "Avis" : "Testimonials"}
-              </span>
-            </div>
+      <section id="testimonials" className="py-24 md:py-32 w-full border-t border-[#1a1c19]/5 bg-[#faf8f5] text-[#1a1c19]">
+        <div className="max-w-7xl mx-auto px-6 md:px-12">
+          <div className="text-center mb-16">
+            <span className="text-[#1a1c19]/60 uppercase tracking-[0.2em] text-xs font-bold">
+              {lang === "fr" ? "Avis" : "Testimonials"}
+            </span>
             <h2 className="font-serif text-4xl md:text-5xl tracking-tight text-[#1a1c19] mb-4">
               <ShinyText
                 text={lang === "fr" ? "Ce que disent nos convives" : "What our guests say"}
@@ -1124,59 +1112,44 @@ export default function HomePage() {
             </h2>
             <p className="text-sm text-[#1a1c19]/70 max-w-2xl mx-auto">
               {lang === "fr"
-                ? "Tous les avis Google 5 étoiles s'affichent dans cette section de témoignages animés."
-                : "All Google 5-star reviews appear in this animated testimonial carousel."}
+                ? "Découvrez les avis authentiques de nos clients, chacun présenté dans un bloc clair et élégant."
+                : "Discover honest guest reviews, each presented in a clean, elegant block."}
             </p>
-          </ScrollTextReveal>
+          </div>
 
-          <div
-            className="relative overflow-hidden rounded-[3rem] border border-[#1a1c19]/10 bg-[#fbf7ee] p-6 shadow-[0_24px_80px_rgba(0,0,0,0.12)]"
-            onMouseEnter={() => setIsPaused(true)}
-            onMouseLeave={() => setIsPaused(false)}
-          >
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(207,190,145,0.12),_transparent_25%),radial-gradient(circle_at_bottom_right,_rgba(207,190,145,0.08),_transparent_20%)]"></div>
-            <div className="relative overflow-hidden">
-              <div
-                className="inline-flex items-stretch gap-6 marquee-track"
-                style={{ animationPlayState: isPaused ? "paused" : "running" }}
+          <div className="grid gap-8 md:grid-cols-3">
+            {REVIEWS.map((review, index) => (
+              <motion.div
+                key={`${review.author}-${index}`}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "0px 0px -80px 0px" }}
+                transition={{ duration: 0.6, delay: index * 0.08, ease: [0.16, 1, 0.3, 1] }}
+                className="group rounded-[2.5rem] border border-[#efe7d2] bg-white p-8 shadow-[0_20px_60px_rgba(0,0,0,0.08)]"
               >
-                {reviewLoop.map((review, index) => (
-                  <div
-                    key={`${review.author}-${index}`}
-                    className="inline-flex min-w-[320px] max-w-[320px] flex-shrink-0 rounded-[2.2rem] border border-[#efe7d2] bg-white p-8 shadow-[0_20px_60px_rgba(0,0,0,0.08)]"
-                  >
-                    <div className="mb-4 flex items-center justify-between gap-3">
-                      <div className="flex gap-1 text-[#cfbe91]">
-                        {[...Array(review.rating)].map((_, starIndex) => (
-                          <Star key={starIndex} size={16} />
-                        ))}
-                      </div>
-                      <span className="text-[0.65rem] uppercase tracking-[0.35em] text-[#a38d5c]">
-                        Google
-                      </span>
-                    </div>
-                    <div className="relative mb-6 text-[#1a1c19]">
-                      <span className="absolute -left-3 -top-3 text-[5.5rem] text-[#cfbe91]/20">“</span>
-                      <p className="relative text-base leading-relaxed min-h-[6rem]">
-                        {review.text}
-                      </p>
-                    </div>
-                    <div className="border-t border-[#efe7d2] pt-4">
-                      <p className="text-sm uppercase tracking-[0.25em] text-[#1a1c19]/80">
-                        {review.author}
-                      </p>
-                    </div>
+                <div className="mb-4 flex items-center justify-between gap-3">
+                  <div className="flex gap-1 text-[#cfbe91]">
+                    {[...Array(review.rating)].map((_, starIndex) => (
+                      <Star key={starIndex} size={16} />
+                    ))}
                   </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="flex justify-center">
-              <div className="inline-flex items-center gap-2 rounded-full bg-[#1a1c19]/10 px-4 py-2 text-xs uppercase tracking-[0.28em] text-[#1a1c19]/80">
-                <Star size={14} className="text-[#cfbe91]" />
-                5-Star Google Reviews
-              </div>
-            </div>
+                  <span className="text-[0.65rem] uppercase tracking-[0.35em] text-[#a38d5c]/80">
+                    Review
+                  </span>
+                </div>
+                <div className="relative mb-6 text-[#1a1c19] min-h-[7rem]">
+                  <span className="absolute -left-3 -top-3 text-[5rem] text-[#cfbe91]/20">“</span>
+                  <p className="relative text-base leading-relaxed">
+                    {review.text}
+                  </p>
+                </div>
+                <div className="border-t border-[#efe7d2] pt-4">
+                  <p className="text-sm uppercase tracking-[0.25em] text-[#1a1c19]/80">
+                    {review.author}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>

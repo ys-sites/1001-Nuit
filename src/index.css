@@ -53,29 +53,6 @@ h6,
   position: relative;
 }
 
-@keyframes marquee-review {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-.marquee-track {
-  display: inline-flex;
-  align-items: stretch;
-  gap: 1.5rem;
-  min-width: max-content;
-  animation: marquee-review 28s linear infinite;
-  white-space: nowrap;
-  will-change: transform;
-}
-
-.marquee-track > * {
-  display: inline-flex;
-  vertical-align: top;
-}
 
 .hover-underline-animation::after {
   content: "";
