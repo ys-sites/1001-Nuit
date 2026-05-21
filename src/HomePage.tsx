@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { motion, useScroll, useSpring } from "motion/react";
 import {
   ArrowRight,
@@ -779,8 +779,9 @@ const MINI_MENU = [
 export default function HomePage() {
   const [activeCategory, setActiveCategory] = useState(0);
   const [lang, setLang] = useState<"en" | "fr">("en");
-  const [activeReview, setActiveReview] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+
+  const reviewLoop = [...REVIEWS, ...REVIEWS];
 
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
@@ -795,14 +796,6 @@ export default function HomePage() {
       el.scrollIntoView({ behavior: "smooth" });
     }
   };
-
-  useEffect(() => {
-    if (isPaused) return;
-    const interval = setInterval(() => {
-      setActiveReview((current) => (current + 1) % REVIEWS.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [isPaused]);
 
   return (
     <div className="w-full bg-[#0a0b0a] font-sans selection:bg-[#cfbe91] selection:text-[#0a0b0a]">
@@ -1387,7 +1380,7 @@ export default function HomePage() {
               <div className="flex flex-col gap-3 font-medium text-[#1a1c19]/80">
                 <p>{lang === "fr" ? "Réservez en ligne via le formulaire ci-dessus." : "Book online using the reservation form above."}</p>
                 <p className="italic text-[#1a1c19]/60 text-sm">
-                  {lang === "fr" ? "Numéro de téléphone disponible bientôt" : "Phone number available soon"}
+                  {lang === "fr" ? "Appelez-nous au" : "Call us at"} <a href="tel:+15144211114" className="text-[#cfbe91] hover:underline">(514) 421-1114</a>
                 </p>
               </div>
             </ScrollTextReveal>
@@ -1413,48 +1406,50 @@ export default function HomePage() {
           </div>
 
           <div
-            className="relative overflow-hidden rounded-[2rem] border border-[#efe7d2]/10 bg-[#161713]/80 p-8 shadow-[0_24px_80px_rgba(0,0,0,0.25)]"
+            className="relative overflow-hidden rounded-[2.5rem] border border-[#efe7d2]/10 bg-[#161713]/80 p-6 shadow-[0_24px_80px_rgba(0,0,0,0.25)]"
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
           >
-            <div className="absolute top-4 left-4 inline-flex items-center gap-2 rounded-full border border-[#cfbe91]/30 bg-[#cfbe91]/10 px-4 py-2 text-xs uppercase tracking-[0.25em] text-[#efe7d2] shadow-[0_0_45px_rgba(207,190,145,0.12)] backdrop-blur-sm">
+            <div className="absolute top-5 left-5 inline-flex items-center gap-2 rounded-full border border-[#cfbe91]/25 bg-[#cfbe91]/10 px-4 py-2 text-xs uppercase tracking-[0.28em] text-[#efe7d2] shadow-[0_0_40px_rgba(207,190,145,0.14)] backdrop-blur-sm">
               <Star size={14} className="text-[#cfbe91]" />
               <span className="font-semibold">Google 5.0</span>
             </div>
-            <motion.div
-              key={activeReview}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -30 }}
-              transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-              className="min-h-[240px]"
-              whileHover={{ scale: 1.01 }}
-            >
-              <div className="flex justify-center gap-1 mb-5">
-                {[...Array(REVIEWS[activeReview].rating)].map((_, starIndex) => (
-                  <Star key={starIndex} size={22} className="text-[#cfbe91]" />
-                ))}
-              </div>
-              <p className="text-lg md:text-xl leading-relaxed text-[#efe7d2]/90 mb-6">{REVIEWS[activeReview].text}</p>
-              <p className="text-sm uppercase tracking-[0.25em] text-[#efe7d2]/60">{REVIEWS[activeReview].author}</p>
-            </motion.div>
 
-            <div className="mt-8 flex flex-col items-center gap-3">
-              <div className="flex flex-wrap justify-center gap-3">
-                {REVIEWS.map((_, dotIndex) => (
-                  <button
-                    key={dotIndex}
-                    type="button"
-                    aria-label={`Show review ${dotIndex + 1}`}
-                    onClick={() => setActiveReview(dotIndex)}
-                    className={`h-3 w-3 rounded-full transition-all duration-300 ${
-                      dotIndex === activeReview ? "bg-[#cfbe91] shadow-[0_0_20px_rgba(207,190,145,0.35)]" : "bg-[#efe7d2]/30"
-                    }`}
-                  />
+            <div className="relative overflow-hidden">
+              <div
+                className="flex items-stretch gap-6 marquee-review"
+                style={{ animationPlayState: isPaused ? "paused" : "running" }}
+              >
+                {reviewLoop.map((review, index) => (
+                  <div
+                    key={`${review.author}-${index}`}
+                    className="min-w-[320px] max-w-[320px] flex-shrink-0 rounded-[2.2rem_0.8rem_1.5rem_0.6rem] border border-[#cfbe91]/12 bg-[#111311]/95 p-8 shadow-[0_20px_60px_rgba(0,0,0,0.28)]"
+                  >
+                    <div className="mb-6 flex items-center justify-between gap-4">
+                      <div className="flex gap-1 text-[#cfbe91]">
+                        {[...Array(review.rating)].map((_, starIndex) => (
+                          <Star key={starIndex} size={16} />
+                        ))}
+                      </div>
+                      <span className="text-[0.65rem] uppercase tracking-[0.35em] text-[#efe7d2]/70">
+                        Verified
+                      </span>
+                    </div>
+                    <div className="mb-6 relative text-base leading-relaxed text-[#efe7d2]/90">
+                      <span className="absolute -left-3 -top-3 text-6xl text-[#cfbe91]/20">“</span>
+                      <p className="relative z-10">{review.text}</p>
+                    </div>
+                    <div className="border-t border-[#efe7d2]/10 pt-4">
+                      <p className="text-sm uppercase tracking-[0.25em] text-[#cfbe91]/80">{review.author}</p>
+                    </div>
+                  </div>
                 ))}
               </div>
+            </div>
+
+            <div className="mt-8 flex justify-center">
               <p className="text-xs uppercase tracking-[0.3em] text-[#efe7d2]/50">
-                {lang === "fr" ? "Survolez pour mettre en pause" : "Hover to pause the loop"}
+                {lang === "fr" ? "Survolez pour mettre en pause" : "Hover to pause"}
               </p>
             </div>
           </div>

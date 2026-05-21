@@ -53,6 +53,19 @@ h6,
   position: relative;
 }
 
+@keyframes marquee-review {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(50%);
+  }
+}
+
+.marquee-review {
+  animation: marquee-review 28s linear infinite;
+}
+
 .hover-underline-animation::after {
   content: "";
   position: absolute;
