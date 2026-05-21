@@ -85,8 +85,9 @@ h6,
   display: flex;
   gap: 2rem;
   width: max-content;
-  animation: review-loop 28s linear infinite;
+  animation: review-loop 45s linear infinite reverse;
   will-change: transform;
+  padding-inline: 1rem;
 }
 
 .review-loop-track:hover {
