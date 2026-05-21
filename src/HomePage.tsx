@@ -1128,7 +1128,7 @@ export default function HomePage() {
           </h2>
 
           <a
-            href="https://www.google.com/maps/search/1001+Nuits"
+            href="https://g.page/r/CfOqKjHKSlrMEAI/review"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-4 bg-white border border-[#cfbe91]/30 rounded-2xl p-5 md:p-6 hover:border-[#cfbe91] transition-all group shadow-md max-w-2xl w-full text-left mx-auto"
