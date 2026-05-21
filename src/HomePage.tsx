@@ -1134,12 +1134,12 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="relative overflow-hidden rounded-[3rem] border border-[#1a1c19]/10 bg-[#fbf7ee] p-6 shadow-[0_24px_80px_rgba(0,0,0,0.12)]">
+          <div className="relative overflow-visible rounded-[3rem] border border-[#1a1c19]/10 bg-[#fbf7ee] p-6 shadow-[0_24px_80px_rgba(0,0,0,0.12)]">
             <div className="review-loop-track flex gap-8">
               {reviewLoop.map((review, index) => (
                 <div
                   key={`${review.author}-${index}`}
-                  className="review-loop-card min-w-[320px] max-w-[320px] flex-shrink-0 rounded-[2.5rem] border border-[#efe7d2] bg-white p-8 shadow-[0_20px_60px_rgba(0,0,0,0.08)]"
+                  className="review-loop-card min-w-[320px] flex-shrink-0 rounded-[2.5rem] border border-[#efe7d2] bg-white p-8 shadow-[0_20px_60px_rgba(0,0,0,0.08)]"
                 >
                   <div className="mb-4 flex items-center justify-between gap-3">
                     <div className="flex gap-1 text-[#cfbe91]">
