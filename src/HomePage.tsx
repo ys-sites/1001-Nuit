@@ -5,6 +5,7 @@ import {
   Instagram,
   Facebook,
   Phone,
+  Star,
 } from "lucide-react";
 
 const TiktokIcon = ({ size = 24, className = "" }) => (
@@ -1335,12 +1336,51 @@ export default function HomePage() {
                 {lang === "fr" ? "Emplacement" : "Location"}
               </h3>
               <div className="flex flex-col gap-3 font-medium text-[#1a1c19]/80">
-                <p>DDO Montreal</p>
+                <p>Dollard-des-Ormeaux, Montreal</p>
                 <p className="italic text-[#1a1c19]/60 text-sm">
-                  {lang === "fr" ? "L'emplacement sera bientôt disponible" : "Location will be available soon"}
+                  {lang === "fr" ? "Adresse exacte à confirmer" : "Exact address coming soon"}
                 </p>
               </div>
             </ScrollTextReveal>
+
+            <ScrollTextReveal className="flex flex-col gap-6" textColor="#1a1c19" delay={0.2}>
+              <h3 className="font-serif text-3xl uppercase tracking-widest text-[#1a1c19]">
+                {lang === "fr" ? "Contact" : "Contact"}
+              </h3>
+              <div className="flex flex-col gap-3 font-medium text-[#1a1c19]/80">
+                <p>{lang === "fr" ? "Réservez en ligne via le formulaire ci-dessus." : "Book online using the reservation form above."}</p>
+                <p className="italic text-[#1a1c19]/60 text-sm">
+                  {lang === "fr" ? "Numéro de téléphone disponible bientôt" : "Phone number available soon"}
+                </p>
+              </div>
+            </ScrollTextReveal>
+          </div>
+        </div>
+      </section>
+
+      {/* Review Section */}
+      <section className="py-24 w-full bg-[#121311] text-[#efe7d2]">
+        <div className="max-w-6xl mx-auto px-6 md:px-12">
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-[#cfbe91] uppercase tracking-[0.3em] text-sm mb-4">
+              {lang === "fr" ? "Avis client" : "Customer Review"}
+            </p>
+            <h2 className="font-serif text-4xl md:text-5xl uppercase tracking-[0.2em] mb-6">
+              {lang === "fr" ? "5 étoiles" : "5 Star Review"}
+            </h2>
+            <div className="flex justify-center gap-2 mb-6">
+              {[...Array(5)].map((_, index) => (
+                <Star key={index} size={28} className="text-[#cfbe91]" />
+              ))}
+            </div>
+            <p className="text-base md:text-lg leading-relaxed text-[#efe7d2]/90 max-w-2xl mx-auto">
+              {lang === "fr"
+                ? "« Une expérience incroyable à 1001 Nuit — service impeccable, plat halal délicieux et ambiance parfaite pour une soirée inoubliable. Nous reviendrons sans hésiter. »"
+                : "“An incredible experience at 1001 Nuit — impeccable service, delicious halal dishes, and the perfect atmosphere for an unforgettable evening. We will be back without hesitation.”"}
+            </p>
+            <p className="text-sm uppercase tracking-[0.3em] text-[#efe7d2]/60 mt-6">
+              {lang === "fr" ? "- Avis vérifié" : "- Verified review"}
+            </p>
           </div>
         </div>
       </section>
