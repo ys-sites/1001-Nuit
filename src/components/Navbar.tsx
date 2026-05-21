@@ -38,7 +38,7 @@ export default function Navbar({
             <Menu size={20} className="text-[#efe7d2]" />
           </button>
 
-          <img src="/logo.svg" alt="1001 Nuits logo" className="w-10 h-10 md:w-12 md:h-12 mr-3 hidden lg:block" />
+          
 
           <div
             className="font-serif text-[18px] md:text-xl xl:text-2xl whitespace-nowrap tracking-[0.2em] uppercase mr-3 lg:mr-4 xl:mr-10 text-[#efe7d2] hover:opacity-80 transition-opacity cursor-pointer flex items-baseline gap-1"
@@ -118,7 +118,7 @@ export default function Navbar({
             <div
               className="flex items-center gap-3"
             >
-              <img src="/logo.svg" alt="1001 Nuits logo" className="w-10 h-10 md:w-12 md:h-12" />
+              
               <div
                 className="font-serif text-xl tracking-[0.2em] uppercase text-[#efe7d2] cursor-pointer flex items-baseline gap-1"
                 onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); setMenuOpen(false); }}

@@ -1163,7 +1163,7 @@ export default function HomePage() {
         <div className="w-full relative flex flex-col gap-8 md:gap-12 mt-12 overflow-hidden py-10 pointer-events-none">
           <div className="flex w-max gap-8 md:gap-12 animate-marquee pause-on-hover pointer-events-auto group">
             {reviewLoop.map((review, index) => (
-              <div key={`row1-${index}`} className="w-[320px] md:w-[420px] p-8 md:p-10 shrink-0 bg-white flex flex-col justify-between border border-[#e4d5ac]/40 shadow-[0_24px_60px_rgba(0,0,0,0.08)] rounded-[2.5rem] relative group-hover:opacity-80 hover:-translate-y-1 transition-all duration-500">
+                <div key={`row1-${index}`} className="w-[320px] md:w-[420px] p-8 md:p-10 shrink-0 bg-white flex flex-col justify-between border border-[#e4d5ac]/40 shadow-[0_24px_60px_rgba(0,0,0,0.08)] rounded-[2.5rem] relative group-hover:opacity-80 hover:-translate-y-1 transition-all duration-500 fancy-review-card">
                 <div>
                   <div className="flex gap-1 mb-6 text-[#cfbe91]">
                     {[...Array(5)].map((_, starIndex) => (
@@ -1444,23 +1444,7 @@ export default function HomePage() {
           <ShinyText text="NUITS" className="inline-block" color="#efe7d2" shineColor="#cfbe91" speed={3} />
         </h2>
         
-        <div className="flex justify-center items-center gap-4 mb-8">
-          {[
-            { icon: Instagram, link: "https://www.instagram.com/1001nu1t/" },
-            { icon: Facebook, link: "https://www.facebook.com/share/1J1KukJuHs/?mibextid=wwXIfr" },
-            { icon: TiktokIcon, link: "https://www.tiktok.com/@1001nu1t" },
-          ].map((social, idx) => (
-            <a
-              key={idx}
-              href={social.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-10 h-10 flex items-center justify-center rounded-full bg-[#1a1c19] border border-[#333330] hover:bg-[#cfbe91] hover:text-[#1a1c19] hover:border-[#cfbe91] transition-all duration-300 shadow-md"
-            >
-              <social.icon size={18} strokeWidth={1.5} />
-            </a>
-          ))}
-        </div>
+        
 
         <div className="flex flex-wrap justify-center items-center gap-6 text-[10px] uppercase tracking-[0.2em] opacity-50 mb-12">
           <span>
