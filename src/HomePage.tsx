@@ -1153,7 +1153,7 @@ export default function HomePage() {
                   </div>
                   <div className="relative mb-6 text-[#1a1c19] min-h-[7rem]">
                     <span className="absolute -left-3 -top-3 text-[5rem] text-[#cfbe91]/20">“</span>
-                    <p className="relative text-base leading-relaxed">
+                    <p className="relative text-base leading-relaxed whitespace-normal break-words">
                       {review.text}
                     </p>
                   </div>

@@ -86,7 +86,6 @@ h6,
   gap: 2rem;
   width: max-content;
   animation: review-loop 28s linear infinite;
-  white-space: nowrap;
   will-change: transform;
 }
 
@@ -95,6 +94,8 @@ h6,
 }
 
 .review-loop-card {
-  display: inline-flex;
+  display: flex;
+  flex-direction: column;
   vertical-align: top;
+  overflow-wrap: anywhere;
 }
