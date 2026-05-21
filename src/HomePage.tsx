@@ -1361,26 +1361,51 @@ export default function HomePage() {
       {/* Review Section */}
       <section className="py-24 w-full bg-[#121311] text-[#efe7d2]">
         <div className="max-w-6xl mx-auto px-6 md:px-12">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="text-center mb-12">
             <p className="text-[#cfbe91] uppercase tracking-[0.3em] text-sm mb-4">
-              {lang === "fr" ? "Avis client" : "Customer Review"}
+              {lang === "fr" ? "Avis client" : "Customer Reviews"}
             </p>
-            <h2 className="font-serif text-4xl md:text-5xl uppercase tracking-[0.2em] mb-6">
-              {lang === "fr" ? "5 étoiles" : "5 Star Review"}
+            <h2 className="font-serif text-4xl md:text-5xl uppercase tracking-[0.2em] mb-4">
+              {lang === "fr" ? "Ce que disent nos clients" : "What Our Guests Are Saying"}
             </h2>
-            <div className="flex justify-center gap-2 mb-6">
-              {[...Array(5)].map((_, index) => (
-                <Star key={index} size={28} className="text-[#cfbe91]" />
-              ))}
-            </div>
-            <p className="text-base md:text-lg leading-relaxed text-[#efe7d2]/90 max-w-2xl mx-auto">
+            <p className="text-base md:text-lg leading-relaxed text-[#efe7d2]/80 max-w-3xl mx-auto">
               {lang === "fr"
-                ? "« Le site de 1001 Nuit est exceptionnel — menu, réservation et ambiance en ligne sont au top. Une découverte halal 5 étoiles pour les gourmets de Montréal. »"
-                : "“1001 Nuit’s website is outstanding — the menu, booking experience, and online atmosphere are top-tier. A 5-star halal dining discovery for Montreal food lovers.”"}
+                ? "Découvrez les avis 5 étoiles de nos clients satisfaits et ressentez l’ambiance unique de 1001 Nuit avant même votre réservation."
+                : "See the 5-star reviews from happy guests and feel the unique 1001 Nuit experience before booking your table."}
             </p>
-            <p className="text-sm uppercase tracking-[0.3em] text-[#efe7d2]/60 mt-6">
-              {lang === "fr" ? "- Avis vérifié" : "- Verified review"}
-            </p>
+          </div>
+
+          <div className="grid gap-8 md:grid-cols-3">
+            {[
+              {
+                quote: lang === "fr"
+                  ? "Service rapide, plats halal délicieux et décor unique — une vraie expérience 5 étoiles à Montréal."
+                  : "Fast service, delicious halal dishes, and unique decor — a true 5-star experience in Montreal.",
+                author: lang === "fr" ? "- Amélie, Montréal" : "- Amélie, Montreal",
+              },
+              {
+                quote: lang === "fr"
+                  ? "1001 Nuit dépasse nos attentes : ambiance chaleureuse, menu créatif, et un accueil parfait."
+                  : "1001 Nuit exceeded our expectations: warm atmosphere, creative menu, and perfect hospitality.",
+                author: lang === "fr" ? "- Karim, DDO" : "- Karim, DDO",
+              },
+              {
+                quote: lang === "fr"
+                  ? "Un restaurant halal à recommander absolument. La réservation en ligne est fluide et le repas est exquis."
+                  : "A halal restaurant we absolutely recommend. The online booking is smooth and the meal is exquisite.",
+                author: lang === "fr" ? "- Sofia, Laval" : "- Sofia, Laval",
+              },
+            ].map((review, index) => (
+              <div key={index} className="rounded-[2rem] border border-[#efe7d2]/10 bg-[#161713]/80 p-8 shadow-[0_24px_80px_rgba(0,0,0,0.25)]">
+                <div className="flex justify-center gap-1 mb-5">
+                  {[...Array(5)].map((_, starIndex) => (
+                    <Star key={starIndex} size={20} className="text-[#cfbe91]" />
+                  ))}
+                </div>
+                <p className="text-base leading-relaxed text-[#efe7d2]/90 mb-6">{review.quote}</p>
+                <p className="text-sm uppercase tracking-[0.25em] text-[#efe7d2]/60">{review.author}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
