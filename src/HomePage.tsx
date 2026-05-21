@@ -1375,8 +1375,8 @@ export default function HomePage() {
             </div>
             <p className="text-base md:text-lg leading-relaxed text-[#efe7d2]/90 max-w-2xl mx-auto">
               {lang === "fr"
-                ? "« Une expérience incroyable à 1001 Nuit — service impeccable, plat halal délicieux et ambiance parfaite pour une soirée inoubliable. Nous reviendrons sans hésiter. »"
-                : "“An incredible experience at 1001 Nuit — impeccable service, delicious halal dishes, and the perfect atmosphere for an unforgettable evening. We will be back without hesitation.”"}
+                ? "« Le site de 1001 Nuit est exceptionnel — menu, réservation et ambiance en ligne sont au top. Une découverte halal 5 étoiles pour les gourmets de Montréal. »"
+                : "“1001 Nuit’s website is outstanding — the menu, booking experience, and online atmosphere are top-tier. A 5-star halal dining discovery for Montreal food lovers.”"}
             </p>
             <p className="text-sm uppercase tracking-[0.3em] text-[#efe7d2]/60 mt-6">
               {lang === "fr" ? "- Avis vérifié" : "- Verified review"}
