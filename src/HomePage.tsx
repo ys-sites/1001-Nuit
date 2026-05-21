@@ -68,6 +68,11 @@ const REVIEWS = [
     text: "Brought my wife here on opening night. Food was great, came out hot and tasted delicious! Only downside was that the service was a bit messy, though I’m sure that was because it was opening night and everyone was a bit overwhelmed. I truly wish the best for the owner and everyone involved in this business and I’ll be sure to bring the rest of my family next time, inshallah!",
     rating: 5,
   },
+  {
+    author: "Ather Majeed Chaudhry",
+    text: "Tasty food we enjoyed all the dishes — mango matcha latte at the end was a hit. I recommend.",
+    rating: 5,
+  },
 ];
 
 const MENU_CATEGORIES = [
