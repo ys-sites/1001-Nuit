@@ -55,15 +55,16 @@ h6,
 
 @keyframes marquee-review {
   from {
-    transform: translateX(-50%);
+    transform: translateX(0);
   }
   to {
-    transform: translateX(0);
+    transform: translateX(-50%);
   }
 }
 
 .marquee-review {
   animation: marquee-review 28s linear infinite;
+  white-space: nowrap;
 }
 
 .hover-underline-animation::after {

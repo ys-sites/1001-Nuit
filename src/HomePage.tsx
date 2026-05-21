@@ -1124,30 +1124,26 @@ export default function HomePage() {
             </h2>
             <p className="text-sm text-[#1a1c19]/70 max-w-2xl mx-auto">
               {lang === "fr"
-                ? "Tous les avis Google 5 étoiles défilent automatiquement dans cette section témoignage."
-                : "All real Google 5-star reviews now scroll continuously in this testimonial section."}
+                ? "Tous les avis Google 5 étoiles s'affichent dans cette section de témoignages animés."
+                : "All Google 5-star reviews appear in this animated testimonial carousel."}
             </p>
           </ScrollTextReveal>
 
           <div
-            className="relative overflow-hidden rounded-[2.5rem] border border-[#1a1c19]/10 bg-[#111311]/95 p-6 shadow-[0_24px_80px_rgba(0,0,0,0.25)]"
+            className="relative overflow-hidden rounded-[3rem] border border-[#1a1c19]/10 bg-[#fbf7ee] p-6 shadow-[0_24px_80px_rgba(0,0,0,0.12)]"
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
           >
-            <div className="absolute top-5 left-5 inline-flex items-center gap-2 rounded-full border border-[#cfbe91]/25 bg-[#cfbe91]/10 px-4 py-2 text-xs uppercase tracking-[0.28em] text-[#efe7d2] shadow-[0_0_40px_rgba(207,190,145,0.14)] backdrop-blur-sm">
-              <Star size={14} className="text-[#cfbe91]" />
-              <span className="font-semibold">Google 5.0</span>
-            </div>
-
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(207,190,145,0.12),_transparent_25%),radial-gradient(circle_at_bottom_right,_rgba(207,190,145,0.08),_transparent_20%)]"></div>
             <div className="relative overflow-hidden">
               <div
-                className="flex items-stretch gap-6 marquee-review"
+                className="inline-flex items-stretch gap-6 marquee-review"
                 style={{ animationPlayState: isPaused ? "paused" : "running" }}
               >
                 {reviewLoop.map((review, index) => (
                   <div
                     key={`${review.author}-${index}`}
-                    className="min-w-[320px] max-w-[320px] flex-shrink-0 rounded-[2rem] border border-[#cfbe91]/10 bg-[#161713]/95 p-8 shadow-[0_20px_60px_rgba(0,0,0,0.28)]"
+                    className="min-w-[320px] max-w-[320px] flex-shrink-0 rounded-[2.2rem] border border-[#efe7d2] bg-white p-8 shadow-[0_20px_60px_rgba(0,0,0,0.08)]"
                   >
                     <div className="mb-4 flex items-center justify-between gap-3">
                       <div className="flex gap-1 text-[#cfbe91]">
@@ -1155,15 +1151,18 @@ export default function HomePage() {
                           <Star key={starIndex} size={16} />
                         ))}
                       </div>
-                      <span className="text-[0.65rem] uppercase tracking-[0.35em] text-[#efe7d2]/70">
-                        Verified
+                      <span className="text-[0.65rem] uppercase tracking-[0.35em] text-[#a38d5c]">
+                        Google
                       </span>
                     </div>
-                    <p className="mb-6 text-base leading-relaxed text-[#efe7d2]/90">
-                      {review.text}
-                    </p>
-                    <div className="border-t border-[#efe7d2]/10 pt-4">
-                      <p className="text-sm uppercase tracking-[0.25em] text-[#cfbe91]/80">
+                    <div className="relative mb-6 text-[#1a1c19]">
+                      <span className="absolute -left-3 -top-3 text-[5.5rem] text-[#cfbe91]/20">“</span>
+                      <p className="relative text-base leading-relaxed min-h-[6rem]">
+                        {review.text}
+                      </p>
+                    </div>
+                    <div className="border-t border-[#efe7d2] pt-4">
+                      <p className="text-sm uppercase tracking-[0.25em] text-[#1a1c19]/80">
                         {review.author}
                       </p>
                     </div>
@@ -1172,10 +1171,14 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="mt-8 flex justify-center">
-              <p className="text-xs uppercase tracking-[0.3em] text-[#efe7d2]/50">
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+              <p className="text-xs uppercase tracking-[0.3em] text-[#1a1c19]/50">
                 {lang === "fr" ? "Survolez pour mettre en pause" : "Hover to pause"}
               </p>
+              <div className="inline-flex items-center gap-2 rounded-full bg-[#1a1c19]/10 px-4 py-2 text-xs uppercase tracking-[0.28em] text-[#1a1c19]/80">
+                <Star size={14} className="text-[#cfbe91]" />
+                5-Star Google Reviews
+              </div>
             </div>
           </div>
         </div>
