@@ -1137,13 +1137,13 @@ export default function HomePage() {
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(207,190,145,0.12),_transparent_25%),radial-gradient(circle_at_bottom_right,_rgba(207,190,145,0.08),_transparent_20%)]"></div>
             <div className="relative overflow-hidden">
               <div
-                className="inline-flex items-stretch gap-6 marquee-review"
+                className="inline-flex items-stretch gap-6 marquee-track"
                 style={{ animationPlayState: isPaused ? "paused" : "running" }}
               >
                 {reviewLoop.map((review, index) => (
                   <div
                     key={`${review.author}-${index}`}
-                    className="min-w-[320px] max-w-[320px] flex-shrink-0 rounded-[2.2rem] border border-[#efe7d2] bg-white p-8 shadow-[0_20px_60px_rgba(0,0,0,0.08)]"
+                    className="inline-flex min-w-[320px] max-w-[320px] flex-shrink-0 rounded-[2.2rem] border border-[#efe7d2] bg-white p-8 shadow-[0_20px_60px_rgba(0,0,0,0.08)]"
                   >
                     <div className="mb-4 flex items-center justify-between gap-3">
                       <div className="flex gap-1 text-[#cfbe91]">
