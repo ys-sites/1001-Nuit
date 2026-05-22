@@ -17,10 +17,12 @@
     <meta property="og:url" content="https://www.1001nuit.com/" />
     <meta property="og:site_name" content="1001 Nuit" />
     <meta property="og:image" content="https://www.1001nuit.com/menu.avif" />
+    <meta property="og:image:alt" content="1001 Nuit Halal Asian Fusion Restaurant preview image" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="1001 Nuit | Halal Asian Fusion Restaurant" />
     <meta name="twitter:description" content="Discover 1001 Nuit, the halal restaurant in Dollard-des-Ormeaux, Montreal offering French-inspired Hong Kong cuisine, snacks, sandwiches, and late-night dining." />
     <meta name="twitter:image" content="https://www.1001nuit.com/menu.avif" />
+    <meta name="twitter:image:alt" content="1001 Nuit restaurant interior and cuisine preview" />
     <meta name="theme-color" content="#0a0b0a" />
     <title>1001 Nuit | Halal Asian Fusion Restaurant | 1001 Nuits Menu & Reservations</title>
     <link rel="icon" href="/L.svg" type="image/svg+xml" />
@@ -33,7 +35,11 @@
         "name": "1001 Nuit",
         "url": "https://www.1001nuit.com/",
         "description": "1001 Nuit is a premium halal Asian fusion restaurant in Dollard-des-Ormeaux, Montreal. Discover French-inspired Hong Kong cuisine, late-night dining, and handcrafted halal dishes.",
-        "image": "https://www.1001nuit.com/menu.avif",
+        "image": [
+          "https://www.1001nuit.com/menu.avif",
+          "https://www.1001nuit.com/L.svg"
+        ],
+        "logo": "https://www.1001nuit.com/L.svg",
         "servesCuisine": ["Asian fusion", "Hong Kong style", "French-inspired", "Halal"],
         "priceRange": "$$",
         "address": {
@@ -63,6 +69,14 @@
           "https://www.facebook.com/share/1J1KukJuHs/?mibextid=wwXIfr",
           "https://www.tiktok.com/@1001nu1t"
         ],
+        "potentialAction": {
+          "@type": "ReserveAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://www.1001nuit.com/#reservation"
+          },
+          "name": "Reserve a table"
+        },
         "aggregateRating": {
           "@type": "AggregateRating",
           "ratingValue": "5",
