@@ -78,6 +78,16 @@ const REVIEWS = [
     text: "Amazing staff and delicious food",
     rating: 5,
   },
+  {
+    author: "Mufti Farasat Ullah Sarmad",
+    text: "Must try spot — first time 100% authentic and 100% halal and hand slaughtered Chinese food in Montreal now.",
+    rating: 5,
+  },
+  {
+    author: "Salma Semraoui",
+    text: "Super service et très bonne nourriture, surtout le pad thaï 10/10.",
+    rating: 5,
+  },
 ];
 
 const MENU_CATEGORIES = [
