@@ -65,7 +65,7 @@ const REVIEWS = [
   },
   {
     author: "Abdullah Akbar",
-    text: "Brought my wife here on opening night. Food was great, came out hot and tasted delicious! Only downside was that the service was a bit messy, though I’m sure that was because it was opening night and everyone was a bit overwhelmed. I truly wish the best for the owner and everyone involved in this business and I’ll be sure to bring the rest of my family next time, inshallah!",
+    text: "Brought my wife here on opening night. Food was great, came out hot and tasted delicious! Only downside was that the service was a bit messy, though I'm sure that was because it was opening night and everyone was a bit overwhelmed. I truly wish the best for the owner and everyone involved in this business and I'll be sure to bring the rest of my family next time, inshallah!",
     rating: 5,
   },
   {
@@ -86,6 +86,41 @@ const REVIEWS = [
   {
     author: "Salma Semraoui",
     text: "Super service et très bonne nourriture, surtout le pad thaï 10/10.",
+    rating: 5,
+  },
+  {
+    author: "Zakaria Berrad",
+    text: "Friendly staff and superior dining experience",
+    rating: 5,
+  },
+  {
+    author: "Hana",
+    text: "Came here with my husband and let me tell you… when they say authentic they meant it! The food was 10/10. I ordered the beef pad Thai and my husband ordered a beef curry. Everything came out fresh, sizzling, flavourful, and best of all DELICIOUS! The staff were so welcoming, kind, and professional. The owner was so sweet and gave us some octopus balls on the house and they were amazinggggg! I plan on bringing my family from Ontario and the US to this amazing restaurant! Thank you for the spectacular experience!",
+    rating: 5,
+  },
+  {
+    author: "Selma Boutaous",
+    text: "One of the best mango matcha I've tasted and delicious food. The packaging is great, we can tell it was chosen with care for the quality",
+    rating: 5,
+  },
+  {
+    author: "Sima West",
+    text: "Excellent service incredibly delicious and fresh food, over all an amazing dining experience",
+    rating: 5,
+  },
+  {
+    author: "Mo",
+    text: "Amazing experience at 1001 Nuit — I loved the food, especially the chicken pad thai and the beef dishes. Everything being 100% halal was a huge plus. The location and atmosphere were beautiful and the gentlemen serving us were very professional and welcoming. Would've loved to try the desserts too… maybe next time!",
+    rating: 5,
+  },
+  {
+    author: "Benjamin Turmel",
+    text: "An exceptional dining experience — Food: 5/5 Service: 5/5 Atmosphere: 5/5",
+    rating: 5,
+  },
+  {
+    author: "Mostafa Ghannam",
+    text: "Amazing new restaurant, the food was delicious, great staff, and the owner Muhammad is amazing and very kind. Thank you for a great night. Will definitely come again!",
     rating: 5,
   },
 ];
