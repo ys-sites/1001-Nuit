@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, useScroll, useSpring } from "motion/react";
 import {
   ArrowRight,
@@ -849,6 +849,10 @@ const MINI_MENU = [
 export default function HomePage() {
   const [activeCategory, setActiveCategory] = useState(0);
   const [lang, setLang] = useState<"en" | "fr">("en");
+
+  useEffect(() => {
+    document.documentElement.lang = lang;
+  }, [lang]);
 
   const reviewLoop = [...REVIEWS, ...REVIEWS];
 
