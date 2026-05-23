@@ -26,6 +26,7 @@ import BlurText from "./components/ui/BlurText";
 import CurvedLoop from "./components/ui/CurvedLoop";
 import ReservationForm from "./components/ReservationForm";
 import ScrollTextReveal from "./components/ui/ScrollTextReveal";
+import NeighborhoodMap from "./components/NeighborhoodMap";
 
 const REVIEWS = [
   {
@@ -1437,44 +1438,65 @@ export default function HomePage() {
         className="py-24 w-full border-t border-[#1a1c19]/10 bg-[#faf8f5] text-[#1a1c19]"
       >
         <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-16">
-            <ScrollTextReveal className="flex flex-col gap-6" textColor="#1a1c19">
-              <h3 className="font-serif text-3xl uppercase tracking-widest text-[#1a1c19]">
-                {lang === "fr" ? "Heures d'ouverture" : "Hours"}
-              </h3>
-              <div className="flex flex-col gap-3 font-medium text-[#1a1c19]/80">
-                <div className="flex justify-between border-b border-[#1a1c19]/10 pb-2">
-                  <span>
-                    {lang === "fr" ? "Tous les jours" : "Every day"}
-                  </span>
-                  <span>11:00 - 21:00</span>
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-stretch">
+            {/* Left Info Pane */}
+            <div className="w-full lg:w-[350px] shrink-0 flex flex-col gap-10">
+              <ScrollTextReveal className="flex flex-col gap-4" textColor="#1a1c19">
+                <h3 className="font-serif text-3xl uppercase tracking-widest text-[#1a1c19]">
+                  {lang === "fr" ? "Heures d'ouverture" : "Hours"}
+                </h3>
+                <div className="flex flex-col gap-2 font-medium text-[#1a1c19]/80">
+                  <div className="flex justify-between border-b border-[#1a1c19]/10 pb-2">
+                    <span>
+                      {lang === "fr" ? "Tous les jours" : "Every day"}
+                    </span>
+                    <span>11:00 - 21:00</span>
+                  </div>
                 </div>
-              </div>
-            </ScrollTextReveal>
+              </ScrollTextReveal>
 
-            <ScrollTextReveal className="flex flex-col gap-6" textColor="#1a1c19" delay={0.1}>
-              <h3 className="font-serif text-3xl uppercase tracking-widest text-[#1a1c19]">
-                {lang === "fr" ? "Emplacement" : "Location"}
-              </h3>
-              <div className="flex flex-col gap-3 font-medium text-[#1a1c19]/80">
-                <p>Dollard-des-Ormeaux, Montreal</p>
-                <p className="italic text-[#1a1c19]/60 text-sm">
-                  {lang === "fr" ? "Adresse exacte à confirmer" : "Exact address coming soon"}
-                </p>
-              </div>
-            </ScrollTextReveal>
+              <ScrollTextReveal className="flex flex-col gap-4" textColor="#1a1c19" delay={0.1}>
+                <h3 className="font-serif text-3xl uppercase tracking-widest text-[#1a1c19]">
+                  {lang === "fr" ? "Emplacement" : "Location"}
+                </h3>
+                <div className="flex flex-col gap-2 font-medium text-[#1a1c19]/80">
+                  <p>Dollard-des-Ormeaux, Montreal</p>
+                  <p className="italic text-[#1a1c19]/60 text-sm">
+                    {lang === "fr" ? "Adresse exacte à confirmer" : "Exact address coming soon"}
+                  </p>
+                </div>
+              </ScrollTextReveal>
 
-            <ScrollTextReveal className="flex flex-col gap-6" textColor="#1a1c19" delay={0.2}>
-              <h3 className="font-serif text-3xl uppercase tracking-widest text-[#1a1c19]">
-                {lang === "fr" ? "Contact" : "Contact"}
-              </h3>
-              <div className="flex flex-col gap-3 font-medium text-[#1a1c19]/80">
-                <p>{lang === "fr" ? "Réservez en ligne via le formulaire ci-dessus." : "Book online using the reservation form above."}</p>
-                <p className="italic text-[#1a1c19]/60 text-sm">
-                  {lang === "fr" ? "Appelez-nous au" : "Call us at"} <a href="tel:+15144211114" className="text-[#cfbe91] hover:underline">(514) 421-1114</a>
-                </p>
-              </div>
-            </ScrollTextReveal>
+              <ScrollTextReveal className="flex flex-col gap-4" textColor="#1a1c19" delay={0.2}>
+                <h3 className="font-serif text-3xl uppercase tracking-widest text-[#1a1c19]">
+                  {lang === "fr" ? "Contact & Réservations" : "Contact & Bookings"}
+                </h3>
+                <div className="flex flex-col gap-2 font-medium text-[#1a1c19]/80">
+                  <p className="text-sm">
+                    {lang === "fr" ? "Réservez en ligne via le formulaire ci-dessus." : "Book online using the reservation form above."}
+                  </p>
+                  <p className="text-sm">
+                    {lang === "fr" ? "Appelez-nous au" : "Call us at"}{" "}
+                    <a href="tel:+15144211114" className="text-[#8a7a4a] hover:underline font-bold">
+                      (514) 421-1114
+                    </a>
+                  </p>
+                  <p className="text-sm">
+                    {lang === "fr" ? "Courriel :" : "Email :"}{" "}
+                    <a href="mailto:1001nuitmtl@gmail.com" className="text-[#8a7a4a] hover:underline font-bold">
+                      1001nuitmtl@gmail.com
+                    </a>
+                  </p>
+                </div>
+              </ScrollTextReveal>
+            </div>
+
+            {/* Right Map Explorer Pane */}
+            <div className="flex-grow w-full">
+              <ScrollTextReveal className="w-full h-full" textColor="#1a1c19" delay={0.3}>
+                <NeighborhoodMap lang={lang} />
+              </ScrollTextReveal>
+            </div>
           </div>
         </div>
       </section>
