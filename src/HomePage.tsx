@@ -1435,7 +1435,7 @@ export default function HomePage() {
       {/* Information & Location Section */}
       <section
         id="information"
-        className="py-24 w-full border-t border-[#1a1c19]/10 bg-[#faf8f5] text-[#1a1c19]"
+        className="py-12 w-full border-t border-[#1a1c19]/10 bg-[#faf8f5] text-[#1a1c19]"
       >
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-stretch">
@@ -1448,9 +1448,15 @@ export default function HomePage() {
                 <div className="flex flex-col gap-2 font-medium text-[#1a1c19]/80">
                   <div className="flex justify-between border-b border-[#1a1c19]/10 pb-2">
                     <span>
-                      {lang === "fr" ? "Tous les jours" : "Every day"}
+                      {lang === "fr" ? "Mardi au Samedi" : "Tuesday to Saturday"}
                     </span>
                     <span>11:00 - 21:00</span>
+                  </div>
+                  <div className="flex justify-between border-b border-[#1a1c19]/10 pb-2 text-red-600/80 font-bold">
+                    <span>
+                      {lang === "fr" ? "Dimanche & Lundi" : "Sunday & Monday"}
+                    </span>
+                    <span>{lang === "fr" ? "Fermé" : "Closed"}</span>
                   </div>
                 </div>
               </ScrollTextReveal>
@@ -1479,12 +1485,6 @@ export default function HomePage() {
                     {lang === "fr" ? "Appelez-nous au" : "Call us at"}{" "}
                     <a href="tel:+15144211114" className="text-[#8a7a4a] hover:underline font-bold">
                       (514) 421-1114
-                    </a>
-                  </p>
-                  <p className="text-sm">
-                    {lang === "fr" ? "Courriel :" : "Email :"}{" "}
-                    <a href="mailto:1001nuitmtl@gmail.com" className="text-[#8a7a4a] hover:underline font-bold">
-                      1001nuitmtl@gmail.com
                     </a>
                   </p>
                 </div>
