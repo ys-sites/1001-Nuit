@@ -1438,7 +1438,7 @@ export default function HomePage() {
         className="py-12 w-full border-t border-[#1a1c19]/10 bg-[#faf8f5] text-[#1a1c19]"
       >
         <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-stretch">
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
             {/* Left Info Pane */}
             <div className="w-full lg:w-[350px] shrink-0 flex flex-col gap-10">
               <ScrollTextReveal className="flex flex-col gap-4" textColor="#1a1c19">
@@ -1466,9 +1466,9 @@ export default function HomePage() {
                   {lang === "fr" ? "Emplacement" : "Location"}
                 </h3>
                 <div className="flex flex-col gap-2 font-medium text-[#1a1c19]/80">
-                  <p>Dollard-des-Ormeaux, Montreal</p>
-                  <p className="italic text-[#1a1c19]/60 text-sm">
-                    {lang === "fr" ? "Adresse exacte à confirmer" : "Exact address coming soon"}
+                  <p className="font-sans text-sm md:text-base leading-relaxed">
+                    11602 A Bd de Salaberry,<br />
+                    Dollard-des-Ormeaux, QC H9B 2R8
                   </p>
                 </div>
               </ScrollTextReveal>
