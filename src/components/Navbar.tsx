@@ -33,7 +33,7 @@ export default function Navbar({
         <div className="flex items-center">
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="p-2 mr-2 md:mr-4 border border-[#333330] rounded-[14px] hover:bg-white/10 transition-colors lg:hidden"
+            className="p-2 mr-2 md:mr-4 border border-[#333330] rounded-[14px] hover:bg-white/10 transition-colors xl:hidden"
           >
             <Menu size={20} className="text-[#efe7d2]" />
           </button>
@@ -41,14 +41,14 @@ export default function Navbar({
           
 
           <div
-            className="font-serif text-[18px] md:text-xl xl:text-2xl whitespace-nowrap tracking-[0.2em] uppercase mr-3 lg:mr-4 xl:mr-10 text-[#efe7d2] hover:opacity-80 transition-opacity cursor-pointer flex items-baseline gap-1"
+            className="font-serif text-[18px] md:text-xl xl:text-2xl whitespace-nowrap tracking-[0.2em] uppercase mr-3 xl:mr-10 text-[#efe7d2] hover:opacity-80 transition-opacity cursor-pointer flex items-baseline gap-1"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
             <span className="lining-nums">1001</span> <span>NUITS</span>
           </div>
         </div>
 
-        <div className="hidden lg:flex items-center gap-6 xl:gap-10 text-[11px] xl:text-[13px] font-bold tracking-[0.15em] xl:tracking-[0.18em] uppercase text-[#efe7d2] whitespace-nowrap">
+        <div className="hidden xl:flex items-center gap-6 xl:gap-10 text-[11px] xl:text-[13px] font-bold tracking-[0.15em] xl:tracking-[0.18em] uppercase text-[#efe7d2] whitespace-nowrap">
           <button
             onClick={() => scrollTo("menu")}
             className="transition-colors hover-underline-animation hover:text-[#cfbe91]"
@@ -113,7 +113,7 @@ export default function Navbar({
 
       {/* Mobile Menu Overlay — rendered via portal to escape overflow:hidden + transform parent */}
       {menuOpen && createPortal(
-        <div className="fixed inset-0 z-[200] bg-[#0a0b0a]/97 backdrop-blur-2xl flex flex-col lg:hidden">
+        <div className="fixed inset-0 z-[200] bg-[#0a0b0a]/97 backdrop-blur-2xl flex flex-col xl:hidden">
           <div className="flex justify-between items-center p-6 border-b border-[#333330]">
             <div
               className="flex items-center gap-3"
