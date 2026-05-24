@@ -1,24 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, useScroll, useSpring } from "motion/react";
-import {
-  ArrowRight,
-  Instagram,
-  Facebook,
-  Phone,
-  Star,
-} from "lucide-react";
-
-const TiktokIcon = ({ size = 24, className = "" }) => (
-  <svg
-    width={size}
-    height={size}
-    viewBox="0 0 24 24"
-    fill="currentColor"
-    className={className}
-  >
-    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
-  </svg>
-);
+import { Star } from "lucide-react";
 
 import Navbar from "./components/Navbar";
 import ShinyText from "./components/ui/ShinyText";
@@ -856,17 +838,6 @@ const MENU_CATEGORIES = [
   }
 ];
 
-const MINI_MENU = [
-  { name_en: "Takoyaki", name_fr: "Takoyaki", price: "$8.99" },
-  { name_en: "Curry Beef Brisket", name_fr: "Bœuf au Cari", price: "$21.99" },
-  {
-    name_en: "Sizzling Lamb Chops",
-    name_fr: "Côtelettes d'agneau",
-    price: "$39.99",
-  },
-];
-
-
 export default function HomePage() {
   const [activeCategory, setActiveCategory] = useState(0);
   const [lang, setLang] = useState<"en" | "fr">("en");
@@ -884,13 +855,6 @@ export default function HomePage() {
     restDelta: 0.001
   });
 
-  const scrollTo = (id: string) => {
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <div className="w-full bg-[#0a0b0a] font-sans selection:bg-[#cfbe91] selection:text-[#0a0b0a]">
       {/* Scroll Progress Bar */}
@@ -899,192 +863,17 @@ export default function HomePage() {
         style={{ scaleX }}
       />
 
-      {/* Hero Section Container */}
-      <section className="w-full p-3 md:p-4 flex flex-col md:flex-row gap-3 md:gap-4 box-border text-[#efe7d2] md:h-[100svh] min-h-[100svh]">
-        {/* Hero Left Section */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.98 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="w-full md:w-[70%] xl:w-[75%] relative rounded-[2rem] md:rounded-[2.5rem] overflow-hidden h-[calc(100svh-1.5rem)] md:h-full md:flex-none flex-shrink-0 group"
-        >
-          {/* Background Image */}
-          <div className="absolute inset-0">
-            <img
-              src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&q=80&w=2400"
-              alt="Ambiance"
-              className="w-full h-full object-cover transition-transform duration-[20s] group-hover:scale-105"
-            />
-            {/* Subtle gradient overlay to darken edges for text readability */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0a0b0a]/90 via-[#0a0b0a]/20 to-[#0a0b0a]/40 z-10"></div>
-            <div className="absolute inset-0 bg-gradient-to-r from-[#0a0b0a]/60 flex-transparent z-10"></div>
-          </div>
-
-          {/* Floating Navbar */}
-          <Navbar
-            className="absolute top-6 left-6 right-6 md:top-8 md:left-8 md:right-8 z-30 w-auto"
-            lang={lang}
-            setLang={setLang}
-          />
-
-          {/* Big Hero Typography */}
-          <motion.div 
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="absolute bottom-8 left-6 md:bottom-12 md:left-12 z-20 pointer-events-none"
-          >
-            <h1 className="font-serif text-[3.2rem] sm:text-[4.5rem] leading-[0.85] md:text-[8rem] lg:text-[10vw] xl:text-[11vw] uppercase tracking-tight text-[#efe7d2] drop-shadow-2xl">
-              <ShinyText text="1001" className="lining-nums inline-block" color="#efe7d2" shineColor="#cfbe91" speed={3} /> <br /> 
-              <ShinyText text="NUITS" className="inline-block" color="#efe7d2" shineColor="#cfbe91" speed={3} delay={0.5} />
-            </h1>
-          </motion.div>
-
-          {/* Brand Logo Badge */}
-          <div className="absolute top-28 left-6 md:top-32 md:left-8 z-20 flex items-center justify-center backdrop-blur-sm rounded-2xl p-2 bg-[#0a0b0a]/40 border border-[#efe7d2]/20 w-32 h-20 md:w-40 md:h-24 shadow-2xl overflow-hidden">
-            <img
-              src="/logo.jpg"
-              alt="1001 Nuits Logo"
-              className="w-full h-full object-contain"
-            />
-          </div>
-
-          {/* Halal Badge */}
-          <div className="absolute top-28 right-6 md:top-32 md:right-8 z-20 flex flex-col items-center justify-center pointer-events-none backdrop-blur-sm rounded-full p-2 bg-[#0a0b0a]/40 border border-[#efe7d2]/20 w-20 h-20 md:w-24 md:h-24 shadow-2xl">
-            <div className="text-center">
-              <div className="flex items-center justify-center mb-1">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-[#cfbe91]">
-                  <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="currentColor"/>
-                </svg>
-              </div>
-              <span className="block font-serif text-[#cfbe91] text-[10px] md:text-[12px] font-bold tracking-[0.2em] leading-none mb-1">HALAL</span>
-              <span className="block text-[7px] md:text-[8px] text-[#efe7d2]/80 uppercase tracking-[0.1em]">Certified</span>
-            </div>
-          </div>
-
-          {/* Social Badges bottom right */}
-          <div className="absolute bottom-5 right-5 md:bottom-10 md:right-10 z-20 flex items-center gap-2 md:gap-3">
-            {[
-              { icon: Instagram, link: "https://www.instagram.com/1001nu1t/" },
-              { icon: Facebook, link: "https://www.facebook.com/share/1J1KukJuHs/?mibextid=wwXIfr" },
-              { icon: TiktokIcon, link: "https://www.tiktok.com/@1001nu1t" },
-            ].map((social, idx) => (
-              <a
-                key={idx}
-                href={social.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 md:w-[52px] md:h-[52px] flex items-center justify-center rounded-full bg-[#0a0b0a]/60 backdrop-blur-md border border-[#333330] hover:bg-white hover:text-black transition-colors duration-300"
-              >
-                <social.icon size={16} strokeWidth={1.5} />
-              </a>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Right Sidebar Sections - Equal Ratio Boxes */}
-        <div className="w-full md:w-[30%] xl:w-[25%] flex flex-col gap-3 md:gap-4 flex-shrink-0 md:h-full md:flex-1 h-auto">
-          {/* Menu Block */}
-          <motion.div
-            onClick={() => scrollTo("menu")}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="relative w-full flex-1 aspect-[4/3] md:aspect-auto rounded-[2rem] md:rounded-[2.5rem] overflow-hidden group block cursor-pointer"
-          >
-            <img
-              src="/menu.avif"
-              alt="Menu"
-              className="absolute inset-0 w-full h-full object-cover transition-transform duration-[10s] group-hover:scale-105"
-            />
-            <div className="absolute inset-0 bg-[#0a0b0a]/30 group-hover:bg-[#0a0b0a]/10 transition-colors duration-500 z-0"></div>
-
-            {/* Mini Menu Peek */}
-            <div className="absolute top-6 left-6 right-6 z-10 hidden sm:block pointer-events-none">
-              <div className="bg-[#0a0b0a]/70 backdrop-blur-xl border border-[#333330] rounded-2xl p-4 flex flex-col gap-3 transform -translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                {MINI_MENU.map((item, idx) => (
-                  <div
-                    key={idx}
-                    className="flex justify-between items-baseline text-xs"
-                  >
-                    <span className="font-serif text-[#cfbe91] tracking-wide">
-                      {lang === "fr" ? item.name_fr : item.name_en}
-                    </span>
-                    <div className="flex-grow border-b border-dashed border-[#cfbe91]/30 mx-2 opacity-50"></div>
-                    <span className="font-serif text-[#cfbe91]">
-                      {item.price}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="absolute bottom-6 right-6 z-10 bg-[#0a0b0a]/80 backdrop-blur-md border border-[#333330] rounded-full pl-6 py-2.5 pr-2.5 flex items-center gap-5 group-hover:bg-white group-hover:text-black group-hover:border-white transition-all duration-300">
-              <span className="text-[10px] tracking-[0.2em] font-medium uppercase mt-0.5">
-                {lang === "fr" ? "Menu" : "Menu"}
-              </span>
-              <div className="w-8 h-8 rounded-full border border-current flex items-center justify-center">
-                <ArrowRight size={14} />
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Our Restaurant Block */}
-          <motion.div
-            onClick={() => scrollTo("about")}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="relative w-full flex-1 aspect-[4/3] md:aspect-auto rounded-[2rem] md:rounded-[2.5rem] overflow-hidden group block cursor-pointer"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&q=80&w=800"
-              alt="Our Restaurant"
-              className="absolute inset-0 w-full h-full object-cover transition-transform duration-[10s] group-hover:scale-105"
-            />
-            <div className="absolute inset-0 bg-[#0a0b0a]/40 group-hover:bg-[#0a0b0a]/20 transition-colors duration-500 z-0"></div>
-
-            <div className="absolute bottom-6 right-6 z-10 bg-[#0a0b0a]/80 backdrop-blur-md border border-[#333330] rounded-full pl-6 py-2.5 pr-2.5 flex items-center gap-5 group-hover:bg-white group-hover:text-black group-hover:border-white transition-all duration-300">
-              <span className="text-[10px] tracking-[0.2em] font-medium uppercase mt-0.5">
-                {lang === "fr" ? "Notre Restaurant" : "Our Restaurant"}
-              </span>
-              <div className="w-8 h-8 rounded-full border border-current flex items-center justify-center">
-                <ArrowRight size={14} />
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Reservation Block */}
-          <motion.div
-            onClick={() => scrollTo("reservation")}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="relative w-full flex-1 aspect-[4/3] md:aspect-auto rounded-[2rem] md:rounded-[2.5rem] overflow-hidden group block cursor-pointer"
-          >
-            <img
-              src="/reservation.png"
-              alt="Reservation"
-              className="absolute inset-0 w-full h-full object-cover transition-transform duration-[10s] group-hover:scale-105"
-            />
-            <div className="absolute inset-0 bg-[#0a0b0a]/30 group-hover:bg-[#0a0b0a]/10 transition-colors duration-500 z-0"></div>
-
-            <div className="absolute bottom-6 right-6 z-10 bg-[#0a0b0a]/80 backdrop-blur-md border border-[#333330] rounded-full pl-6 py-2.5 pr-2.5 flex items-center gap-5 group-hover:bg-white group-hover:text-black group-hover:border-white transition-all duration-300">
-              <span className="text-[10px] tracking-[0.2em] font-medium uppercase mt-0.5">
-                {lang === "fr" ? "Réservation" : "Reservation"}
-              </span>
-              <div className="w-8 h-8 rounded-full border border-current flex items-center justify-center">
-                <ArrowRight size={14} />
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      {/* Floating Navbar */}
+      <Navbar
+        className="fixed top-6 left-6 right-6 md:top-8 md:left-8 md:right-8 z-50"
+        lang={lang}
+        setLang={setLang}
+      />
 
       {/* Menu Section */}
       <section
         id="menu"
-        className="min-h-screen bg-[#faf8f5] text-[#1a1c19] pt-24 pb-24 w-full relative"
+        className="min-h-screen bg-[#faf8f5] text-[#1a1c19] pt-36 md:pt-44 pb-24 w-full relative"
       >
         <div className="max-w-5xl mx-auto px-6 md:px-12">
           {/* Tabs */}
