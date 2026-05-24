@@ -940,14 +940,6 @@ export default function HomePage() {
             </h1>
           </motion.div>
 
-          {/* Brand Logo Badge */}
-          <div className="absolute top-28 left-6 md:top-32 md:left-8 z-20 flex items-center justify-center backdrop-blur-sm rounded-2xl p-2 bg-[#0a0b0a]/40 border border-[#efe7d2]/20 w-32 h-20 md:w-40 md:h-24 shadow-2xl overflow-hidden">
-            <img
-              src="/logo.jpg"
-              alt="1001 Nuits Logo"
-              className="w-full h-full object-contain"
-            />
-          </div>
 
           {/* Halal Badge */}
           <div className="absolute top-28 right-6 md:top-32 md:right-8 z-20 flex flex-col items-center justify-center pointer-events-none backdrop-blur-sm rounded-full p-2 bg-[#0a0b0a]/40 border border-[#efe7d2]/20 w-20 h-20 md:w-24 md:h-24 shadow-2xl">
