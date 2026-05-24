@@ -124,6 +124,26 @@ const REVIEWS = [
     text: "Amazing new restaurant, the food was delicious, great staff, and the owner Muhammad is amazing and very kind. Thank you for a great night. Will definitely come again!",
     rating: 5,
   },
+  {
+    author: "K- Man",
+    text: "Great spot for authentic Asian Halal food. Ordered the shrimp and chicken Pad Thai and it was amazing. Definitely check them out!",
+    rating: 5,
+  },
+  {
+    author: "Tubie 101",
+    text: "My husband and I were very excited about trying 1001Nuit when it first appeared on my fyp. It was our first time here and it was an amazing experience with great service and excellent food. We will definitely be adding 1001Nuit to our restaurant options, and will be returning soon. Thank you to the 1001Nuit team for such an exceptional dining experience. May God bring much success and prosperity to 1001Nuit. — Food: 5/5 Service: 5/5 Atmosphere: 5/5",
+    rating: 5,
+  },
+  {
+    author: "Mahdi K",
+    text: "Amazing experience! The food was delicious, the service was excellent, and the atmosphere was welcoming. A special thank you to Muhammad, the owner, for his outstanding hospitality and hard work you can really see the care and passion he puts into the restaurant. Highly recommend! — Food: 5/5 Service: 5/5 Atmosphere: 5/5",
+    rating: 5,
+  },
+  {
+    author: "Julian Sablowski",
+    text: "Really enjoyed the food, we had rose out and Mohammad offered us something while we waited. Superb service and we will certainly be back. Food tasted fresh and really good! — Food: 5/5 Service: 5/5 Atmosphere: 5/5",
+    rating: 5,
+  },
 ];
 
 const MENU_CATEGORIES = [
@@ -920,6 +940,15 @@ export default function HomePage() {
             </h1>
           </motion.div>
 
+          {/* Brand Logo Badge */}
+          <div className="absolute top-28 left-6 md:top-32 md:left-8 z-20 flex items-center justify-center backdrop-blur-sm rounded-2xl p-2 bg-[#0a0b0a]/40 border border-[#efe7d2]/20 w-32 h-20 md:w-40 md:h-24 shadow-2xl overflow-hidden">
+            <img
+              src="/logo.jpg"
+              alt="1001 Nuits Logo"
+              className="w-full h-full object-contain"
+            />
+          </div>
+
           {/* Halal Badge */}
           <div className="absolute top-28 right-6 md:top-32 md:right-8 z-20 flex flex-col items-center justify-center pointer-events-none backdrop-blur-sm rounded-full p-2 bg-[#0a0b0a]/40 border border-[#efe7d2]/20 w-20 h-20 md:w-24 md:h-24 shadow-2xl">
             <div className="text-center">
@@ -1283,6 +1312,16 @@ export default function HomePage() {
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
             className="flex-1 flex flex-col justify-center lg:mt-0 order-1 lg:order-2 backdrop-blur-md bg-white/30 p-8 md:p-12 lg:p-16 rounded-[4rem] border border-white/20 shadow-sm"
           >
+            <div className="flex justify-center lg:justify-start mb-6">
+              <div className="backdrop-blur-sm rounded-2xl p-2 bg-[#0a0b0a] border border-[#333330] w-36 h-20 shadow-md overflow-hidden">
+                <img
+                  src="/logo.jpg"
+                  alt="1001 Nuits Logo"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+            </div>
+
             <ScrollTextReveal delay={0.35} textColor="#1a1c19" className="mb-8">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-[1px] bg-[#1a1c19]/30"></div>
