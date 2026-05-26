@@ -144,6 +144,11 @@ const REVIEWS = [
     text: "Really enjoyed the food, we had rose out and Mohammad offered us something while we waited. Superb service and we will certainly be back. Food tasted fresh and really good! — Food: 5/5 Service: 5/5 Atmosphere: 5/5",
     rating: 5,
   },
+  {
+    author: "Jasmin Bouchard",
+    text: "J’ai mangé dans ce restaurant chinois halal. La nourriture était bonne et le service avec Rim était excellent. Elle est très professionnelle et accueillante. Je recommande ! ⭐️⭐️⭐️⭐️⭐️ Merci beaucoup Mohemed — Food: 5/5 Service: 5/5 Atmosphere: 5/5",
+    rating: 5,
+  },
 ];
 
 const MENU_CATEGORIES = [
