@@ -951,7 +951,7 @@ export default function HomePage() {
           {/* Background Image */}
           <div className="absolute inset-0">
             <img
-              src="/hero.webp"
+              src="/hero.jpeg"
               alt="Ambiance"
               className="w-full h-full object-cover transition-transform duration-[20s] group-hover:scale-105"
             />
