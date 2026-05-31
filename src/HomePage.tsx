@@ -24,7 +24,6 @@ import Navbar from "./components/Navbar";
 import ShinyText from "./components/ui/ShinyText";
 import BlurText from "./components/ui/BlurText";
 import CurvedLoop from "./components/ui/CurvedLoop";
-import ReservationForm from "./components/ReservationForm";
 import ScrollTextReveal from "./components/ui/ScrollTextReveal";
 import NeighborhoodMap from "./components/NeighborhoodMap";
 
@@ -1482,16 +1481,16 @@ export default function HomePage() {
         <div className="max-w-4xl mx-auto px-6 md:px-12 text-center relative z-10 w-full">
           <ScrollTextReveal className="mb-12" textColor="#1a1c19">
             <h2 className="font-serif text-5xl md:text-7xl uppercase tracking-widest leading-[1] mb-4 text-[#1a1c19]">
-              <ShinyText text={lang === "fr" ? "Réservez" : "Book"} color="#1a1c19" shineColor="#cfbe91" speed={3} /> <br />
+              <ShinyText text={lang === "fr" ? "Réservez" : "Reserve"} color="#1a1c19" shineColor="#cfbe91" speed={3} /> <br />
               <span className="text-[#cfbe91] italic normal-case font-light drop-shadow-sm">
-                {lang === "fr" ? "votre événement" : "your event"}
+                {lang === "fr" ? "appelez-nous" : "call us"}
               </span>
             </h2>
-            <div className="max-w-lg mx-auto">
+            <div className="max-w-lg mx-auto mb-12">
               <BlurText
                 text={lang === "fr"
-                  ? "Remplissez le formulaire ci-dessous pour organiser votre événement privé avec nous."
-                  : "Fill out the form below to arrange your private event with us."}
+                  ? "Pour réserver votre table ou organiser un événement privé, appelez-nous directement."
+                  : "To reserve your table or arrange a private event, give us a call directly."}
                 delay={20}
                 animateBy="words"
                 className="text-sm md:text-lg font-medium opacity-70 leading-relaxed justify-center"
@@ -1499,7 +1498,17 @@ export default function HomePage() {
             </div>
           </ScrollTextReveal>
 
-          <ReservationForm lang={lang} />
+          <motion.a
+            href="tel:+15144211114"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+            className="inline-flex items-center gap-4 bg-[#1a1c19] text-[#efe7d2] rounded-full px-8 py-5 md:px-12 md:py-7 hover:bg-[#cfbe91] hover:text-[#1a1c19] transition-all duration-300 group shadow-xl"
+          >
+            <Phone size={24} className="shrink-0" />
+            <span className="font-serif text-2xl md:text-4xl tracking-widest lining-nums">(514) 421-1114</span>
+          </motion.a>
         </div>
       </section>
 
