@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import HomePage from './HomePage';
+import ReviewPage from './ReviewPage';
 
 export default function App() {
   return (
@@ -7,6 +8,7 @@ export default function App() {
       <main className="flex-grow flex flex-col">
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/review" element={<ReviewPage />} />
         </Routes>
       </main>
     </div>

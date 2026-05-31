@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { motion, useScroll, useSpring } from "motion/react";
 import {
   ArrowRight,
@@ -1247,10 +1248,8 @@ export default function HomePage() {
             />
           </h2>
 
-          <a
-            href="https://g.page/r/CfOqKjHKSlrMEAI/review"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/review"
             className="inline-flex items-center gap-4 bg-white border border-[#cfbe91]/30 rounded-2xl p-5 md:p-6 hover:border-[#cfbe91] transition-all group shadow-md max-w-2xl w-full text-left mx-auto"
           >
             <div className="w-11 h-11 rounded-xl bg-[#cfbe91]/15 flex items-center justify-center shrink-0 group-hover:bg-[#cfbe91]/25 transition-colors">
@@ -1267,7 +1266,7 @@ export default function HomePage() {
             <div className="shrink-0 flex items-center gap-2 bg-[#cfbe91] text-[#0a0b0a] font-bold text-xs tracking-wider uppercase px-4 py-2.5 rounded-xl group-hover:bg-[#d7c683] transition-colors whitespace-nowrap">
               {lang === "fr" ? "Nous noter" : "Review Us"}
             </div>
-          </a>
+          </Link>
         </div>
 
         <div className="w-full relative flex flex-col gap-8 md:gap-12 mt-12 overflow-hidden py-10 pointer-events-none">
