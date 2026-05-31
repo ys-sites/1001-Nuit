@@ -951,7 +951,7 @@ export default function HomePage() {
           {/* Background Image */}
           <div className="absolute inset-0">
             <img
-              src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&q=80&w=2400"
+              src="/hero.webp"
               alt="Ambiance"
               className="w-full h-full object-cover transition-transform duration-[20s] group-hover:scale-105"
             />
@@ -1025,7 +1025,7 @@ export default function HomePage() {
             className="relative w-full flex-1 aspect-[4/3] md:aspect-auto rounded-[2rem] md:rounded-[2.5rem] overflow-hidden group block cursor-pointer"
           >
             <img
-              src="/menu.avif"
+              src="/menu.webp"
               alt="Menu"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-[10s] group-hover:scale-105"
             />
@@ -1070,7 +1070,7 @@ export default function HomePage() {
             className="relative w-full flex-1 aspect-[4/3] md:aspect-auto rounded-[2rem] md:rounded-[2.5rem] overflow-hidden group block cursor-pointer"
           >
             <img
-              src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&q=80&w=800"
+              src="/restaurent.webp"
               alt="Our Restaurant"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-[10s] group-hover:scale-105"
             />
@@ -1316,7 +1316,7 @@ export default function HomePage() {
             {/* Image Composition */}
             <div className="relative w-full aspect-[4/5] max-w-md mx-auto lg:mx-0 mt-8 mb-16 lg:my-0">
               <img
-                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80&w=800"
+                src="/drink.webp"
                 alt="Restaurant Interior"
                 className="w-full h-full object-cover rounded-[2.5rem] shadow-xl"
               />
@@ -1328,8 +1328,8 @@ export default function HomePage() {
                 className="absolute -bottom-6 -right-4 sm:-bottom-10 sm:-right-10 w-1/2 sm:w-2/3 max-w-[180px] sm:max-w-[240px] aspect-square rounded-[2rem] overflow-hidden border-[8px] sm:border-[12px] border-[#faf8f5] shadow-2xl"
               >
                 <img
-                  src="https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&q=80&w=800"
-                  alt="Chefs"
+                  src="/dessert.webp"
+                  alt="Dessert"
                   className="w-full h-full object-cover"
                 />
               </motion.div>
