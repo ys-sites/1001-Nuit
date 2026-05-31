@@ -34,10 +34,10 @@ export default function ReviewPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0a0b0a] flex flex-col items-center justify-center px-6 py-16 relative overflow-hidden">
+    <div className="min-h-screen bg-[#faf8f5] flex flex-col items-center justify-center px-6 py-16 relative overflow-hidden">
       {/* Decorative background text */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden opacity-[0.025]">
-        <p className="font-serif text-[18vw] uppercase text-[#efe7d2] whitespace-nowrap leading-none tracking-widest">
+        <p className="font-serif text-[18vw] uppercase text-[#1a1c19] whitespace-nowrap leading-none tracking-widest">
           1001 NUITS
         </p>
       </div>
@@ -45,7 +45,7 @@ export default function ReviewPage() {
       {/* Back button */}
       <Link
         to="/"
-        className="absolute top-6 left-6 md:top-10 md:left-10 flex items-center gap-2 text-[#efe7d2]/50 hover:text-[#cfbe91] transition-colors text-sm tracking-widest uppercase font-medium"
+        className="absolute top-6 left-6 md:top-10 md:left-10 flex items-center gap-2 text-[#1a1c19]/40 hover:text-[#8a7a4a] transition-colors text-sm tracking-widest uppercase font-medium"
       >
         <ArrowLeft size={16} />
         <span>Back</span>
@@ -58,7 +58,7 @@ export default function ReviewPage() {
         transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
         className="mb-10 flex flex-col items-center gap-3"
       >
-        <div className="w-32 h-16 rounded-xl overflow-hidden border border-[#333330] bg-[#111]">
+        <div className="w-32 h-16 rounded-xl overflow-hidden border border-[#1a1c19]/10 bg-[#0a0b0a]">
           <img src="/logo.jpg" alt="1001 Nuits" className="w-full h-full object-contain" />
         </div>
       </motion.div>
@@ -75,10 +75,10 @@ export default function ReviewPage() {
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             className="flex flex-col items-center text-center max-w-lg w-full"
           >
-            <h1 className="font-serif text-4xl md:text-5xl text-[#efe7d2] mb-3 tracking-wide">
+            <h1 className="font-serif text-4xl md:text-5xl text-[#1a1c19] mb-3 tracking-wide">
               How was your experience?
             </h1>
-            <p className="text-[#efe7d2]/50 text-sm md:text-base mb-10 font-medium tracking-wide">
+            <p className="text-[#1a1c19]/50 text-sm md:text-base mb-10 font-medium tracking-wide">
               Tap a star to share your feedback
             </p>
 
@@ -102,7 +102,7 @@ export default function ReviewPage() {
                     className={`transition-colors duration-150 drop-shadow-lg ${
                       star <= (hovered || selected)
                         ? "fill-[#cfbe91] text-[#cfbe91]"
-                        : "fill-transparent text-[#efe7d2]/20"
+                        : "fill-transparent text-[#1a1c19]/15"
                     }`}
                   />
                 </motion.button>
@@ -118,16 +118,14 @@ export default function ReviewPage() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -6 }}
                   transition={{ duration: 0.2 }}
-                  className="text-[#cfbe91] font-serif text-2xl tracking-wider h-8"
+                  className="text-[#8a7a4a] font-serif text-2xl tracking-wider h-8"
                 >
                   {starLabel(hovered || selected)}
                 </motion.p>
               )}
             </AnimatePresence>
 
-            <p className="text-[#efe7d2]/25 text-xs mt-8 tracking-widest uppercase">
-              5 stars redirects to Google · 1–4 stars share privately
-            </p>
+
           </motion.div>
         )}
 
@@ -156,10 +154,10 @@ export default function ReviewPage() {
               ))}
             </div>
 
-            <h2 className="font-serif text-3xl md:text-4xl text-[#efe7d2] mb-3 tracking-wide">
+            <h2 className="font-serif text-3xl md:text-4xl text-[#1a1c19] mb-3 tracking-wide">
               Tell us more
             </h2>
-            <p className="text-[#efe7d2]/50 text-sm mb-8 max-w-sm">
+            <p className="text-[#1a1c19]/50 text-sm mb-8 max-w-sm">
               We value your feedback. What could we have done better?
             </p>
 
@@ -168,7 +166,7 @@ export default function ReviewPage() {
               onChange={(e) => setComment(e.target.value)}
               placeholder="Share your experience..."
               rows={5}
-              className="w-full bg-[#111]/80 border border-[#333330] focus:border-[#cfbe91]/60 text-[#efe7d2] placeholder-[#efe7d2]/25 rounded-2xl p-5 text-sm leading-relaxed resize-none outline-none transition-colors duration-200 font-sans mb-6"
+              className="w-full bg-white border border-[#1a1c19]/10 focus:border-[#cfbe91]/60 text-[#1a1c19] placeholder-[#1a1c19]/30 rounded-2xl p-5 text-sm leading-relaxed resize-none outline-none transition-colors duration-200 font-sans mb-6 shadow-sm"
             />
 
             <motion.button
@@ -183,7 +181,7 @@ export default function ReviewPage() {
 
             <button
               onClick={() => { setStage("rating"); setSelected(0); }}
-              className="mt-4 text-[#efe7d2]/30 hover:text-[#efe7d2]/60 text-xs uppercase tracking-widest transition-colors"
+              className="mt-4 text-[#1a1c19]/30 hover:text-[#1a1c19]/60 text-xs uppercase tracking-widest transition-colors"
             >
               ← Change rating
             </button>
@@ -206,19 +204,19 @@ export default function ReviewPage() {
               transition={{ type: "spring", stiffness: 260, damping: 18, delay: 0.15 }}
               className="mb-8"
             >
-              <CheckCircle size={72} className="text-[#cfbe91]" strokeWidth={1.5} />
+              <CheckCircle size={72} className="text-[#8a7a4a]" strokeWidth={1.5} />
             </motion.div>
 
-            <h2 className="font-serif text-4xl md:text-5xl text-[#efe7d2] mb-4 tracking-wide">
+            <h2 className="font-serif text-4xl md:text-5xl text-[#1a1c19] mb-4 tracking-wide">
               Thank you!
             </h2>
-            <p className="text-[#efe7d2]/60 text-base leading-relaxed mb-10 max-w-sm">
+            <p className="text-[#1a1c19]/60 text-base leading-relaxed mb-10 max-w-sm">
               Your feedback has been received. We truly appreciate you taking the time to share your experience with us — it helps us continue to improve.
             </p>
 
             <Link
               to="/"
-              className="inline-flex items-center gap-2 border border-[#cfbe91]/40 hover:border-[#cfbe91] text-[#cfbe91] hover:text-[#cfbe91] px-8 py-3.5 rounded-full uppercase tracking-widest text-xs font-bold transition-all duration-200"
+              className="inline-flex items-center gap-2 border border-[#8a7a4a]/40 hover:border-[#8a7a4a] text-[#8a7a4a] px-8 py-3.5 rounded-full uppercase tracking-widest text-xs font-bold transition-all duration-200"
             >
               <ArrowLeft size={14} />
               Back to 1001 Nuits
