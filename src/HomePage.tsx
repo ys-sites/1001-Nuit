@@ -149,6 +149,41 @@ const REVIEWS = [
     text: "J’ai mangé dans ce restaurant chinois halal. La nourriture était bonne et le service avec Rim était excellent. Elle est très professionnelle et accueillante. Je recommande ! ⭐️⭐️⭐️⭐️⭐️ Merci beaucoup Mohemed — Food: 5/5 Service: 5/5 Atmosphere: 5/5",
     rating: 5,
   },
+  {
+    author: "Mounia Belmamoun",
+    text: "We were very happy with our experience. The food was delicious and the service excellent. The staff was very warm and welcoming, and the place was clean and beautiful. Food: 5/5 Service: 5/5 Atmosphere: 5/5",
+    rating: 5,
+  },
+  {
+    author: "Elias Ayhs",
+    text: "Food came very quickly. Ordering on the phone was very nice. Big portions and very good food.",
+    rating: 5,
+  },
+  {
+    author: "Info Magna Montreal",
+    text: "Amazing food, service and staff keep it up",
+    rating: 5,
+  },
+  {
+    author: "bilal vinsloke",
+    text: "Great spot to try Hong Kong food. I was warmly greeted and the food was soothing. The owner is a great guy, I will be back.",
+    rating: 5,
+  },
+  {
+    author: "Amira Ibrahim",
+    text: "Food was delicious and arrived fast. Favourite was the general tao",
+    rating: 5,
+  },
+  {
+    author: "Maryam I",
+    text: "Great first impression, chinese food halal in the west? Yes please and alhamdullilahhhhhh. Loved the shrimp and chicken general tao the pad thai noodles and beef hit the spot! For a new resto the kitchen and serving staff are clearly hard at work much appreciated and I'll be coming back again! 1/1001 nights completed 1000 to go!",
+    rating: 5,
+  },
+  {
+    author: "Motahhareh",
+    text: "We had a wonderful treat tonight. We were the first customers here on their opening day, and we just came back. We tried the pad Thai, Curry Beef Udon Soup, General Tao's chicken, and HK style Beef Noodles and we really enjoyed all of them. Their beef is very tender and the chicken is the most tender chicken I have ever tried. Taro milk tea and mango passion slush were amazing and Waffles are a must try. We will definitely go back inshallah.",
+    rating: 5,
+  },
 ];
 
 const MENU_CATEGORIES = [
@@ -1477,25 +1512,6 @@ export default function HomePage() {
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
             {/* Left Info Pane */}
             <div className="w-full lg:w-[350px] shrink-0 flex flex-col gap-10">
-              <ScrollTextReveal className="flex flex-col gap-4" textColor="#1a1c19">
-                <h3 className="font-serif text-3xl uppercase tracking-widest text-[#1a1c19]">
-                  {lang === "fr" ? "Heures d'ouverture" : "Hours"}
-                </h3>
-                <div className="flex flex-col gap-2 font-medium text-[#1a1c19]/80">
-                  <div className="flex justify-between border-b border-[#1a1c19]/10 pb-2">
-                    <span>
-                      {lang === "fr" ? "Mardi au Samedi" : "Tuesday to Saturday"}
-                    </span>
-                    <span>11:00 - 21:00</span>
-                  </div>
-                  <div className="flex justify-between border-b border-[#1a1c19]/10 pb-2 text-red-600/80 font-bold">
-                    <span>
-                      {lang === "fr" ? "Dimanche & Lundi" : "Sunday & Monday"}
-                    </span>
-                    <span>{lang === "fr" ? "Fermé" : "Closed"}</span>
-                  </div>
-                </div>
-              </ScrollTextReveal>
 
               <ScrollTextReveal className="flex flex-col gap-4" textColor="#1a1c19" delay={0.1}>
                 <h3 className="font-serif text-3xl uppercase tracking-widest text-[#1a1c19]">
