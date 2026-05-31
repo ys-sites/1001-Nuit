@@ -1410,7 +1410,7 @@ export default function HomePage() {
             className="w-full lg:w-1/2 relative"
           >
               <div className="relative aspect-[4/3] w-full rounded-[2.5rem] overflow-hidden">
-               <img src="/event.png" alt="Private Dining Room" className="w-full h-full object-cover grayscale opacity-90 transition-all duration-[5s] hover:grayscale-0 hover:scale-105" />
+               <img src="/hero.webp" alt="Private Dining Room" className="w-full h-full object-cover grayscale opacity-90 transition-all duration-[5s] hover:grayscale-0 hover:scale-105" />
                <div className="absolute inset-0 bg-[#0a0b0a]/20"></div>
              </div>
           </motion.div>
