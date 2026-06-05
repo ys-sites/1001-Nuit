@@ -382,6 +382,20 @@ const MENU_CATEGORIES = [
     ]
   },
   {
+    title_en: "DUMPLINGS 餃子",
+    title_fr: "DUMPLINGS 餃子",
+    items: [
+      {
+        id: "D01",
+        name_fr: "Dumplings de soupe à l'agneau et à la coriandre",
+        name_en: "Lamb&Cilantro Soup Dumplings",
+        price: "$16.99",
+        desc_fr: "",
+        desc_en: "",
+      }
+    ]
+  },
+  {
     title_en: "MAIN DISH 主食",
     title_fr: "PLATS PRINCIPAUX 主食",
     items: [
@@ -514,6 +528,60 @@ const MENU_CATEGORIES = [
     ]
   },
   {
+    title_en: "BAKED HK STYLE 焗部系列",
+    title_fr: "PLATS GRATINÉS STYLE HK 焗部系列",
+    items: [
+      {
+        id: "F01",
+        name_fr: "F01 Cari de bœuf braisé cuit au four",
+        name_en: "F01 Baked Curry Braised Beef",
+        price: "$22.99",
+        desc_fr: "",
+        desc_en: "",
+      },
+      {
+        id: "F02",
+        name_fr: "F02 Poulet sauce crémeuse cuit au four",
+        name_en: "F02 Baked Chicken Creamy Sauce",
+        price: "$19.99",
+        desc_fr: "",
+        desc_en: "",
+      },
+      {
+        id: "F03",
+        name_fr: "F03 Steak de poulet au poivre noir cuit au four",
+        name_en: "F03 Bake BPChicken Steak",
+        price: "$19.99",
+        desc_fr: "",
+        desc_en: "",
+      },
+      {
+        id: "F05",
+        name_fr: "F05 Bolognaise cuite au four",
+        name_en: "F05 Baked Bolognese",
+        price: "$18.99",
+        desc_fr: "",
+        desc_en: "",
+      },
+      {
+        id: "F06",
+        name_fr: "F06 Gratin spécial bœuf",
+        name_en: "F06 Special Beef Bake",
+        price: "$24.99",
+        desc_fr: "",
+        desc_en: "",
+      },
+      {
+        id: "F07",
+        name_fr: "Filet de poisson cuit au four avec sauce crémeuse aux champignons",
+        name_en: "BakeFish Fillet w/Creamy MushS",
+        price: "$21.99",
+        desc_fr: "",
+        desc_en: "",
+      }
+    ]
+  },
+  {
     title_en: "VEGETARIAN 素食專區",
     title_fr: "PLATS VÉGÉTARIENS 素食專區",
     items: [
@@ -538,6 +606,14 @@ const MENU_CATEGORIES = [
         name_fr: "V05 Tofu braisé à la sauce soya",
         name_en: "V05 Braised Tofu in Soy Sauce",
         price: "$13.99",
+        desc_fr: "",
+        desc_en: "",
+      },
+      {
+        id: "V06",
+        name_fr: "Sauté de légumes assortis",
+        name_en: "Stir-Fried Mixed Vegetables",
+        price: "$12.95",
         desc_fr: "",
         desc_en: "",
       }
@@ -881,7 +957,8 @@ export default function HomePage() {
             "INSTANT",
             "SIZZLING PLATES",
             "CURRY STYLE HK",
-            "VEGETARIAN"
+            "VEGETARIAN",
+            "BAKED HK STYLE"
           ].some(t => MENU_CATEGORIES[activeCategory].title_en.startsWith(t)) && (
             <motion.div
               initial={{ opacity: 0 }}
