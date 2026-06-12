@@ -1075,18 +1075,18 @@ export default function HomePage() {
               onClick={handleOrderOnline}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.97 }}
-              className="w-full flex items-center justify-between bg-[#cfbe91] text-[#0a0b0a] pl-6 pr-3 py-3 rounded-full shadow-2xl hover:bg-[#d7c97a] transition-colors duration-300 group cursor-pointer"
+              className="w-1/2 flex items-center justify-between bg-[#cfbe91] text-[#0a0b0a] pl-8 pr-4 py-4 rounded-full shadow-2xl hover:bg-[#d7c97a] transition-colors duration-300 group cursor-pointer"
             >
               <div className="flex flex-col items-start leading-tight">
-                <span className="text-[11px] font-black uppercase tracking-[0.22em]">
+                <span className="text-sm font-black uppercase tracking-[0.22em]">
                   {lang === "fr" ? "Commander en ligne" : "Order Online"}
                 </span>
-                <span className="text-[9px] font-medium uppercase tracking-[0.18em] opacity-60">
+                <span className="text-[11px] font-medium uppercase tracking-[0.18em] opacity-60">
                   {lang === "fr" ? "À emporter" : "Pickup"}
                 </span>
               </div>
-              <div className="w-9 h-9 rounded-full bg-[#0a0b0a]/15 flex items-center justify-center group-hover:bg-[#0a0b0a]/20 transition-colors shrink-0">
-                <ArrowRight size={15} />
+              <div className="w-10 h-10 rounded-full bg-[#0a0b0a]/15 flex items-center justify-center group-hover:bg-[#0a0b0a]/20 transition-colors shrink-0">
+                <ArrowRight size={17} />
               </div>
             </motion.button>
 
