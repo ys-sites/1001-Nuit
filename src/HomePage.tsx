@@ -589,12 +589,75 @@ const MENU_CATEGORIES = [
     items: [
       {
         id: "T01",
-        name_fr: "Takoyaki (6 pièces)",
-        name_en: "Takoyaki (6 pcs)",
-        name_zh: "章魚小丸子(6個)",
-        price: "$8.99",
+        name_fr: "Takoyaki (4 pièces)",
+        name_en: "Takoyaki (4 pcs)",
+        name_zh: "章魚小丸子(4個)",
+        price: "$6.99",
         desc_fr: "Boulettes de poulpe classiques.",
         desc_en: "Classic octopus balls."
+      },
+      {
+        id: "T02",
+        name_fr: "Toast au lait condensé",
+        name_en: "Condensed Milk Toast",
+        name_zh: "煉奶多士",
+        price: "$8.99",
+        desc_fr: "",
+        desc_en: ""
+      },
+      {
+        id: "T03",
+        name_fr: "Toast aux crevettes",
+        name_en: "Shrimp Toast",
+        name_zh: "蝦多士",
+        price: "$9.99",
+        desc_fr: "",
+        desc_en: ""
+      },
+      {
+        id: "T04",
+        name_fr: "Gaufres à la crème glacée au thé vert",
+        name_en: "Green Tea Ice Cream Waffles",
+        name_zh: "抹茶雪糕格仔餅",
+        price: "$8.99",
+        desc_fr: "",
+        desc_en: ""
+      },
+      {
+        id: "T05",
+        name_fr: "Gaufres à la crème glacée aux haricots rouges",
+        name_en: "Red Bean Ice Cream Waffles",
+        name_zh: "紅豆雪糕格仔餅",
+        price: "$8.99",
+        desc_fr: "",
+        desc_en: ""
+      },
+      {
+        id: "T06",
+        name_fr: "Gaufres au chocolat et crème glacée",
+        name_en: "Chocolate Waffle Ice Cream",
+        name_zh: "朱古力雪糕格仔餅",
+        price: "$8.99",
+        desc_fr: "",
+        desc_en: ""
+      },
+      {
+        id: "T07",
+        name_fr: "Gelato à la vanille",
+        name_en: "Vanilla Gelato",
+        name_zh: "雲呢拿意式雪糕",
+        price: "$7.99",
+        desc_fr: "",
+        desc_en: ""
+      },
+      {
+        id: "T08",
+        name_fr: "Gelato à la mangue",
+        name_en: "Mango Gelato",
+        name_zh: "芒果意式雪糕",
+        price: "$7.99",
+        desc_fr: "",
+        desc_en: ""
       }
     ]
   },
@@ -607,7 +670,7 @@ const MENU_CATEGORIES = [
         name_fr: "Soupe udon au bœuf braisé au cari",
         name_en: "Curry Beef Brisket Udon in Soup",
         name_zh: "咖喱牛腩湯烏冬",
-        price: "$17.99",
+        price: "$22.99",
         desc_fr: "",
         desc_en: ""
       },
@@ -616,25 +679,25 @@ const MENU_CATEGORIES = [
         name_fr: "Cuisse de poulet frit croustillant avec salade de pommes de terre ou frites",
         name_en: "Crispy Fried Chicken Leg with Potato Salad or Fries",
         name_zh: "生炸雞腿配薯仔沙律或薯條",
-        price: "$15.99",
+        price: "$16.99",
         desc_fr: "",
         desc_en: ""
       },
       {
         id: "B03",
-        name_fr: "Toast aux crevettes avec salade de pommes de terre ou frites",
-        name_en: "Shrimp Toast with Potato Salad or Fries",
-        name_zh: "蝦多士配薯仔沙律或薯條",
-        price: "$14.99",
+        name_fr: "Crevettes Général Tao",
+        name_en: "General Tao's Shrimp",
+        name_zh: "左宗棠蝦",
+        price: "$26.99",
         desc_fr: "",
         desc_en: ""
       },
       {
         id: "B04",
-        name_fr: "Poutine style Hong Kong au double fromage et sauce à la viande",
-        name_en: "Poutine in Hong Kong Style (Double Cheese & Meat Sauce)",
-        name_zh: "雙重芝士肉醬薯條",
-        price: "$16.99",
+        name_fr: "Boules de sésame",
+        name_en: "Sesame Balls",
+        name_zh: "煎堆",
+        price: "$6.99",
         desc_fr: "",
         desc_en: ""
       },
@@ -850,6 +913,15 @@ const MENU_CATEGORIES = [
         name_fr: "Thé au lait à la hongkongaise",
         name_en: "Hong Kong Style Milk Tea",
         name_zh: "港式奶茶",
+        price: "$4.99",
+        desc_fr: "",
+        desc_en: ""
+      },
+      {
+        id: "G12",
+        name_fr: "Thé au lait au taro",
+        name_en: "Taro Milk Tea",
+        name_zh: "芋頭奶茶",
         price: "$5.99",
         desc_fr: "",
         desc_en: ""
@@ -859,7 +931,70 @@ const MENU_CATEGORIES = [
         name_fr: "Café",
         name_en: "Coffee",
         name_zh: "咖啡",
+        price: "$3.99",
+        desc_fr: "",
+        desc_en: ""
+      },
+      {
+        id: "G13",
+        name_fr: "Latte matcha aux fraises",
+        name_en: "Strawberry Matcha Latte",
+        name_zh: "草莓抹茶拿鐵",
+        price: "$5.99",
+        desc_fr: "",
+        desc_en: ""
+      },
+      {
+        id: "G14",
+        name_fr: "Latte matcha à la mangue",
+        name_en: "Mango Matcha Latte",
+        name_zh: "芒果抹茶拿鐵",
+        price: "$5.99",
+        desc_fr: "",
+        desc_en: ""
+      },
+      {
+        id: "G15",
+        name_fr: "Slush mangue et fruit de la passion",
+        name_en: "Mango Passion Slush",
+        name_zh: "芒果百香果沙冰",
+        price: "$7.99",
+        desc_fr: "",
+        desc_en: ""
+      },
+      {
+        id: "G16",
+        name_fr: "Slush aux fraises",
+        name_en: "Strawberry Slush",
+        name_zh: "草莓沙冰",
+        price: "$7.99",
+        desc_fr: "",
+        desc_en: ""
+      },
+      {
+        id: "G17",
+        name_fr: "Coca-Cola mexicain en bouteille",
+        name_en: "Coca Cola Mexican Bottled",
+        name_zh: "墨西哥可口可樂",
         price: "$4.99",
+        desc_fr: "",
+        desc_en: ""
+      },
+      {
+        id: "G18",
+        name_fr: "Red Bull Zero",
+        name_en: "Red Bull Zero",
+        name_zh: "紅牛零卡",
+        price: "$6.99",
+        desc_fr: "",
+        desc_en: ""
+      },
+      {
+        id: "G19",
+        name_fr: "Coke diète",
+        name_en: "Diet Coke",
+        name_zh: "健怡可樂",
+        price: "$3.00",
         desc_fr: "",
         desc_en: ""
       },
@@ -922,7 +1057,7 @@ const MENU_CATEGORIES = [
 ];
 
 const MINI_MENU = [
-  { name_en: "Takoyaki (6 pcs)", name_fr: "Takoyaki (6 pièces)", price: "$8.99" },
+  { name_en: "Takoyaki (4 pcs)", name_fr: "Takoyaki (4 pièces)", price: "$6.99" },
   { name_en: "E06 Curry Beef on Rice", name_fr: "E06 Cari de bœuf sur riz", price: "$21.99" },
   {
     name_en: "SP01 Sizzling Lamb Chops",
