@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { motion, useScroll, useSpring } from "motion/react";
 import {
   ArrowRight,
@@ -27,6 +27,7 @@ import BlurText from "./components/ui/BlurText";
 import CurvedLoop from "./components/ui/CurvedLoop";
 import ScrollTextReveal from "./components/ui/ScrollTextReveal";
 import NeighborhoodMap from "./components/NeighborhoodMap";
+import { isOpenNow } from "./lib/useIsOpen";
 
 const REVIEWS = [
   {
@@ -995,6 +996,15 @@ const MINI_MENU = [
 export default function HomePage() {
   const [activeCategory, setActiveCategory] = useState(0);
   const [lang, setLang] = useState<"en" | "fr">("en");
+  const navigate = useNavigate();
+
+  const handleOrderOnline = () => {
+    if (isOpenNow()) {
+      window.open('https://cloud.quickposhub.com/onlineorder/#/pages/order/tableurl?code=E9IPN247Bx', '_blank');
+    } else {
+      navigate('/closed');
+    }
+  };
 
   useEffect(() => {
     document.documentElement.lang = lang;
@@ -1052,13 +1062,34 @@ export default function HomePage() {
             setLang={setLang}
           />
 
-          {/* Big Hero Typography */}
+          {/* Big Hero Typography + Order Online Button */}
           <motion.div 
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="absolute bottom-8 left-6 md:bottom-12 md:left-12 z-20 pointer-events-none"
+            className="absolute bottom-8 left-6 md:bottom-12 md:left-12 z-20 flex flex-col items-start gap-5"
           >
+            {/* Order Online / Pickup Button — above the title */}
+            <motion.button
+              id="hero-order-online-btn"
+              onClick={handleOrderOnline}
+              whileHover={{ scale: 1.04 }}
+              whileTap={{ scale: 0.97 }}
+              className="flex items-center gap-3 bg-[#cfbe91] text-[#0a0b0a] pl-6 pr-3 py-3 rounded-full shadow-2xl hover:bg-[#d7c97a] transition-colors duration-300 group"
+            >
+              <div className="flex flex-col items-start leading-tight">
+                <span className="text-[11px] font-black uppercase tracking-[0.22em]">
+                  {lang === "fr" ? "Commander en ligne" : "Order Online"}
+                </span>
+                <span className="text-[9px] font-medium uppercase tracking-[0.18em] opacity-60">
+                  {lang === "fr" ? "À emporter" : "Pickup"}
+                </span>
+              </div>
+              <div className="w-9 h-9 rounded-full bg-[#0a0b0a]/15 flex items-center justify-center group-hover:bg-[#0a0b0a]/20 transition-colors">
+                <ArrowRight size={15} />
+              </div>
+            </motion.button>
+
             <h1 className="font-serif text-[3.2rem] sm:text-[4.5rem] leading-[0.85] md:text-[8rem] lg:text-[10vw] xl:text-[11vw] uppercase tracking-tight text-[#efe7d2] drop-shadow-2xl">
               <ShinyText text="1001" className="lining-nums inline-block" color="#efe7d2" shineColor="#cfbe91" speed={3} /> <br /> 
               <ShinyText text="NUITS" className="inline-block" color="#efe7d2" shineColor="#cfbe91" speed={3} delay={0.5} />
@@ -1171,37 +1202,12 @@ export default function HomePage() {
             </div>
           </motion.div>
 
-          {/* Reservation Block */}
+          {/* Order Online Block */}
           <motion.div
-            onClick={() => scrollTo("reservation")}
+            onClick={handleOrderOnline}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="relative w-full flex-1 aspect-[4/3] md:aspect-auto rounded-[2rem] md:rounded-[2.5rem] overflow-hidden group block cursor-pointer"
-          >
-            <img
-              src="/reservation.png"
-              alt="Reservation"
-              className="absolute inset-0 w-full h-full object-cover transition-transform duration-[10s] group-hover:scale-105"
-            />
-            <div className="absolute inset-0 bg-[#0a0b0a]/30 group-hover:bg-[#0a0b0a]/10 transition-colors duration-500 z-0"></div>
-
-            <div className="absolute bottom-6 right-6 z-10 bg-[#0a0b0a]/80 backdrop-blur-md border border-[#333330] rounded-full pl-6 py-2.5 pr-2.5 flex items-center gap-5 group-hover:bg-white group-hover:text-black group-hover:border-white transition-all duration-300">
-              <span className="text-[10px] tracking-[0.2em] font-medium uppercase mt-0.5">
-                {lang === "fr" ? "Réservation" : "Reservation"}
-              </span>
-              <div className="w-8 h-8 rounded-full border border-current flex items-center justify-center">
-                <ArrowRight size={14} />
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Order Online Block */}
-          <motion.div
-            onClick={() => window.open('https://cloud.quickposhub.com/onlineorder/#/pages/order/tableurl?code=E9IPN247Bx', '_blank')}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
             className="relative w-full flex-1 aspect-[4/3] md:aspect-auto rounded-[2rem] md:rounded-[2.5rem] overflow-hidden group block cursor-pointer"
           >
             <img
@@ -1242,7 +1248,7 @@ export default function HomePage() {
             </p>
             <button
               id="order-online-menu-cta"
-              onClick={() => window.open('https://cloud.quickposhub.com/onlineorder/#/pages/order/tableurl?code=E9IPN247Bx', '_blank')}
+              onClick={handleOrderOnline}
               className="px-8 py-3.5 bg-[#cfbe91] text-[#1a1c19] text-[11px] tracking-[0.25em] font-bold uppercase rounded-full hover:bg-[#d7c97a] transition-all duration-300"
             >
               {lang === "fr" ? "Commander en ligne" : "Order Online"}
@@ -1378,7 +1384,7 @@ export default function HomePage() {
             />
           </h2>
 
-          {/* <Link
+          <Link
             to="/review"
             className="inline-flex items-center gap-4 bg-white border border-[#cfbe91]/30 rounded-2xl p-5 md:p-6 hover:border-[#cfbe91] transition-all group shadow-md max-w-2xl w-full text-left mx-auto"
           >
@@ -1396,7 +1402,7 @@ export default function HomePage() {
             <div className="shrink-0 flex items-center gap-2 bg-[#cfbe91] text-[#0a0b0a] font-bold text-xs tracking-wider uppercase px-4 py-2.5 rounded-xl group-hover:bg-[#d7c683] transition-colors whitespace-nowrap">
               {lang === "fr" ? "Nous noter" : "Review Us"}
             </div>
-          </Link> */}
+          </Link>
         </div>
 
         <div className="w-full relative flex flex-col gap-8 md:gap-12 mt-12 overflow-hidden py-10 pointer-events-none">
