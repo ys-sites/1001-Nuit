@@ -1067,15 +1067,15 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="absolute bottom-8 left-6 md:bottom-12 md:left-12 z-20 flex flex-col items-start gap-5"
+            className="absolute bottom-8 left-6 md:bottom-12 md:left-12 z-20 flex flex-col items-stretch gap-5"
           >
-            {/* Order Online / Pickup Button — above the title */}
+            {/* Order Online / Pickup Button — same width as 1001 title */}
             <motion.button
               id="hero-order-online-btn"
               onClick={handleOrderOnline}
-              whileHover={{ scale: 1.04 }}
+              whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.97 }}
-              className="flex items-center gap-3 bg-[#cfbe91] text-[#0a0b0a] pl-6 pr-3 py-3 rounded-full shadow-2xl hover:bg-[#d7c97a] transition-colors duration-300 group"
+              className="w-full flex items-center justify-between bg-[#cfbe91] text-[#0a0b0a] pl-6 pr-3 py-3 rounded-full shadow-2xl hover:bg-[#d7c97a] transition-colors duration-300 group cursor-pointer"
             >
               <div className="flex flex-col items-start leading-tight">
                 <span className="text-[11px] font-black uppercase tracking-[0.22em]">
@@ -1085,7 +1085,7 @@ export default function HomePage() {
                   {lang === "fr" ? "À emporter" : "Pickup"}
                 </span>
               </div>
-              <div className="w-9 h-9 rounded-full bg-[#0a0b0a]/15 flex items-center justify-center group-hover:bg-[#0a0b0a]/20 transition-colors">
+              <div className="w-9 h-9 rounded-full bg-[#0a0b0a]/15 flex items-center justify-center group-hover:bg-[#0a0b0a]/20 transition-colors shrink-0">
                 <ArrowRight size={15} />
               </div>
             </motion.button>
