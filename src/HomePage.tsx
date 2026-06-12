@@ -976,60 +976,6 @@ const MENU_CATEGORIES = [
         price: "$3.00",
         desc_fr: "",
         desc_en: ""
-      },
-      {
-        id: "G05",
-        name_fr: "Café et thé au lait mélangés (Yuenyeung)",
-        name_en: "Coffee & Milk Tea Mix (Yuenyeung)",
-        name_zh: "鴛鴦",
-        price: "$5.99",
-        desc_fr: "",
-        desc_en: ""
-      },
-      {
-        id: "G07",
-        name_fr: "Thé au citron à la hongkongaise",
-        name_en: "Hong Kong Style Lemon Tea",
-        name_zh: "港式檸檬茶",
-        price: "$5.99",
-        desc_fr: "",
-        desc_en: ""
-      },
-      {
-        id: "G08",
-        name_fr: "Eau au citron",
-        name_en: "Lemon Water",
-        name_zh: "檸檬水",
-        price: "$4.99",
-        desc_fr: "",
-        desc_en: ""
-      },
-      {
-        id: "G09",
-        name_fr: "Limonade au miel",
-        name_en: "Honey Lemonade",
-        name_zh: "檸檬蜜",
-        price: "$5.99",
-        desc_fr: "",
-        desc_en: ""
-      },
-      {
-        id: "G10",
-        name_fr: "Thé au lait \"Teddy Bear\"",
-        name_en: "Teddy Bear Milk Tea",
-        name_zh: "熊熊絲襪奶茶",
-        price: "$6.99",
-        desc_fr: "",
-        desc_en: ""
-      },
-      {
-        id: "G11",
-        name_fr: "Thé glacé au citron \"Teddy Bear\"",
-        name_en: "Teddy Bear Lemon Tea",
-        name_zh: "熊熊檸檬紅茶",
-        price: "$6.99",
-        desc_fr: "",
-        desc_en: ""
       }
     ]
   }
