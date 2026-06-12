@@ -1153,7 +1153,7 @@ export default function HomePage() {
 
             <div className="absolute bottom-6 right-6 z-10 bg-[#0a0b0a]/80 backdrop-blur-md border border-[#333330] rounded-full pl-6 py-2.5 pr-2.5 flex items-center gap-5 group-hover:bg-white group-hover:text-black group-hover:border-white transition-all duration-300">
               <span className="text-[10px] tracking-[0.2em] font-medium uppercase mt-0.5">
-                {lang === "fr" ? "Commander en ligne" : "Order Online"}
+                {lang === "fr" ? "Commander en ligne — À emporter" : "Order Online — Pickup"}
               </span>
               <div className="w-8 h-8 rounded-full border border-current flex items-center justify-center">
                 <ArrowRight size={14} />
@@ -1182,7 +1182,7 @@ export default function HomePage() {
               onClick={() => window.open('https://cloud.quickposhub.com/onlineorder/#/pages/order/tableurl?code=E9IPN247Bx', '_blank')}
               className="px-8 py-3.5 bg-[#1a1c19] border border-[#cfbe91] text-[#cfbe91] text-[11px] tracking-[0.25em] font-bold uppercase rounded-full hover:bg-[#cfbe91] hover:text-[#1a1c19] transition-all duration-300"
             >
-              {lang === "fr" ? "Commander en ligne" : "Order Online"}
+              {lang === "fr" ? "Commander en ligne — À emporter" : "Order Online — Pickup"}
             </button>
           </motion.div>
 
