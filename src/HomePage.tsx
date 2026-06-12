@@ -7,6 +7,7 @@ import {
   Facebook,
   Phone,
   Star,
+  Calendar,
 } from "lucide-react";
 
 const TiktokIcon = ({ size = 24, className = "" }) => (
@@ -1598,7 +1599,7 @@ export default function HomePage() {
       {/* Reservation Section */}
       <section
         id="reservation"
-        className="min-h-[70vh] bg-[#faf8f5] text-[#1a1c19] py-32 w-full relative overflow-hidden flex items-center border-t border-[#1a1c19]/10"
+        className="min-h-[85vh] bg-[#faf8f5] text-[#1a1c19] py-32 w-full relative overflow-hidden flex items-center border-t border-[#1a1c19]/10"
       >
         <div className="absolute inset-0 opacity-[0.03] flex items-center pointer-events-none overflow-hidden whitespace-nowrap">
           <motion.div
@@ -1616,19 +1617,19 @@ export default function HomePage() {
             ))}
           </motion.div>
         </div>
-        <div className="max-w-4xl mx-auto px-6 md:px-12 text-center relative z-10 w-full">
-          <ScrollTextReveal className="mb-12" textColor="#1a1c19">
-            <h2 className="font-serif text-5xl md:text-7xl uppercase tracking-widest leading-[1] mb-4 text-[#1a1c19]">
+        <div className="max-w-5xl mx-auto px-6 md:px-12 relative z-10 w-full">
+          <ScrollTextReveal className="mb-16 text-center" textColor="#1a1c19">
+            <h2 className="font-serif text-5xl md:text-7xl uppercase tracking-widest leading-[1] mb-6 text-[#1a1c19]">
               <ShinyText text={lang === "fr" ? "Réservez" : "Reserve"} color="#1a1c19" shineColor="#cfbe91" speed={3} /> <br />
               <span className="text-[#cfbe91] italic normal-case font-light drop-shadow-sm">
-                {lang === "fr" ? "appelez-nous" : "call us"}
+                {lang === "fr" ? "une table" : "a table"}
               </span>
             </h2>
-            <div className="max-w-lg mx-auto mb-12">
+            <div className="max-w-2xl mx-auto">
               <BlurText
                 text={lang === "fr"
-                  ? "Pour réserver votre table ou organiser un événement privé, appelez-nous directement."
-                  : "To reserve your table or arrange a private event, give us a call directly."}
+                  ? "Réservez en ligne pour une confirmation instantanée ou appelez-nous directement pour vos événements."
+                  : "Book online for instant confirmation or call us directly to arrange your reservation."}
                 delay={20}
                 animateBy="words"
                 className="text-sm md:text-lg font-medium opacity-70 leading-relaxed justify-center"
@@ -1636,17 +1637,81 @@ export default function HomePage() {
             </div>
           </ScrollTextReveal>
 
-          <motion.a
-            href="tel:+15144211114"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="inline-flex items-center gap-4 bg-[#1a1c19] text-[#efe7d2] rounded-full px-8 py-5 md:px-12 md:py-7 hover:bg-[#cfbe91] hover:text-[#1a1c19] transition-all duration-300 group shadow-xl"
-          >
-            <Phone size={24} className="shrink-0" />
-            <span className="font-serif text-2xl md:text-4xl tracking-widest lining-nums">(514) 421-1114</span>
-          </motion.a>
+          <div className="flex flex-col md:flex-row justify-center items-stretch gap-8 max-w-4xl mx-auto mt-12">
+            {/* Online Booking Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+              className="flex-1 p-8 md:p-10 bg-white border border-[#cfbe91]/40 rounded-[2.5rem] shadow-[0_24px_60px_rgba(0,0,0,0.06)] flex flex-col justify-between items-center text-center group hover:shadow-[0_30px_70px_rgba(207,190,145,0.15)] transition-all duration-500"
+            >
+              <div className="flex flex-col items-center gap-5">
+                <div className="w-16 h-16 rounded-2xl bg-[#cfbe91]/10 flex items-center justify-center text-[#cfbe91] group-hover:bg-[#cfbe91] group-hover:text-white transition-all duration-500">
+                  <Calendar size={28} strokeWidth={1.5} />
+                </div>
+                <div>
+                  <h3 className="font-serif text-2xl md:text-3xl text-[#1a1c19] mb-2 font-semibold">
+                    {lang === "fr" ? "En Ligne" : "Book Online"}
+                  </h3>
+                  <p className="text-sm text-[#1a1c19]/60 font-medium leading-relaxed max-w-[280px] mx-auto">
+                    {lang === "fr"
+                      ? "Confirmation instantanée et rapide en quelques clics."
+                      : "Quick, instant confirmation in just a few clicks."}
+                  </p>
+                </div>
+              </div>
+              <div className="mt-8 w-full">
+                <motion.a
+                  href="https://cloud.quickposhub.com/onlineorder/#/pages/order/tableurl?code=eJlRgR8hfc"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="w-full flex items-center justify-center gap-3 bg-[#1a1c19] text-[#efe7d2] hover:bg-[#cfbe91] hover:text-[#1a1c19] px-6 py-4.5 rounded-2xl font-bold text-sm uppercase tracking-wider transition-colors duration-300 shadow-md group/btn"
+                >
+                  <span>{lang === "fr" ? "Réserver en ligne" : "Reserve Online"}</span>
+                  <ArrowRight size={16} className="group-hover/btn:translate-x-1 transition-transform" />
+                </motion.a>
+              </div>
+            </motion.div>
+
+            {/* Phone Booking Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+              className="flex-1 p-8 md:p-10 bg-white border border-[#cfbe91]/20 rounded-[2.5rem] shadow-[0_24px_60px_rgba(0,0,0,0.06)] flex flex-col justify-between items-center text-center group hover:shadow-[0_30px_70px_rgba(0,0,0,0.08)] transition-all duration-500"
+            >
+              <div className="flex flex-col items-center gap-5">
+                <div className="w-16 h-16 rounded-2xl bg-[#cfbe91]/10 flex items-center justify-center text-[#cfbe91] group-hover:bg-[#cfbe91] group-hover:text-white transition-all duration-500">
+                  <Phone size={28} strokeWidth={1.5} />
+                </div>
+                <div>
+                  <h3 className="font-serif text-2xl md:text-3xl text-[#1a1c19] mb-2 font-semibold">
+                    {lang === "fr" ? "Par Téléphone" : "By Phone"}
+                  </h3>
+                  <p className="text-sm text-[#1a1c19]/60 font-medium leading-relaxed max-w-[280px] mx-auto">
+                    {lang === "fr"
+                      ? "Idéal pour les groupes de plus de 6 personnes ou événements spéciaux."
+                      : "Best for groups larger than 6 guests or special events."}
+                  </p>
+                </div>
+              </div>
+              <div className="mt-8 w-full">
+                <motion.a
+                  href="tel:+15144211114"
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="w-full flex items-center justify-center gap-3 border-[1.5px] border-[#1a1c19] text-[#1a1c19] hover:bg-[#1a1c19] hover:text-[#efe7d2] px-6 py-4.5 rounded-2xl font-bold text-sm uppercase tracking-wider transition-colors duration-300 shadow-sm"
+                >
+                  <Phone size={16} />
+                  <span className="lining-nums">(514) 421-1114</span>
+                </motion.a>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -1678,7 +1743,7 @@ export default function HomePage() {
                 </h3>
                 <div className="flex flex-col gap-2 font-medium text-[#1a1c19]/80">
                   <p className="text-sm">
-                    {lang === "fr" ? "Réservez en ligne via le formulaire ci-dessus." : "Book online using the reservation form above."}
+                    {lang === "fr" ? "Réservez en ligne via le lien de réservation ci-dessus." : "Book online using the reservation link above."}
                   </p>
                   <p className="text-sm">
                     {lang === "fr" ? "Appelez-nous au" : "Call us at"}{" "}
