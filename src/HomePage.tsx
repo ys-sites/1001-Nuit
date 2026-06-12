@@ -1175,14 +1175,17 @@ export default function HomePage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "0px 0px -80px 0px" }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="flex justify-center mb-10"
+            className="flex flex-col items-center gap-4 mb-12"
           >
+            <p className="text-[#1a1c19]/50 text-[11px] uppercase tracking-[0.25em] font-bold">
+              {lang === "fr" ? "Commande à emporter" : "Pickup Order"}
+            </p>
             <button
               id="order-online-menu-cta"
               onClick={() => window.open('https://cloud.quickposhub.com/onlineorder/#/pages/order/tableurl?code=E9IPN247Bx', '_blank')}
-              className="px-8 py-3.5 bg-[#1a1c19] border border-[#cfbe91] text-[#cfbe91] text-[11px] tracking-[0.25em] font-bold uppercase rounded-full hover:bg-[#cfbe91] hover:text-[#1a1c19] transition-all duration-300"
+              className="px-8 py-3.5 bg-[#cfbe91] text-[#1a1c19] text-[11px] tracking-[0.25em] font-bold uppercase rounded-full hover:bg-[#d7c97a] transition-all duration-300"
             >
-              {lang === "fr" ? "Commander en ligne — À emporter" : "Order Online — Pickup"}
+              {lang === "fr" ? "Commander en ligne" : "Order Online"}
             </button>
           </motion.div>
 
