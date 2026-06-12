@@ -1067,15 +1067,16 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="absolute bottom-8 left-6 md:bottom-12 md:left-12 z-20 flex flex-col items-stretch gap-5"
+            className="absolute bottom-8 left-6 md:bottom-12 md:left-12 z-20 flex flex-col items-stretch gap-5 pointer-events-auto cursor-pointer"
+            onClick={handleOrderOnline}
           >
-            {/* Order Online / Pickup Button — same width as 1001 title */}
+            {/* Order Online / Pickup Button */}
             <motion.button
               id="hero-order-online-btn"
-              onClick={handleOrderOnline}
+              onClick={(e) => { e.stopPropagation(); handleOrderOnline(); }}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.97 }}
-              className="w-1/2 flex items-center justify-between bg-[#cfbe91] text-[#0a0b0a] pl-8 pr-4 py-4 rounded-full shadow-2xl hover:bg-[#d7c97a] transition-colors duration-300 group cursor-pointer"
+              className="w-1/2 flex items-center justify-between bg-[#cfbe91] text-[#0a0b0a] pl-8 pr-4 py-4 rounded-full shadow-2xl hover:bg-[#d7c97a] transition-colors duration-300 group cursor-pointer pointer-events-auto"
             >
               <div className="flex flex-col items-start leading-tight">
                 <span className="text-sm font-black uppercase tracking-[0.22em]">
@@ -1090,8 +1091,10 @@ export default function HomePage() {
               </div>
             </motion.button>
 
-            <h1 className="font-serif text-[3.2rem] sm:text-[4.5rem] leading-[0.85] md:text-[8rem] lg:text-[10vw] xl:text-[11vw] uppercase tracking-tight text-[#efe7d2] drop-shadow-2xl">
-              <ShinyText text="1001" className="lining-nums inline-block" color="#efe7d2" shineColor="#cfbe91" speed={3} /> <br /> 
+            <h1
+              className="font-serif text-[3.2rem] sm:text-[4.5rem] leading-[0.85] md:text-[8rem] lg:text-[10vw] xl:text-[11vw] uppercase tracking-tight text-[#efe7d2] drop-shadow-2xl select-none"
+            >
+              <ShinyText text="1001" className="lining-nums inline-block" color="#efe7d2" shineColor="#cfbe91" speed={3} /> <br />
               <ShinyText text="NUITS" className="inline-block" color="#efe7d2" shineColor="#cfbe91" speed={3} delay={0.5} />
             </h1>
           </motion.div>
