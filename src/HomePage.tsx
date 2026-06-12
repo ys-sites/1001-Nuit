@@ -1135,6 +1135,31 @@ export default function HomePage() {
               </div>
             </div>
           </motion.div>
+
+          {/* Order Online Block */}
+          <motion.div
+            onClick={() => window.open('https://cloud.quickposhub.com/onlineorder/#/pages/order/tableurl?code=E9IPN247Bx', '_blank')}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+            className="relative w-full flex-1 aspect-[4/3] md:aspect-auto rounded-[2rem] md:rounded-[2.5rem] overflow-hidden group block cursor-pointer"
+          >
+            <img
+              src="/menu.avif"
+              alt="Order Online"
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-[10s] group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-[#0a0b0a]/30 group-hover:bg-[#0a0b0a]/10 transition-colors duration-500 z-0"></div>
+
+            <div className="absolute bottom-6 right-6 z-10 bg-[#0a0b0a]/80 backdrop-blur-md border border-[#333330] rounded-full pl-6 py-2.5 pr-2.5 flex items-center gap-5 group-hover:bg-white group-hover:text-black group-hover:border-white transition-all duration-300">
+              <span className="text-[10px] tracking-[0.2em] font-medium uppercase mt-0.5">
+                {lang === "fr" ? "Commander en ligne" : "Order Online"}
+              </span>
+              <div className="w-8 h-8 rounded-full border border-current flex items-center justify-center">
+                <ArrowRight size={14} />
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
@@ -1144,6 +1169,23 @@ export default function HomePage() {
         className="min-h-screen bg-[#faf8f5] text-[#1a1c19] pt-24 pb-24 w-full relative"
       >
         <div className="max-w-5xl mx-auto px-6 md:px-12">
+          {/* Order Online CTA */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "0px 0px -80px 0px" }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            className="flex justify-center mb-10"
+          >
+            <button
+              id="order-online-menu-cta"
+              onClick={() => window.open('https://cloud.quickposhub.com/onlineorder/#/pages/order/tableurl?code=E9IPN247Bx', '_blank')}
+              className="px-8 py-3.5 bg-[#1a1c19] border border-[#cfbe91] text-[#cfbe91] text-[11px] tracking-[0.25em] font-bold uppercase rounded-full hover:bg-[#cfbe91] hover:text-[#1a1c19] transition-all duration-300"
+            >
+              {lang === "fr" ? "Commander en ligne" : "Order Online"}
+            </button>
+          </motion.div>
+
           {/* Tabs */}
           <motion.div 
             initial={{ opacity: 0, y: 50 }}
