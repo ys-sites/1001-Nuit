@@ -211,9 +211,9 @@ const MENU_CATEGORIES = [
       },
       {
         id: "C03",
-        name_fr: "Poulet sauce poivre noir sur riz",
-        name_en: "Chicken with Black Pepper Sauce on Rice",
-        name_zh: "黑椒汁雞扒飯",
+        name_fr: "Poulet takoyaki sur riz",
+        name_en: "Takoyaki Chicken on Rice",
+        name_zh: "章魚燒雞飯",
         price: "$21.99",
         desc_fr: "",
         desc_en: ""
@@ -333,18 +333,9 @@ const MENU_CATEGORIES = [
         desc_en: "Choice of: Rice or Spaghetti"
       },
       {
-        id: "F04",
-        name_fr: "Gratin \"duo\" – spaghetti bolognaise et poulet sauce tomate sur riz",
-        name_en: "Bolognese Spaghetti and Tomato Chicken Steak on Rice",
-        name_zh: "鴛鴦兩鬧",
-        price: "$21.99",
-        desc_fr: "",
-        desc_en: ""
-      },
-      {
         id: "F05",
         name_fr: "Gratin à la sauce bolognaise",
-        name_en: "Bolognese",
+        name_en: "Baked Bolognese",
         name_zh: "焗肉醬意粉",
         price: "$18.99",
         desc_fr: "Au choix : riz ou spaghetti",
@@ -352,17 +343,17 @@ const MENU_CATEGORIES = [
       },
       {
         id: "F06",
-        name_fr: "Gratin spécial bœuf (cari de bœuf braisé & côtes sauce poivre noir)",
-        name_en: "Curry Beef Brisket + Black Pepper Beef Ribs",
-        name_zh: "焗牛魔王 (咖喱牛腩 + 黑椒牛仔骨)",
+        name_fr: "Gratin spécial bœuf",
+        name_en: "Special Beef Bake",
+        name_zh: "焗牛魔王",
         price: "$24.99",
         desc_fr: "Au choix : riz ou spaghetti",
         desc_en: "Choice of: Rice or Spaghetti"
       },
       {
         id: "F07",
-        name_fr: "Gratin de filet de poisson sauce crémeuse aux champignons",
-        name_en: "Cutlet Fish Fillet with Creamy Mushroom Sauce",
+        name_fr: "Filet de poisson gratiné sauce crémeuse aux champignons",
+        name_en: "Bake Fish Fillet with Creamy Mushroom Sauce",
         name_zh: "焗白汁蘑菇魚柳",
         price: "$21.99",
         desc_fr: "Au choix : riz ou spaghetti",
@@ -402,38 +393,11 @@ const MENU_CATEGORIES = [
         desc_en: ""
       },
       {
-        id: "E04",
-        name_fr: "Cari de bœuf braisé sur riz",
-        name_en: "Curry Beef Brisket on Rice",
-        name_zh: "咖喱牛腩飯",
-        price: "$22.99",
-        desc_fr: "",
-        desc_en: ""
-      },
-      {
-        id: "E05",
-        name_fr: "Cari de poulet sur riz",
-        name_en: "Curry Chicken Steak on Rice",
-        name_zh: "咖喱雞扒飯",
-        price: "$18.99",
-        desc_fr: "",
-        desc_en: ""
-      },
-      {
         id: "E06",
         name_fr: "Cari de bœuf sur riz",
         name_en: "Curry Beef on Rice",
         name_zh: "咖喱牛肉飯",
         price: "$21.99",
-        desc_fr: "",
-        desc_en: ""
-      },
-      {
-        id: "E07",
-        name_fr: "Cari de cuisse de poulet frit sur riz",
-        name_en: "Curry Chicken Leg on Rice",
-        name_zh: "咖喱生炸雞腿飯",
-        price: "$19.99",
         desc_fr: "",
         desc_en: ""
       },
@@ -463,10 +427,10 @@ const MENU_CATEGORIES = [
       },
       {
         id: "SP02",
-        name_fr: "Contre-filet AAA Angus sur plaque chaude",
-        name_en: "AAA Angus Striploin Steak",
-        name_zh: "AAA安格斯西冷牛扒",
-        price: "$36.99",
+        name_fr: "Côtes de bœuf AAA Angus sur plaque chaude",
+        name_en: "AAA Angus Beef Ribs",
+        name_zh: "AAA安格斯牛肋骨",
+        price: "$34.99",
         desc_fr: "préparation env. 20 min",
         desc_en: "prep time approx. 20 min"
       },
@@ -512,24 +476,6 @@ const MENU_CATEGORIES = [
         desc_fr: "",
         desc_en: ""
       },
-      {
-        id: "M03",
-        name_fr: "Nouilles Lo Ding au bœuf satay et œufs brouillés",
-        name_en: "Satay Beef & Scrambled Egg Lo Ding",
-        name_zh: "豉油皇沙爹牛肉滑蛋撈一丁",
-        price: "$15.99",
-        desc_fr: "",
-        desc_en: ""
-      },
-      {
-        id: "M04",
-        name_fr: "Nouilles Lo Ding au luncheon meat halal et œufs brouillés",
-        name_en: "Halal Luncheon Meat & Scrambled Egg Lo Ding",
-        name_zh: "Halal午餐肉滑蛋撈一丁",
-        price: "$15.99",
-        desc_fr: "",
-        desc_en: ""
-      }
     ]
   },
   {
@@ -547,28 +493,10 @@ const MENU_CATEGORIES = [
       },
       {
         id: "V02",
-        name_fr: "Riz frit végétarien (ananas en option)",
-        name_en: "Vegetarian Fried Rice (Pineapple Optional)",
-        name_zh: "炒飯 (素，可加菠蘿)",
+        name_fr: "Riz frit végétarien",
+        name_en: "Vegetarian Fried Rice",
+        name_zh: "炒飯 (素)",
         price: "$13.99",
-        desc_fr: "",
-        desc_en: ""
-      },
-      {
-        id: "V03",
-        name_fr: "Tofu tendre doré poêlé",
-        name_en: "Pan-fried Golden Soft Tofu",
-        name_zh: "煎黃金嫩豆腐",
-        price: "$12.99",
-        desc_fr: "",
-        desc_en: ""
-      },
-      {
-        id: "V04",
-        name_fr: "Mapo tofu végétarien",
-        name_en: "Vegetarian Mapo Tofu",
-        name_zh: "麻婆豆腐(素)",
-        price: "$15.99",
         desc_fr: "",
         desc_en: ""
       },
@@ -578,6 +506,15 @@ const MENU_CATEGORIES = [
         name_en: "Braised Tofu in Soy Sauce",
         name_zh: "紅燒豆腐",
         price: "$13.99",
+        desc_fr: "",
+        desc_en: ""
+      },
+      {
+        id: "V06",
+        name_fr: "Légumes mélangés sautés",
+        name_en: "Stir-Fried Mixed Vegetables",
+        name_zh: "炒雜菜",
+        price: "$12.95",
         desc_fr: "",
         desc_en: ""
       }
@@ -703,64 +640,55 @@ const MENU_CATEGORIES = [
       },
       {
         id: "B05",
-        name_fr: "Ailes de poulet croustillantes avec salade de pommes de terre ou frites",
-        name_en: "Crispy Chicken Wings with Potato Salad or Fries",
-        name_zh: "香脆炸雞翼配薯仔沙律或薯條",
+        name_fr: "Ailes de poulet croustillantes avec frites",
+        name_en: "Chicken Wing with Fries",
+        name_zh: "香脆炸雞翼配薯條",
         price: "$15.99",
         desc_fr: "",
         desc_en: ""
       },
       {
-        id: "B07",
-        name_fr: "Boulettes de poisson au cari style Hong Kong (15 mcx)",
-        name_en: "Fish Balls in Hong Kong Style Curry (15 pcs)",
-        name_zh: "港式咖喱魚蛋(15粒)",
+        id: "B13",
+        name_fr: "Ailes de poulet avec frites (sauce miel et ail)",
+        name_en: "Wings with Fries (Honey Garlic Sauce)",
+        name_zh: "蒜香蜜糖雞翼配薯條",
+        price: "$16.99",
+        desc_fr: "",
+        desc_en: ""
+      },
+      {
+        id: "B06",
+        name_fr: "Udon sauté au poulet",
+        name_en: "Chicken Udon Stir-Fry",
+        name_zh: "雞肉炒烏冬",
+        price: "$21.99",
+        desc_fr: "",
+        desc_en: ""
+      },
+      {
+        id: "B18",
+        name_fr: "Rouleaux de printemps",
+        name_en: "Spring Rolls",
+        name_zh: "春卷",
         price: "$8.99",
         desc_fr: "",
         desc_en: ""
       },
       {
-        id: "B08",
-        name_fr: "Soupe de wontons avec nouilles aux œufs ou nouilles de riz",
-        name_en: "Wonton Noodle Soup (Egg Noodles or Flat Rice Noodles)",
-        name_zh: "云吞湯麵或河粉",
-        price: "$16.99",
-        desc_fr: "",
-        desc_en: ""
-      },
-      {
         id: "B10",
-        name_fr: "Boulettes de bœuf au cari style Hong Kong (12 mcx)",
-        name_en: "Beef Balls in Hong Kong Style Curry (12 pcs)",
-        name_zh: "港式咖喱牛丸(12粒)",
+        name_fr: "Boulettes de bœuf au cari style Hong Kong",
+        name_en: "HK Curry Beef Ball",
+        name_zh: "港式咖喱牛丸",
+        price: "$9.99",
+        desc_fr: "",
+        desc_en: ""
+      },
+      {
+        id: "B19",
+        name_fr: "Pétoncles frits",
+        name_en: "Fried Scallops",
+        name_zh: "炸帶子",
         price: "$10.99",
-        desc_fr: "",
-        desc_en: ""
-      },
-      {
-        id: "B11",
-        name_fr: "Boulettes de poisson et de bœuf au cari style Hong Kong (12 mcx)",
-        name_en: "Fish & Beef Balls in Hong Kong Style Curry (12 pcs)",
-        name_zh: "港式咖喱魚蛋牛丸(12粒)",
-        price: "$12.99",
-        desc_fr: "",
-        desc_en: ""
-      },
-      {
-        id: "B13",
-        name_fr: "Ailes de poulet avec frites (sauce beurre ou miel et ail)",
-        name_en: "Chicken Wings with Fries (Butter Sauce or Honey Garlic)",
-        name_zh: "奶油醬/蒜香蜜糖雞翼配薯條",
-        price: "$16.99",
-        desc_fr: "",
-        desc_en: ""
-      },
-      {
-        id: "B16",
-        name_fr: "Poulet Général Tao",
-        name_en: "General Tso's Chicken",
-        name_zh: "左宗棠雞",
-        price: "$21.99",
         desc_fr: "",
         desc_en: ""
       },
@@ -769,16 +697,67 @@ const MENU_CATEGORIES = [
         name_fr: "Calmars frits",
         name_en: "Deep Fried Calamari",
         name_zh: "炸魷魚圈",
-        price: "$18.99",
+        price: "$16.99",
         desc_fr: "",
         desc_en: ""
       },
       {
-        id: "B18",
-        name_fr: "Bouchées de poulet au gingembre et oignons verts",
-        name_en: "Ginger and Scallion Chicken Bites",
-        name_zh: "薑蔥雞球",
-        price: "$19.99",
+        id: "B09",
+        name_fr: "Bœuf épicé piment",
+        name_en: "Spicy Chilli Beef",
+        name_zh: "辣椒牛肉",
+        price: "$12.99",
+        desc_fr: "",
+        desc_en: ""
+      },
+      {
+        id: "B16",
+        name_fr: "Poulet Général Tao",
+        name_en: "General Tao's Chicken",
+        name_zh: "左宗棠雞",
+        price: "$23.99",
+        desc_fr: "",
+        desc_en: ""
+      }
+    ]
+  },
+  {
+    title_en: "DUMPLINGS 餃子",
+    title_fr: "DUMPLINGS 餃子",
+    items: [
+      {
+        id: "D01",
+        name_fr: "Raviolis soupe agneau & coriandre",
+        name_en: "Lamb & Cilantro Soup Dumplings",
+        name_zh: "羊肉香菜湯餃",
+        price: "$16.99",
+        desc_fr: "",
+        desc_en: ""
+      },
+      {
+        id: "D02",
+        name_fr: "Raviolis crevettes, œuf & courgette",
+        name_en: "Shrimp, Egg & Zucchini Dumplings",
+        name_zh: "蝦仁蛋瓜餃",
+        price: "$14.99",
+        desc_fr: "",
+        desc_en: ""
+      },
+      {
+        id: "D03",
+        name_fr: "Raviolis au poulet",
+        name_en: "Chicken Dumplings",
+        name_zh: "雞肉餃子",
+        price: "$14.99",
+        desc_fr: "",
+        desc_en: ""
+      },
+      {
+        id: "D04",
+        name_fr: "Raviolis aux légumes",
+        name_en: "Vegetables Dumplings",
+        name_zh: "素菜餃子",
+        price: "$13.99",
         desc_fr: "",
         desc_en: ""
       }
