@@ -1077,18 +1077,18 @@ export default function HomePage() {
               onClick={(e) => { e.stopPropagation(); handleOrderOnline(); }}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.97 }}
-              className="w-1/2 flex items-center justify-between bg-[#cfbe91] text-[#0a0b0a] pl-8 pr-4 py-4 rounded-full shadow-2xl hover:bg-[#d7c97a] transition-colors duration-300 group cursor-pointer pointer-events-auto"
+              className="w-fit flex items-center justify-between gap-6 bg-[#cfbe91] text-[#0a0b0a] pl-6 pr-4 py-3 sm:pl-8 sm:pr-4 sm:py-4 rounded-full shadow-2xl hover:bg-[#d7c97a] transition-colors duration-300 group cursor-pointer pointer-events-auto whitespace-nowrap"
             >
               <div className="flex flex-col items-start leading-tight">
-                <span className="text-sm font-black uppercase tracking-[0.22em]">
+                <span className="text-xs sm:text-sm font-black uppercase tracking-[0.22em] whitespace-nowrap">
                   {lang === "fr" ? "Commander en ligne" : "Order Online"}
                 </span>
-                <span className="text-[11px] font-medium uppercase tracking-[0.18em] opacity-60">
+                <span className="text-[10px] sm:text-[11px] font-medium uppercase tracking-[0.18em] opacity-60 whitespace-nowrap">
                   {lang === "fr" ? "À emporter" : "Pickup"}
                 </span>
               </div>
-              <div className="w-10 h-10 rounded-full bg-[#0a0b0a]/15 flex items-center justify-center group-hover:bg-[#0a0b0a]/20 transition-colors shrink-0">
-                <ArrowRight size={17} />
+              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#0a0b0a]/15 flex items-center justify-center group-hover:bg-[#0a0b0a]/20 transition-colors shrink-0">
+                <ArrowRight className="w-4 h-4 sm:w-[17px] sm:h-[17px]" />
               </div>
             </motion.button>
 
@@ -1668,7 +1668,7 @@ export default function HomePage() {
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full flex items-center justify-center gap-3 bg-[#1a1c19] text-[#efe7d2] hover:bg-[#cfbe91] hover:text-[#1a1c19] px-6 py-4.5 rounded-2xl font-bold text-sm uppercase tracking-wider transition-colors duration-300 shadow-md group/btn"
+                  className="w-full flex items-center justify-center gap-2 bg-[#1a1c19] text-[#efe7d2] hover:bg-[#cfbe91] hover:text-[#1a1c19] px-4 py-4 rounded-2xl font-bold text-xs sm:text-sm uppercase tracking-wider transition-colors duration-300 shadow-md group/btn whitespace-nowrap"
                 >
                   <span>{lang === "fr" ? "Réserver en ligne" : "Reserve Online"}</span>
                   <ArrowRight size={16} className="group-hover/btn:translate-x-1 transition-transform" />
@@ -1704,7 +1704,7 @@ export default function HomePage() {
                   href="tel:+15144211114"
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full flex items-center justify-center gap-3 border-[1.5px] border-[#1a1c19] text-[#1a1c19] hover:bg-[#1a1c19] hover:text-[#efe7d2] px-6 py-4.5 rounded-2xl font-bold text-sm uppercase tracking-wider transition-colors duration-300 shadow-sm"
+                  className="w-full flex items-center justify-center gap-2 border-[1.5px] border-[#1a1c19] text-[#1a1c19] hover:bg-[#1a1c19] hover:text-[#efe7d2] px-4 py-4 rounded-2xl font-bold text-xs sm:text-sm uppercase tracking-wider transition-colors duration-300 shadow-sm whitespace-nowrap"
                 >
                   <Phone size={16} />
                   <span className="lining-nums">(514) 421-1114</span>
