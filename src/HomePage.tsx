@@ -1689,7 +1689,7 @@ export default function HomePage() {
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full flex items-center justify-center gap-2 bg-[#1a1c19] text-[#efe7d2] hover:bg-[#cfbe91] hover:text-[#1a1c19] px-4 py-4 rounded-2xl font-bold text-xs sm:text-sm uppercase tracking-wider transition-colors duration-300 shadow-md group/btn whitespace-nowrap"
+                  className="w-full flex items-center justify-center gap-2 bg-[#cfbe91] text-[#1a1c19] hover:bg-[#d7c97a] px-4 py-4 rounded-2xl font-bold text-xs sm:text-sm uppercase tracking-wider transition-colors duration-300 shadow-md group/btn whitespace-nowrap"
                 >
                   <span>{lang === "fr" ? "Réserver en ligne" : "Reserve Online"}</span>
                   <ArrowRight size={16} className="group-hover/btn:translate-x-1 transition-transform" />
@@ -1725,7 +1725,7 @@ export default function HomePage() {
                   href="tel:+15144211114"
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full flex items-center justify-center gap-2 border-[1.5px] border-[#1a1c19] text-[#1a1c19] hover:bg-[#1a1c19] hover:text-[#efe7d2] px-4 py-4 rounded-2xl font-bold text-xs sm:text-sm uppercase tracking-wider transition-colors duration-300 shadow-sm whitespace-nowrap"
+                  className="w-full flex items-center justify-center gap-2 bg-[#cfbe91] text-[#1a1c19] hover:bg-[#d7c97a] px-4 py-4 rounded-2xl font-bold text-xs sm:text-sm uppercase tracking-wider transition-colors duration-300 shadow-md whitespace-nowrap"
                 >
                   <Phone size={16} />
                   <span className="lining-nums">(514) 421-1114</span>
