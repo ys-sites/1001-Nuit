@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { motion, useScroll, useSpring } from "motion/react";
+import { motion, AnimatePresence, useScroll, useSpring } from "motion/react";
 import {
   ArrowRight,
   Instagram,
@@ -8,6 +8,7 @@ import {
   Phone,
   Star,
   Calendar,
+  X,
 } from "lucide-react";
 
 const TiktokIcon = ({ size = 24, className = "" }) => (
@@ -997,6 +998,7 @@ const MINI_MENU = [
 export default function HomePage() {
   const [activeCategory, setActiveCategory] = useState(0);
   const [lang, setLang] = useState<"en" | "fr">("en");
+  const [showPromo, setShowPromo] = useState(true);
   const navigate = useNavigate();
 
   const handleOrderOnline = () => {
@@ -1077,7 +1079,7 @@ export default function HomePage() {
               onClick={(e) => { e.stopPropagation(); scrollTo("reservation"); }}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.97 }}
-              className="w-fit flex items-center justify-between gap-6 bg-[#cfbe91] text-[#0a0b0a] pl-6 pr-4 py-3 sm:pl-8 sm:pr-4 sm:py-4 rounded-full shadow-2xl hover:bg-[#d7c97a] transition-colors duration-300 group cursor-pointer pointer-events-auto whitespace-nowrap"
+              className="w-fit flex items-center justify-between gap-6 bg-[#c8b88a] text-[#0a0b0a] pl-6 pr-4 py-3 sm:pl-8 sm:pr-4 sm:py-4 rounded-full shadow-2xl hover:bg-[#efe7d2] transition-colors duration-300 group cursor-pointer pointer-events-auto whitespace-nowrap"
             >
               <div className="flex flex-col items-start leading-tight">
                 <span className="text-xs sm:text-sm font-black uppercase tracking-[0.22em] whitespace-nowrap">
@@ -1098,7 +1100,7 @@ export default function HomePage() {
               onClick={(e) => { e.stopPropagation(); handleOrderOnline(); }}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.97 }}
-              className="w-fit flex items-center justify-between gap-6 bg-[#cfbe91] text-[#0a0b0a] pl-6 pr-4 py-3 sm:pl-8 sm:pr-4 sm:py-4 rounded-full shadow-2xl hover:bg-[#d7c97a] transition-colors duration-300 group cursor-pointer pointer-events-auto whitespace-nowrap"
+              className="w-fit flex items-center justify-between gap-6 bg-[#c8b88a] text-[#0a0b0a] pl-6 pr-4 py-3 sm:pl-8 sm:pr-4 sm:py-4 rounded-full shadow-2xl hover:bg-[#efe7d2] transition-colors duration-300 group cursor-pointer pointer-events-auto whitespace-nowrap"
             >
               <div className="flex flex-col items-start leading-tight">
                 <span className="text-xs sm:text-sm font-black uppercase tracking-[0.22em] whitespace-nowrap">
@@ -1274,7 +1276,7 @@ export default function HomePage() {
             <button
               id="order-online-menu-cta"
               onClick={handleOrderOnline}
-              className="px-8 py-3.5 bg-[#cfbe91] text-[#1a1c19] text-[11px] tracking-[0.25em] font-bold uppercase rounded-full hover:bg-[#d7c97a] transition-all duration-300"
+              className="px-8 py-3.5 bg-[#c8b88a] text-[#1a1c19] text-[11px] tracking-[0.25em] font-bold uppercase rounded-full hover:bg-[#efe7d2] transition-all duration-300"
             >
               {lang === "fr" ? "Commander en ligne" : "Order Online"}
             </button>
@@ -1294,8 +1296,8 @@ export default function HomePage() {
                 onClick={() => setActiveCategory(idx)}
                 className={`py-3 px-2 md:px-5 md:py-2.5 rounded-[12px] md:rounded-lg border text-[10px] sm:text-xs font-bold md:tracking-[0.1em] transition-colors uppercase leading-tight ${
                   activeCategory === idx
-                    ? "border-[#cfbe91] bg-[#cfbe91] text-[#1a1c19] shadow-sm"
-                    : "border-[#1a1c19]/20 text-[#1a1c19] hover:border-[#cfbe91] hover:text-[#1a1c19]"
+                    ? "border-[#c8b88a] bg-[#c8b88a] text-[#1a1c19] shadow-sm"
+                    : "border-[#1a1c19]/20 text-[#1a1c19] hover:border-[#c8b88a] hover:text-[#1a1c19]"
                 }`}
               >
                 {lang === "fr" ? cat.title_fr : cat.title_en}
@@ -1689,7 +1691,7 @@ export default function HomePage() {
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full flex items-center justify-center gap-2 bg-[#cfbe91] text-[#1a1c19] hover:bg-[#d7c97a] px-4 py-4 rounded-2xl font-bold text-xs sm:text-sm uppercase tracking-wider transition-colors duration-300 shadow-md group/btn whitespace-nowrap"
+                  className="w-full flex items-center justify-center gap-2 bg-[#c8b88a] text-[#1a1c19] hover:bg-[#efe7d2] px-4 py-4 rounded-2xl font-bold text-xs sm:text-sm uppercase tracking-wider transition-colors duration-300 shadow-md group/btn whitespace-nowrap"
                 >
                   <span>{lang === "fr" ? "Réserver en ligne" : "Reserve Online"}</span>
                   <ArrowRight size={16} className="group-hover/btn:translate-x-1 transition-transform" />
@@ -1725,7 +1727,7 @@ export default function HomePage() {
                   href="tel:+15144211114"
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full flex items-center justify-center gap-2 bg-[#cfbe91] text-[#1a1c19] hover:bg-[#d7c97a] px-4 py-4 rounded-2xl font-bold text-xs sm:text-sm uppercase tracking-wider transition-colors duration-300 shadow-md whitespace-nowrap"
+                  className="w-full flex items-center justify-center gap-2 bg-[#c8b88a] text-[#1a1c19] hover:bg-[#efe7d2] px-4 py-4 rounded-2xl font-bold text-xs sm:text-sm uppercase tracking-wider transition-colors duration-300 shadow-md whitespace-nowrap"
                 >
                   <Phone size={16} />
                   <span className="lining-nums">(514) 421-1114</span>
@@ -1826,6 +1828,49 @@ export default function HomePage() {
           {lang === "fr" ? "Tous droits réservés." : "All rights reserved."}
         </p>
       </motion.footer>
+
+      {/* Promotional Popup Modal */}
+      <AnimatePresence>
+        {showPromo && (
+          <div className="fixed inset-0 z-[250] flex items-center justify-center p-4">
+            {/* Backdrop Blur/Overlay */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setShowPromo(false)}
+              className="absolute inset-0 bg-[#0a0b0a]/85 backdrop-blur-md cursor-pointer"
+            />
+
+            {/* Modal Card */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.9, y: 20 }}
+              transition={{ type: "spring", damping: 25, stiffness: 220 }}
+              className="relative max-w-lg w-full bg-[#1a1c19] border border-[#cfbe91]/30 rounded-3xl md:rounded-[2rem] overflow-hidden shadow-[0_24px_60px_rgba(0,0,0,0.6)] z-10 flex flex-col items-center"
+            >
+              {/* Close Button */}
+              <button
+                onClick={() => setShowPromo(false)}
+                className="absolute top-4 right-4 z-20 p-2.5 rounded-full bg-[#0a0b0a]/60 text-[#efe7d2] hover:bg-white hover:text-black border border-white/10 transition-colors cursor-pointer"
+                aria-label="Close promotion"
+              >
+                <X size={20} />
+              </button>
+
+              {/* Image Container */}
+              <div className="w-full aspect-auto flex items-center justify-center bg-[#0a0b0a]">
+                <img
+                  src="/promotion.png"
+                  alt="Promotion"
+                  className="w-full h-auto max-h-[75vh] object-contain select-none"
+                />
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

@@ -190,7 +190,7 @@ export default function ClosedPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
           onClick={() => navigate("/")}
-          className="px-8 py-3.5 bg-[#cfbe91] text-[#0a0b0a] text-[11px] tracking-[0.25em] font-bold uppercase rounded-full hover:bg-[#d7c97a] transition-all duration-300"
+          className="px-8 py-3.5 bg-[#c8b88a] text-[#0a0b0a] text-[11px] tracking-[0.25em] font-bold uppercase rounded-full hover:bg-[#efe7d2] transition-all duration-300"
         >
           ← {t.back}
         </motion.button>

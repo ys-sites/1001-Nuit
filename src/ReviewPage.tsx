@@ -173,7 +173,7 @@ export default function ReviewPage() {
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
               onClick={handleSubmit}
-              className="w-full flex items-center justify-center gap-3 bg-[#cfbe91] text-[#0a0b0a] font-bold uppercase tracking-widest text-sm py-4 rounded-2xl hover:bg-[#d7c683] transition-colors duration-200"
+              className="w-full flex items-center justify-center gap-3 bg-[#c8b88a] text-[#0a0b0a] font-bold uppercase tracking-widest text-sm py-4 rounded-2xl hover:bg-[#efe7d2] transition-colors duration-200"
             >
               <Send size={16} />
               Submit Feedback
