@@ -1077,7 +1077,7 @@ export default function HomePage() {
               onClick={(e) => { e.stopPropagation(); scrollTo("reservation"); }}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.97 }}
-              className="w-fit flex items-center justify-between gap-6 bg-[#0a0b0a]/80 backdrop-blur-md border border-[#cfbe91]/40 text-[#efe7d2] pl-6 pr-4 py-3 sm:pl-8 sm:pr-4 sm:py-4 rounded-full shadow-2xl hover:border-[#cfbe91] hover:text-[#cfbe91] transition-all duration-300 group cursor-pointer pointer-events-auto whitespace-nowrap"
+              className="w-fit flex items-center justify-between gap-6 bg-[#cfbe91] text-[#0a0b0a] pl-6 pr-4 py-3 sm:pl-8 sm:pr-4 sm:py-4 rounded-full shadow-2xl hover:bg-[#d7c97a] transition-colors duration-300 group cursor-pointer pointer-events-auto whitespace-nowrap"
             >
               <div className="flex flex-col items-start leading-tight">
                 <span className="text-xs sm:text-sm font-black uppercase tracking-[0.22em] whitespace-nowrap">
@@ -1087,7 +1087,7 @@ export default function HomePage() {
                   {lang === "fr" ? "En ligne ou par téléphone" : "Online or Phone"}
                 </span>
               </div>
-              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#efe7d2]/10 flex items-center justify-center group-hover:bg-[#cfbe91]/25 transition-colors shrink-0 text-[#cfbe91]">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#0a0b0a]/15 flex items-center justify-center group-hover:bg-[#0a0b0a]/20 transition-colors shrink-0">
                 <Calendar className="w-4 h-4 sm:w-[17px] sm:h-[17px]" />
               </div>
             </motion.button>
