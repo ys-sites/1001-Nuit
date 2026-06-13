@@ -1071,6 +1071,27 @@ export default function HomePage() {
             className="absolute bottom-8 left-6 md:bottom-12 md:left-12 z-20 flex flex-col items-stretch gap-5 pointer-events-auto cursor-pointer"
             onClick={handleOrderOnline}
           >
+            {/* Reserve a Table Button */}
+            <motion.button
+              id="hero-reserve-table-btn"
+              onClick={(e) => { e.stopPropagation(); scrollTo("reservation"); }}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.97 }}
+              className="w-fit flex items-center justify-between gap-6 bg-[#0a0b0a]/80 backdrop-blur-md border border-[#cfbe91]/40 text-[#efe7d2] pl-6 pr-4 py-3 sm:pl-8 sm:pr-4 sm:py-4 rounded-full shadow-2xl hover:border-[#cfbe91] hover:text-[#cfbe91] transition-all duration-300 group cursor-pointer pointer-events-auto whitespace-nowrap"
+            >
+              <div className="flex flex-col items-start leading-tight">
+                <span className="text-xs sm:text-sm font-black uppercase tracking-[0.22em] whitespace-nowrap">
+                  {lang === "fr" ? "Réservez une table" : "Reserve a Table"}
+                </span>
+                <span className="text-[10px] sm:text-[11px] font-medium uppercase tracking-[0.18em] opacity-60 whitespace-nowrap">
+                  {lang === "fr" ? "En ligne ou par téléphone" : "Online or Phone"}
+                </span>
+              </div>
+              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#efe7d2]/10 flex items-center justify-center group-hover:bg-[#cfbe91]/25 transition-colors shrink-0 text-[#cfbe91]">
+                <Calendar className="w-4 h-4 sm:w-[17px] sm:h-[17px]" />
+              </div>
+            </motion.button>
+
             {/* Order Online / Pickup Button */}
             <motion.button
               id="hero-order-online-btn"
@@ -1181,9 +1202,9 @@ export default function HomePage() {
             </div>
           </motion.div>
 
-          {/* Our Restaurant Block */}
+          {/* Reservation Block */}
           <motion.div
-            onClick={() => scrollTo("about")}
+            onClick={() => scrollTo("reservation")}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
@@ -1191,14 +1212,14 @@ export default function HomePage() {
           >
             <img
               src="/restaurent.webp"
-              alt="Our Restaurant"
+              alt="Reservation"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-[10s] group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-[#0a0b0a]/40 group-hover:bg-[#0a0b0a]/20 transition-colors duration-500 z-0"></div>
 
             <div className="absolute bottom-6 right-6 z-10 bg-[#0a0b0a]/80 backdrop-blur-md border border-[#333330] rounded-full pl-6 py-2.5 pr-2.5 flex items-center gap-5 group-hover:bg-white group-hover:text-black group-hover:border-white transition-all duration-300">
               <span className="text-[10px] tracking-[0.2em] font-medium uppercase mt-0.5">
-                {lang === "fr" ? "Notre Restaurant" : "Our Restaurant"}
+                {lang === "fr" ? "Réservation" : "Reservation"}
               </span>
               <div className="w-8 h-8 rounded-full border border-current flex items-center justify-center">
                 <ArrowRight size={14} />
