@@ -1862,7 +1862,7 @@ export default function HomePage() {
               {/* Image Container */}
               <div className="w-full aspect-auto flex items-center justify-center bg-[#0a0b0a]">
                 <img
-                  src="/promotion.png"
+                  src="/promotion.jpg"
                   alt="Promotion"
                   className="w-full h-auto max-h-[75vh] object-contain select-none"
                 />
