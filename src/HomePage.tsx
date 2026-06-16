@@ -1074,50 +1074,8 @@ export default function HomePage() {
             className="absolute bottom-8 left-6 md:bottom-12 md:left-12 z-20 flex flex-col items-stretch gap-5 pointer-events-auto cursor-pointer"
             onClick={handleOrderOnline}
           >
-            {/* Reserve a Table Button */}
-            <motion.button
-              id="hero-reserve-table-btn"
-              onClick={(e) => { e.stopPropagation(); scrollTo("reservation"); }}
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.97 }}
-              className="w-fit flex items-center justify-between gap-6 bg-[#c8b88a] text-[#0a0b0a] pl-6 pr-4 py-3 sm:pl-8 sm:pr-4 sm:py-4 rounded-full shadow-2xl hover:bg-[#efe7d2] transition-colors duration-300 group cursor-pointer pointer-events-auto whitespace-nowrap"
-            >
-              <div className="flex flex-col items-start leading-tight">
-                <span className="text-xs sm:text-sm font-black uppercase tracking-[0.22em] whitespace-nowrap">
-                  {lang === "fr" ? "Réservez une table" : "Reserve a Table"}
-                </span>
-                <span className="text-[10px] sm:text-[11px] font-medium uppercase tracking-[0.18em] opacity-60 whitespace-nowrap">
-                  {lang === "fr" ? "En ligne ou par téléphone" : "Online or Phone"}
-                </span>
-              </div>
-              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#0a0b0a]/15 flex items-center justify-center group-hover:bg-[#0a0b0a]/20 transition-colors shrink-0">
-                <Calendar className="w-4 h-4 sm:w-[17px] sm:h-[17px]" />
-              </div>
-            </motion.button>
-
             {/* Ordering Options Group */}
             <div className="flex flex-col sm:flex-row flex-wrap gap-4 sm:items-center">
-              {/* Order Online / Pickup Button */}
-              <motion.button
-                id="hero-order-online-btn"
-                onClick={(e) => { e.stopPropagation(); handleOrderOnline(); }}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.97 }}
-                className="w-fit flex items-center justify-between gap-6 bg-[#c8b88a] text-[#0a0b0a] pl-6 pr-4 py-3 sm:pl-8 sm:pr-4 sm:py-4 rounded-full shadow-2xl hover:bg-[#efe7d2] transition-colors duration-300 group cursor-pointer pointer-events-auto whitespace-nowrap"
-              >
-                <div className="flex flex-col items-start leading-tight">
-                  <span className="text-xs sm:text-sm font-black uppercase tracking-[0.22em] whitespace-nowrap">
-                    {lang === "fr" ? "Commander en ligne" : "Order Online"}
-                  </span>
-                  <span className="text-[10px] sm:text-[11px] font-medium uppercase tracking-[0.18em] opacity-60 whitespace-nowrap">
-                    {lang === "fr" ? "À emporter" : "Pickup"}
-                  </span>
-                </div>
-                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#0a0b0a]/15 flex items-center justify-center group-hover:bg-[#0a0b0a]/20 transition-colors shrink-0">
-                  <ArrowRight className="w-4 h-4 sm:w-[17px] sm:h-[17px]" />
-                </div>
-              </motion.button>
-
               {/* Uber Eats Delivery Button */}
               <motion.button
                 id="hero-uber-eats-btn"
@@ -1220,7 +1178,7 @@ export default function HomePage() {
             className="relative w-full flex-1 aspect-[4/3] md:aspect-auto rounded-[2rem] md:rounded-[2.5rem] overflow-hidden group block cursor-pointer"
           >
             <img
-              src="/menu.webp"
+              src="/SoupDumplings.jpg"
               alt="Menu"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-[10s] group-hover:scale-105"
             />
