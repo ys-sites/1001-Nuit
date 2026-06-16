@@ -1096,7 +1096,7 @@ export default function HomePage() {
             </motion.button>
 
             {/* Ordering Options Group */}
-            <div className="flex flex-col sm:flex-row gap-4 sm:items-center">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-4 sm:items-center">
               {/* Order Online / Pickup Button */}
               <motion.button
                 id="hero-order-online-btn"
@@ -1127,7 +1127,7 @@ export default function HomePage() {
                 }}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.97 }}
-                className="w-fit flex items-center justify-between gap-6 bg-[#c8b88a] text-[#0a0b0a] pl-6 pr-4 py-3 sm:pl-8 sm:pr-4 sm:py-4 rounded-full shadow-2xl hover:bg-[#efe7d2] transition-colors duration-300 group cursor-pointer pointer-events-auto whitespace-nowrap"
+                className="w-fit flex items-center justify-between gap-6 bg-[#06C167] text-white pl-6 pr-4 py-3 sm:pl-8 sm:pr-4 sm:py-4 rounded-full shadow-2xl hover:bg-[#05a85c] transition-colors duration-300 group cursor-pointer pointer-events-auto whitespace-nowrap"
               >
                 <div className="flex flex-col items-start leading-tight">
                   <span className="text-xs sm:text-sm font-black uppercase tracking-[0.22em] whitespace-nowrap">
@@ -1137,7 +1137,31 @@ export default function HomePage() {
                     {lang === "fr" ? "Livraison" : "Delivery"}
                   </span>
                 </div>
-                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#0a0b0a]/15 flex items-center justify-center group-hover:bg-[#0a0b0a]/20 transition-colors shrink-0">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/15 flex items-center justify-center group-hover:bg-white/20 transition-colors shrink-0">
+                  <ShoppingBag className="w-4 h-4 sm:w-[17px] sm:h-[17px]" />
+                </div>
+              </motion.button>
+
+              {/* DoorDash Delivery Button */}
+              <motion.button
+                id="hero-doordash-btn"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  window.open('https://order.online/business/1001-nuit-21950545', '_blank');
+                }}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.97 }}
+                className="w-fit flex items-center justify-between gap-6 bg-[#FF3008] text-white pl-6 pr-4 py-3 sm:pl-8 sm:pr-4 sm:py-4 rounded-full shadow-2xl hover:bg-[#E02600] transition-colors duration-300 group cursor-pointer pointer-events-auto whitespace-nowrap"
+              >
+                <div className="flex flex-col items-start leading-tight">
+                  <span className="text-xs sm:text-sm font-black uppercase tracking-[0.22em] whitespace-nowrap">
+                    {lang === "fr" ? "DoorDash" : "DoorDash"}
+                  </span>
+                  <span className="text-[10px] sm:text-[11px] font-medium uppercase tracking-[0.18em] opacity-60 whitespace-nowrap">
+                    {lang === "fr" ? "Livraison" : "Delivery"}
+                  </span>
+                </div>
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/15 flex items-center justify-center group-hover:bg-white/20 transition-colors shrink-0">
                   <ShoppingBag className="w-4 h-4 sm:w-[17px] sm:h-[17px]" />
                 </div>
               </motion.button>
@@ -1296,18 +1320,49 @@ export default function HomePage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "0px 0px -80px 0px" }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="flex flex-col items-center gap-4 mb-12"
+            className="w-full flex flex-col sm:flex-row flex-wrap items-center justify-center gap-8 sm:gap-12 mb-12"
           >
-            <p className="text-[#1a1c19]/50 text-[11px] uppercase tracking-[0.25em] font-bold">
-              {lang === "fr" ? "Commande à emporter" : "Pickup Order"}
-            </p>
-            <button
-              id="order-online-menu-cta"
-              onClick={handleOrderOnline}
-              className="px-8 py-3.5 bg-[#c8b88a] text-[#1a1c19] text-[11px] tracking-[0.25em] font-bold uppercase rounded-full hover:bg-[#efe7d2] transition-all duration-300"
-            >
-              {lang === "fr" ? "Commander en ligne" : "Order Online"}
-            </button>
+            {/* Pickup Order */}
+            <div className="flex flex-col items-center gap-3">
+              <p className="text-[#1a1c19]/50 text-[11px] uppercase tracking-[0.25em] font-bold">
+                {lang === "fr" ? "Commande à emporter" : "Pickup Order"}
+              </p>
+              <button
+                id="order-online-menu-cta"
+                onClick={handleOrderOnline}
+                className="px-8 py-3.5 bg-[#c8b88a] text-[#1a1c19] text-[11px] tracking-[0.25em] font-bold uppercase rounded-full hover:bg-[#efe7d2] transition-all duration-300 shadow-md"
+              >
+                {lang === "fr" ? "Commander en ligne" : "Order Online"}
+              </button>
+            </div>
+
+            {/* Uber Eats Delivery Order */}
+            <div className="flex flex-col items-center gap-3">
+              <p className="text-[#1a1c19]/50 text-[11px] uppercase tracking-[0.25em] font-bold">
+                {lang === "fr" ? "Livraison Uber Eats" : "Uber Eats Delivery"}
+              </p>
+              <button
+                id="uber-eats-menu-cta"
+                onClick={() => window.open('https://www.order.store/store/1001-nuit-authentic-chinese-restaurant/3pM54vb0RuSg-0QNzFABEQ', '_blank')}
+                className="px-8 py-3.5 bg-[#06C167] text-white text-[11px] tracking-[0.25em] font-bold uppercase rounded-full hover:bg-[#05a85c] transition-all duration-300 shadow-md"
+              >
+                {lang === "fr" ? "Commander sur Uber Eats" : "Order Uber Eats"}
+              </button>
+            </div>
+
+            {/* DoorDash Delivery Order */}
+            <div className="flex flex-col items-center gap-3">
+              <p className="text-[#1a1c19]/50 text-[11px] uppercase tracking-[0.25em] font-bold">
+                {lang === "fr" ? "Livraison DoorDash" : "DoorDash Delivery"}
+              </p>
+              <button
+                id="doordash-menu-cta"
+                onClick={() => window.open('https://order.online/business/1001-nuit-21950545', '_blank')}
+                className="px-8 py-3.5 bg-[#FF3008] text-white text-[11px] tracking-[0.25em] font-bold uppercase rounded-full hover:bg-[#E02600] transition-all duration-300 shadow-md"
+              >
+                {lang === "fr" ? "Commander sur DoorDash" : "Order DoorDash"}
+              </button>
+            </div>
           </motion.div>
 
           {/* Tabs */}
