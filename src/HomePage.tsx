@@ -9,6 +9,7 @@ import {
   Star,
   Calendar,
   X,
+  ShoppingBag,
 } from "lucide-react";
 
 const TiktokIcon = ({ size = 24, className = "" }) => (
@@ -1049,7 +1050,7 @@ export default function HomePage() {
           {/* Background Image */}
           <div className="absolute inset-0">
             <img
-              src="/hero.jpeg"
+              src="/HeroShot.jpg"
               alt="Ambiance"
               className="w-full h-full object-cover transition-transform duration-[20s] group-hover:scale-105"
             />
@@ -1094,26 +1095,53 @@ export default function HomePage() {
               </div>
             </motion.button>
 
-            {/* Order Online / Pickup Button */}
-            <motion.button
-              id="hero-order-online-btn"
-              onClick={(e) => { e.stopPropagation(); handleOrderOnline(); }}
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.97 }}
-              className="w-fit flex items-center justify-between gap-6 bg-[#c8b88a] text-[#0a0b0a] pl-6 pr-4 py-3 sm:pl-8 sm:pr-4 sm:py-4 rounded-full shadow-2xl hover:bg-[#efe7d2] transition-colors duration-300 group cursor-pointer pointer-events-auto whitespace-nowrap"
-            >
-              <div className="flex flex-col items-start leading-tight">
-                <span className="text-xs sm:text-sm font-black uppercase tracking-[0.22em] whitespace-nowrap">
-                  {lang === "fr" ? "Commander en ligne" : "Order Online"}
-                </span>
-                <span className="text-[10px] sm:text-[11px] font-medium uppercase tracking-[0.18em] opacity-60 whitespace-nowrap">
-                  {lang === "fr" ? "À emporter" : "Pickup"}
-                </span>
-              </div>
-              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#0a0b0a]/15 flex items-center justify-center group-hover:bg-[#0a0b0a]/20 transition-colors shrink-0">
-                <ArrowRight className="w-4 h-4 sm:w-[17px] sm:h-[17px]" />
-              </div>
-            </motion.button>
+            {/* Ordering Options Group */}
+            <div className="flex flex-col sm:flex-row gap-4 sm:items-center">
+              {/* Order Online / Pickup Button */}
+              <motion.button
+                id="hero-order-online-btn"
+                onClick={(e) => { e.stopPropagation(); handleOrderOnline(); }}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.97 }}
+                className="w-fit flex items-center justify-between gap-6 bg-[#c8b88a] text-[#0a0b0a] pl-6 pr-4 py-3 sm:pl-8 sm:pr-4 sm:py-4 rounded-full shadow-2xl hover:bg-[#efe7d2] transition-colors duration-300 group cursor-pointer pointer-events-auto whitespace-nowrap"
+              >
+                <div className="flex flex-col items-start leading-tight">
+                  <span className="text-xs sm:text-sm font-black uppercase tracking-[0.22em] whitespace-nowrap">
+                    {lang === "fr" ? "Commander en ligne" : "Order Online"}
+                  </span>
+                  <span className="text-[10px] sm:text-[11px] font-medium uppercase tracking-[0.18em] opacity-60 whitespace-nowrap">
+                    {lang === "fr" ? "À emporter" : "Pickup"}
+                  </span>
+                </div>
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#0a0b0a]/15 flex items-center justify-center group-hover:bg-[#0a0b0a]/20 transition-colors shrink-0">
+                  <ArrowRight className="w-4 h-4 sm:w-[17px] sm:h-[17px]" />
+                </div>
+              </motion.button>
+
+              {/* Uber Eats Delivery Button */}
+              <motion.button
+                id="hero-uber-eats-btn"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  window.open('https://www.order.store/store/1001-nuit-authentic-chinese-restaurant/3pM54vb0RuSg-0QNzFABEQ', '_blank');
+                }}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.97 }}
+                className="w-fit flex items-center justify-between gap-6 bg-[#c8b88a] text-[#0a0b0a] pl-6 pr-4 py-3 sm:pl-8 sm:pr-4 sm:py-4 rounded-full shadow-2xl hover:bg-[#efe7d2] transition-colors duration-300 group cursor-pointer pointer-events-auto whitespace-nowrap"
+              >
+                <div className="flex flex-col items-start leading-tight">
+                  <span className="text-xs sm:text-sm font-black uppercase tracking-[0.22em] whitespace-nowrap">
+                    {lang === "fr" ? "Uber Eats" : "Uber Eats"}
+                  </span>
+                  <span className="text-[10px] sm:text-[11px] font-medium uppercase tracking-[0.18em] opacity-60 whitespace-nowrap">
+                    {lang === "fr" ? "Livraison" : "Delivery"}
+                  </span>
+                </div>
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#0a0b0a]/15 flex items-center justify-center group-hover:bg-[#0a0b0a]/20 transition-colors shrink-0">
+                  <ShoppingBag className="w-4 h-4 sm:w-[17px] sm:h-[17px]" />
+                </div>
+              </motion.button>
+            </div>
 
             <h1
               className="font-serif text-[3.2rem] sm:text-[4.5rem] leading-[0.85] md:text-[8rem] lg:text-[10vw] xl:text-[11vw] uppercase tracking-tight text-[#efe7d2] drop-shadow-2xl select-none"
