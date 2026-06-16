@@ -1223,7 +1223,7 @@ export default function HomePage() {
             className="relative w-full flex-1 aspect-[4/3] md:aspect-auto rounded-[2rem] md:rounded-[2.5rem] overflow-hidden group block cursor-pointer"
           >
             <img
-              src="/restaurent.webp"
+              src="/reservation.jpg"
               alt="Reservation"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-[10s] group-hover:scale-105"
             />
