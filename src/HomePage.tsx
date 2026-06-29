@@ -1123,6 +1123,30 @@ export default function HomePage() {
                   <ShoppingBag className="w-4 h-4 sm:w-[17px] sm:h-[17px]" />
                 </div>
               </motion.button>
+
+              {/* Fantuan Delivery Button */}
+              <motion.button
+                id="hero-fantuan-btn"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  window.open('https://mwx.fantuan.ca/store/Restaurant/ca-4811988?f_promotion=157745&f_channel=198603&f_type=0&f_id=1', '_blank');
+                }}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.97 }}
+                className="w-fit flex items-center justify-between gap-6 bg-[#FFC800] text-[#0a0b0a] pl-6 pr-4 py-3 sm:pl-8 sm:pr-4 sm:py-4 rounded-full shadow-2xl hover:bg-[#e6b400] transition-colors duration-300 group cursor-pointer pointer-events-auto whitespace-nowrap"
+              >
+                <div className="flex flex-col items-start leading-tight">
+                  <span className="text-xs sm:text-sm font-black uppercase tracking-[0.22em] whitespace-nowrap">
+                    {lang === "fr" ? "Fantuan" : "Fantuan"}
+                  </span>
+                  <span className="text-[10px] sm:text-[11px] font-medium uppercase tracking-[0.18em] opacity-60 whitespace-nowrap">
+                    {lang === "fr" ? "Livraison" : "Delivery"}
+                  </span>
+                </div>
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-black/10 flex items-center justify-center group-hover:bg-black/15 transition-colors shrink-0">
+                  <ShoppingBag className="w-4 h-4 sm:w-[17px] sm:h-[17px] text-[#0a0b0a]" />
+                </div>
+              </motion.button>
             </div>
 
             <h1
@@ -1248,7 +1272,7 @@ export default function HomePage() {
             className="relative w-full flex-1 aspect-[4/3] md:aspect-auto rounded-[2rem] md:rounded-[2.5rem] overflow-hidden group block cursor-pointer"
           >
             <img
-              src="/menu.avif"
+              src="/menu.webp"
               alt="Order Online"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-[10s] group-hover:scale-105"
             />
@@ -1319,6 +1343,20 @@ export default function HomePage() {
                 className="px-8 py-3.5 bg-[#FF3008] text-white text-[11px] tracking-[0.25em] font-bold uppercase rounded-full hover:bg-[#E02600] transition-all duration-300 shadow-md"
               >
                 {lang === "fr" ? "Commander sur DoorDash" : "Order DoorDash"}
+              </button>
+            </div>
+
+            {/* Fantuan Delivery Order */}
+            <div className="flex flex-col items-center gap-3">
+              <p className="text-[#1a1c19]/50 text-[11px] uppercase tracking-[0.25em] font-bold">
+                {lang === "fr" ? "Livraison Fantuan" : "Fantuan Delivery"}
+              </p>
+              <button
+                id="fantuan-menu-cta"
+                onClick={() => window.open('https://mwx.fantuan.ca/store/Restaurant/ca-4811988?f_promotion=157745&f_channel=198603&f_type=0&f_id=1', '_blank')}
+                className="px-8 py-3.5 bg-[#FFC800] text-black text-[11px] tracking-[0.25em] font-bold uppercase rounded-full hover:bg-[#e6b400] transition-all duration-300 shadow-md"
+              >
+                {lang === "fr" ? "Commander sur Fantuan" : "Order Fantuan"}
               </button>
             </div>
           </motion.div>
