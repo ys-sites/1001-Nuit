@@ -1133,7 +1133,7 @@ export default function HomePage() {
                 }}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.97 }}
-                className="w-fit flex items-center justify-between gap-6 bg-[#FFC800] text-[#0a0b0a] pl-6 pr-4 py-3 sm:pl-8 sm:pr-4 sm:py-4 rounded-full shadow-2xl hover:bg-[#e6b400] transition-colors duration-300 group cursor-pointer pointer-events-auto whitespace-nowrap"
+                className="w-fit flex items-center justify-between gap-6 bg-[#1CC4C4] text-[#0a0b0a] pl-6 pr-4 py-3 sm:pl-8 sm:pr-4 sm:py-4 rounded-full shadow-2xl hover:bg-[#16a8a8] transition-colors duration-300 group cursor-pointer pointer-events-auto whitespace-nowrap"
               >
                 <div className="flex flex-col items-start leading-tight">
                   <span className="text-xs sm:text-sm font-black uppercase tracking-[0.22em] whitespace-nowrap">
@@ -1354,7 +1354,7 @@ export default function HomePage() {
               <button
                 id="fantuan-menu-cta"
                 onClick={() => window.open('https://mwx.fantuan.ca/store/Restaurant/ca-4811988?f_promotion=157745&f_channel=198603&f_type=0&f_id=1', '_blank')}
-                className="px-8 py-3.5 bg-[#FFC800] text-black text-[11px] tracking-[0.25em] font-bold uppercase rounded-full hover:bg-[#e6b400] transition-all duration-300 shadow-md"
+                className="px-8 py-3.5 bg-[#1CC4C4] text-black text-[11px] tracking-[0.25em] font-bold uppercase rounded-full hover:bg-[#16a8a8] transition-all duration-300 shadow-md"
               >
                 {lang === "fr" ? "Commander sur Fantuan" : "Order Fantuan"}
               </button>
