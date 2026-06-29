@@ -2,7 +2,7 @@
  * 1001 Nuits — Business Hours Logic
  *
  * Hours (Montreal local time, UTC-4/UTC-5):
- *   Monday:    Closed
+ *   Monday:    11:00–22:00
  *   Tuesday:   11:00–15:00, 16:00–22:00
  *   Wednesday: 11:00–15:00, 16:00–22:00
  *   Thursday:  11:00–15:00, 16:00–22:00
@@ -18,7 +18,7 @@ export type DaySchedule =
 /** Sunday=0 … Saturday=6 (same as Date.getDay()) */
 const HOURS: Record<number, DaySchedule> = {
   0: { closed: false, slots: [[11, 15], [16, 22]] }, // Sunday
-  1: { closed: true },                               // Monday
+  1: { closed: false, slots: [[11, 22]] },           // Monday
   2: { closed: false, slots: [[11, 15], [16, 22]] }, // Tuesday
   3: { closed: false, slots: [[11, 15], [16, 22]] }, // Wednesday
   4: { closed: false, slots: [[11, 15], [16, 22]] }, // Thursday
