@@ -1906,6 +1906,23 @@ export default function HomePage() {
           © {new Date().getFullYear()} 1001 Nuits.{" "}
           {lang === "fr" ? "Tous droits réservés." : "All rights reserved."}
         </p>
+        <div className="flex justify-center items-center mt-6">
+          <a 
+            href="https://www.ysdev.ca" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="ys-signature-btn"
+          >
+            <img 
+              src="/YS.png" 
+              alt="YS Logo" 
+              className="ys-sig-logo" 
+            />
+            <span className="ys-sig-text">
+              Made by <strong className="ys-sig-highlight">YS Marketing Solutions</strong> <span className="ys-sig-divider">|</span> Marketing Agency
+            </span>
+          </a>
+        </div>
       </motion.footer>
 
       {/* Promotional Popup Modal */}
