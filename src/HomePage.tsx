@@ -1383,20 +1383,76 @@ export default function HomePage() {
             </motion.div>
           )}
 
-          {/* Menu Items */}
-                    <p className="font-serif text-[1.05rem] sm:text-[1.4rem] md:text-2xl tracking-wide text-[#1a1c19]/50 mt-1">
-                      {(item as any).name_zh}
+          {/* Menu Items -- photo-grid for Sushi Combo, text rows for others */}
+          {(MENU_CATEGORIES[activeCategory].items[0] as any)?.image ? (
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+              {MENU_CATEGORIES[activeCategory].items.map((item, idx) => (
+                <motion.div
+                  key={`img-${idx}`}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "0px 0px -80px 0px" }}
+                  transition={{ delay: idx * 0.05, duration: 0.5 }}
+                  className="relative rounded-2xl overflow-hidden group aspect-[4/3]"
+                >
+                  <img
+                    src={(item as any).image}
+                    alt={lang === "fr" ? item.name_fr : item.name_en}
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0b0a]/90 via-[#0a0b0a]/20 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4">
+                    <p className="font-serif text-sm sm:text-base text-[#efe7d2] leading-snug">
+                      {lang === "fr" ? item.name_fr : item.name_en}
                     </p>
-                  )}
-                  {(lang === "fr" ? item.desc_fr : item.desc_en) && (
-                    <p className="text-[12px] sm:text-[13px] md:text-sm text-[#1a1c19]/70 mt-2 font-medium tracking-wide">
-                      {lang === "fr" ? item.desc_fr : item.desc_en}
+                    {(item as any).name_zh && (
+                      <p className="text-[10px] text-[#cfbe91]/60 leading-tight mt-0.5">
+                        {(item as any).name_zh}
+                      </p>
+                    )}
+                    <p className="font-serif text-[#cfbe91] text-sm sm:text-base font-bold mt-1">
+                      {item.price}
                     </p>
-                  )}
-                </div>
-              </motion.div>
-            ))}
-          </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          ) : (
+            <div className="flex flex-col gap-6 sm:gap-10">
+              {MENU_CATEGORIES[activeCategory].items.map((item, idx) => (
+                <motion.div
+                  key={`txt-${idx}`}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "0px 0px -80px 0px" }}
+                  transition={{ delay: idx * 0.1, duration: 0.6 }}
+                  className="flex flex-col gap-2 group"
+                >
+                  <div className="flex-1 flex flex-col justify-center w-full">
+                    <div className="flex items-end gap-2 w-full min-w-0">
+                      <h4 className="font-serif text-[1.05rem] sm:text-[1.4rem] md:text-2xl tracking-wide text-[#1a1c19] shrink min-w-0">
+                        {lang === "fr" ? item.name_fr : item.name_en}
+                      </h4>
+                      <div className="flex-1 border-b-[1.5px] border-dotted border-[#1a1c19]/30 mx-1 sm:mx-2 relative top-[-5px] sm:top-[-8px] min-w-[8px] shrink-0"></div>
+                      <span className="font-serif text-[1.05rem] sm:text-[1.4rem] md:text-2xl tracking-wider text-[#1a1c19] shrink-0">
+                        {item.price}
+                      </span>
+                    </div>
+                    {(item as any).name_zh && (
+                      <p className="font-serif text-[1.05rem] sm:text-[1.4rem] md:text-2xl tracking-wide text-[#1a1c19]/50 mt-1">
+                        {(item as any).name_zh}
+                      </p>
+                    )}
+                    {(lang === "fr" ? item.desc_fr : item.desc_en) && (
+                      <p className="text-[12px] sm:text-[13px] md:text-sm text-[#1a1c19]/70 mt-2 font-medium tracking-wide">
+                        {lang === "fr" ? item.desc_fr : item.desc_en}
+                      </p>
+                    )}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
