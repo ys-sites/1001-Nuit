@@ -298,7 +298,8 @@ const MENU_CATEGORIES = [
         name_zh: "芒果卷",
         price: "$5.99",
         desc_fr: "",
-        desc_en: ""
+        desc_en: "",
+        image: "/sushi/image.png"
       },
       {
         id: "",
@@ -307,7 +308,8 @@ const MENU_CATEGORIES = [
         name_zh: "牛油果卷",
         price: "$5.99",
         desc_fr: "",
-        desc_en: ""
+        desc_en: "",
+        image: "/sushi/avocado.png"
       },
       {
         id: "",
@@ -316,7 +318,8 @@ const MENU_CATEGORIES = [
         name_zh: "三文魚牛油果卷",
         price: "$8.99",
         desc_fr: "",
-        desc_en: ""
+        desc_en: "",
+        image: "/sushi/salmon and avocado.png"
       },
       {
         id: "",
@@ -325,7 +328,8 @@ const MENU_CATEGORIES = [
         name_zh: "炸雞卷",
         price: "$11.99",
         desc_fr: "",
-        desc_en: ""
+        desc_en: "",
+        image: "/sushi/fried chicken roll.png"
       },
       {
         id: "",
@@ -334,7 +338,8 @@ const MENU_CATEGORIES = [
         name_zh: "龍眼卷",
         price: "$12.99",
         desc_fr: "",
-        desc_en: ""
+        desc_en: "",
+        image: "/sushi/dragon eye roll.png"
       },
       {
         id: "",
@@ -343,7 +348,8 @@ const MENU_CATEGORIES = [
         name_zh: "辣三文魚卷",
         price: "$13.99",
         desc_fr: "",
-        desc_en: ""
+        desc_en: "",
+        image: "/sushi/spicy salmon.png"
       },
       {
         id: "",
@@ -352,7 +358,8 @@ const MENU_CATEGORIES = [
         name_zh: "SS1壽司拼盤",
         price: "$15.99",
         desc_fr: "",
-        desc_en: ""
+        desc_en: "",
+        image: "/sushi/ss1.png"
       },
       {
         id: "",
@@ -361,7 +368,8 @@ const MENU_CATEGORIES = [
         name_zh: "SS2壽司拼盤",
         price: "$21.99",
         desc_fr: "",
-        desc_en: ""
+        desc_en: "",
+        image: "/sushi/ss2.png"
       },
       {
         id: "",
@@ -370,7 +378,8 @@ const MENU_CATEGORIES = [
         name_zh: "SS3壽司拼盤",
         price: "$34.99",
         desc_fr: "",
-        desc_en: ""
+        desc_en: "",
+        image: "/sushi/ss3.png"
       },
       {
         id: "",
@@ -379,7 +388,8 @@ const MENU_CATEGORIES = [
         name_zh: "SS4壽司拼盤",
         price: "$44.99",
         desc_fr: "",
-        desc_en: ""
+        desc_en: "",
+        image: "/sushi/ss4.png"
       },
       {
         id: "",
@@ -388,7 +398,8 @@ const MENU_CATEGORIES = [
         name_zh: "壽司船 1",
         price: "$97.99",
         desc_fr: "",
-        desc_en: ""
+        desc_en: "",
+        image: "/sushi/boat 1.png"
       },
       {
         id: "",
@@ -397,7 +408,8 @@ const MENU_CATEGORIES = [
         name_zh: "壽司船 2",
         price: "$111.99",
         desc_fr: "",
-        desc_en: ""
+        desc_en: "",
+        image: "/sushi/boat 2.png"
       }
     ]
   },
