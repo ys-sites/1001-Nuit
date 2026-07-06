@@ -1384,33 +1384,6 @@ export default function HomePage() {
           )}
 
           {/* Menu Items */}
-          <div className="flex flex-col gap-6 sm:gap-10">
-            {MENU_CATEGORIES[activeCategory].items.map((item, idx) => (
-              <motion.div
-                key={item.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "0px 0px -80px 0px" }}
-                transition={{ delay: idx * 0.1, duration: 0.6 }}
-                className="flex flex-col gap-2 group"
-              >
-                {/* Item Details */}
-                <div className="flex-1 flex flex-col justify-center w-full">
-                  <div className="flex items-end gap-2 w-full min-w-0">
-                    <h4 className="font-serif text-[1.05rem] sm:text-[1.4rem] md:text-2xl tracking-wide text-[#1a1c19] shrink min-w-0">
-                      {/* {item.id && !item.id.includes("T01") && (
-                        <span className="text-[10px] sm:text-xs font-sans font-bold text-[#8a7a4a] tracking-widest uppercase mr-1.5">
-                          {item.id}.
-                        </span>
-                      )} */}
-                      {lang === "fr" ? item.name_fr : item.name_en}
-                    </h4>
-                    <div className="flex-1 border-b-[1.5px] border-dotted border-[#1a1c19]/30 mx-1 sm:mx-2 relative top-[-5px] sm:top-[-8px] min-w-[8px] shrink-0"></div>
-                    <span className="font-serif text-[1.05rem] sm:text-[1.4rem] md:text-2xl tracking-wider text-[#1a1c19] shrink-0">
-                      {item.price}
-                    </span>
-                  </div>
-                  {(item as any).name_zh && (
                     <p className="font-serif text-[1.05rem] sm:text-[1.4rem] md:text-2xl tracking-wide text-[#1a1c19]/50 mt-1">
                       {(item as any).name_zh}
                     </p>
