@@ -98,8 +98,8 @@ const menuStr = `const MENU_CATEGORIES = [
     ]
   },
   {
-    title_en: "COMBO 壽司套餐",
-    title_fr: "COMBO 壽司套餐",
+    title_en: "SUSHI COMBO 壽司套餐",
+    title_fr: "SUSHI COMBO 壽司套餐",
     items: [
       {
         id: "",
