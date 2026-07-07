@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { motion, AnimatePresence, useScroll, useSpring } from "motion/react";
 import {
   ArrowRight,
@@ -30,7 +30,8 @@ import BlurText from "./components/ui/BlurText";
 import CurvedLoop from "./components/ui/CurvedLoop";
 import ScrollTextReveal from "./components/ui/ScrollTextReveal";
 import NeighborhoodMap from "./components/NeighborhoodMap";
-import { isOpenNow } from "./lib/useIsOpen";
+import SocialFeedback from "./components/SocialFeedback";
+
 
 const REVIEWS = [
   {
@@ -952,14 +953,10 @@ export default function HomePage() {
   const [activeCategory, setActiveCategory] = useState(0);
   const [lang, setLang] = useState<"en" | "fr">("en");
   const [showPromo, setShowPromo] = useState(true);
-  const navigate = useNavigate();
+  const [hoveredSocial, setHoveredSocial] = useState<number | null>(null);
 
   const handleOrderOnline = () => {
-    if (isOpenNow()) {
-      window.open('https://cloud.quickposhub.com/onlineorder/#/pages/order/tableurl?code=E9IPN247Bx', '_blank');
-    } else {
-      navigate('/closed');
-    }
+    window.open('https://cloud.quickposhub.com/onlineorder/#/pages/order/tableurl?code=E9IPN247Bx', '_blank');
   };
 
   useEffect(() => {
@@ -1115,18 +1112,31 @@ export default function HomePage() {
           {/* Social Badges bottom right */}
           <div className="absolute bottom-5 right-5 md:bottom-10 md:right-10 z-20 flex items-center gap-2 md:gap-3">
             {[
-              { icon: Instagram, link: "https://www.instagram.com/1001nu1t/" },
-              { icon: Facebook, link: "https://www.facebook.com/share/1J1KukJuHs/?mibextid=wwXIfr" },
-              { icon: TiktokIcon, link: "https://www.tiktok.com/@1001nu1t" },
+              { icon: Instagram as any, link: "https://www.instagram.com/1001nu1t/", color: "#E4405F" },
+              { icon: Facebook as any, link: "https://www.facebook.com/share/1J1KukJuHs/?mibextid=wwXIfr", color: "#1877F2" },
+              { icon: TiktokIcon as any, link: "https://www.tiktok.com/@1001nu1t", color: "#25F4EE" },
             ].map((social, idx) => (
               <a
                 key={idx}
                 href={social.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 md:w-[52px] md:h-[52px] flex items-center justify-center rounded-full bg-[#0a0b0a]/60 backdrop-blur-md border border-[#333330] hover:bg-white hover:text-black transition-colors duration-300"
+                onMouseEnter={() => setHoveredSocial(idx)}
+                onMouseLeave={() => setHoveredSocial(null)}
+                className="w-10 h-10 md:w-[52px] md:h-[52px] flex items-center justify-center rounded-full bg-[#0a0b0a]/60 backdrop-blur-md border border-[#333330] transition-colors duration-300"
+                style={{
+                  backgroundColor: hoveredSocial === idx ? social.color : "rgba(10, 11, 10, 0.6)",
+                  borderColor: hoveredSocial === idx ? social.color : "#333330",
+                }}
               >
-                <social.icon size={16} strokeWidth={1.5} />
+                <social.icon
+                  size={16}
+                  strokeWidth={1.5}
+                  style={{
+                    color: hoveredSocial === idx ? "#ffffff" : social.color,
+                    transition: "color 0.3s ease",
+                  }}
+                />
               </a>
             ))}
           </div>
@@ -1140,7 +1150,7 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="relative w-full flex-1 aspect-[4/3] md:aspect-auto rounded-[2rem] md:rounded-[2.5rem] overflow-hidden group block cursor-pointer"
+            className="relative w-full flex-1 aspect-[16/9] md:aspect-auto rounded-[2rem] md:rounded-[2.5rem] overflow-hidden group block cursor-pointer"
           >
             <img
               src="/SoupDumplings.jpg"
@@ -1169,7 +1179,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="absolute bottom-6 right-6 z-10 bg-[#0a0b0a]/80 backdrop-blur-md border border-[#333330] rounded-full pl-6 py-2.5 pr-2.5 flex items-center gap-5 group-hover:bg-white group-hover:text-black group-hover:border-white transition-all duration-300">
+            <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 z-10 bg-[#0a0b0a]/80 backdrop-blur-md border border-[#333330] rounded-full pl-6 py-2.5 pr-2.5 flex items-center gap-5 group-hover:bg-white group-hover:text-black group-hover:border-white transition-all duration-300">
               <span className="text-[10px] tracking-[0.2em] font-medium uppercase mt-0.5">
                 {lang === "fr" ? "Menu" : "Menu"}
               </span>
@@ -1185,7 +1195,7 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="relative w-full flex-1 aspect-[4/3] md:aspect-auto rounded-[2rem] md:rounded-[2.5rem] overflow-hidden group block cursor-pointer"
+            className="relative w-full flex-1 aspect-[16/9] md:aspect-auto rounded-[2rem] md:rounded-[2.5rem] overflow-hidden group block cursor-pointer"
           >
             <img
               src="/reservation.jpg"
@@ -1194,7 +1204,7 @@ export default function HomePage() {
             />
             <div className="absolute inset-0 bg-[#0a0b0a]/40 group-hover:bg-[#0a0b0a]/20 transition-colors duration-500 z-0"></div>
 
-            <div className="absolute bottom-6 right-6 z-10 bg-[#0a0b0a]/80 backdrop-blur-md border border-[#333330] rounded-full pl-6 py-2.5 pr-2.5 flex items-center gap-5 group-hover:bg-white group-hover:text-black group-hover:border-white transition-all duration-300">
+            <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 z-10 bg-[#0a0b0a]/80 backdrop-blur-md border border-[#333330] rounded-full pl-6 py-2.5 pr-2.5 flex items-center gap-5 group-hover:bg-white group-hover:text-black group-hover:border-white transition-all duration-300">
               <span className="text-[10px] tracking-[0.2em] font-medium uppercase mt-0.5">
                 {lang === "fr" ? "Réservation" : "Reservation"}
               </span>
@@ -1210,7 +1220,7 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="relative w-full flex-1 aspect-[4/3] md:aspect-auto rounded-[2rem] md:rounded-[2.5rem] overflow-hidden group block cursor-pointer"
+            className="relative w-full flex-1 aspect-[16/9] md:aspect-auto rounded-[2rem] md:rounded-[2.5rem] overflow-hidden group block cursor-pointer"
           >
             <img
               src="/menu.webp"
@@ -1219,7 +1229,7 @@ export default function HomePage() {
             />
             <div className="absolute inset-0 bg-[#0a0b0a]/30 group-hover:bg-[#0a0b0a]/10 transition-colors duration-500 z-0"></div>
 
-            <div className="absolute bottom-6 right-6 z-10 bg-[#0a0b0a]/80 backdrop-blur-md border border-[#333330] rounded-full pl-6 py-2.5 pr-2.5 flex items-center gap-5 group-hover:bg-white group-hover:text-black group-hover:border-white transition-all duration-300">
+            <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 z-10 bg-[#0a0b0a]/80 backdrop-blur-md border border-[#333330] rounded-full pl-6 py-2.5 pr-2.5 flex items-center gap-5 group-hover:bg-white group-hover:text-black group-hover:border-white transition-all duration-300">
               <span className="text-[10px] tracking-[0.2em] font-medium uppercase mt-0.5">
                 {lang === "fr" ? "Commander en ligne — À emporter" : "Order Online — Pickup"}
               </span>
@@ -1349,29 +1359,6 @@ export default function HomePage() {
             <div className="w-10 h-[1px] bg-[#1a1c19]/30 hidden sm:block"></div>
           </motion.div>
 
-          {/* Complimentary Drink Notice */}
-          {[
-            "MAIN DISH",
-            "INSTANT",
-            "SIZZLING PLATES",
-            "CURRY STYLE HK",
-            "VEGETARIAN",
-            "BAKED HK STYLE"
-          ].some(t => MENU_CATEGORIES[activeCategory].title_en.startsWith(t)) && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              key={`notice-${activeCategory}`}
-              className="mb-10 text-center"
-            >
-              <p className="inline-block px-6 py-2 bg-[#cfbe91]/20 border border-[#cfbe91]/30 rounded-full text-[10px] md:text-xs uppercase tracking-widest font-bold text-[#8a7a4a]">
-                {lang === "fr" 
-                  ? "☕ Boisson gratuite incluse avec ce plat (café ou thé)"
-                  : "☕ Complimentary beverage included (hot/cold tea or coffee)"}
-              </p>
-            </motion.div>
-          )}
-
           {/* Menu Items -- photo-grid for Sushi Combo, text rows for others */}
           {(MENU_CATEGORIES[activeCategory].items[0] as any)?.image ? (
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
@@ -1394,11 +1381,6 @@ export default function HomePage() {
                     <p className="font-serif text-sm sm:text-base text-[#efe7d2] leading-snug">
                       {lang === "fr" ? item.name_fr : item.name_en}
                     </p>
-                    {(item as any).name_zh && (
-                      <p className="text-[10px] text-[#cfbe91]/60 leading-tight mt-0.5">
-                        {(item as any).name_zh}
-                      </p>
-                    )}
                     <p className="font-serif text-[#cfbe91] text-sm sm:text-base font-bold mt-1">
                       {item.price}
                     </p>
@@ -1427,11 +1409,6 @@ export default function HomePage() {
                         {item.price}
                       </span>
                     </div>
-                    {(item as any).name_zh && (
-                      <p className="font-serif text-[1.05rem] sm:text-[1.4rem] md:text-2xl tracking-wide text-[#1a1c19]/50 mt-1">
-                        {(item as any).name_zh}
-                      </p>
-                    )}
                     {(lang === "fr" ? item.desc_fr : item.desc_en) && (
                       <p className="text-[12px] sm:text-[13px] md:text-sm text-[#1a1c19]/70 mt-2 font-medium tracking-wide">
                         {lang === "fr" ? item.desc_fr : item.desc_en}
@@ -1622,8 +1599,7 @@ export default function HomePage() {
             className="w-full lg:w-1/2 relative"
           >
               <div className="relative aspect-[4/3] w-full rounded-[2.5rem] overflow-hidden">
-               <img src="/hero.webp" alt="Private Dining Room" className="w-full h-full object-cover grayscale opacity-90 transition-all duration-[5s] hover:grayscale-0 hover:scale-105" />
-               <div className="absolute inset-0 bg-[#0a0b0a]/20"></div>
+               <img src="/hero.webp.png" alt="Private Dining Room" className="w-full h-full object-cover transition-all duration-[5s] hover:scale-105" />
              </div>
           </motion.div>
 
@@ -1667,6 +1643,9 @@ export default function HomePage() {
         
         </div>
       </section>
+
+      {/* Social Feedback Section */}
+      <SocialFeedback lang={lang} />
 
       {/* Reservation Section */}
       <section

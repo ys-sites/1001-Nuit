@@ -207,3 +207,12 @@ h6,
   color: rgba(255, 255, 255, 0.1);
   margin: 0 4px;
 }
+
+/* Hide scrollbar utility */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
