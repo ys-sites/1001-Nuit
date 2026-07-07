@@ -994,7 +994,7 @@ export default function HomePage() {
           initial={{ opacity: 0, scale: 0.98 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="w-full md:w-[70%] xl:w-[75%] relative rounded-[2rem] md:rounded-[2.5rem] overflow-hidden h-[calc(100svh-1.5rem)] md:h-full md:flex-none flex-shrink-0 group"
+          className="w-full md:w-[78%] xl:w-[82%] relative rounded-[2rem] md:rounded-[2.5rem] overflow-hidden h-[calc(100svh-1.5rem)] md:h-full md:flex-none flex-shrink-0 group"
         >
           {/* Background Image */}
           <div className="absolute inset-0">
@@ -1056,7 +1056,7 @@ export default function HomePage() {
         </motion.div>
 
         {/* Right Sidebar Sections - Equal Ratio Boxes */}
-        <div className="w-full md:w-[30%] xl:w-[25%] flex flex-col gap-3 md:gap-4 flex-shrink-0 md:h-full md:flex-1 h-auto">
+        <div className="w-full md:w-[22%] xl:w-[18%] flex flex-col gap-3 md:gap-4 flex-shrink-0 md:h-full md:flex-1 h-auto">
           {/* Menu Block */}
           <motion.div
             onClick={() => scrollTo("menu")}
@@ -1522,7 +1522,7 @@ export default function HomePage() {
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
             className="w-full lg:w-1/2 relative"
           >
-              <div className="relative w-full rounded-[2.5rem] overflow-hidden">
+              <div className="relative w-full max-w-lg mx-auto lg:ml-auto rounded-[2.5rem] overflow-hidden">
                <img src="/hero.webp" alt="Private Dining Room" loading="lazy" decoding="async" className="w-full h-auto transition-all duration-[5s] hover:scale-105" />
              </div>
           </motion.div>
