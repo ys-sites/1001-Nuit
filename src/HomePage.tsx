@@ -300,7 +300,7 @@ const MENU_CATEGORIES = [
         price: "$5.99",
         desc_fr: "",
         desc_en: "",
-        image: "/sushi/image.png"
+        image: "/sushi/image.webp"
       },
       {
         id: "",
@@ -310,7 +310,7 @@ const MENU_CATEGORIES = [
         price: "$5.99",
         desc_fr: "",
         desc_en: "",
-        image: "/sushi/avocado.png"
+        image: "/sushi/avocado.webp"
       },
       {
         id: "",
@@ -320,7 +320,7 @@ const MENU_CATEGORIES = [
         price: "$8.99",
         desc_fr: "",
         desc_en: "",
-        image: "/sushi/salmon and avocado.png"
+        image: "/sushi/salmon and avocado.webp"
       },
       {
         id: "",
@@ -330,7 +330,7 @@ const MENU_CATEGORIES = [
         price: "$11.99",
         desc_fr: "",
         desc_en: "",
-        image: "/sushi/fried chicken roll.png"
+        image: "/sushi/fried chicken roll.webp"
       },
       {
         id: "",
@@ -340,7 +340,7 @@ const MENU_CATEGORIES = [
         price: "$12.99",
         desc_fr: "",
         desc_en: "",
-        image: "/sushi/dragon eye roll.png"
+        image: "/sushi/dragon eye roll.webp"
       },
       {
         id: "",
@@ -350,7 +350,7 @@ const MENU_CATEGORIES = [
         price: "$13.99",
         desc_fr: "",
         desc_en: "",
-        image: "/sushi/spicy salmon.png"
+        image: "/sushi/spicy salmon.webp"
       },
       {
         id: "",
@@ -360,7 +360,7 @@ const MENU_CATEGORIES = [
         price: "$15.99",
         desc_fr: "",
         desc_en: "",
-        image: "/sushi/ss1.png"
+        image: "/sushi/ss1.webp"
       },
       {
         id: "",
@@ -370,7 +370,7 @@ const MENU_CATEGORIES = [
         price: "$21.99",
         desc_fr: "",
         desc_en: "",
-        image: "/sushi/ss2.png"
+        image: "/sushi/ss2.webp"
       },
       {
         id: "",
@@ -380,7 +380,7 @@ const MENU_CATEGORIES = [
         price: "$34.99",
         desc_fr: "",
         desc_en: "",
-        image: "/sushi/ss3.png"
+        image: "/sushi/ss3.webp"
       },
       {
         id: "",
@@ -390,7 +390,7 @@ const MENU_CATEGORIES = [
         price: "$44.99",
         desc_fr: "",
         desc_en: "",
-        image: "/sushi/ss4.png"
+        image: "/sushi/ss4.webp"
       },
       {
         id: "",
@@ -400,7 +400,7 @@ const MENU_CATEGORIES = [
         price: "$97.99",
         desc_fr: "",
         desc_en: "",
-        image: "/sushi/boat 1.png"
+        image: "/sushi/boat 1.webp"
       },
       {
         id: "",
@@ -410,7 +410,7 @@ const MENU_CATEGORIES = [
         price: "$111.99",
         desc_fr: "",
         desc_en: "",
-        image: "/sushi/boat 2.png"
+        image: "/sushi/boat 2.webp"
       }
     ]
   },
@@ -999,8 +999,10 @@ export default function HomePage() {
           {/* Background Image */}
           <div className="absolute inset-0">
             <img
-              src="/HeroShot.jpg"
+              src="/HeroShot.webp"
               alt="Ambiance"
+              fetchPriority="high"
+              decoding="async"
               className="w-full h-full object-cover transition-transform duration-[20s] group-hover:scale-105"
             />
             {/* Subtle gradient overlay to darken edges for text readability */}
@@ -1123,10 +1125,10 @@ export default function HomePage() {
                 rel="noopener noreferrer"
                 onMouseEnter={() => setHoveredSocial(idx)}
                 onMouseLeave={() => setHoveredSocial(null)}
-                className="w-10 h-10 md:w-[52px] md:h-[52px] flex items-center justify-center rounded-full bg-[#0a0b0a]/60 backdrop-blur-md border border-[#333330] transition-colors duration-300"
+                className="w-10 h-10 md:w-[52px] md:h-[52px] flex items-center justify-center rounded-full bg-[#0a0b0a]/85 backdrop-blur-none md:backdrop-blur-md md:bg-[#0a0b0a]/60 border border-[#333330] transition-colors duration-300"
                 style={{
-                  backgroundColor: hoveredSocial === idx ? social.color : "rgba(10, 11, 10, 0.6)",
-                  borderColor: hoveredSocial === idx ? social.color : "#333330",
+                  backgroundColor: hoveredSocial === idx ? social.color : undefined,
+                  borderColor: hoveredSocial === idx ? social.color : undefined,
                 }}
               >
                 <social.icon
@@ -1153,7 +1155,7 @@ export default function HomePage() {
             className="relative w-full flex-1 aspect-[16/9] md:aspect-auto rounded-[2rem] md:rounded-[2.5rem] overflow-hidden group block cursor-pointer"
           >
             <img
-              src="/SoupDumplings.jpg"
+              src="/SoupDumplings.webp"
               alt="Menu"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-[10s] group-hover:scale-105"
             />
@@ -1161,7 +1163,7 @@ export default function HomePage() {
 
             {/* Mini Menu Peek */}
             <div className="absolute top-6 left-6 right-6 z-10 hidden sm:block pointer-events-none">
-              <div className="bg-[#0a0b0a]/70 backdrop-blur-xl border border-[#333330] rounded-2xl p-4 flex flex-col gap-3 transform -translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+              <div className="bg-[#0a0b0a]/70 backdrop-blur-md md:backdrop-blur-xl border border-[#333330] rounded-2xl p-4 flex flex-col gap-3 transform -translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
                 {MINI_MENU.map((item, idx) => (
                   <div
                     key={idx}
@@ -1179,7 +1181,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 z-10 bg-[#0a0b0a]/80 backdrop-blur-md border border-[#333330] rounded-full pl-6 py-2.5 pr-2.5 flex items-center gap-5 group-hover:bg-white group-hover:text-black group-hover:border-white transition-all duration-300">
+            <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 z-10 bg-[#0a0b0a]/85 backdrop-blur-none md:backdrop-blur-md md:bg-[#0a0b0a]/80 border border-[#333330] rounded-full pl-6 py-2.5 pr-2.5 flex items-center gap-5 group-hover:bg-white group-hover:text-black group-hover:border-white transition-all duration-300">
               <span className="text-[10px] tracking-[0.2em] font-medium uppercase mt-0.5">
                 {lang === "fr" ? "Menu" : "Menu"}
               </span>
@@ -1198,13 +1200,13 @@ export default function HomePage() {
             className="relative w-full flex-1 aspect-[16/9] md:aspect-auto rounded-[2rem] md:rounded-[2.5rem] overflow-hidden group block cursor-pointer"
           >
             <img
-              src="/reservation.jpg"
+              src="/reservation.webp"
               alt="Reservation"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-[10s] group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-[#0a0b0a]/40 group-hover:bg-[#0a0b0a]/20 transition-colors duration-500 z-0"></div>
 
-            <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 z-10 bg-[#0a0b0a]/80 backdrop-blur-md border border-[#333330] rounded-full pl-6 py-2.5 pr-2.5 flex items-center gap-5 group-hover:bg-white group-hover:text-black group-hover:border-white transition-all duration-300">
+            <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 z-10 bg-[#0a0b0a]/85 backdrop-blur-none md:backdrop-blur-md md:bg-[#0a0b0a]/80 border border-[#333330] rounded-full pl-6 py-2.5 pr-2.5 flex items-center gap-5 group-hover:bg-white group-hover:text-black group-hover:border-white transition-all duration-300">
               <span className="text-[10px] tracking-[0.2em] font-medium uppercase mt-0.5">
                 {lang === "fr" ? "Réservation" : "Reservation"}
               </span>
@@ -1229,7 +1231,7 @@ export default function HomePage() {
             />
             <div className="absolute inset-0 bg-[#0a0b0a]/30 group-hover:bg-[#0a0b0a]/10 transition-colors duration-500 z-0"></div>
 
-            <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 z-10 bg-[#0a0b0a]/80 backdrop-blur-md border border-[#333330] rounded-full pl-6 py-2.5 pr-2.5 flex items-center gap-5 group-hover:bg-white group-hover:text-black group-hover:border-white transition-all duration-300">
+            <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 z-10 bg-[#0a0b0a]/85 backdrop-blur-none md:backdrop-blur-md md:bg-[#0a0b0a]/80 border border-[#333330] rounded-full pl-6 py-2.5 pr-2.5 flex items-center gap-5 group-hover:bg-white group-hover:text-black group-hover:border-white transition-all duration-300">
               <span className="text-[10px] tracking-[0.2em] font-medium uppercase mt-0.5">
                 {lang === "fr" ? "Commander en ligne — À emporter" : "Order Online — Pickup"}
               </span>
@@ -1244,7 +1246,7 @@ export default function HomePage() {
       {/* Menu Section */}
       <section
         id="menu"
-        className="min-h-screen bg-[#faf8f5] text-[#1a1c19] pt-24 pb-24 w-full relative"
+        className="min-h-screen bg-[#faf8f5] text-[#1a1c19] pt-24 pb-24 w-full relative content-visibility-lazy"
       >
         <div className="max-w-5xl mx-auto px-6 md:px-12">
           {/* Order Online CTA */}
@@ -1374,6 +1376,8 @@ export default function HomePage() {
                   <img
                     src={(item as any).image}
                     alt={lang === "fr" ? item.name_fr : item.name_en}
+                    loading="lazy"
+                    decoding="async"
                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0a0b0a]/90 via-[#0a0b0a]/20 to-transparent" />
@@ -1423,7 +1427,7 @@ export default function HomePage() {
       </section>
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="w-full py-24 md:py-32 bg-[#faf8f5] text-[#1a1c19] overflow-hidden">
+      <section id="testimonials" className="w-full py-24 md:py-32 bg-[#faf8f5] text-[#1a1c19] overflow-hidden content-visibility-lazy">
         <div className="max-w-7xl mx-auto px-6 md:px-12 mb-16 text-center">
           <p className="text-[#cfbe91] font-bold tracking-[0.25em] text-sm uppercase mb-4">
             {lang === "fr" ? "Témoignages" : "Testimonials"}
@@ -1486,7 +1490,7 @@ export default function HomePage() {
       {/* About Section */}
       <section
         id="about"
-        className="min-h-screen bg-[#faf8f5] text-[#1a1c19] py-24 w-full relative border-t border-[#1a1c19]/10 overflow-hidden flex flex-col justify-between"
+        className="min-h-screen bg-[#faf8f5] text-[#1a1c19] py-24 w-full relative border-t border-[#1a1c19]/10 overflow-hidden flex flex-col justify-between content-visibility-lazy"
       >
         {/* Top Marquee */}
         <div className="absolute top-0 left-0 right-0 pointer-events-none opacity-[0.5] h-1/4 flex items-start justify-center -z-0">
@@ -1507,6 +1511,8 @@ export default function HomePage() {
               <img
                 src="/drink.webp"
                 alt="Restaurant Interior"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover rounded-[2.5rem] shadow-xl"
               />
               <motion.div
@@ -1519,6 +1525,8 @@ export default function HomePage() {
                 <img
                   src="/dessert.webp"
                   alt="Dessert"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover"
                 />
               </motion.div>
@@ -1529,13 +1537,15 @@ export default function HomePage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px 0px 0px 0px" }}
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
-            className="flex-1 flex flex-col justify-center lg:mt-0 order-1 lg:order-2 backdrop-blur-md bg-white/30 p-8 md:p-12 lg:p-16 rounded-[4rem] border border-white/20 shadow-sm"
+            className="flex-1 flex flex-col justify-center lg:mt-0 order-1 lg:order-2 backdrop-blur-none bg-white/85 md:backdrop-blur-md md:bg-white/30 p-8 md:p-12 lg:p-16 rounded-[4rem] border border-white/20 shadow-sm"
           >
             <div className="flex justify-center lg:justify-start mb-6">
-              <div className="backdrop-blur-sm rounded-2xl p-2 bg-[#0a0b0a] border border-[#333330] w-36 h-20 shadow-md overflow-hidden">
+              <div className="rounded-2xl p-2 bg-[#0a0b0a] border border-[#333330] w-36 h-20 shadow-md overflow-hidden">
                 <img
-                  src="/logo.jpg"
+                  src="/logo.webp"
                   alt="1001 Nuits Logo"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-contain"
                 />
               </div>
@@ -1588,7 +1598,7 @@ export default function HomePage() {
       </section>
 
       {/* Private Events Section */}
-      <section id="private-events" className="py-24 md:py-32 w-full border-t border-[#1a1c19]/10 relative bg-[#1a1c19] text-[#efe7d2]">
+      <section id="private-events" className="py-24 md:py-32 w-full border-t border-[#1a1c19]/10 relative bg-[#1a1c19] text-[#efe7d2] content-visibility-lazy">
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col lg:flex-row-reverse items-center gap-16 md:gap-24">
           
           <motion.div
@@ -1599,7 +1609,7 @@ export default function HomePage() {
             className="w-full lg:w-1/2 relative"
           >
               <div className="relative aspect-[4/3] w-full rounded-[2.5rem] overflow-hidden">
-               <img src="/hero.webp.png" alt="Private Dining Room" className="w-full h-full object-cover transition-all duration-[5s] hover:scale-105" />
+               <img src="/hero.webp" alt="Private Dining Room" loading="lazy" decoding="async" className="w-full h-full object-cover transition-all duration-[5s] hover:scale-105" />
              </div>
           </motion.div>
 
@@ -1650,7 +1660,7 @@ export default function HomePage() {
       {/* Reservation Section */}
       <section
         id="reservation"
-        className="min-h-[85vh] bg-[#faf8f5] text-[#1a1c19] py-32 w-full relative overflow-hidden flex items-center border-t border-[#1a1c19]/10"
+        className="min-h-[85vh] bg-[#faf8f5] text-[#1a1c19] py-32 w-full relative overflow-hidden flex items-center border-t border-[#1a1c19]/10 content-visibility-lazy"
       >
         <div className="absolute inset-0 opacity-[0.03] flex items-center pointer-events-none overflow-hidden whitespace-nowrap">
           <motion.div
@@ -1822,7 +1832,7 @@ export default function HomePage() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "0px 0px -80px 0px" }}
         transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-        className="bg-[#0a0b0a] text-[#efe7d2] pt-16 border-t border-[#333330] text-center pb-8"
+        className="bg-[#0a0b0a] text-[#efe7d2] pt-16 border-t border-[#333330] text-center pb-8 content-visibility-lazy"
       >
         <h2 className="font-serif text-4xl tracking-[0.2em] text-[#efe7d2] mb-6">
           <ShinyText text="1001" className="lining-nums inline-block" color="#efe7d2" shineColor="#cfbe91" speed={3} />
@@ -1863,8 +1873,10 @@ export default function HomePage() {
             className="ys-signature-btn"
           >
             <img 
-              src="/YS.png" 
+              src="/YS.webp" 
               alt="YS Logo" 
+              loading="lazy"
+              decoding="async"
               className="ys-sig-logo" 
             />
             <span className="ys-sig-text">
@@ -1884,7 +1896,7 @@ export default function HomePage() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setShowPromo(false)}
-              className="absolute inset-0 bg-[#0a0b0a]/85 backdrop-blur-md cursor-pointer"
+              className="absolute inset-0 bg-[#0a0b0a]/90 backdrop-blur-none md:backdrop-blur-md md:bg-[#0a0b0a]/85 cursor-pointer"
             />
 
             {/* Modal Card */}
@@ -1907,8 +1919,9 @@ export default function HomePage() {
               {/* Image Container */}
               <div className="w-full aspect-auto flex items-center justify-center bg-[#0a0b0a]">
                 <img
-                  src="/promotion.jpg"
+                  src="/promotion.webp"
                   alt="Promotion"
+                  decoding="async"
                   className="w-full h-auto max-h-[75vh] object-contain select-none"
                 />
               </div>

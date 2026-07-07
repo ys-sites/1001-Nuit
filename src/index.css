@@ -216,3 +216,26 @@ h6,
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* Content Visibility lazy loading utility */
+.content-visibility-lazy {
+  content-visibility: auto;
+  contain-intrinsic-size: 800px;
+}
+
+/* Offload marquee tracks with will-change */
+.animate-marquee,
+.animate-marquee-reverse {
+  will-change: transform;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee,
+  .animate-marquee-reverse {
+    animation-play-state: paused !important;
+  }
+  .curved-loop-jacket {
+    display: none !important;
+  }
+}

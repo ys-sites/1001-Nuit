@@ -18,15 +18,15 @@ const VIDEOS: VideoItem[] = [
 ];
 
 const BACKGROUND_IMAGES = [
-  { src: "/HeroShot.jpg", size: "w-24 h-24 md:w-32 md:h-32", pos: "top-[10%] left-[5%]" },
-  { src: "/SoupDumplings.jpg", size: "w-28 h-28 md:w-40 md:h-40", pos: "top-[40%] left-[2%]" },
-  { src: "/reservation.jpg", size: "w-32 h-32 md:w-44 md:h-44", pos: "bottom-[5%] left-[8%]" },
+  { src: "/HeroShot.webp", size: "w-24 h-24 md:w-32 md:h-32", pos: "top-[10%] left-[5%]" },
+  { src: "/SoupDumplings.webp", size: "w-28 h-28 md:w-40 md:h-40", pos: "top-[40%] left-[2%]" },
+  { src: "/reservation.webp", size: "w-32 h-32 md:w-44 md:h-44", pos: "bottom-[5%] left-[8%]" },
   { src: "/menu.webp", size: "w-24 h-24 md:w-36 md:h-36", pos: "top-[12%] right-[4%]" },
   { src: "/dessert.webp", size: "w-28 h-28 md:w-36 md:h-36", pos: "top-[45%] right-[2%]" },
   { src: "/drink.webp", size: "w-32 h-32 md:w-40 md:h-40", pos: "bottom-[8%] right-[6%]" },
-  { src: "/promotion.jpg", size: "w-24 h-24 md:w-32 md:h-32", pos: "bottom-[45%] left-[12%]" },
-  { src: "/Beef Balls in Hong Kong Style Curry (12 pcs).png", size: "w-28 h-28 md:w-36 md:h-36", pos: "top-[25%] right-[15%]" },
-  { src: "/Crispy Chicken Wings with Potato Salad or Fries.png", size: "w-24 h-24 md:w-32 md:h-32", pos: "bottom-[30%] right-[14%]" },
+  { src: "/promotion.webp", size: "w-24 h-24 md:w-32 md:h-32", pos: "bottom-[45%] left-[12%]" },
+  { src: "/Beef Balls in Hong Kong Style Curry (12 pcs).webp", size: "w-28 h-28 md:w-36 md:h-36", pos: "top-[25%] right-[15%]" },
+  { src: "/Crispy Chicken Wings with Potato Salad or Fries.webp", size: "w-24 h-24 md:w-32 md:h-32", pos: "bottom-[30%] right-[14%]" },
 ];
 
 function VideoCard({

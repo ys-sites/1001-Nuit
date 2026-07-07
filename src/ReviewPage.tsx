@@ -59,7 +59,7 @@ export default function ReviewPage() {
         className="mb-10 flex flex-col items-center gap-3"
       >
         <div className="w-32 h-16 rounded-xl overflow-hidden border border-[#1a1c19]/10 bg-[#0a0b0a]">
-          <img src="/logo.jpg" alt="1001 Nuits" className="w-full h-full object-contain" />
+          <img src="/logo.webp" alt="1001 Nuits" className="w-full h-full object-contain" />
         </div>
       </motion.div>
 

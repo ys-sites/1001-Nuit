@@ -26,7 +26,7 @@ export default function Navbar({
     <>
       <div
         className={cn(
-          "flex justify-between items-center bg-[#0a0b0a]/70 backdrop-blur-xl border border-[#333330] rounded-2xl p-2 pr-2 md:pr-4 shadow-2xl",
+          "flex justify-between items-center bg-[#0a0b0a]/70 backdrop-blur-md md:backdrop-blur-xl border border-[#333330] rounded-2xl p-2 pr-2 md:pr-4 shadow-2xl",
           className,
         )}
       >
@@ -113,7 +113,7 @@ export default function Navbar({
 
       {/* Mobile Menu Overlay — rendered via portal to escape overflow:hidden + transform parent */}
       {menuOpen && createPortal(
-        <div className="fixed inset-0 z-[200] bg-[#0a0b0a]/97 backdrop-blur-2xl flex flex-col xl:hidden">
+        <div className="fixed inset-0 z-[200] bg-[#0a0b0a]/97 flex flex-col xl:hidden">
           <div className="flex justify-between items-center p-6 border-b border-[#333330]">
             <div
               className="flex items-center gap-3"
