@@ -1017,65 +1017,7 @@ export default function HomePage() {
             setLang={setLang}
           />
 
-          {/* Big Hero Typography + Order Online Button */}
-          <motion.div 
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="absolute bottom-8 left-6 md:bottom-12 md:left-12 z-20 flex flex-col items-stretch gap-5 pointer-events-auto cursor-pointer"
-            onClick={handleOrderOnline}
-          >
-            {/* Ordering Options Group */}
-            <div className="flex flex-col sm:flex-row flex-wrap gap-4 sm:items-center">
-              {/* DoorDash Delivery Button */}
-              <motion.button
-                id="hero-doordash-btn"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  window.open('https://order.online/business/1001-nuit-21950545', '_blank');
-                }}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.97 }}
-                className="w-fit flex items-center justify-between gap-6 bg-[#FF3008] text-white pl-6 pr-4 py-3 sm:pl-8 sm:pr-4 sm:py-4 rounded-full shadow-2xl hover:bg-[#E02600] transition-colors duration-300 group cursor-pointer pointer-events-auto whitespace-nowrap"
-              >
-                <div className="flex flex-col items-start leading-tight">
-                  <span className="text-xs sm:text-sm font-black uppercase tracking-[0.22em] whitespace-nowrap">
-                    {lang === "fr" ? "DoorDash" : "DoorDash"}
-                  </span>
-                  <span className="text-[10px] sm:text-[11px] font-medium uppercase tracking-[0.18em] opacity-60 whitespace-nowrap">
-                    {lang === "fr" ? "Livraison" : "Delivery"}
-                  </span>
-                </div>
-                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/15 flex items-center justify-center group-hover:bg-white/20 transition-colors shrink-0">
-                  <ShoppingBag className="w-4 h-4 sm:w-[17px] sm:h-[17px]" />
-                </div>
-              </motion.button>
 
-              {/* Fantuan Delivery Button */}
-              <motion.button
-                id="hero-fantuan-btn"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  window.open('https://mwx.fantuan.ca/store/Restaurant/ca-4811988?f_promotion=157745&f_channel=198603&f_type=0&f_id=1', '_blank');
-                }}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.97 }}
-                className="w-fit flex items-center justify-between gap-6 bg-[#1CC4C4] text-[#0a0b0a] pl-6 pr-4 py-3 sm:pl-8 sm:pr-4 sm:py-4 rounded-full shadow-2xl hover:bg-[#16a8a8] transition-colors duration-300 group cursor-pointer pointer-events-auto whitespace-nowrap"
-              >
-                <div className="flex flex-col items-start leading-tight">
-                  <span className="text-xs sm:text-sm font-black uppercase tracking-[0.22em] whitespace-nowrap">
-                    {lang === "fr" ? "Fantuan" : "Fantuan"}
-                  </span>
-                  <span className="text-[10px] sm:text-[11px] font-medium uppercase tracking-[0.18em] opacity-60 whitespace-nowrap">
-                    {lang === "fr" ? "Livraison" : "Delivery"}
-                  </span>
-                </div>
-                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-black/10 flex items-center justify-center group-hover:bg-black/15 transition-colors shrink-0">
-                  <ShoppingBag className="w-4 h-4 sm:w-[17px] sm:h-[17px] text-[#0a0b0a]" />
-                </div>
-              </motion.button>
-            </div>
-          </motion.div>
 
 
 

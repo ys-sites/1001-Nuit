@@ -8,13 +8,13 @@ interface VideoItem {
 }
 
 const VIDEOS: VideoItem[] = [
-  { id: 1, src: "/video/insta 1.mp4" },
+  { id: 1, src: "/video/insta 7.mp4" },
   { id: 2, src: "/video/insta 2.mp4" },
   { id: 3, src: "/video/insta 3.mp4" },
   { id: 4, src: "/video/insta 4.mp4" },
   { id: 5, src: "/video/insta 5.mp4" },
   { id: 6, src: "/video/insta 6.mp4" },
-  { id: 7, src: "/video/insta 7.mp4" },
+  { id: 7, src: "/video/insta 1.mp4" },
 ];
 
 const BACKGROUND_IMAGES = [
