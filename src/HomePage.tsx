@@ -192,8 +192,8 @@ const REVIEWS = [
 
 const MENU_CATEGORIES = [
   {
-    title_en: "MAIN DISH 主食",
-    title_fr: "PLATS PRINCIPAUX 主食",
+    title_en: "MAIN DISH",
+    title_fr: "PLATS PRINCIPAUX",
     items: [
       {
         id: "",
@@ -288,8 +288,8 @@ const MENU_CATEGORIES = [
     ]
   },
   {
-    title_en: "SUSHI COMBO 壽司套餐",
-    title_fr: "SUSHI COMBO 壽司套餐",
+    title_en: "SUSHI COMBO",
+    title_fr: "SUSHI COMBO",
     items: [
       {
         id: "",
@@ -414,8 +414,8 @@ const MENU_CATEGORIES = [
     ]
   },
   {
-    title_en: "SIZZLING PLATES 鐵板系列",
-    title_fr: "PLATS SUR PLAQUE CHAUDE 鐵板系列",
+    title_en: "SIZZLING PLATES",
+    title_fr: "PLATS SUR PLAQUE CHAUDE",
     items: [
       {
         id: "SP01",
@@ -456,8 +456,8 @@ const MENU_CATEGORIES = [
     ]
   },
   {
-    title_en: "DUMPLINGS 餃子",
-    title_fr: "DUMPLINGS 餃子",
+    title_en: "DUMPLINGS",
+    title_fr: "DUMPLINGS",
     items: [
       {
         id: "",
@@ -480,8 +480,8 @@ const MENU_CATEGORIES = [
     ]
   },
   {
-    title_en: "VEGETARIAN 素食專區",
-    title_fr: "PLATS VÉGÉTARIENS 素食專區",
+    title_en: "VEGETARIAN",
+    title_fr: "PLATS VÉGÉTARIENS",
     items: [
       {
         id: "V01",
@@ -522,8 +522,8 @@ const MENU_CATEGORIES = [
     ]
   },
   {
-    title_en: "BAKED HK STYLE 港式焗飯／焗意粉",
-    title_fr: "PLATS GRATINÉS STYLE HK 港式焗飯／焗意粉",
+    title_en: "BAKED HK STYLE",
+    title_fr: "PLATS GRATINÉS STYLE HK",
     items: [
       {
         id: "F01",
@@ -582,8 +582,8 @@ const MENU_CATEGORIES = [
     ]
   },
   {
-    title_en: "CURRY STYLE HK 港式咖喱",
-    title_fr: "CARI STYLE HK 港式咖喱",
+    title_en: "CURRY STYLE HK",
+    title_fr: "CARI STYLE HK",
     items: [
       {
         id: "E01",
@@ -633,8 +633,8 @@ const MENU_CATEGORIES = [
     ]
   },
   {
-    title_en: "INSTANT 面",
-    title_fr: "NOUILLES INSTANTANÉES 面",
+    title_en: "INSTANT",
+    title_fr: "NOUILLES INSTANTANÉES",
     items: [
       {
         id: "M01",
@@ -657,8 +657,8 @@ const MENU_CATEGORIES = [
     ]
   },
   {
-    title_en: "SIGNATURE SNACK 招牌小吃",
-    title_fr: "COLLATION SIGNATURE 招牌小吃",
+    title_en: "SIGNATURE SNACK",
+    title_fr: "COLLATION SIGNATURE",
     items: [
       {
         id: "",
@@ -744,8 +744,8 @@ const MENU_CATEGORIES = [
     ]
   },
   {
-    title_en: "DRINK 飲品",
-    title_fr: "BOISSONS 飲品",
+    title_en: "DRINK",
+    title_fr: "BOISSONS",
     items: [
       {
         id: "",
@@ -840,8 +840,8 @@ const MENU_CATEGORIES = [
     ]
   },
   {
-    title_en: "SNACKS & SIDES 小食",
-    title_fr: "ENTRÉES & ACCOMPAGNEMENTS 小食",
+    title_en: "SNACKS & SIDES",
+    title_fr: "ENTRÉES & ACCOMPAGNEMENTS",
     items: [
       {
         id: "B09",
@@ -1110,18 +1110,7 @@ export default function HomePage() {
           </motion.div>
 
 
-          {/* Halal Badge */}
-          <div className="absolute top-28 right-6 md:top-32 md:right-8 z-20 flex flex-col items-center justify-center pointer-events-none backdrop-blur-sm rounded-full p-2 bg-[#0a0b0a]/40 border border-[#efe7d2]/20 w-20 h-20 md:w-24 md:h-24 shadow-2xl">
-            <div className="text-center">
-              <div className="flex items-center justify-center mb-1">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-[#cfbe91]">
-                  <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="currentColor"/>
-                </svg>
-              </div>
-              <span className="block font-serif text-[#cfbe91] text-[10px] md:text-[12px] font-bold tracking-[0.2em] leading-none mb-1">HALAL</span>
-              <span className="block text-[7px] md:text-[8px] text-[#efe7d2]/80 uppercase tracking-[0.1em]">Certified</span>
-            </div>
-          </div>
+
 
           {/* Social Badges bottom right */}
           <div className="absolute bottom-5 right-5 md:bottom-10 md:right-10 z-20 flex items-center gap-2 md:gap-3">
@@ -1588,24 +1577,24 @@ export default function HomePage() {
               <div className="space-y-5 text-[#1a1c19]/80 font-medium leading-relaxed max-w-md text-sm md:text-base mt-6">
                 <BlurText
                   text={lang === "en"
-                    ? "Founded on the belief that culinary excellence shouldn't compromise on dietary principles, 1001 Nuits brings authentic Hong Kong style dining crafted exclusively with halal ingredients."
-                    : "Fondé sur la conviction que l'excellence culinaire ne doit pas faire de compromis avec ses principes diététiques, 1001 Nuits propose une cuisine authentique de style hongkongais élaborée exclusivement avec des ingrédients halal."}
+                    ? "Founded on the belief that culinary excellence shouldn't compromise on dietary principles, 1001 Nuits brings authentic Asian cuisine crafted exclusively with halal ingredients."
+                    : "Fondé sur la conviction que l'excellence culinaire ne doit pas faire de compromis avec ses principes diététiques, 1001 Nuits propose une cuisine asiatique authentique élaborée exclusivement avec des ingrédients halal."}
                   delay={10}
                   animateBy="words"
                   className="text-[#1a1c19]/80"
                 />
                 <BlurText
                   text={lang === "en"
-                    ? "Every dish is a carefully balanced masterpiece—hand-slaughtered halal meat, free of pork and alcohol, without losing the signature taste that makes Hong Kong cuisine world-renowned."
-                    : "Chaque plat est un chef-d'œuvre soigneusement équilibré : viande halal abattue à la main, sans porc ni alcool, tout en préservant le goût distinctif qui rend la cuisine hongkongaise célèbre dans le monde entier."}
+                    ? "Every dish is a carefully balanced masterpiece—hand-slaughtered halal meat, free of pork and alcohol, without losing the signature taste that makes Asian cuisine world-renowned."
+                    : "Chaque plat est un chef-d'œuvre soigneusement équilibré : viande halal abattue à la main, sans porc ni alcool, tout en préservant le goût distinctif qui rend la cuisine asiatique célèbre dans le monde entier."}
                   delay={10}
                   animateBy="words"
                   className="text-[#1a1c19]/80"
                 />
                 <BlurText
                   text={lang === "en"
-                    ? "Our chefs are straight from Hong Kong with more than 20 years of experience, bringing genuine technique and flavor to every plate."
-                    : "Nos chefs viennent directement de Hong Kong et possèdent plus de 20 ans d'expérience culinaire, apportant authenticité et savoir-faire à chaque plat."}
+                    ? "Our chefs are experts in Asian cuisine with more than 20 years of experience, bringing genuine technique and flavor to every plate."
+                    : "Nos chefs sont des experts de la cuisine asiatique et possèdent plus de 20 ans d'expérience culinaire, apportant authenticité et savoir-faire à chaque plat."}
                   delay={10}
                   animateBy="words"
                   className="text-[#1a1c19]/80"
@@ -1777,8 +1766,8 @@ export default function HomePage() {
                   </h3>
                   <p className="text-sm text-[#1a1c19]/60 font-medium leading-relaxed max-w-[280px] mx-auto">
                     {lang === "fr"
-                      ? "Idéal pour les groupes de plus de 6 personnes ou événements spéciaux."
-                      : "Best for groups larger than 6 guests or special events."}
+                      ? "Idéal pour les groupes de plus de 8 personnes ou événements spéciaux."
+                      : "Best for groups larger than 8 guests or special events."}
                   </p>
                 </div>
               </div>

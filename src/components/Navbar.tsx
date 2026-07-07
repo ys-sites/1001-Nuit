@@ -81,13 +81,13 @@ export default function Navbar({
           </button>
         </div>
 
-        <div className="flex items-center gap-2 md:gap-3 ml-auto">
+        <div className="flex items-center gap-2 md:gap-3 ml-auto shrink-0">
           {setLang && (
-            <div className="flex bg-[#1a1c19]/80 border border-[#333330] rounded-full p-1 text-[10px] tracking-widest font-bold font-sans">
+            <div className="flex flex-row flex-nowrap items-center bg-[#1a1c19]/80 border border-[#333330] rounded-full p-0.5 text-[9px] sm:text-[10px] tracking-widest font-bold font-sans shrink-0">
               <button
                 onClick={() => setLang("en")}
                 className={cn(
-                  "px-2 py-1 md:px-3 md:py-1.5 rounded-full transition-all uppercase whitespace-nowrap",
+                  "px-1.5 py-0.5 md:px-2 md:py-1 rounded-full transition-all uppercase whitespace-nowrap shrink-0",
                   lang === "en"
                     ? "bg-[#cfbe91] text-[#0a0b0a]"
                     : "text-[#efe7d2] hover:text-[#cfbe91]",
@@ -98,7 +98,7 @@ export default function Navbar({
               <button
                 onClick={() => setLang("fr")}
                 className={cn(
-                  "px-2 py-1 md:px-3 md:py-1.5 rounded-full transition-all uppercase whitespace-nowrap",
+                  "px-1.5 py-0.5 md:px-2 md:py-1 rounded-full transition-all uppercase whitespace-nowrap shrink-0",
                   lang === "fr"
                     ? "bg-[#cfbe91] text-[#0a0b0a]"
                     : "text-[#efe7d2] hover:text-[#cfbe91]",
@@ -153,12 +153,12 @@ export default function Navbar({
           </nav>
 
           {setLang && (
-            <div className="p-8 flex justify-start border-t border-[#333330]">
-              <div className="flex bg-[#1a1c19]/80 border border-[#333330] rounded-full p-1 text-[10px] tracking-widest font-bold font-sans">
+            <div className="p-8 flex justify-start border-t border-[#333330] shrink-0">
+              <div className="flex flex-row flex-nowrap items-center bg-[#1a1c19]/80 border border-[#333330] rounded-full p-1 text-[10px] tracking-widest font-bold font-sans shrink-0">
                 <button
                   onClick={() => setLang("en")}
                   className={cn(
-                    "px-4 py-2 rounded-full transition-all uppercase",
+                    "px-3 py-1.5 rounded-full transition-all uppercase whitespace-nowrap shrink-0",
                     lang === "en"
                       ? "bg-[#cfbe91] text-[#0a0b0a]"
                       : "text-[#efe7d2] hover:text-[#cfbe91]",
@@ -169,7 +169,7 @@ export default function Navbar({
                 <button
                   onClick={() => setLang("fr")}
                   className={cn(
-                    "px-4 py-2 rounded-full transition-all uppercase",
+                    "px-3 py-1.5 rounded-full transition-all uppercase whitespace-nowrap shrink-0",
                     lang === "fr"
                       ? "bg-[#cfbe91] text-[#0a0b0a]"
                       : "text-[#efe7d2] hover:text-[#cfbe91]",
