@@ -88,12 +88,12 @@ function VideoCard({
         onEnded={handleEnded}
       />
 
-      {/* Top Gradient Header with Instagram Badge */}
+      {/* Top Gradient Header with Logo Badge */}
       <div className="absolute top-0 left-0 right-0 p-4 bg-gradient-to-b from-black/80 via-black/40 to-transparent flex justify-between items-center z-10 pointer-events-none">
         <div className="flex items-center gap-2">
-          <div className="bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-500 p-0.5 rounded-full">
-            <div className="bg-black p-1 rounded-full flex items-center justify-center">
-              <Instagram size={14} className="text-white fill-white" />
+          <div className="bg-gradient-to-tr from-[#cfbe91] to-[#efe7d2] p-0.5 rounded-full">
+            <div className="bg-black w-6 h-6 rounded-full overflow-hidden flex items-center justify-center">
+              <img src="/logo.webp" alt="1001 Nuits Logo" className="w-full h-full object-cover" />
             </div>
           </div>
           <span className="text-white text-xs font-semibold tracking-wide drop-shadow">

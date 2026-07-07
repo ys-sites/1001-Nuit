@@ -1027,30 +1027,6 @@ export default function HomePage() {
           >
             {/* Ordering Options Group */}
             <div className="flex flex-col sm:flex-row flex-wrap gap-4 sm:items-center">
-              {/* Uber Eats Delivery Button */}
-              <motion.button
-                id="hero-uber-eats-btn"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  window.open('https://www.order.store/store/1001-nuit-authentic-chinese-restaurant/3pM54vb0RuSg-0QNzFABEQ', '_blank');
-                }}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.97 }}
-                className="w-fit flex items-center justify-between gap-6 bg-[#06C167] text-white pl-6 pr-4 py-3 sm:pl-8 sm:pr-4 sm:py-4 rounded-full shadow-2xl hover:bg-[#05a85c] transition-colors duration-300 group cursor-pointer pointer-events-auto whitespace-nowrap"
-              >
-                <div className="flex flex-col items-start leading-tight">
-                  <span className="text-xs sm:text-sm font-black uppercase tracking-[0.22em] whitespace-nowrap">
-                    {lang === "fr" ? "Uber Eats" : "Uber Eats"}
-                  </span>
-                  <span className="text-[10px] sm:text-[11px] font-medium uppercase tracking-[0.18em] opacity-60 whitespace-nowrap">
-                    {lang === "fr" ? "Livraison" : "Delivery"}
-                  </span>
-                </div>
-                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/15 flex items-center justify-center group-hover:bg-white/20 transition-colors shrink-0">
-                  <ShoppingBag className="w-4 h-4 sm:w-[17px] sm:h-[17px]" />
-                </div>
-              </motion.button>
-
               {/* DoorDash Delivery Button */}
               <motion.button
                 id="hero-doordash-btn"
@@ -1099,13 +1075,6 @@ export default function HomePage() {
                 </div>
               </motion.button>
             </div>
-
-            <h1
-              className="font-serif text-[3.2rem] sm:text-[4.5rem] leading-[0.85] md:text-[8rem] lg:text-[10vw] xl:text-[11vw] uppercase tracking-tight text-[#efe7d2] drop-shadow-2xl select-none"
-            >
-              <ShinyText text="1001" className="lining-nums inline-block" color="#efe7d2" shineColor="#cfbe91" speed={3} /> <br />
-              <ShinyText text="NUITS" className="inline-block" color="#efe7d2" shineColor="#cfbe91" speed={3} delay={0.5} />
-            </h1>
           </motion.div>
 
 
@@ -1242,6 +1211,9 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
+
+      {/* Social Feedback Section */}
+      <SocialFeedback lang={lang} />
 
       {/* Menu Section */}
       <section
@@ -1608,8 +1580,8 @@ export default function HomePage() {
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
             className="w-full lg:w-1/2 relative"
           >
-              <div className="relative aspect-[4/3] w-full rounded-[2.5rem] overflow-hidden">
-               <img src="/hero.webp" alt="Private Dining Room" loading="lazy" decoding="async" className="w-full h-full object-cover transition-all duration-[5s] hover:scale-105" />
+              <div className="relative w-full rounded-[2.5rem] overflow-hidden">
+               <img src="/hero.webp" alt="Private Dining Room" loading="lazy" decoding="async" className="w-full h-auto transition-all duration-[5s] hover:scale-105" />
              </div>
           </motion.div>
 
@@ -1654,8 +1626,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Social Feedback Section */}
-      <SocialFeedback lang={lang} />
+
 
       {/* Reservation Section */}
       <section
@@ -1689,8 +1660,8 @@ export default function HomePage() {
             <div className="max-w-2xl mx-auto">
               <BlurText
                 text={lang === "fr"
-                  ? "Réservez en ligne pour une confirmation instantanée ou appelez-nous directement pour vos événements."
-                  : "Book online for instant confirmation or call us directly to arrange your reservation."}
+                  ? "Réservez en ligne pour une confirmation instantanée (jusqu'à 8 personnes) ou appelez-nous directement."
+                  : "Book online for instant confirmation (up to 8 guests) or call us directly to arrange your reservation."}
                 delay={20}
                 animateBy="words"
                 className="text-sm md:text-lg font-medium opacity-70 leading-relaxed justify-center"
