@@ -5,16 +5,17 @@ import { Instagram, Play, Pause, ChevronLeft, ChevronRight } from "lucide-react"
 interface VideoItem {
   id: number;
   src: string;
+  link: string;
 }
 
 const VIDEOS: VideoItem[] = [
-  { id: 1, src: "/video/insta 7.mp4" },
-  { id: 2, src: "/video/insta 2.mp4" },
-  { id: 3, src: "/video/insta 3.mp4" },
-  { id: 4, src: "/video/insta 4.mp4" },
-  { id: 5, src: "/video/insta 5.mp4" },
-  { id: 6, src: "/video/insta 6.mp4" },
-  { id: 7, src: "/video/insta 1.mp4" },
+  { id: 2, src: "/video/insta 2.mp4", link: "https://www.instagram.com/reel/DZWAQRGhzzf/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
+  { id: 7, src: "/video/insta 7.mp4", link: "https://www.instagram.com/reel/DadczovOwRA/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
+  { id: 3, src: "/video/insta 3.mp4", link: "https://www.instagram.com/reel/DZxViJ6RVwS/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
+  { id: 4, src: "/video/insta 4.mp4", link: "https://www.instagram.com/reel/DaB-H8DB9JE/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
+  { id: 5, src: "/video/insta 5.mp4", link: "https://www.instagram.com/reel/DaET_OjPpaa/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
+  { id: 6, src: "/video/insta 6.mp4", link: "https://www.instagram.com/reel/DaN298HRRrv/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
+  { id: 1, src: "/video/insta 1.mp4", link: "https://www.instagram.com/reel/DYkJVLNg0tR/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
 ];
 
 const BACKGROUND_IMAGES = [
@@ -90,7 +91,13 @@ function VideoCard({
 
       {/* Top Gradient Header with Logo Badge */}
       <div className="absolute top-0 left-0 right-0 p-4 bg-gradient-to-b from-black/80 via-black/40 to-transparent flex justify-between items-center z-10 pointer-events-none">
-        <div className="flex items-center gap-2">
+        <a
+          href={video.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={(e) => e.stopPropagation()}
+          className="flex items-center gap-2 pointer-events-auto hover:opacity-80 transition-opacity cursor-pointer"
+        >
           <div className="bg-gradient-to-tr from-[#cfbe91] to-[#efe7d2] p-0.5 rounded-full">
             <div className="bg-black w-6 h-6 rounded-full overflow-hidden flex items-center justify-center">
               <img src="/logo.webp" alt="1001 Nuits Logo" className="w-full h-full object-cover" />
@@ -99,7 +106,7 @@ function VideoCard({
           <span className="text-white text-xs font-semibold tracking-wide drop-shadow">
             @1001nu1t
           </span>
-        </div>
+        </a>
       </div>
 
       {/* Center Play Button Overlay */}
