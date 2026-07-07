@@ -1,58 +1,24 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "motion/react";
-import { ArrowLeft, Clock, Moon } from "lucide-react";
-import {
-  getSchedule,
-  formatSlots,
-  nextOpenToday,
-  DAY_NAMES_EN,
-  DAY_NAMES_FR,
-} from "./lib/useIsOpen";
+import { ArrowLeft, Moon } from "lucide-react";
 
 export default function ClosedPage() {
   const navigate = useNavigate();
   const [lang, setLang] = useState<"en" | "fr">("en");
-  const [now, setNow] = useState(new Date());
-
-  /* Keep clock ticking */
-  useEffect(() => {
-    const id = setInterval(() => setNow(new Date()), 30_000);
-    return () => clearInterval(id);
-  }, []);
-
-  const todayIdx = now.getDay();
-  const todaySchedule = getSchedule(todayIdx);
-  const nextOpen = nextOpenToday(lang);
 
   const t = {
     en: {
       closed: "We're Currently Closed",
       subtitle: "Sorry, we're not taking orders right now.",
-      today: "Today's Hours",
-      todayHours: formatSlots(todaySchedule, "en"),
-      reopen: nextOpen
-        ? `We reopen today at ${nextOpen}`
-        : "We are closed for the rest of today. See you tomorrow!",
-      schedule: "Weekly Schedule",
       back: "Back to Home",
-      order: "Try Order Online",
     },
     fr: {
       closed: "Nous sommes fermés",
       subtitle: "Désolé, nous n'acceptons pas de commandes en ce moment.",
-      today: "Horaires d'aujourd'hui",
-      todayHours: formatSlots(todaySchedule, "fr"),
-      reopen: nextOpen
-        ? `Nous rouvrons aujourd'hui à ${nextOpen}`
-        : "Nous sommes fermés pour le reste de la journée. À demain !",
-      schedule: "Horaires de la semaine",
       back: "Retour à l'accueil",
-      order: "Commander en ligne",
     },
   }[lang];
-
-  const days = lang === "en" ? DAY_NAMES_EN : DAY_NAMES_FR;
 
   return (
     <div className="min-h-screen bg-[#0a0b0a] text-[#efe7d2] flex flex-col items-center justify-center relative overflow-hidden px-6 py-16">
@@ -119,76 +85,11 @@ export default function ClosedPage() {
           </p>
         </motion.div>
 
-        {/* Today's hours card */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-          className="w-full bg-white/5 border border-[#cfbe91]/20 rounded-[1.5rem] p-6 flex flex-col gap-3"
-        >
-          <div className="flex items-center gap-2 text-[#cfbe91]">
-            <Clock size={16} strokeWidth={1.5} />
-            <span className="text-[11px] font-bold uppercase tracking-[0.2em]">
-              {t.today}
-            </span>
-          </div>
-          <p className="font-serif text-2xl text-[#efe7d2]">{t.todayHours}</p>
-          <p className="text-[#efe7d2]/50 text-sm">{t.reopen}</p>
-        </motion.div>
-
-        {/* Full weekly schedule */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
-          className="w-full bg-white/[0.03] border border-[#efe7d2]/10 rounded-[1.5rem] p-6 flex flex-col gap-1"
-        >
-          <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#efe7d2]/40 mb-3">
-            {t.schedule}
-          </p>
-          {days.map((dayName, idx) => {
-            const sched = getSchedule(idx);
-            const isToday = idx === todayIdx;
-            return (
-              <div
-                key={idx}
-                className={`flex justify-between items-center py-2 px-3 rounded-xl transition-colors ${
-                  isToday ? "bg-[#cfbe91]/10 border border-[#cfbe91]/20" : ""
-                }`}
-              >
-                <span
-                  className={`text-sm font-medium ${
-                    isToday ? "text-[#cfbe91]" : "text-[#efe7d2]/60"
-                  }`}
-                >
-                  {dayName}
-                  {isToday && (
-                    <span className="ml-2 text-[9px] uppercase tracking-widest opacity-70">
-                      ({lang === "en" ? "Today" : "Aujourd'hui"})
-                    </span>
-                  )}
-                </span>
-                <span
-                  className={`text-sm font-serif ${
-                    sched.closed
-                      ? "text-[#efe7d2]/30"
-                      : isToday
-                      ? "text-[#cfbe91]"
-                      : "text-[#efe7d2]/70"
-                  }`}
-                >
-                  {formatSlots(sched, lang)}
-                </span>
-              </div>
-            );
-          })}
-        </motion.div>
-
         {/* CTA */}
         <motion.button
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
           onClick={() => navigate("/")}
           className="px-8 py-3.5 bg-[#c8b88a] text-[#0a0b0a] text-[11px] tracking-[0.25em] font-bold uppercase rounded-full hover:bg-[#efe7d2] transition-all duration-300"
         >
