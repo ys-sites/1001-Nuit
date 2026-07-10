@@ -783,7 +783,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$6.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/b19-fried-scallops.svg"
+        "image": "/menu/b19-fried-scallops.webp"
       },
       {
         "id": "B17",
@@ -793,7 +793,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$14.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/b17-deep-fried-calamari.svg"
+        "image": "/menu/b17-deep-fried-calamari.webp"
       },
       {
         "id": "B10",
