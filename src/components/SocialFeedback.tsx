@@ -9,13 +9,13 @@ interface VideoItem {
 }
 
 const VIDEOS: VideoItem[] = [
-  { id: 2, src: "/video/insta 2.mp4", link: "https://www.instagram.com/reel/DZWAQRGhzzf/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
-  { id: 7, src: "/video/insta 7.mp4", link: "https://www.instagram.com/reel/DadczovOwRA/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
-  { id: 3, src: "/video/insta 3.mp4", link: "https://www.instagram.com/reel/DZxViJ6RVwS/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
-  { id: 4, src: "/video/insta 4.mp4", link: "https://www.instagram.com/reel/DaB-H8DB9JE/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
-  { id: 5, src: "/video/insta 5.mp4", link: "https://www.instagram.com/reel/DaET_OjPpaa/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
-  { id: 6, src: "/video/insta 6.mp4", link: "https://www.instagram.com/reel/DaN298HRRrv/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
-  { id: 1, src: "/video/insta 1.mp4", link: "https://www.instagram.com/reel/DYkJVLNg0tR/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
+  { id: 2, src: "/video/insta_2.mp4", link: "https://www.instagram.com/reel/DZWAQRGhzzf/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
+  { id: 7, src: "/video/insta_7.mp4", link: "https://www.instagram.com/reel/DadczovOwRA/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
+  { id: 3, src: "/video/insta_3.mp4", link: "https://www.instagram.com/reel/DZxViJ6RVwS/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
+  { id: 4, src: "/video/insta_4.mp4", link: "https://www.instagram.com/reel/DaB-H8DB9JE/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
+  { id: 5, src: "/video/insta_5.mp4", link: "https://www.instagram.com/reel/DaET_OjPpaa/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
+  { id: 6, src: "/video/insta_6.mp4", link: "https://www.instagram.com/reel/DaN298HRRrv/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
+  { id: 1, src: "/video/insta_1.mp4", link: "https://www.instagram.com/reel/DYkJVLNg0tR/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
 ];
 
 const BACKGROUND_IMAGES = [
@@ -81,7 +81,7 @@ function VideoCard({
     >
       <video
         ref={videoRef}
-        src={`${video.src}#t=0.1`}
+        src={`${video.src}#t=1.0`}
         loop
         playsInline
         preload="metadata"

@@ -204,17 +204,17 @@ const MENU_CATEGORIES = [
         "price": "$16.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_1.webp"
+        "image": "/menu/broccoli-beef.webp"
       },
       {
         "id": "C01",
         "name_fr": "Riz frit aux crevettes sakura et poulet",
         "name_en": "C01 Sakura Shrimp&Chicken FR",
         "name_zh": "櫻花蝦雞粒炒飯",
-        "price": "$22.99",
+        "price": "$21.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_2.webp"
+        "image": "/menu/c01-sakura-shrimp-and-chicken-fr.webp"
       },
       {
         "id": "B16",
@@ -224,27 +224,27 @@ const MENU_CATEGORIES = [
         "price": "$23.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_69.webp"
+        "image": "/menu/b16-general-taos-chicken.webp"
       },
       {
         "id": "C03",
         "name_fr": "Poulet takoyaki sur riz",
         "name_en": "C03 TakoyakiChicken on Rice",
         "name_zh": "章魚燒雞飯",
-        "price": "$21.99",
+        "price": "$20.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_4.webp"
+        "image": "/menu/c03-takoyakichicken-on-rice.webp"
       },
       {
         "id": "C04",
         "name_fr": "Crevettes, bœuf et œufs brouillés sur riz",
         "name_en": "C04 Prawns BeefScrambleEggsRice",
         "name_zh": "香蔥大蝦牛肉滑蛋飯",
-        "price": "$24.99",
+        "price": "$22.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_5.webp"
+        "image": "/menu/c04-prawns-beefscrambleeggsrice.webp"
       },
       {
         "id": "C06",
@@ -254,7 +254,7 @@ const MENU_CATEGORIES = [
         "price": "$22.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_6.webp"
+        "image": "/menu/c06-spaghetti-wbeef-bpsauce.webp"
       },
       {
         "id": "C09",
@@ -264,53 +264,63 @@ const MENU_CATEGORIES = [
         "price": "$26.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_7.webp"
+        "image": "/menu/c09-aaa-beef-ribs-sunnyeggrice.webp"
       },
       {
         "id": "C10",
         "name_fr": "Nouilles de riz plates sautées au bœuf style Hong Kong",
         "name_en": "C10 HK style Beef Noodles",
         "name_zh": "干炒牛河",
-        "price": "$23.99",
+        "price": "$22.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_8.webp"
+        "image": "/menu/c10-hk-style-beef-noodles.webp"
       },
       {
         "id": "C11",
         "name_fr": "Pad thaï",
         "name_en": "C11 Pad Thai",
         "name_zh": "炒泰式河粉",
-        "price": "$23.99",
+        "price": "$21.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_9.webp"
+        "image": "/menu/c11-pad-thai.webp"
       },
       {
         "id": "C12",
         "name_fr": "Riz frit à l'ananas",
         "name_en": "C12 Pineapple Fried Rice",
         "name_zh": "菠蘿炒飯",
-        "price": "$25.99",
+        "price": "$23.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_10.webp"
+        "image": "/menu/c12-pineapple-fried-rice.webp"
+      },
+      {
+        "id": "C13",
+        "name_fr": "Nouilles de blé plates sautées avec de tendres tranches de bœuf, carottes, oignons et brocolis dans une sauce soja spéciale",
+        "name_en": "C13 Stir-fried Beef udon",
+        "name_zh": "干炒牛烏冬",
+        "price": "$23.99",
+        "desc_fr": "Nouilles de blé plates sautées avec de tendres tranches de bœuf, carottes, oignons et brocolis dans une sauce soja spéciale de la maison.",
+        "desc_en": "Stir-fried flat wheat noodles with tender beef slice, carrot, onion and broccoli in house special soy sauce.",
+        "image": "/menu/b06-chicken-udon-stir-fry.webp"
       }
     ]
   },
   {
-    "title_en": "SUSHI COMBO",
-    "title_fr": "SUSHI COMBO",
+    "title_en": "Combo",
+    "title_fr": "Combo",
     "items": [
       {
         "id": "",
-        "name_fr": "Mangue",
+        "name_fr": "Rouleau mangue",
         "name_en": "Mango",
         "name_zh": "芒果卷",
         "price": "$5.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_11.webp"
+        "image": "/menu/mango.webp"
       },
       {
         "id": "",
@@ -320,37 +330,37 @@ const MENU_CATEGORIES = [
         "price": "$5.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_12.webp"
+        "image": "/menu/avocado.webp"
       },
       {
         "id": "",
-        "name_fr": "Saumon & Avocat",
+        "name_fr": "Saumon et avocat",
         "name_en": "Salmon & Avocado",
         "name_zh": "三文魚牛油果卷",
         "price": "$8.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_13.webp"
+        "image": "/menu/salmon-and-avocado.webp"
       },
       {
         "id": "",
-        "name_fr": "Rouleau au poulet frit",
+        "name_fr": "Rouleau de poulet frit",
         "name_en": "Fried Chicken roll",
         "name_zh": "炸雞卷",
         "price": "$11.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_14.webp"
+        "image": "/menu/fried-chicken-roll.webp"
       },
       {
         "id": "",
-        "name_fr": "Rouleau œil de dragon",
+        "name_fr": "Rouleau d'oeil de dragon",
         "name_en": "Dragon eye roll",
         "name_zh": "龍眼卷",
         "price": "$12.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_15.webp"
+        "image": "/menu/dragon-eye-roll.webp"
       },
       {
         "id": "",
@@ -360,47 +370,47 @@ const MENU_CATEGORIES = [
         "price": "$13.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_16.webp"
+        "image": "/menu/spicy-salmon.webp"
       },
       {
         "id": "",
         "name_fr": "SS1",
         "name_en": "SS1",
-        "name_zh": "SS1壽司拼盤",
+        "name_zh": "SS1",
         "price": "$15.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_17.webp"
+        "image": "/menu/ss1.webp"
       },
       {
         "id": "",
         "name_fr": "SS2",
         "name_en": "SS2",
-        "name_zh": "SS2壽司拼盤",
+        "name_zh": "SS2",
         "price": "$21.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_18.webp"
+        "image": "/menu/ss2.webp"
       },
       {
         "id": "",
         "name_fr": "SS3",
         "name_en": "SS3",
-        "name_zh": "SS3壽司拼盤",
+        "name_zh": "SS3",
         "price": "$34.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_19.webp"
+        "image": "/menu/ss3.webp"
       },
       {
         "id": "",
         "name_fr": "SS4",
         "name_en": "SS4",
-        "name_zh": "SS4壽司拼盤",
+        "name_zh": "SS4",
         "price": "$44.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_20.webp"
+        "image": "/menu/ss4.webp"
       },
       {
         "id": "",
@@ -410,7 +420,7 @@ const MENU_CATEGORIES = [
         "price": "$97.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_21.webp"
+        "image": "/menu/boat-1.webp"
       },
       {
         "id": "",
@@ -420,53 +430,53 @@ const MENU_CATEGORIES = [
         "price": "$111.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_22.webp"
+        "image": "/menu/boat2.webp"
       }
     ]
   },
   {
     "title_en": "SIZZLING PLATES",
-    "title_fr": "PLATS SUR PLAQUE CHAUDE",
+    "title_fr": "PLAQUES CHAUDES SILLANTES",
     "items": [
       {
         "id": "SP01",
-        "name_fr": "Côtelettes d'agneau sur plaque chaude",
+        "name_fr": "Côtelettes d'agneau grésillantes",
         "name_en": "SP01 Sizzling Lamb Chops",
-        "name_zh": "鐵板羊扒",
-        "price": "$39.99",
-        "desc_fr": "préparation env. 20 min",
-        "desc_en": "prep time approx. 20 min",
-        "image": "/menu/imgi_23.webp"
+        "name_zh": "SP01 鐵板羊扒",
+        "price": "$37.99",
+        "desc_fr": "",
+        "desc_en": "",
+        "image": "/menu/sp01-sizzling-lamb-chops.webp"
       },
       {
         "id": "SP02",
-        "name_fr": "Côtes de bœuf AAA Angus sur plaque chaude",
+        "name_fr": "Côtes de bœuf Angus AAA",
         "name_en": "SP02 AAA Angus Beef Ribs",
-        "name_zh": "AAA安格斯牛肋骨",
-        "price": "$34.99",
-        "desc_fr": "préparation env. 20 min",
-        "desc_en": "prep time approx. 20 min",
-        "image": "/menu/imgi_24.webp"
+        "name_zh": "SP02 AAA 鐵板牛仔骨",
+        "price": "$32.99",
+        "desc_fr": "",
+        "desc_en": "",
+        "image": "/menu/sp02-aaa-angus-beef-ribs.webp"
       },
       {
         "id": "SP03",
-        "name_fr": "Poulet à l'ail sur plaque chaude",
+        "name_fr": "Côtelette de poulet à l'ail",
         "name_en": "SP03 Garlic Chicken Chop",
-        "name_zh": "鐵板蒜蓉雞扒",
+        "name_zh": "SP03 蒜香雞扒",
         "price": "$28.99",
-        "desc_fr": "préparation env. 20 min",
-        "desc_en": "prep time approx. 20 min",
-        "image": "/menu/imgi_25.webp"
+        "desc_fr": "",
+        "desc_en": "",
+        "image": "/menu/sp03-garlic-chicken-chop.webp"
       },
       {
         "id": "SP04",
-        "name_fr": "Filet de sole pané et poulet sur plaque chaude",
+        "name_fr": "Filet de sole et côtelette de poulet",
         "name_en": "SP04 BreadSole&ChickenChop",
-        "name_zh": "鐵板吉列龍利雞扒",
+        "name_zh": "SP04 龍利柳配雞扒",
         "price": "$31.99",
-        "desc_fr": "préparation env. 20 min",
-        "desc_en": "prep time approx. 20 min",
-        "image": "/menu/imgi_26.webp"
+        "desc_fr": "",
+        "desc_en": "",
+        "image": "/menu/sp04-breadsole-and-chickenchop.webp"
       }
     ]
   },
@@ -476,224 +486,214 @@ const MENU_CATEGORIES = [
     "items": [
       {
         "id": "",
-        "name_fr": "Raviolis crevettes, œuf & courgette",
-        "name_en": "Shrimp egg & zucchini",
-        "name_zh": "蝦仁蛋瓜餃",
-        "price": "$12.99",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/imgi_27.webp"
+        "name_fr": "Dumplets à la soupe d'agneau et coriandre",
+        "name_en": "Lamb&Cilantro Soup Dumplings",
+        "name_zh": "羊肉香菜小籠包",
+        "price": "$16.99",
+        "desc_fr": "Dumplings à la vapeur farcis d'agneau juteux et de coriandre fraîche.",
+        "desc_en": "Steamed soup dumplings filled with juicy lamb and fresh cilantro.",
+        "image": "/menu/lamb-and-cilantro-soup-dumplings.webp"
       },
       {
         "id": "",
-        "name_fr": "Raviolis aux légumes",
+        "name_fr": "Dumpling aux légumes",
         "name_en": "Vegetables Dumpling",
-        "name_zh": "素菜餃子",
+        "name_zh": "蔬菜餃子",
         "price": "$8.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_28.webp"
+        "image": "/menu/vegetables-dumpling.webp"
       }
     ]
   },
   {
     "title_en": "VEGETARIAN",
-    "title_fr": "PLATS VÉGÉTARIENS",
+    "title_fr": "VÉGÉTARIEN",
     "items": [
       {
         "id": "V01",
-        "name_fr": "Vermicelles de riz sautés végétariens",
+        "name_fr": "Vermicelles sautés aux légumes",
         "name_en": "V01 Veg Stir Vermicelli",
-        "name_zh": "素炒米粉",
+        "name_zh": "V01 素炒米粉",
         "price": "$15.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_29.webp"
+        "image": "/menu/v01-veg-stir-vermicelli.webp"
       },
       {
         "id": "V02",
-        "name_fr": "Riz frit végétarien",
+        "name_fr": "Riz frit aux légumes",
         "name_en": "V02 Veg Fried Rice",
-        "name_zh": "炒飯 (素)",
+        "name_zh": "V02 素炒飯",
         "price": "$13.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_30.webp"
+        "image": "/menu/v02-veg-fried-rice.webp"
       },
       {
         "id": "V05",
-        "name_fr": "Tofu braisé à la sauce soya",
+        "name_fr": "Tofu braisé à la sauce soja",
         "name_en": "V05 Braised Tofu in Soy Sauce",
-        "name_zh": "紅燒豆腐",
+        "name_zh": "V05 紅燒豆腐",
         "price": "$13.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_31.webp"
+        "image": "/menu/v05-braised-tofu-in-soy-sauce.webp"
       },
       {
         "id": "",
-        "name_fr": "Légumes mélangés sautés",
-        "name_en": "Stir-Fried Mixed Vegetables",
-        "name_zh": "炒雜菜",
+        "name_fr": "Légumes mixtes sautés",
+        "name_en": "Stir-fried Mixed Vegetables",
+        "name_zh": "清炒什菜",
         "price": "$12.95",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_32.webp"
+        "image": "/menu/stir-fried-mixed-vegetables.webp"
       }
     ]
   },
   {
-    "title_en": "BAKED HK STYLE",
-    "title_fr": "PLATS GRATINÉS STYLE HK",
+    "title_en": "Baked HK Style",
+    "title_fr": "Cuit style HK",
     "items": [
       {
         "id": "F01",
-        "name_fr": "Gratin au cari de bœuf braisé",
+        "name_fr": "Bœuf braisé au cari cuit au four",
         "name_en": "F01 Baked Curry Braised Beef",
-        "name_zh": "焗咖喱牛腩",
+        "name_zh": "F01 焗咖喱牛腩飯",
         "price": "$22.99",
-        "desc_fr": "Au choix : riz ou spaghetti",
-        "desc_en": "Choice of: Rice or Spaghetti",
-        "image": "/menu/imgi_33.webp"
+        "desc_fr": "",
+        "desc_en": "",
+        "image": "/menu/f01-baked-curry-braised-beef.webp"
       },
       {
         "id": "F02",
-        "name_fr": "Gratin au poulet sauce crémeuse",
+        "name_fr": "Poulet cuit au four sauce crémeuse",
         "name_en": "F02 Baked Chicken Creamy Sauce",
-        "name_zh": "焗白汁雞皇",
+        "name_zh": "F02 焗白汁雞扒飯",
         "price": "$19.99",
-        "desc_fr": "Au choix : riz ou spaghetti",
-        "desc_en": "Choice of: Rice or Spaghetti",
-        "image": "/menu/imgi_34.webp"
+        "desc_fr": "",
+        "desc_en": "",
+        "image": "/menu/f02-baked-chicken-creamy-sauce.webp"
       },
       {
         "id": "F03",
-        "name_fr": "Gratin au poulet sauce poivre noir",
+        "name_fr": "Bifteck de poulet au poivre noir cuit au four",
         "name_en": "F03 Bake BPChicken Steak",
-        "name_zh": "焗黑椒雞扒",
+        "name_zh": "F03 焗黑椒雞扒飯",
         "price": "$19.99",
-        "desc_fr": "Au choix : riz ou spaghetti",
-        "desc_en": "Choice of: Rice or Spaghetti",
-        "image": "/menu/imgi_35.webp"
+        "desc_fr": "",
+        "desc_en": "",
+        "image": "/menu/f03-bake-bpchicken-steak.webp"
       },
       {
         "id": "F05",
-        "name_fr": "Gratin à la sauce bolognaise",
+        "name_fr": "Bolognaise cuite au four",
         "name_en": "F05 Baked Bolognese",
-        "name_zh": "焗肉醬意粉",
+        "name_zh": "F05 焗肉醬意粉",
         "price": "$18.99",
-        "desc_fr": "Au choix : riz ou spaghetti",
-        "desc_en": "Choice of: Rice or Spaghetti",
-        "image": "/menu/imgi_36.webp"
-      },
-      {
-        "id": "F06",
-        "name_fr": "Gratin spécial bœuf",
-        "name_en": "F06 Special Beef Bake",
-        "name_zh": "焗牛魔王",
-        "price": "$24.99",
-        "desc_fr": "Au choix : riz ou spaghetti",
-        "desc_en": "Choice of: Rice or Spaghetti",
-        "image": "/menu/imgi_37.webp"
+        "desc_fr": "",
+        "desc_en": "",
+        "image": "/menu/f05-baked-bolognese.webp"
       },
       {
         "id": "F07",
-        "name_fr": "Filet de poisson gratiné sauce crémeuse aux champignons",
+        "name_fr": "Filet de poisson cuit au four avec sauce aux champignons crémeuse",
         "name_en": "BakeFish Fillet w/Creamy MushS",
-        "name_zh": "焗白汁蘑菇魚柳",
+        "name_zh": "焗鮮菇石斑柳飯",
         "price": "$21.99",
-        "desc_fr": "Au choix : riz ou spaghetti",
-        "desc_en": "Choice of: Rice or Spaghetti",
-        "image": "/menu/imgi_38.webp"
+        "desc_fr": "",
+        "desc_en": "",
+        "image": "/menu/f07-bakefish-fillet-wcreamy-mushs.webp"
       }
     ]
   },
   {
     "title_en": "CURRY STYLE HK",
-    "title_fr": "CARI STYLE HK",
+    "title_fr": "STYLE DE CARI HK",
     "items": [
-      {
-        "id": "E01",
-        "name_fr": "Cari de bœuf braisé (sans accompagnement)",
-        "name_en": "E01 Curry Beef (no side)",
-        "name_zh": "咖喱牛腩淨食",
-        "price": "$29.99",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/imgi_39.webp"
-      },
-      {
-        "id": "E02",
-        "name_fr": "Cari de côtelettes d'agneau (sans accompagnement)",
-        "name_en": "E02 Curry Lamb Chops (No Side)",
-        "name_zh": "咖喱羊排淨食",
-        "price": "$33.99",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/imgi_40.webp"
-      },
-      {
-        "id": "E03",
-        "name_fr": "Cari de légumes variés avec œuf sur riz",
-        "name_en": "E03 Curry Mixed VegEgg on Rice",
-        "name_zh": "咖喱雜菜蛋飯",
-        "price": "$16.99",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/imgi_41.webp"
-      },
       {
         "id": "E06",
         "name_fr": "Cari de bœuf sur riz",
         "name_en": "E06 Curry Beef on Rice",
-        "name_zh": "咖喱牛肉飯",
+        "name_zh": "E06 咖喱牛肉飯",
         "price": "$21.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_42.webp"
+        "image": "/menu/e06-curry-beef-on-rice.webp"
+      },
+      {
+        "id": "E01",
+        "name_fr": "Cari de bœuf (sans accompagnement)",
+        "name_en": "E01 Curry Beef (no side)",
+        "name_zh": "E01 咖喱牛肉 (淨餸)",
+        "price": "$29.99",
+        "desc_fr": "",
+        "desc_en": "",
+        "image": "/menu/e01-curry-beef-no-side.webp"
       },
       {
         "id": "E08",
         "name_fr": "Cari de côtelettes d'agneau sur riz",
         "name_en": "E08 Curry Lamb Chops on Rice",
-        "name_zh": "咖喱羊排飯",
+        "name_zh": "E08 咖喱羊扒飯",
         "price": "$27.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_43.webp"
+        "image": "/menu/e08-curry-lamb-chops-on-rice.webp"
+      },
+      {
+        "id": "E02",
+        "name_fr": "Cari de côtelettes d'agneau (sans accompagnement)",
+        "name_en": "E02 Curry Lamb Chops (No Side)",
+        "name_zh": "E02 咖喱羊扒 (淨餸)",
+        "price": "$33.99",
+        "desc_fr": "",
+        "desc_en": "",
+        "image": "/menu/e02-curry-lamb-chops-no-side.webp"
       }
     ]
   },
   {
-    "title_en": "INSTANT",
-    "title_fr": "NOUILLES INSTANTANÉES",
+    "title_en": "Instant",
+    "title_fr": "Instantané",
     "items": [
       {
         "id": "M01",
-        "name_fr": "Nouilles Lo Ding au curry et poitrine de bœuf braisée",
+        "name_fr": "Ragoût de bœuf au cari Lo Ding",
         "name_en": "M01 Curry Beef Brisket Lo Ding",
-        "name_zh": "咖喱牛腩湯撈一丁",
+        "name_zh": "M01 咖喱牛腩撈丁",
         "price": "$18.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_44.webp"
+        "image": "/menu/m01-curry-beef-brisket-lo-ding.webp"
       },
       {
         "id": "M02",
-        "name_fr": "Nouilles Lo Ding au poulet sauce soja et œufs brouillés",
+        "name_fr": "Poulet et œufs brouillés Lo Ding",
         "name_en": "M02 Chicken&ScrambleEggLoDing",
-        "name_zh": "豉油皇雞滑蛋湯撈一丁",
+        "name_zh": "M02 滑蛋雞扒撈丁",
         "price": "$15.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_45.webp"
+        "image": "/menu/m02-chicken-and-scrambleeggloding.webp"
       }
     ]
   },
   {
     "title_en": "SIGNATURE SNACK",
-    "title_fr": "COLLATION SIGNATURE",
+    "title_fr": "COLLATIONS SIGNATURES",
     "items": [
+      {
+        "id": "",
+        "name_fr": "Takoyaki (4 pièces)",
+        "name_en": "Takoyaki (4 pieces)",
+        "name_zh": "章魚燒 (4粒)",
+        "price": "$5.99",
+        "desc_fr": "Boulettes de poulpe frites garnies de mayonnaise, sauce takoyaki et flocons de bonite.",
+        "desc_en": "Deep fried octopus balls topped with mayo, takoyaki sauce, and bonito flakes.",
+        "image": "/menu/c03-takoyakichicken-on-rice.webp"
+      },
       {
         "id": "",
         "name_fr": "Poulet pop-corn",
@@ -702,7 +702,7 @@ const MENU_CATEGORIES = [
         "price": "$14.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_46.webp"
+        "image": "/menu/popcorn-chicken.webp"
       },
       {
         "id": "",
@@ -712,7 +712,7 @@ const MENU_CATEGORIES = [
         "price": "$7.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_47.webp"
+        "image": "/menu/condensed-milk-toast.webp"
       },
       {
         "id": "",
@@ -722,7 +722,7 @@ const MENU_CATEGORIES = [
         "price": "$9.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_48.webp"
+        "image": "/menu/ice-cream-toast.webp"
       },
       {
         "id": "",
@@ -732,7 +732,7 @@ const MENU_CATEGORIES = [
         "price": "$6.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_49.webp"
+        "image": "/menu/shrimp-toast.webp"
       },
       {
         "id": "",
@@ -742,47 +742,17 @@ const MENU_CATEGORIES = [
         "price": "$1.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_50.webp"
+        "image": "/menu/ice-cream.webp"
       },
       {
         "id": "",
-        "name_fr": "Gaufre au chocolat et crème glacée",
-        "name_en": "Chocolate waffle ice cream",
-        "name_zh": "朱古力雪糕格仔餅",
+        "name_fr": "Gaufres avec crème glacée",
+        "name_en": "ice cream waffles",
+        "name_zh": "雪糕格仔餅",
         "price": "$8.99",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/imgi_51.webp"
-      },
-      {
-        "id": "",
-        "name_fr": "Gaufres à la crème glacée au thé vert",
-        "name_en": "green tea ice cream waffles",
-        "name_zh": "抹茶雪糕格仔餅",
-        "price": "$8.99",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/imgi_52.webp"
-      },
-      {
-        "id": "",
-        "name_fr": "Gaufres à la crème glacée aux haricots rouges",
-        "name_en": "red bean ice cream waffles",
-        "name_zh": "紅豆雪糕格仔餅",
-        "price": "$8.99",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/imgi_53.webp"
-      },
-      {
-        "id": "",
-        "name_fr": "Gelato à la mangue",
-        "name_en": "Mango Gelato",
-        "name_zh": "芒果意式雪糕",
-        "price": "$7.99",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/imgi_54.webp"
+        "desc_fr": "Gaufre fraîchement cuite garnie de crème glacée.",
+        "desc_en": "Freshly baked waffle topped with ice cream.",
+        "image": "/menu/ice-cream-waffles.webp"
       }
     ]
   },
@@ -798,7 +768,7 @@ const MENU_CATEGORIES = [
         "price": "$4.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_55.webp"
+        "image": "/menu/hong-kong-style-milk-tea.webp"
       },
       {
         "id": "",
@@ -808,7 +778,7 @@ const MENU_CATEGORIES = [
         "price": "$5.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_56.webp"
+        "image": "/menu/taro-milk-tea.webp"
       },
       {
         "id": "",
@@ -818,7 +788,7 @@ const MENU_CATEGORIES = [
         "price": "$3.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_57.webp"
+        "image": "/menu/coffee.webp"
       },
       {
         "id": "",
@@ -828,7 +798,7 @@ const MENU_CATEGORIES = [
         "price": "$5.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_58.webp"
+        "image": "/menu/strawberry-matcha-latte.webp"
       },
       {
         "id": "",
@@ -838,7 +808,7 @@ const MENU_CATEGORIES = [
         "price": "$5.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_59.webp"
+        "image": "/menu/mango-matcha-latte.webp"
       },
       {
         "id": "",
@@ -848,7 +818,7 @@ const MENU_CATEGORIES = [
         "price": "$7.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_60.webp"
+        "image": "/menu/mango-passion-slush.webp"
       },
       {
         "id": "",
@@ -858,7 +828,7 @@ const MENU_CATEGORIES = [
         "price": "$7.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_61.webp"
+        "image": "/menu/strawberry-slush.webp"
       },
       {
         "id": "",
@@ -868,7 +838,7 @@ const MENU_CATEGORIES = [
         "price": "$4.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_62.webp"
+        "image": "/menu/coca-cola-mexican-bottled.webp"
       },
       {
         "id": "",
@@ -878,7 +848,7 @@ const MENU_CATEGORIES = [
         "price": "$4.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_63.webp"
+        "image": "/menu/limonade.webp"
       },
       {
         "id": "",
@@ -888,7 +858,7 @@ const MENU_CATEGORIES = [
         "price": "$3.00",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_64.webp"
+        "image": "/menu/diet-coke.webp"
       }
     ]
   },
@@ -904,7 +874,7 @@ const MENU_CATEGORIES = [
         "price": "$13.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_65.webp"
+        "image": "/menu/b09-spicy-chill-beef.webp"
       },
       {
         "id": "B01",
@@ -914,7 +884,7 @@ const MENU_CATEGORIES = [
         "price": "$22.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_66.webp"
+        "image": "/menu/b01-curry-beef-udon-soup.webp"
       },
       {
         "id": "B06",
@@ -924,7 +894,7 @@ const MENU_CATEGORIES = [
         "price": "$19.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_67.webp"
+        "image": "/menu/b06-chicken-udon-stir-fry.webp"
       },
       {
         "id": "B03",
@@ -934,7 +904,7 @@ const MENU_CATEGORIES = [
         "price": "$26.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_68.webp"
+        "image": "/menu/b03-general-taos-shrimp.webp"
       },
       {
         "id": "B16",
@@ -944,17 +914,7 @@ const MENU_CATEGORIES = [
         "price": "$23.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_69.webp"
-      },
-      {
-        "id": "",
-        "name_fr": "Cuisse de poulet frit croustillant avec salade de pommes de terre ou frites",
-        "name_en": "ChickenLeg w/PotatoSalad/Fries",
-        "name_zh": "生炸雞腿配薯仔沙律或薯條",
-        "price": "$14.99",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/imgi_70.webp"
+        "image": "/menu/b16-general-taos-chicken-2.webp"
       },
       {
         "id": "B04",
@@ -964,7 +924,17 @@ const MENU_CATEGORIES = [
         "price": "$5.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_71.webp"
+        "image": "/menu/b04-sesame-balls.webp"
+      },
+      {
+        "id": "B18",
+        "name_fr": "B18 Rouleaux de printemps",
+        "name_en": "B18 Spring Rolls",
+        "name_zh": "B18 春卷",
+        "price": "$6.99",
+        "desc_fr": "Rouleaux de printemps croustillants frits farcis de légumes.",
+        "desc_en": "Deep fried crispy spring rolls filled with vegetables.",
+        "image": "/menu/b18-spring-rolls.webp"
       },
       {
         "id": "B19",
@@ -974,7 +944,7 @@ const MENU_CATEGORIES = [
         "price": "$6.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_72.svg"
+        "image": "/menu/b19-fried-scallops.svg"
       },
       {
         "id": "B17",
@@ -984,16 +954,7 @@ const MENU_CATEGORIES = [
         "price": "$14.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_73.svg"
-      },
-      {
-        "id": "B10",
-        "name_fr": "Boulettes de bœuf au cari style Hong Kong",
-        "name_en": "B10 HKCurry Beef Ball",
-        "name_zh": "B10 港式咖喱牛丸",
-        "price": "$9.99",
-        "desc_fr": "",
-        "desc_en": ""
+        "image": "/menu/b17-deep-fried-calamari.svg"
       }
     ]
   }

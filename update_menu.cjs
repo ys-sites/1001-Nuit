@@ -13,7 +13,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$16.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_1.webp"
+        "image": "/menu/broccoli-beef.webp"
       },
       {
         "id": "C01",
@@ -23,7 +23,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$22.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_2.webp"
+        "image": "/menu/c01-sakura-shrimp-and-chicken-fr.webp"
       },
       {
         "id": "B16",
@@ -33,7 +33,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$23.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_69.webp"
+        "image": "/menu/b16-general-taos-chicken.webp"
       },
       {
         "id": "C03",
@@ -43,7 +43,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$21.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_4.webp"
+        "image": "/menu/c03-takoyakichicken-on-rice.webp"
       },
       {
         "id": "C04",
@@ -53,7 +53,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$24.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_5.webp"
+        "image": "/menu/c04-prawns-beefscrambleeggsrice.webp"
       },
       {
         "id": "C06",
@@ -63,7 +63,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$22.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_6.webp"
+        "image": "/menu/c06-spaghetti-wbeef-bpsauce.webp"
       },
       {
         "id": "C09",
@@ -73,7 +73,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$26.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_7.webp"
+        "image": "/menu/c09-aaa-beef-ribs-sunnyeggrice.webp"
       },
       {
         "id": "C10",
@@ -83,7 +83,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$23.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_8.webp"
+        "image": "/menu/c10-hk-style-beef-noodles.webp"
       },
       {
         "id": "C11",
@@ -93,7 +93,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$23.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_9.webp"
+        "image": "/menu/c11-pad-thai.webp"
       },
       {
         "id": "C12",
@@ -103,7 +103,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$25.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_10.webp"
+        "image": "/menu/c12-pineapple-fried-rice.webp"
       }
     ]
   },
@@ -119,7 +119,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$5.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_11.webp"
+        "image": "/menu/mango.webp"
       },
       {
         "id": "",
@@ -129,7 +129,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$5.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_12.webp"
+        "image": "/menu/avocado.webp"
       },
       {
         "id": "",
@@ -139,7 +139,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$8.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_13.webp"
+        "image": "/menu/salmon-and-avocado.webp"
       },
       {
         "id": "",
@@ -149,7 +149,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$11.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_14.webp"
+        "image": "/menu/fried-chicken-roll.webp"
       },
       {
         "id": "",
@@ -159,7 +159,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$12.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_15.webp"
+        "image": "/menu/dragon-eye-roll.webp"
       },
       {
         "id": "",
@@ -169,7 +169,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$13.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_16.webp"
+        "image": "/menu/spicy-salmon.webp"
       },
       {
         "id": "",
@@ -179,7 +179,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$15.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_17.webp"
+        "image": "/menu/ss1.webp"
       },
       {
         "id": "",
@@ -189,7 +189,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$21.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_18.webp"
+        "image": "/menu/ss2.webp"
       },
       {
         "id": "",
@@ -199,7 +199,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$34.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_19.webp"
+        "image": "/menu/ss3.webp"
       },
       {
         "id": "",
@@ -209,7 +209,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$44.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_20.webp"
+        "image": "/menu/ss4.webp"
       },
       {
         "id": "",
@@ -219,7 +219,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$97.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_21.webp"
+        "image": "/menu/boat-1.webp"
       },
       {
         "id": "",
@@ -229,7 +229,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$111.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_22.webp"
+        "image": "/menu/boat2.webp"
       }
     ]
   },
@@ -245,7 +245,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$39.99",
         "desc_fr": "préparation env. 20 min",
         "desc_en": "prep time approx. 20 min",
-        "image": "/menu/imgi_23.webp"
+        "image": "/menu/sp01-sizzling-lamb-chops.webp"
       },
       {
         "id": "SP02",
@@ -255,7 +255,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$34.99",
         "desc_fr": "préparation env. 20 min",
         "desc_en": "prep time approx. 20 min",
-        "image": "/menu/imgi_24.webp"
+        "image": "/menu/sp02-aaa-angus-beef-ribs.webp"
       },
       {
         "id": "SP03",
@@ -265,7 +265,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$28.99",
         "desc_fr": "préparation env. 20 min",
         "desc_en": "prep time approx. 20 min",
-        "image": "/menu/imgi_25.webp"
+        "image": "/menu/sp03-garlic-chicken-chop.webp"
       },
       {
         "id": "SP04",
@@ -275,7 +275,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$31.99",
         "desc_fr": "préparation env. 20 min",
         "desc_en": "prep time approx. 20 min",
-        "image": "/menu/imgi_26.webp"
+        "image": "/menu/sp04-breadsole-and-chickenchop.webp"
       }
     ]
   },
@@ -291,7 +291,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$12.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_27.webp"
+        "image": "/menu/shrimp-egg-and-zucchini.webp"
       },
       {
         "id": "",
@@ -301,7 +301,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$8.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_28.webp"
+        "image": "/menu/vegetables-dumpling.webp"
       }
     ]
   },
@@ -317,7 +317,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$15.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_29.webp"
+        "image": "/menu/v01-veg-stir-vermicelli.webp"
       },
       {
         "id": "V02",
@@ -327,7 +327,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$13.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_30.webp"
+        "image": "/menu/v02-veg-fried-rice.webp"
       },
       {
         "id": "V05",
@@ -337,7 +337,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$13.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_31.webp"
+        "image": "/menu/v05-braised-tofu-in-soy-sauce.webp"
       },
       {
         "id": "",
@@ -347,7 +347,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$12.95",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_32.webp"
+        "image": "/menu/stir-fried-mixed-vegetables.webp"
       }
     ]
   },
@@ -363,7 +363,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$22.99",
         "desc_fr": "Au choix : riz ou spaghetti",
         "desc_en": "Choice of: Rice or Spaghetti",
-        "image": "/menu/imgi_33.webp"
+        "image": "/menu/f01-baked-curry-braised-beef.webp"
       },
       {
         "id": "F02",
@@ -373,7 +373,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$19.99",
         "desc_fr": "Au choix : riz ou spaghetti",
         "desc_en": "Choice of: Rice or Spaghetti",
-        "image": "/menu/imgi_34.webp"
+        "image": "/menu/f02-baked-chicken-creamy-sauce.webp"
       },
       {
         "id": "F03",
@@ -383,7 +383,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$19.99",
         "desc_fr": "Au choix : riz ou spaghetti",
         "desc_en": "Choice of: Rice or Spaghetti",
-        "image": "/menu/imgi_35.webp"
+        "image": "/menu/f03-bake-bpchicken-steak.webp"
       },
       {
         "id": "F05",
@@ -393,7 +393,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$18.99",
         "desc_fr": "Au choix : riz ou spaghetti",
         "desc_en": "Choice of: Rice or Spaghetti",
-        "image": "/menu/imgi_36.webp"
+        "image": "/menu/f05-baked-bolognese.webp"
       },
       {
         "id": "F06",
@@ -403,7 +403,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$24.99",
         "desc_fr": "Au choix : riz ou spaghetti",
         "desc_en": "Choice of: Rice or Spaghetti",
-        "image": "/menu/imgi_37.webp"
+        "image": "/menu/f06-special-beef-bake.webp"
       },
       {
         "id": "F07",
@@ -413,7 +413,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$21.99",
         "desc_fr": "Au choix : riz ou spaghetti",
         "desc_en": "Choice of: Rice or Spaghetti",
-        "image": "/menu/imgi_38.webp"
+        "image": "/menu/f07-bakefish-fillet-wcreamy-mushs.webp"
       }
     ]
   },
@@ -429,7 +429,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$29.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_39.webp"
+        "image": "/menu/e01-curry-beef-no-side.webp"
       },
       {
         "id": "E02",
@@ -439,7 +439,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$33.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_40.webp"
+        "image": "/menu/e02-curry-lamb-chops-no-side.webp"
       },
       {
         "id": "E03",
@@ -449,7 +449,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$16.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_41.webp"
+        "image": "/menu/e03-curry-mixed-vegegg-on-rice.webp"
       },
       {
         "id": "E06",
@@ -459,7 +459,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$21.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_42.webp"
+        "image": "/menu/e06-curry-beef-on-rice.webp"
       },
       {
         "id": "E08",
@@ -469,7 +469,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$27.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_43.webp"
+        "image": "/menu/e08-curry-lamb-chops-on-rice.webp"
       }
     ]
   },
@@ -485,7 +485,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$18.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_44.webp"
+        "image": "/menu/m01-curry-beef-brisket-lo-ding.webp"
       },
       {
         "id": "M02",
@@ -495,7 +495,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$15.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_45.webp"
+        "image": "/menu/m02-chicken-and-scrambleeggloding.webp"
       }
     ]
   },
@@ -511,7 +511,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$14.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_46.webp"
+        "image": "/menu/popcorn-chicken.webp"
       },
       {
         "id": "",
@@ -521,7 +521,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$7.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_47.webp"
+        "image": "/menu/condensed-milk-toast.webp"
       },
       {
         "id": "",
@@ -531,7 +531,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$9.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_48.webp"
+        "image": "/menu/ice-cream-toast.webp"
       },
       {
         "id": "",
@@ -541,7 +541,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$6.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_49.webp"
+        "image": "/menu/shrimp-toast.webp"
       },
       {
         "id": "",
@@ -551,7 +551,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$1.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_50.webp"
+        "image": "/menu/ice-cream.webp"
       },
       {
         "id": "",
@@ -561,7 +561,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$8.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_51.webp"
+        "image": "/menu/chocolate-waffle-ice-cream.webp"
       },
       {
         "id": "",
@@ -571,7 +571,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$8.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_52.webp"
+        "image": "/menu/green-tea-ice-cream-waffles.webp"
       },
       {
         "id": "",
@@ -581,7 +581,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$8.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_53.webp"
+        "image": "/menu/red-bean-ice-cream-waffles.webp"
       },
       {
         "id": "",
@@ -591,7 +591,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$7.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_54.webp"
+        "image": "/menu/mango-gelato.webp"
       }
     ]
   },
@@ -607,7 +607,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$4.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_55.webp"
+        "image": "/menu/hong-kong-style-milk-tea.webp"
       },
       {
         "id": "",
@@ -617,7 +617,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$5.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_56.webp"
+        "image": "/menu/taro-milk-tea.webp"
       },
       {
         "id": "",
@@ -627,7 +627,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$3.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_57.webp"
+        "image": "/menu/coffee.webp"
       },
       {
         "id": "",
@@ -637,7 +637,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$5.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_58.webp"
+        "image": "/menu/strawberry-matcha-latte.webp"
       },
       {
         "id": "",
@@ -647,7 +647,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$5.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_59.webp"
+        "image": "/menu/mango-matcha-latte.webp"
       },
       {
         "id": "",
@@ -657,7 +657,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$7.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_60.webp"
+        "image": "/menu/mango-passion-slush.webp"
       },
       {
         "id": "",
@@ -667,7 +667,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$7.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_61.webp"
+        "image": "/menu/strawberry-slush.webp"
       },
       {
         "id": "",
@@ -677,7 +677,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$4.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_62.webp"
+        "image": "/menu/coca-cola-mexican-bottled.webp"
       },
       {
         "id": "",
@@ -687,7 +687,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$4.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_63.webp"
+        "image": "/menu/limonade.webp"
       },
       {
         "id": "",
@@ -697,7 +697,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$3.00",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_64.webp"
+        "image": "/menu/diet-coke.webp"
       }
     ]
   },
@@ -713,7 +713,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$13.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_65.webp"
+        "image": "/menu/b09-spicy-chill-beef.webp"
       },
       {
         "id": "B01",
@@ -723,7 +723,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$22.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_66.webp"
+        "image": "/menu/b01-curry-beef-udon-soup.webp"
       },
       {
         "id": "B06",
@@ -733,7 +733,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$19.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_67.webp"
+        "image": "/menu/b06-chicken-udon-stir-fry.webp"
       },
       {
         "id": "B03",
@@ -743,7 +743,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$26.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_68.webp"
+        "image": "/menu/b03-general-taos-shrimp.webp"
       },
       {
         "id": "B16",
@@ -753,7 +753,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$23.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_69.webp"
+        "image": "/menu/b16-general-taos-chicken-2.webp"
       },
       {
         "id": "",
@@ -763,7 +763,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$14.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_70.webp"
+        "image": "/menu/chickenleg-wpotatosaladfries.webp"
       },
       {
         "id": "B04",
@@ -773,7 +773,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$5.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_71.webp"
+        "image": "/menu/b04-sesame-balls.webp"
       },
       {
         "id": "B19",
@@ -783,7 +783,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$6.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_72.svg"
+        "image": "/menu/b19-fried-scallops.svg"
       },
       {
         "id": "B17",
@@ -793,7 +793,7 @@ const menuStr = `const MENU_CATEGORIES = [
         "price": "$14.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/imgi_73.svg"
+        "image": "/menu/b17-deep-fried-calamari.svg"
       },
       {
         "id": "B10",
@@ -807,16 +807,6 @@ const menuStr = `const MENU_CATEGORIES = [
     ]
   }
 ];;`;
-
-const miniMenuStr = `const MINI_MENU = [
-  { name_en: "B16 General Tao's Chicken", name_fr: "B16 Poulet Général Tao", price: "$23.99" },
-  { name_en: "E06 Curry Beef on Rice", name_fr: "E06 Cari de bœuf sur riz", price: "$21.99" },
-  {
-    name_en: "SP01 Sizzling Lamb Chops",
-    name_fr: "SP01 Côtelettes d'agneau sur plaque chaude",
-    price: "$39.99",
-  },
-];`;
 
 let content = fs.readFileSync('src/HomePage.tsx', 'utf8');
 
