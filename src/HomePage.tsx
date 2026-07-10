@@ -191,6 +191,8 @@ const REVIEWS = [
   },
 ];
 
+const SHOW_MENU_IMAGES = false;
+
 const MENU_CATEGORIES = [
   {
     "title_en": "MAIN DISH",
@@ -1308,7 +1310,7 @@ export default function HomePage() {
                 transition={{ delay: idx * 0.05, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
                 className="bg-white rounded-2xl border border-gray-100 shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)] transition-all duration-300 flex overflow-hidden h-[120px] sm:h-[140px] md:h-[150px] group"
               >
-                {item.image && (
+                {SHOW_MENU_IMAGES && item.image && (
                   <div className="w-[120px] sm:w-[150px] md:w-[180px] shrink-0 h-full relative overflow-hidden">
                     <img
                       src={item.image}
