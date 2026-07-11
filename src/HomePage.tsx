@@ -1826,7 +1826,7 @@ export default function HomePage() {
               {/* Image Container */}
               <div className="w-full aspect-auto flex items-center justify-center bg-[#0a0b0a]">
                 <img
-                  src="/promotion.webp"
+                  src={encodeURI("/buffet promotion.png")}
                   alt="Promotion"
                   decoding="async"
                   className="w-full h-auto max-h-[75vh] object-contain select-none"

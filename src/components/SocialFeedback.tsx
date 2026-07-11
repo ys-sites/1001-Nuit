@@ -26,7 +26,7 @@ const BACKGROUND_IMAGES = [
   { src: "/menu.webp", size: "w-24 h-24 md:w-36 md:h-36", pos: "top-[12%] right-[4%]" },
   { src: "/dessert.webp", size: "w-28 h-28 md:w-36 md:h-36", pos: "top-[45%] right-[2%]" },
   { src: "/drink.webp", size: "w-32 h-32 md:w-40 md:h-40", pos: "bottom-[8%] right-[6%]" },
-  { src: "/promotion.webp", size: "w-24 h-24 md:w-32 md:h-32", pos: "bottom-[45%] left-[12%]" },
+  { src: encodeURI("/buffet promotion.png"), size: "w-24 h-24 md:w-32 md:h-32", pos: "bottom-[45%] left-[12%]" },
   { src: "/Beef Balls in Hong Kong Style Curry (12 pcs).webp", size: "w-28 h-28 md:w-36 md:h-36", pos: "top-[25%] right-[15%]" },
   { src: "/Crispy Chicken Wings with Potato Salad or Fries.webp", size: "w-24 h-24 md:w-32 md:h-32", pos: "bottom-[30%] right-[14%]" },
 ];
