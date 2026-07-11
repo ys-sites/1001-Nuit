@@ -1070,7 +1070,7 @@ export default function HomePage() {
             className="relative w-full flex-1 aspect-[16/9] md:aspect-auto rounded-[2rem] md:rounded-[2.5rem] overflow-hidden group block cursor-pointer"
           >
             <img
-              src="/SoupDumplings.webp"
+              src={encodeURI("/sushi/boat 2.webp")}
               alt="Menu"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-[10s] group-hover:scale-105"
             />
@@ -1115,7 +1115,7 @@ export default function HomePage() {
             className="relative w-full flex-1 aspect-[16/9] md:aspect-auto rounded-[2rem] md:rounded-[2.5rem] overflow-hidden group block cursor-pointer"
           >
             <img
-              src="/reservation.webp"
+              src={encodeURI("/menu/Main Dish/Spaghetti wBeef BPSauce.webp")}
               alt="Reservation"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-[10s] group-hover:scale-105"
             />
@@ -1140,7 +1140,7 @@ export default function HomePage() {
             className="relative w-full flex-1 aspect-[16/9] md:aspect-auto rounded-[2rem] md:rounded-[2.5rem] overflow-hidden group block cursor-pointer"
           >
             <img
-              src="/menu.webp"
+              src={encodeURI("/menu/SIZZLING PLATES/Sizzling Lamb Chops.webp")}
               alt="Order Online"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-[10s] group-hover:scale-105"
             />
@@ -1293,7 +1293,7 @@ export default function HomePage() {
                 {SHOW_MENU_IMAGES && item.image && (
                   <div className="w-[120px] sm:w-[150px] md:w-[180px] shrink-0 h-full relative overflow-hidden">
                     <img
-                      src={item.image}
+                      src={encodeURI(item.image)}
                       alt={lang === "fr" ? item.name_fr : item.name_en}
                       loading="lazy"
                       decoding="async"
