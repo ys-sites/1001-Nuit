@@ -311,8 +311,8 @@ const MENU_CATEGORIES = [
     ]
   },
   {
-    "title_en": "Combo",
-    "title_fr": "Combo",
+    "title_en": "Sushi Combo",
+    "title_fr": "Sushi Combo",
     "items": [
       {
         "id": "",
