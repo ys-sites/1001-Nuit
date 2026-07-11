@@ -304,8 +304,8 @@ const MENU_CATEGORIES = [
         "name_en": "C13 Stir-fried Beef udon",
         "name_zh": "干炒牛烏冬",
         "price": "$23.99",
-        "desc_fr": "Nouilles de blé plates sautées avec de tendres tranches de bœuf, carottes, oignons et brocolis dans une sauce soja spéciale de la maison.",
-        "desc_en": "Stir-fried flat wheat noodles with tender beef slice, carrot, onion and broccoli in house special soy sauce.",
+        "desc_fr": "",
+        "desc_en": "",
         "image": "/menu/Main Dish/Stir fry beef udon.webp"
       }
     ]
@@ -492,8 +492,8 @@ const MENU_CATEGORIES = [
         "name_en": "Lamb&Cilantro Soup Dumplings",
         "name_zh": "羊肉香菜小籠包",
         "price": "$16.99",
-        "desc_fr": "Dumplings à la vapeur farcis d'agneau juteux et de coriandre fraîche.",
-        "desc_en": "Steamed soup dumplings filled with juicy lamb and fresh cilantro.",
+        "desc_fr": "",
+        "desc_en": "",
         "image": "/menu/DUMPLINGS/Lamp Cilantro Dumplings.webp"
       },
       {
@@ -682,8 +682,8 @@ const MENU_CATEGORIES = [
         "name_en": "Takoyaki (4 pieces)",
         "name_zh": "章魚燒 (4粒)",
         "price": "$5.99",
-        "desc_fr": "Boulettes de poulpe frites garnies de mayonnaise, sauce takoyaki et flocons de bonite.",
-        "desc_en": "Deep fried octopus balls topped with mayo, takoyaki sauce, and bonito flakes.",
+        "desc_fr": "",
+        "desc_en": "",
         "image": "/menu/Signature Snacks/Takoyaki 4 Pieces.webp"
       },
       {
@@ -742,8 +742,8 @@ const MENU_CATEGORIES = [
         "name_en": "ice cream waffles",
         "name_zh": "雪糕格仔餅",
         "price": "$8.99",
-        "desc_fr": "Gaufre fraîchement cuite garnie de crème glacée.",
-        "desc_en": "Freshly baked waffle topped with ice cream.",
+        "desc_fr": "",
+        "desc_en": "",
         "image": "/menu/Signature Snacks/Ice Cream Waffles.webp"
       }
     ]
@@ -944,8 +944,8 @@ const MENU_CATEGORIES = [
         "name_en": "B18 Spring Rolls",
         "name_zh": "B18 春卷",
         "price": "$6.99",
-        "desc_fr": "Rouleaux de printemps croustillants frits farcis de légumes.",
-        "desc_en": "Deep fried crispy spring rolls filled with vegetables.",
+        "desc_fr": "",
+        "desc_en": "",
         "image": "/menu/SNACKS & SIDES/Spring Rolls.png"
       }
     ]
