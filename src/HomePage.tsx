@@ -191,7 +191,7 @@ const REVIEWS = [
   },
 ];
 
-const SHOW_MENU_IMAGES = false;
+const SHOW_MENU_IMAGES = true;
 
 const MENU_CATEGORIES = [
   {
