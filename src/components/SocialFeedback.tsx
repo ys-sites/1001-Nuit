@@ -16,6 +16,7 @@ const VIDEOS: VideoItem[] = [
   { id: 5, src: "/video/insta_5.mp4", link: "https://www.instagram.com/reel/DaET_OjPpaa/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
   { id: 6, src: "/video/insta_6.mp4", link: "https://www.instagram.com/reel/DaN298HRRrv/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
   { id: 1, src: "/video/insta_1.mp4", link: "https://www.instagram.com/reel/DYkJVLNg0tR/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
+  { id: 8, src: "/video/insta_8.mp4", link: "https://www.instagram.com/reel/DakoLM3xz-C/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
 ];
 
 const BACKGROUND_IMAGES = [
