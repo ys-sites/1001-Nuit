@@ -1019,9 +1019,6 @@ export default function HomePage() {
               decoding="async"
               className="w-full h-full object-cover transition-transform duration-[20s] group-hover:scale-105"
             />
-            {/* Subtle gradient overlay to darken edges for text readability */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0a0b0a]/90 via-[#0a0b0a]/20 to-[#0a0b0a]/40 z-10"></div>
-            <div className="absolute inset-0 bg-gradient-to-r from-[#0a0b0a]/60 flex-transparent z-10"></div>
           </div>
 
           {/* Floating Navbar */}
@@ -1080,7 +1077,7 @@ export default function HomePage() {
             className="relative w-full flex-1 aspect-[16/9] md:aspect-auto rounded-[2rem] md:rounded-[2.5rem] overflow-hidden group block cursor-pointer"
           >
             <img
-              src={encodeURI("/sushi/boat 2.webp")}
+              src={encodeURI("/menu/Sushi Combo/Boat 2.webp")}
               alt="Menu"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-[10s] group-hover:scale-105"
             />
@@ -1749,17 +1746,6 @@ export default function HomePage() {
         
         
 
-        <div className="flex flex-wrap justify-center items-center gap-6 text-[10px] uppercase tracking-[0.2em] opacity-50 mb-12">
-          <span>
-            {lang === "fr"
-              ? "Viande halal abattue à la main"
-              : "Hand-slaughtered halal meat"}
-          </span>
-          <span className="text-[#cfbe91]">•</span>
-          <span>{lang === "fr" ? "Sans porc" : "No pork"}</span>
-          <span className="text-[#cfbe91]">•</span>
-          <span>{lang === "fr" ? "Sans alcool" : "No alcohol"}</span>
-        </div>
         <div className="text-[12px] opacity-80 mb-4">
           <a
             href="mailto:1001nuitmtl@gmail.com"
