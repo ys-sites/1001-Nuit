@@ -206,7 +206,7 @@ const MENU_CATEGORIES = [
         "price": "$16.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/broccoli-beef.webp"
+        "image": "/menu/Main Dish/Broccoli Beef.webp"
       },
       {
         "id": "C01",
@@ -216,7 +216,7 @@ const MENU_CATEGORIES = [
         "price": "$21.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/c01-sakura-shrimp-and-chicken-fr.webp"
+        "image": "/menu/Main Dish/Sakura Shrimp & Chicken FR.webp"
       },
       {
         "id": "B16",
@@ -226,7 +226,7 @@ const MENU_CATEGORIES = [
         "price": "$23.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/b16-general-taos-chicken.webp"
+        "image": "/menu/Main Dish/General Tao's Chicken.webp"
       },
       {
         "id": "C03",
@@ -236,7 +236,7 @@ const MENU_CATEGORIES = [
         "price": "$20.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/c03-takoyakichicken-on-rice.webp"
+        "image": "/menu/Main Dish/TakoyakiChicken on Rice.webp"
       },
       {
         "id": "C04",
@@ -246,7 +246,7 @@ const MENU_CATEGORIES = [
         "price": "$22.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/c04-prawns-beefscrambleeggsrice.webp"
+        "image": "/menu/Main Dish/Prawns BeefScrambleEggsRice.webp"
       },
       {
         "id": "C06",
@@ -256,7 +256,7 @@ const MENU_CATEGORIES = [
         "price": "$22.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/c06-spaghetti-wbeef-bpsauce.webp"
+        "image": "/menu/Main Dish/Spaghetti wBeef BPSauce.webp"
       },
       {
         "id": "C09",
@@ -266,7 +266,7 @@ const MENU_CATEGORIES = [
         "price": "$26.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/c09-aaa-beef-ribs-sunnyeggrice.webp"
+        "image": "/menu/Main Dish/AAA Beef Ribs SunnyEggRice.webp"
       },
       {
         "id": "C10",
@@ -276,7 +276,7 @@ const MENU_CATEGORIES = [
         "price": "$22.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/c10-hk-style-beef-noodles.webp"
+        "image": "/menu/Main Dish/HK style Beef Noodles.webp"
       },
       {
         "id": "C11",
@@ -286,7 +286,7 @@ const MENU_CATEGORIES = [
         "price": "$21.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/c11-pad-thai.webp"
+        "image": "/menu/Main Dish/Pad Thai.webp"
       },
       {
         "id": "C12",
@@ -296,7 +296,7 @@ const MENU_CATEGORIES = [
         "price": "$23.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/c12-pineapple-fried-rice.webp"
+        "image": "/menu/Main Dish/Pineapple Fried Rice.webp"
       },
       {
         "id": "C13",
@@ -306,7 +306,7 @@ const MENU_CATEGORIES = [
         "price": "$23.99",
         "desc_fr": "Nouilles de blé plates sautées avec de tendres tranches de bœuf, carottes, oignons et brocolis dans une sauce soja spéciale de la maison.",
         "desc_en": "Stir-fried flat wheat noodles with tender beef slice, carrot, onion and broccoli in house special soy sauce.",
-        "image": "/menu/b06-chicken-udon-stir-fry.webp"
+        "image": "/menu/Main Dish/Stir fry beef udon.webp"
       }
     ]
   },
@@ -322,7 +322,7 @@ const MENU_CATEGORIES = [
         "price": "$5.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/mango.webp"
+        "image": "/menu/Sushi Combo/Mango.webp"
       },
       {
         "id": "",
@@ -332,7 +332,7 @@ const MENU_CATEGORIES = [
         "price": "$5.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/avocado.webp"
+        "image": "/menu/Sushi Combo/Avocado.webp"
       },
       {
         "id": "",
@@ -342,7 +342,7 @@ const MENU_CATEGORIES = [
         "price": "$8.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/salmon-and-avocado.webp"
+        "image": "/menu/Sushi Combo/Salmon & Avocado.webp"
       },
       {
         "id": "",
@@ -352,7 +352,7 @@ const MENU_CATEGORIES = [
         "price": "$11.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/fried-chicken-roll.webp"
+        "image": "/menu/Sushi Combo/Fried Chicken Roll.webp"
       },
       {
         "id": "",
@@ -362,7 +362,7 @@ const MENU_CATEGORIES = [
         "price": "$12.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/dragon-eye-roll.webp"
+        "image": "/menu/Sushi Combo/Dragon Eye Roll.webp"
       },
       {
         "id": "",
@@ -372,7 +372,7 @@ const MENU_CATEGORIES = [
         "price": "$13.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/spicy-salmon.webp"
+        "image": "/menu/Sushi Combo/Spicy Salmon.webp"
       },
       {
         "id": "",
@@ -382,7 +382,7 @@ const MENU_CATEGORIES = [
         "price": "$15.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/ss1.webp"
+        "image": "/menu/Sushi Combo/SS1.webp"
       },
       {
         "id": "",
@@ -392,7 +392,7 @@ const MENU_CATEGORIES = [
         "price": "$21.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/ss2.webp"
+        "image": "/menu/Sushi Combo/SS2.jpg"
       },
       {
         "id": "",
@@ -402,7 +402,7 @@ const MENU_CATEGORIES = [
         "price": "$34.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/ss3.webp"
+        "image": "/menu/Sushi Combo/SS3.webp"
       },
       {
         "id": "",
@@ -412,7 +412,7 @@ const MENU_CATEGORIES = [
         "price": "$44.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/ss4.webp"
+        "image": "/menu/Sushi Combo/SS4.webp"
       },
       {
         "id": "",
@@ -422,7 +422,7 @@ const MENU_CATEGORIES = [
         "price": "$97.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/boat-1.webp"
+        "image": "/menu/Sushi Combo/Boat 1.webp"
       },
       {
         "id": "",
@@ -432,7 +432,7 @@ const MENU_CATEGORIES = [
         "price": "$111.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/boat2.webp"
+        "image": "/menu/Sushi Combo/Boat 2.webp"
       }
     ]
   },
@@ -448,7 +448,7 @@ const MENU_CATEGORIES = [
         "price": "$37.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/sp01-sizzling-lamb-chops.webp"
+        "image": "/menu/SIZZLING PLATES/Sizzling Lamb Chops.webp"
       },
       {
         "id": "SP02",
@@ -458,7 +458,7 @@ const MENU_CATEGORIES = [
         "price": "$32.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/sp02-aaa-angus-beef-ribs.webp"
+        "image": "/menu/SIZZLING PLATES/AAA Angus Beef Ribs.webp"
       },
       {
         "id": "SP03",
@@ -468,7 +468,7 @@ const MENU_CATEGORIES = [
         "price": "$28.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/sp03-garlic-chicken-chop.webp"
+        "image": "/menu/SIZZLING PLATES/Garlic Chicken Chop.webp"
       },
       {
         "id": "SP04",
@@ -478,7 +478,7 @@ const MENU_CATEGORIES = [
         "price": "$31.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/sp04-breadsole-and-chickenchop.webp"
+        "image": "/menu/SIZZLING PLATES/BreadSole & ChickenChop.webp"
       }
     ]
   },
@@ -494,7 +494,7 @@ const MENU_CATEGORIES = [
         "price": "$16.99",
         "desc_fr": "Dumplings à la vapeur farcis d'agneau juteux et de coriandre fraîche.",
         "desc_en": "Steamed soup dumplings filled with juicy lamb and fresh cilantro.",
-        "image": "/menu/lamb-and-cilantro-soup-dumplings.webp"
+        "image": "/menu/DUMPLINGS/Lamp Cilantro Dumplings.webp"
       },
       {
         "id": "",
@@ -504,7 +504,7 @@ const MENU_CATEGORIES = [
         "price": "$8.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/vegetables-dumpling.webp"
+        "image": "/menu/DUMPLINGS/Vegetables Dumpling.webp"
       }
     ]
   },
@@ -520,7 +520,7 @@ const MENU_CATEGORIES = [
         "price": "$15.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/v01-veg-stir-vermicelli.webp"
+        "image": "/menu/VEGETARIAN/Veg Stir Vermicelli.webp"
       },
       {
         "id": "V02",
@@ -530,7 +530,7 @@ const MENU_CATEGORIES = [
         "price": "$13.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/v02-veg-fried-rice.webp"
+        "image": "/menu/VEGETARIAN/Veg Fried Rice.webp"
       },
       {
         "id": "V05",
@@ -540,7 +540,7 @@ const MENU_CATEGORIES = [
         "price": "$13.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/v05-braised-tofu-in-soy-sauce.webp"
+        "image": "/menu/VEGETARIAN/Braised Tofu in Soy Sauce.webp"
       },
       {
         "id": "",
@@ -550,7 +550,7 @@ const MENU_CATEGORIES = [
         "price": "$12.95",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/stir-fried-mixed-vegetables.webp"
+        "image": "/menu/VEGETARIAN/Stir-Fried Mixed Vegetables.webp"
       }
     ]
   },
@@ -559,16 +559,6 @@ const MENU_CATEGORIES = [
     "title_fr": "Cuit style HK",
     "items": [
       {
-        "id": "F01",
-        "name_fr": "Bœuf braisé au cari cuit au four",
-        "name_en": "F01 Baked Curry Braised Beef",
-        "name_zh": "F01 焗咖喱牛腩飯",
-        "price": "$22.99",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/f01-baked-curry-braised-beef.webp"
-      },
-      {
         "id": "F02",
         "name_fr": "Poulet cuit au four sauce crémeuse",
         "name_en": "F02 Baked Chicken Creamy Sauce",
@@ -576,7 +566,7 @@ const MENU_CATEGORIES = [
         "price": "$19.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/f02-baked-chicken-creamy-sauce.webp"
+        "image": "/menu/BAKED HK STYLE/Baked Chicken Creamy Sauce.webp"
       },
       {
         "id": "F03",
@@ -586,7 +576,7 @@ const MENU_CATEGORIES = [
         "price": "$19.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/f03-bake-bpchicken-steak.webp"
+        "image": "/menu/BAKED HK STYLE/Bake BPChicken Steak.webp"
       },
       {
         "id": "F05",
@@ -596,17 +586,17 @@ const MENU_CATEGORIES = [
         "price": "$18.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/f05-baked-bolognese.webp"
+        "image": "/menu/BAKED HK STYLE/Baked Bolognese.webp"
       },
       {
-        "id": "F07",
-        "name_fr": "Filet de poisson cuit au four avec sauce aux champignons crémeuse",
-        "name_en": "BakeFish Fillet w/Creamy MushS",
-        "name_zh": "焗鮮菇石斑柳飯",
-        "price": "$21.99",
+        "id": "F06",
+        "name_fr": "Gratin spécial bœuf",
+        "name_en": "F06 Special Beef Bake",
+        "name_zh": "F06 焗牛魔王",
+        "price": "$24.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/f07-bakefish-fillet-wcreamy-mushs.webp"
+        "image": "/menu/BAKED HK STYLE/Special Beef Bake.webp"
       }
     ]
   },
@@ -622,7 +612,7 @@ const MENU_CATEGORIES = [
         "price": "$21.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/e06-curry-beef-on-rice.webp"
+        "image": "/menu/CURRY STYLE HK/Curry Beef on Rice.webp"
       },
       {
         "id": "E01",
@@ -632,7 +622,7 @@ const MENU_CATEGORIES = [
         "price": "$29.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/e01-curry-beef-no-side.webp"
+        "image": "/menu/CURRY STYLE HK/Curry Beef (no side).webp"
       },
       {
         "id": "E08",
@@ -642,7 +632,7 @@ const MENU_CATEGORIES = [
         "price": "$27.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/e08-curry-lamb-chops-on-rice.webp"
+        "image": "/menu/CURRY STYLE HK/Curry Lamb Chops on Rice.webp"
       },
       {
         "id": "E02",
@@ -652,7 +642,7 @@ const MENU_CATEGORIES = [
         "price": "$33.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/e02-curry-lamb-chops-no-side.webp"
+        "image": "/menu/CURRY STYLE HK/Curry Lamb Chops on Rice (no side).webp"
       }
     ]
   },
@@ -668,7 +658,7 @@ const MENU_CATEGORIES = [
         "price": "$18.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/m01-curry-beef-brisket-lo-ding.webp"
+        "image": "/menu/Curry Beef Brisket Lo Ding - Copy.webp"
       },
       {
         "id": "M02",
@@ -678,7 +668,7 @@ const MENU_CATEGORIES = [
         "price": "$15.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/m02-chicken-and-scrambleeggloding.webp"
+        "image": "/menu/Chicken & ScrambleEgg LoDing.webp"
       }
     ]
   },
@@ -694,7 +684,7 @@ const MENU_CATEGORIES = [
         "price": "$5.99",
         "desc_fr": "Boulettes de poulpe frites garnies de mayonnaise, sauce takoyaki et flocons de bonite.",
         "desc_en": "Deep fried octopus balls topped with mayo, takoyaki sauce, and bonito flakes.",
-        "image": "/menu/c03-takoyakichicken-on-rice.webp"
+        "image": "/menu/Signature Snacks/Takoyaki 4 Pieces.webp"
       },
       {
         "id": "",
@@ -704,7 +694,7 @@ const MENU_CATEGORIES = [
         "price": "$14.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/popcorn-chicken.webp"
+        "image": "/menu/Signature Snacks/Popcorn Chicken.webp"
       },
       {
         "id": "",
@@ -714,7 +704,7 @@ const MENU_CATEGORIES = [
         "price": "$7.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/condensed-milk-toast.webp"
+        "image": "/menu/Signature Snacks/Condensed Milk Toast.webp"
       },
       {
         "id": "",
@@ -724,7 +714,7 @@ const MENU_CATEGORIES = [
         "price": "$9.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/ice-cream-toast.webp"
+        "image": "/menu/Signature Snacks/Ice Cream Toast.webp"
       },
       {
         "id": "",
@@ -734,7 +724,7 @@ const MENU_CATEGORIES = [
         "price": "$6.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/shrimp-toast.webp"
+        "image": "/menu/Signature Snacks/Shrimp Toast.webp"
       },
       {
         "id": "",
@@ -744,7 +734,7 @@ const MENU_CATEGORIES = [
         "price": "$1.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/ice-cream.webp"
+        "image": "/menu/Signature Snacks/Ice Cream.webp"
       },
       {
         "id": "",
@@ -754,7 +744,7 @@ const MENU_CATEGORIES = [
         "price": "$8.99",
         "desc_fr": "Gaufre fraîchement cuite garnie de crème glacée.",
         "desc_en": "Freshly baked waffle topped with ice cream.",
-        "image": "/menu/ice-cream-waffles.webp"
+        "image": "/menu/Signature Snacks/Ice Cream Waffles.webp"
       }
     ]
   },
@@ -770,7 +760,7 @@ const MENU_CATEGORIES = [
         "price": "$4.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/hong-kong-style-milk-tea.webp"
+        "image": "/menu/Drinks/Hong Kong Style Milk Tea.webp"
       },
       {
         "id": "",
@@ -780,7 +770,7 @@ const MENU_CATEGORIES = [
         "price": "$5.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/taro-milk-tea.webp"
+        "image": "/menu/Drinks/Taro Milk Tea.webp"
       },
       {
         "id": "",
@@ -790,7 +780,7 @@ const MENU_CATEGORIES = [
         "price": "$3.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/coffee.webp"
+        "image": "/menu/Drinks/Coffee.webp"
       },
       {
         "id": "",
@@ -800,7 +790,7 @@ const MENU_CATEGORIES = [
         "price": "$5.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/strawberry-matcha-latte.webp"
+        "image": "/menu/Drinks/Strawberry Matcha Latte.webp"
       },
       {
         "id": "",
@@ -810,7 +800,7 @@ const MENU_CATEGORIES = [
         "price": "$5.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/mango-matcha-latte.webp"
+        "image": "/menu/Drinks/Mango Matcha Latte.webp"
       },
       {
         "id": "",
@@ -820,7 +810,7 @@ const MENU_CATEGORIES = [
         "price": "$7.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/mango-passion-slush.webp"
+        "image": "/menu/Drinks/Mango Passion Slush.webp"
       },
       {
         "id": "",
@@ -830,7 +820,7 @@ const MENU_CATEGORIES = [
         "price": "$7.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/strawberry-slush.webp"
+        "image": "/menu/Drinks/Strawberry Slush.webp"
       },
       {
         "id": "",
@@ -840,7 +830,7 @@ const MENU_CATEGORIES = [
         "price": "$4.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/coca-cola-mexican-bottled.webp"
+        "image": "/menu/Drinks/Coca Cola Mexican Bottled.webp"
       },
       {
         "id": "",
@@ -850,7 +840,7 @@ const MENU_CATEGORIES = [
         "price": "$4.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/limonade.webp"
+        "image": "/menu/Drinks/Limonade.webp"
       },
       {
         "id": "",
@@ -860,7 +850,7 @@ const MENU_CATEGORIES = [
         "price": "$3.00",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/diet-coke.webp"
+        "image": "/menu/Drinks/Diet Coke.webp"
       }
     ]
   },
@@ -876,7 +866,7 @@ const MENU_CATEGORIES = [
         "price": "$13.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/b09-spicy-chill-beef.webp"
+        "image": "/menu/SNACKS & SIDES/Spicy Chill Beef.webp"
       },
       {
         "id": "B01",
@@ -886,7 +876,7 @@ const MENU_CATEGORIES = [
         "price": "$22.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/b01-curry-beef-udon-soup.webp"
+        "image": "/menu/SNACKS & SIDES/Curry Beef Udon Soup.webp"
       },
       {
         "id": "B06",
@@ -896,7 +886,7 @@ const MENU_CATEGORIES = [
         "price": "$19.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/b06-chicken-udon-stir-fry.webp"
+        "image": "/menu/SNACKS & SIDES/Chicken Udon Stir-Fry.webp"
       },
       {
         "id": "B03",
@@ -906,7 +896,7 @@ const MENU_CATEGORIES = [
         "price": "$26.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/b03-general-taos-shrimp.webp"
+        "image": "/menu/SNACKS & SIDES/General Tao's Shrimp.webp"
       },
       {
         "id": "B16",
@@ -916,7 +906,7 @@ const MENU_CATEGORIES = [
         "price": "$23.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/b16-general-taos-chicken-2.webp"
+        "image": "/menu/SNACKS & SIDES/General Tao's Chicken.webp"
       },
       {
         "id": "B04",
@@ -926,17 +916,7 @@ const MENU_CATEGORIES = [
         "price": "$5.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/b04-sesame-balls.webp"
-      },
-      {
-        "id": "B18",
-        "name_fr": "B18 Rouleaux de printemps",
-        "name_en": "B18 Spring Rolls",
-        "name_zh": "B18 春卷",
-        "price": "$6.99",
-        "desc_fr": "Rouleaux de printemps croustillants frits farcis de légumes.",
-        "desc_en": "Deep fried crispy spring rolls filled with vegetables.",
-        "image": "/menu/b18-spring-rolls.webp"
+        "image": "/menu/SNACKS & SIDES/Sesame Balls.webp"
       },
       {
         "id": "B19",
