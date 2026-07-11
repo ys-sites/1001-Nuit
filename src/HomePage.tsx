@@ -214,7 +214,7 @@ const MENU_CATEGORIES = [
       {
         "id": "C01",
         "name_fr": "Riz frit aux crevettes sakura et poulet",
-        "name_en": "C01 Sakura Shrimp&Chicken FR",
+        "name_en": "C01 Sakura Shrimp & Chicken Fried Rice",
         "name_zh": "櫻花蝦雞粒炒飯",
         "price": "$21.99",
         "desc_fr": "",
@@ -234,7 +234,7 @@ const MENU_CATEGORIES = [
       {
         "id": "C03",
         "name_fr": "Poulet takoyaki sur riz",
-        "name_en": "C03 TakoyakiChicken on Rice",
+        "name_en": "C03 Takoyaki Chicken on Rice",
         "name_zh": "章魚燒雞飯",
         "price": "$20.99",
         "desc_fr": "",
@@ -244,7 +244,7 @@ const MENU_CATEGORIES = [
       {
         "id": "C04",
         "name_fr": "Crevettes, bœuf et œufs brouillés sur riz",
-        "name_en": "C04 Prawns BeefScrambleEggsRice",
+        "name_en": "C04 Prawns Beef Scramble Eggs Rice",
         "name_zh": "香蔥大蝦牛肉滑蛋飯",
         "price": "$22.99",
         "desc_fr": "",
@@ -254,7 +254,7 @@ const MENU_CATEGORIES = [
       {
         "id": "C06",
         "name_fr": "Spaghetti sauté au bœuf sauce poivre noir",
-        "name_en": "C06 Spaghetti w/Beef BPSauce",
+        "name_en": "C06 Spaghetti w/Beef BP Sauce",
         "name_zh": "黑椒牛肉炒意粉",
         "price": "$22.99",
         "desc_fr": "",
@@ -264,7 +264,7 @@ const MENU_CATEGORIES = [
       {
         "id": "C09",
         "name_fr": "Côtes de bœuf AAA sauce poivre noir avec œuf au plat sur riz",
-        "name_en": "C09 AAA Beef Ribs SunnyEggRice",
+        "name_en": "C09 AAA Beef Ribs Sunny Egg Rice",
         "name_zh": "AAA 黑椒牛仔骨煎蛋飯",
         "price": "$26.99",
         "desc_fr": "",
@@ -430,7 +430,7 @@ const MENU_CATEGORIES = [
       {
         "id": "",
         "name_fr": "Bateau 2",
-        "name_en": "Boat2",
+        "name_en": "Boat 2",
         "name_zh": "壽司船 2",
         "price": "$111.99",
         "desc_fr": "",
@@ -476,7 +476,7 @@ const MENU_CATEGORIES = [
       {
         "id": "SP04",
         "name_fr": "Filet de sole et côtelette de poulet",
-        "name_en": "SP04 BreadSole&ChickenChop",
+        "name_en": "SP04 Bread Sole & Chicken Chop",
         "name_zh": "SP04 龍利柳配雞扒",
         "price": "$31.99",
         "desc_fr": "",
@@ -492,7 +492,7 @@ const MENU_CATEGORIES = [
       {
         "id": "",
         "name_fr": "Dumplets à la soupe d'agneau et coriandre",
-        "name_en": "Lamb&Cilantro Soup Dumplings",
+        "name_en": "Lamb & Cilantro Soup Dumplings",
         "name_zh": "羊肉香菜小籠包",
         "price": "$16.99",
         "desc_fr": "",
@@ -574,7 +574,7 @@ const MENU_CATEGORIES = [
       {
         "id": "F03",
         "name_fr": "Bifteck de poulet au poivre noir cuit au four",
-        "name_en": "F03 Bake BPChicken Steak",
+        "name_en": "F03 Bake BP Chicken Steak",
         "name_zh": "F03 焗黑椒雞扒飯",
         "price": "$19.99",
         "desc_fr": "",
@@ -666,7 +666,7 @@ const MENU_CATEGORIES = [
       {
         "id": "M02",
         "name_fr": "Poulet et œufs brouillés Lo Ding",
-        "name_en": "M02 Chicken&ScrambleEggLoDing",
+        "name_en": "M02 Chicken & Scramble Egg Lo Ding",
         "name_zh": "M02 滑蛋雞扒撈丁",
         "price": "$15.99",
         "desc_fr": "",
@@ -943,7 +943,7 @@ const MENU_CATEGORIES = [
       },
       {
         "id": "B18",
-        "name_fr": "B18 Rouleaux de printemps",
+        "name_fr": "Rouleaux de printemps",
         "name_en": "B18 Spring Rolls",
         "name_zh": "B18 春卷",
         "price": "$6.99",
@@ -954,17 +954,6 @@ const MENU_CATEGORIES = [
     ]
   }
 ];
-
-const MINI_MENU = [
-  { name_en: "B16 General Tao's Chicken", name_fr: "B16 Poulet Général Tao", price: "$23.99" },
-  { name_en: "E06 Curry Beef on Rice", name_fr: "E06 Cari de bœuf sur riz", price: "$21.99" },
-  {
-    name_en: "SP01 Sizzling Lamb Chops",
-    name_fr: "SP01 Côtelettes d'agneau sur plaque chaude",
-    price: "$39.99",
-  },
-];
-
 
 export default function HomePage() {
   const [activeCategory, setActiveCategory] = useState(0);
@@ -1059,7 +1048,7 @@ export default function HomePage() {
             <span className="w-8 h-8 md:w-9 md:h-9 flex-shrink-0 flex items-center justify-center rounded-full bg-[#cfbe91]/15 text-[#cfbe91] group-hover/loc:bg-[#cfbe91] group-hover/loc:text-[#0a0b0a] transition-colors duration-300">
               <MapPin size={15} strokeWidth={1.75} />
             </span>
-            <span className="text-[9px] md:text-xs font-medium tracking-wide text-[#efe7d2]/90 leading-tight max-w-[150px] md:max-w-none md:whitespace-nowrap">
+            <span className="text-[9px] md:text-xs font-bold tracking-wide text-white leading-tight max-w-[150px] md:max-w-none md:whitespace-nowrap">
               11602-A Bd de Salaberry, Dollard-des-Ormeaux, QC H9B 2R8
             </span>
           </a>
@@ -1112,26 +1101,6 @@ export default function HomePage() {
               alt="Menu"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-[10s] group-hover:scale-105"
             />
-            {/* Mini Menu Peek */}
-            <div className="absolute top-6 left-6 right-6 z-10 hidden sm:block pointer-events-none">
-              <div className="bg-[#0a0b0a]/70 backdrop-blur-md md:backdrop-blur-xl border border-[#333330] rounded-2xl p-4 flex flex-col gap-3 transform -translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                {MINI_MENU.map((item, idx) => (
-                  <div
-                    key={idx}
-                    className="flex justify-between items-baseline text-xs"
-                  >
-                    <span className="font-serif text-[#cfbe91] tracking-wide">
-                      {lang === "fr" ? item.name_fr : item.name_en}
-                    </span>
-                    <div className="flex-grow border-b border-dashed border-[#cfbe91]/30 mx-2 opacity-50"></div>
-                    <span className="font-serif text-[#cfbe91]">
-                      {item.price}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
             <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 z-10 bg-[#0a0b0a]/85 backdrop-blur-none md:backdrop-blur-md md:bg-[#0a0b0a]/80 border border-[#333330] rounded-full pl-6 py-2.5 pr-2.5 flex items-center gap-5 group-hover:bg-white group-hover:text-black group-hover:border-white transition-all duration-300">
               <span className="text-[10px] tracking-[0.2em] font-medium uppercase mt-0.5">
                 {lang === "fr" ? "Menu" : "Menu"}
