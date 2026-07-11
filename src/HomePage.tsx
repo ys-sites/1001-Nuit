@@ -10,7 +10,10 @@ import {
   Calendar,
   X,
   ShoppingBag,
+  MapPin,
 } from "lucide-react";
+
+const RESTAURANT_ADDRESS = "11602-A Boulevard de Salaberry, Dollard-des-Ormeaux, QC H9B 2R8";
 
 const TiktokIcon = ({ size = 24, className = "" }) => (
   <svg
@@ -1033,6 +1036,34 @@ export default function HomePage() {
 
 
 
+          {/* Location Badge bottom left */}
+          <a
+            href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(RESTAURANT_ADDRESS)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => {
+              const isIOS =
+                /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+                (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+              if (isIOS) {
+                e.preventDefault();
+                window.open(
+                  `https://maps.apple.com/?daddr=${encodeURIComponent(RESTAURANT_ADDRESS)}`,
+                  "_blank",
+                  "noopener,noreferrer"
+                );
+              }
+            }}
+            className="group/loc absolute bottom-5 left-5 md:bottom-10 md:left-10 z-20 flex items-center gap-2.5 md:gap-3 bg-[#0a0b0a]/85 backdrop-blur-none md:backdrop-blur-md md:bg-[#0a0b0a]/60 border border-[#333330] hover:border-[#cfbe91]/60 rounded-full py-1.5 pl-1.5 pr-4 md:py-2 md:pl-2 md:pr-5 transition-all duration-300"
+          >
+            <span className="w-8 h-8 md:w-9 md:h-9 flex-shrink-0 flex items-center justify-center rounded-full bg-[#cfbe91]/15 text-[#cfbe91] group-hover/loc:bg-[#cfbe91] group-hover/loc:text-[#0a0b0a] transition-colors duration-300">
+              <MapPin size={15} strokeWidth={1.75} />
+            </span>
+            <span className="text-[10px] md:text-xs font-medium tracking-wide text-[#efe7d2]/90 whitespace-nowrap">
+              {lang === "fr" ? "Dollard-des-Ormeaux, QC" : "Dollard-des-Ormeaux, QC"}
+            </span>
+          </a>
+
           {/* Social Badges bottom right */}
           <div className="absolute bottom-5 right-5 md:bottom-10 md:right-10 z-20 flex items-center gap-2 md:gap-3">
             {[
@@ -1748,10 +1779,10 @@ export default function HomePage() {
 
         <div className="text-[12px] opacity-80 mb-4">
           <a
-            href="mailto:1001nuitmtl@gmail.com"
+            href="mailto:info@1001nuit.com"
             className="text-[#cfbe91] hover:text-[#efe7d2] transition-colors"
           >
-            1001nuitmtl@gmail.com
+            info@1001nuit.com
           </a>
         </div>
         <p className="text-[10px] uppercase tracking-widest opacity-30">
