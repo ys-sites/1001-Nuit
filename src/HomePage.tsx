@@ -1059,8 +1059,8 @@ export default function HomePage() {
             <span className="w-8 h-8 md:w-9 md:h-9 flex-shrink-0 flex items-center justify-center rounded-full bg-[#cfbe91]/15 text-[#cfbe91] group-hover/loc:bg-[#cfbe91] group-hover/loc:text-[#0a0b0a] transition-colors duration-300">
               <MapPin size={15} strokeWidth={1.75} />
             </span>
-            <span className="text-[10px] md:text-xs font-medium tracking-wide text-[#efe7d2]/90 whitespace-nowrap">
-              {lang === "fr" ? "Dollard-des-Ormeaux, QC" : "Dollard-des-Ormeaux, QC"}
+            <span className="text-[9px] md:text-xs font-medium tracking-wide text-[#efe7d2]/90 leading-tight max-w-[150px] md:max-w-none md:whitespace-nowrap">
+              11602-A Bd de Salaberry, Dollard-des-Ormeaux, QC H9B 2R8
             </span>
           </a>
 
@@ -1112,8 +1112,6 @@ export default function HomePage() {
               alt="Menu"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-[10s] group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-[#0a0b0a]/30 group-hover:bg-[#0a0b0a]/10 transition-colors duration-500 z-0"></div>
-
             {/* Mini Menu Peek */}
             <div className="absolute top-6 left-6 right-6 z-10 hidden sm:block pointer-events-none">
               <div className="bg-[#0a0b0a]/70 backdrop-blur-md md:backdrop-blur-xl border border-[#333330] rounded-2xl p-4 flex flex-col gap-3 transform -translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
@@ -1157,8 +1155,6 @@ export default function HomePage() {
               alt="Reservation"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-[10s] group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-[#0a0b0a]/40 group-hover:bg-[#0a0b0a]/20 transition-colors duration-500 z-0"></div>
-
             <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 z-10 bg-[#0a0b0a]/85 backdrop-blur-none md:backdrop-blur-md md:bg-[#0a0b0a]/80 border border-[#333330] rounded-full pl-6 py-2.5 pr-2.5 flex items-center gap-5 group-hover:bg-white group-hover:text-black group-hover:border-white transition-all duration-300">
               <span className="text-[10px] tracking-[0.2em] font-medium uppercase mt-0.5">
                 {lang === "fr" ? "Réservation" : "Reservation"}
@@ -1182,8 +1178,6 @@ export default function HomePage() {
               alt="Order Online"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-[10s] group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-[#0a0b0a]/30 group-hover:bg-[#0a0b0a]/10 transition-colors duration-500 z-0"></div>
-
             <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 z-10 bg-[#0a0b0a]/85 backdrop-blur-none md:backdrop-blur-md md:bg-[#0a0b0a]/80 border border-[#333330] rounded-full pl-6 py-2.5 pr-2.5 flex items-center gap-5 group-hover:bg-white group-hover:text-black group-hover:border-white transition-all duration-300">
               <span className="text-[10px] tracking-[0.2em] font-medium uppercase mt-0.5">
                 {lang === "fr" ? "Commander en ligne — À emporter" : "Order Online — Pickup"}
