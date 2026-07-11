@@ -926,7 +926,7 @@ const MENU_CATEGORIES = [
         "price": "$6.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/b19-fried-scallops.webp"
+        "image": "/menu/SNACKS & SIDES/Fried Scallops.webp"
       },
       {
         "id": "B17",
@@ -936,7 +936,17 @@ const MENU_CATEGORIES = [
         "price": "$14.99",
         "desc_fr": "",
         "desc_en": "",
-        "image": "/menu/b17-deep-fried-calamari.webp"
+        "image": "/menu/SNACKS & SIDES/Deep Fried Calamari.webp"
+      },
+      {
+        "id": "B18",
+        "name_fr": "B18 Rouleaux de printemps",
+        "name_en": "B18 Spring Rolls",
+        "name_zh": "B18 春卷",
+        "price": "$6.99",
+        "desc_fr": "Rouleaux de printemps croustillants frits farcis de légumes.",
+        "desc_en": "Deep fried crispy spring rolls filled with vegetables.",
+        "image": "/menu/SNACKS & SIDES/Spring Rolls.png"
       }
     ]
   }
