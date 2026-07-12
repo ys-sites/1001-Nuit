@@ -1049,7 +1049,7 @@ export default function HomePage() {
               <MapPin size={15} strokeWidth={1.75} />
             </span>
             <span className="text-[9px] md:text-xs font-bold tracking-wide text-white leading-tight max-w-[150px] md:max-w-none md:whitespace-nowrap">
-              11602-A Bd de Salaberry, Dollard-des-Ormeaux, QC H9B 2R8
+              11602-A Bd de Salaberry, Dollard-des-Ormeaux
             </span>
           </a>
 
