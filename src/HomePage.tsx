@@ -1587,8 +1587,8 @@ export default function HomePage() {
             <div className="max-w-2xl mx-auto">
               <BlurText
                 text={lang === "fr"
-                  ? "Réservez en ligne pour une confirmation instantanée (jusqu'à 8 personnes) ou appelez-nous directement."
-                  : "Book online for instant confirmation (up to 8 guests) or call us directly to arrange your reservation."}
+                  ? "Appelez-nous directement pour effectuer votre réservation."
+                  : "Call us directly to arrange your reservation."}
                 delay={20}
                 animateBy="words"
                 className="text-sm md:text-lg font-medium opacity-70 leading-relaxed justify-center"
@@ -1596,52 +1596,14 @@ export default function HomePage() {
             </div>
           </ScrollTextReveal>
 
-          <div className="flex flex-col md:flex-row justify-center items-stretch gap-8 max-w-4xl mx-auto mt-12">
-            {/* Online Booking Card */}
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              className="flex-1 p-8 md:p-10 bg-white border border-[#cfbe91]/40 rounded-[2.5rem] shadow-[0_24px_60px_rgba(0,0,0,0.06)] flex flex-col justify-between items-center text-center group hover:shadow-[0_30px_70px_rgba(207,190,145,0.15)] transition-all duration-500"
-            >
-              <div className="flex flex-col items-center gap-5">
-                <div className="w-16 h-16 rounded-2xl bg-[#cfbe91]/10 flex items-center justify-center text-[#cfbe91] group-hover:bg-[#cfbe91] group-hover:text-white transition-all duration-500">
-                  <Calendar size={28} strokeWidth={1.5} />
-                </div>
-                <div>
-                  <h3 className="font-serif text-2xl md:text-3xl text-[#1a1c19] mb-2 font-semibold">
-                    {lang === "fr" ? "En Ligne" : "Book Online"}
-                  </h3>
-                  <p className="text-sm text-[#1a1c19]/60 font-medium leading-relaxed max-w-[280px] mx-auto">
-                    {lang === "fr"
-                      ? "Confirmation instantanée et rapide en quelques clics."
-                      : "Quick, instant confirmation in just a few clicks."}
-                  </p>
-                </div>
-              </div>
-              <div className="mt-8 w-full">
-                <motion.a
-                  href="https://cloud.quickposhub.com/onlineorder/#/pages/order/tableurl?code=eJlRgR8hfc"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileHover={{ scale: 1.03 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="w-full flex items-center justify-center gap-2 bg-[#c8b88a] text-[#1a1c19] hover:bg-[#efe7d2] px-4 py-4 rounded-2xl font-bold text-xs sm:text-sm uppercase tracking-wider transition-colors duration-300 shadow-md group/btn whitespace-nowrap"
-                >
-                  <span>{lang === "fr" ? "Réserver en ligne" : "Reserve Online"}</span>
-                  <ArrowRight size={16} className="group-hover/btn:translate-x-1 transition-transform" />
-                </motion.a>
-              </div>
-            </motion.div>
-
+          <div className="max-w-md mx-auto mt-12">
             {/* Phone Booking Card */}
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-              className="flex-1 p-8 md:p-10 bg-white border border-[#cfbe91]/20 rounded-[2.5rem] shadow-[0_24px_60px_rgba(0,0,0,0.06)] flex flex-col justify-between items-center text-center group hover:shadow-[0_30px_70px_rgba(0,0,0,0.08)] transition-all duration-500"
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+              className="p-8 md:p-10 bg-white border border-[#cfbe91]/40 rounded-[2.5rem] shadow-[0_24px_60px_rgba(0,0,0,0.06)] flex flex-col justify-between items-center text-center group hover:shadow-[0_30px_70px_rgba(207,190,145,0.15)] transition-all duration-500"
             >
               <div className="flex flex-col items-center gap-5">
                 <div className="w-16 h-16 rounded-2xl bg-[#cfbe91]/10 flex items-center justify-center text-[#cfbe91] group-hover:bg-[#cfbe91] group-hover:text-white transition-all duration-500">
@@ -1653,8 +1615,8 @@ export default function HomePage() {
                   </h3>
                   <p className="text-sm text-[#1a1c19]/60 font-medium leading-relaxed max-w-[280px] mx-auto">
                     {lang === "fr"
-                      ? "Idéal pour les groupes de plus de 8 personnes ou événements spéciaux."
-                      : "Best for groups larger than 8 guests or special events."}
+                      ? "Contactez-nous directement pour réserver votre table ou organiser vos événements."
+                      : "Call us directly to book your table or arrange your special events."}
                   </p>
                 </div>
               </div>
@@ -1702,7 +1664,7 @@ export default function HomePage() {
                 </h3>
                 <div className="flex flex-col gap-2 font-medium text-[#1a1c19]/80">
                   <p className="text-sm">
-                    {lang === "fr" ? "Réservez en ligne via le lien de réservation ci-dessus." : "Book online using the reservation link above."}
+                    {lang === "fr" ? "Pour toute réservation de table ou d'événement :" : "For table reservations or special events:"}
                   </p>
                   <p className="text-sm">
                     {lang === "fr" ? "Appelez-nous au" : "Call us at"}{" "}
