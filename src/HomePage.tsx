@@ -31,6 +31,7 @@ import Navbar from "./components/Navbar";
 import ShinyText from "./components/ui/ShinyText";
 import BlurText from "./components/ui/BlurText";
 import CurvedLoop from "./components/ui/CurvedLoop";
+import ScrollTextReveal from "./components/ui/ScrollTextReveal";
 
 import NeighborhoodMap from "./components/NeighborhoodMap";
 import SocialFeedback from "./components/SocialFeedback";
@@ -1450,7 +1451,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="mb-8">
+            <ScrollTextReveal delay={0.35} textColor="#1a1c19" className="mb-8">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-[1px] bg-[#1a1c19]/30"></div>
                 <span className="text-[#1a1c19]/60 uppercase tracking-[0.2em] text-xs font-bold">
@@ -1486,7 +1487,7 @@ export default function HomePage() {
                   className="text-[#1a1c19]/80"
                 />
               </div>
-            </div>
+            </ScrollTextReveal>
           </motion.div>
         </div>
 
@@ -1519,7 +1520,7 @@ export default function HomePage() {
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.12 }}
             className="w-full lg:w-1/2 flex flex-col gap-8"
           >
-            <div>
+            <ScrollTextReveal delay={0.3} textColor="#efe7d2">
               <span className="text-[#cfbe91] uppercase tracking-[0.2em] font-bold text-sm mb-4 block">
                 {lang === "fr" ? "Événements Privés" : "Private Events"}
               </span>
@@ -1547,7 +1548,7 @@ export default function HomePage() {
                   {lang === "fr" ? "Se Renseigner" : "Inquire Now"}
                 </button>
               </div>
-            </div>
+            </ScrollTextReveal>
           </motion.div>
         
         </div>
@@ -1577,7 +1578,7 @@ export default function HomePage() {
           </motion.div>
         </div>
         <div className="max-w-5xl mx-auto px-6 md:px-12 relative z-10 w-full">
-          <div className="mb-16 text-center">
+          <ScrollTextReveal className="mb-16 text-center" textColor="#1a1c19">
             <h2 className="font-serif text-5xl md:text-7xl uppercase tracking-widest leading-[1] mb-6 text-[#1a1c19]">
               <ShinyText text={lang === "fr" ? "Réservez" : "Reserve"} color="#1a1c19" shineColor="#cfbe91" speed={3} /> <br />
               <span className="text-[#cfbe91] italic normal-case font-light drop-shadow-sm">
@@ -1594,7 +1595,7 @@ export default function HomePage() {
                 className="text-sm md:text-lg font-medium opacity-70 leading-relaxed justify-center"
               />
             </div>
-          </div>
+          </ScrollTextReveal>
 
           <div className="max-w-md mx-auto mt-12">
             {/* Phone Booking Card */}
@@ -1646,7 +1647,7 @@ export default function HomePage() {
             {/* Left Info Pane */}
             <div className="w-full lg:w-[350px] shrink-0 flex flex-col gap-10">
 
-              <div className="flex flex-col gap-4">
+              <ScrollTextReveal className="flex flex-col gap-4" textColor="#1a1c19" delay={0.1}>
                 <h3 className="font-serif text-3xl uppercase tracking-widest text-[#1a1c19]">
                   {lang === "fr" ? "Emplacement" : "Location"}
                 </h3>
@@ -1656,9 +1657,9 @@ export default function HomePage() {
                     Dollard-des-Ormeaux, QC H9B 2R8
                   </p>
                 </div>
-              </div>
+              </ScrollTextReveal>
 
-              <div className="flex flex-col gap-4">
+              <ScrollTextReveal className="flex flex-col gap-4" textColor="#1a1c19" delay={0.2}>
                 <h3 className="font-serif text-3xl uppercase tracking-widest text-[#1a1c19]">
                   {lang === "fr" ? "Contact & Réservations" : "Contact & Bookings"}
                 </h3>
@@ -1673,13 +1674,13 @@ export default function HomePage() {
                     </a>
                   </p>
                 </div>
-              </div>
+              </ScrollTextReveal>
             </div>
 
             <div className="flex-grow w-full">
-              <div className="w-full h-full">
+              <ScrollTextReveal className="w-full h-full" textColor="#1a1c19" delay={0.3}>
                 <NeighborhoodMap lang={lang} />
-              </div>
+              </ScrollTextReveal>
             </div>
           </div>
         </div>
