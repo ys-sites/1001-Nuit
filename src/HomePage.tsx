@@ -1409,8 +1409,8 @@ export default function HomePage() {
             {/* Image Composition */}
             <div className="relative w-full aspect-[4/5] max-w-md mx-auto lg:mx-0 mt-8 mb-16 lg:my-0">
               <img
-                src="/drink.webp"
-                alt="Restaurant Interior"
+                src="/menu/Drinks/Strawberry Matcha Latte.jpeg"
+                alt="Strawberry Matcha Latte"
                 loading="lazy"
                 decoding="async"
                 className="w-full h-full object-cover rounded-[2.5rem] shadow-xl"
@@ -1423,8 +1423,8 @@ export default function HomePage() {
                 className="absolute -bottom-6 -right-4 sm:-bottom-10 sm:-right-10 w-1/2 sm:w-2/3 max-w-[180px] sm:max-w-[240px] aspect-square rounded-[2rem] overflow-hidden border-[8px] sm:border-[12px] border-[#faf8f5] shadow-2xl"
               >
                 <img
-                  src="/dessert.webp"
-                  alt="Dessert"
+                  src="/menu/Signature Snacks/Ice Cream Waffles.jpeg"
+                  alt="Ice Cream Waffles"
                   loading="lazy"
                   decoding="async"
                   className="w-full h-full object-cover"
