@@ -9,6 +9,7 @@ interface VideoItem {
 }
 
 const VIDEOS: VideoItem[] = [
+  { id: 9, src: "/video/insta_9.mp4", link: "https://www.instagram.com/reel/Da6Oy-VoXVl/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
   { id: 2, src: "/video/insta_2.mp4", link: "https://www.instagram.com/reel/DZWAQRGhzzf/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
   { id: 7, src: "/video/insta_7.mp4", link: "https://www.instagram.com/reel/DadczovOwRA/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
   { id: 3, src: "/video/insta_3.mp4", link: "https://www.instagram.com/reel/DZxViJ6RVwS/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
