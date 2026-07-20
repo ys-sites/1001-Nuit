@@ -31,7 +31,7 @@ import Navbar from "./components/Navbar";
 import ShinyText from "./components/ui/ShinyText";
 import BlurText from "./components/ui/BlurText";
 import CurvedLoop from "./components/ui/CurvedLoop";
-import ScrollTextReveal from "./components/ui/ScrollTextReveal";
+
 import NeighborhoodMap from "./components/NeighborhoodMap";
 import SocialFeedback from "./components/SocialFeedback";
 
@@ -1450,7 +1450,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <ScrollTextReveal delay={0.35} textColor="#1a1c19" className="mb-8">
+            <div className="mb-8">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-[1px] bg-[#1a1c19]/30"></div>
                 <span className="text-[#1a1c19]/60 uppercase tracking-[0.2em] text-xs font-bold">
@@ -1486,7 +1486,7 @@ export default function HomePage() {
                   className="text-[#1a1c19]/80"
                 />
               </div>
-            </ScrollTextReveal>
+            </div>
           </motion.div>
         </div>
 
@@ -1519,7 +1519,7 @@ export default function HomePage() {
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.12 }}
             className="w-full lg:w-1/2 flex flex-col gap-8"
           >
-            <ScrollTextReveal delay={0.3} textColor="#efe7d2">
+            <div>
               <span className="text-[#cfbe91] uppercase tracking-[0.2em] font-bold text-sm mb-4 block">
                 {lang === "fr" ? "Événements Privés" : "Private Events"}
               </span>
@@ -1529,7 +1529,7 @@ export default function HomePage() {
               <div className="flex flex-col gap-6 text-[#efe7d2]/70 text-lg leading-relaxed mt-6">
                 <BlurText
                   text={lang === "fr"
-                    ? "Qu'il s'agisse d'une réunion d'affaires intime, d'un dîner de répétition ou d'une réception fastueuse, nos salles à manger privées offrent le cadre idéal. Nous proposons des menus personnalisés avec des ingrédients halal finement sélectionnés, et un service dédié pour faire de votre événement une expérience inoubliable."
+                    ? "Qu'il s'agisse d'une réunion d'affaires intime, d'un dîner de répétition ou d'une réception fastueuse, nos salles à manger privées offrent le cadre idéal. Nous proposons des menus personnalisés avec des ingrédients halal finement sélectionnés, et un service dédié pour faire de votre événement une expérience inouivilable."
                     : "Whether it is an intimate business gathering, a rehearsal dinner, or a lavish reception, our private dining rooms provide the perfect backdrop. We offer custom menus crafted with the finest halal ingredients, and dedicated service to make your event an unforgettable experience."}
                   delay={10}
                   animateBy="words"
@@ -1547,7 +1547,7 @@ export default function HomePage() {
                   {lang === "fr" ? "Se Renseigner" : "Inquire Now"}
                 </button>
               </div>
-            </ScrollTextReveal>
+            </div>
           </motion.div>
         
         </div>
@@ -1577,7 +1577,7 @@ export default function HomePage() {
           </motion.div>
         </div>
         <div className="max-w-5xl mx-auto px-6 md:px-12 relative z-10 w-full">
-          <ScrollTextReveal className="mb-16 text-center" textColor="#1a1c19">
+          <div className="mb-16 text-center">
             <h2 className="font-serif text-5xl md:text-7xl uppercase tracking-widest leading-[1] mb-6 text-[#1a1c19]">
               <ShinyText text={lang === "fr" ? "Réservez" : "Reserve"} color="#1a1c19" shineColor="#cfbe91" speed={3} /> <br />
               <span className="text-[#cfbe91] italic normal-case font-light drop-shadow-sm">
@@ -1594,7 +1594,7 @@ export default function HomePage() {
                 className="text-sm md:text-lg font-medium opacity-70 leading-relaxed justify-center"
               />
             </div>
-          </ScrollTextReveal>
+          </div>
 
           <div className="max-w-md mx-auto mt-12">
             {/* Phone Booking Card */}
@@ -1646,7 +1646,7 @@ export default function HomePage() {
             {/* Left Info Pane */}
             <div className="w-full lg:w-[350px] shrink-0 flex flex-col gap-10">
 
-              <ScrollTextReveal className="flex flex-col gap-4" textColor="#1a1c19" delay={0.1}>
+              <div className="flex flex-col gap-4">
                 <h3 className="font-serif text-3xl uppercase tracking-widest text-[#1a1c19]">
                   {lang === "fr" ? "Emplacement" : "Location"}
                 </h3>
@@ -1656,9 +1656,9 @@ export default function HomePage() {
                     Dollard-des-Ormeaux, QC H9B 2R8
                   </p>
                 </div>
-              </ScrollTextReveal>
+              </div>
 
-              <ScrollTextReveal className="flex flex-col gap-4" textColor="#1a1c19" delay={0.2}>
+              <div className="flex flex-col gap-4">
                 <h3 className="font-serif text-3xl uppercase tracking-widest text-[#1a1c19]">
                   {lang === "fr" ? "Contact & Réservations" : "Contact & Bookings"}
                 </h3>
@@ -1673,14 +1673,13 @@ export default function HomePage() {
                     </a>
                   </p>
                 </div>
-              </ScrollTextReveal>
+              </div>
             </div>
 
-            {/* Right Map Explorer Pane */}
             <div className="flex-grow w-full">
-              <ScrollTextReveal className="w-full h-full" textColor="#1a1c19" delay={0.3}>
+              <div className="w-full h-full">
                 <NeighborhoodMap lang={lang} />
-              </ScrollTextReveal>
+              </div>
             </div>
           </div>
         </div>
