@@ -1587,8 +1587,8 @@ export default function HomePage() {
             <div className="max-w-2xl mx-auto">
               <BlurText
                 text={lang === "fr"
-                  ? "Appelez-nous directement pour effectuer votre réservation."
-                  : "Call us directly to arrange your reservation."}
+                  ? "Nous acceptons les réservations uniquement pour les groupes de 8 personnes ou plus. Appelez-nous directement."
+                  : "We accept table reservations only for groups of 8 or more people. Please call us directly."}
                 delay={20}
                 animateBy="words"
                 className="text-sm md:text-lg font-medium opacity-70 leading-relaxed justify-center"
@@ -1615,8 +1615,8 @@ export default function HomePage() {
                   </h3>
                   <p className="text-sm text-[#1a1c19]/60 font-medium leading-relaxed max-w-[280px] mx-auto">
                     {lang === "fr"
-                      ? "Contactez-nous directement pour réserver votre table ou organiser vos événements."
-                      : "Call us directly to book your table or arrange your special events."}
+                      ? "Réservations acceptées uniquement pour les groupes de 8 personnes ou plus. Contactez-nous pour réserver."
+                      : "Reservations are accepted only for groups of 8 or more people. Call us directly to book your table."}
                   </p>
                 </div>
               </div>
@@ -1664,7 +1664,7 @@ export default function HomePage() {
                 </h3>
                 <div className="flex flex-col gap-2 font-medium text-[#1a1c19]/80">
                   <p className="text-sm">
-                    {lang === "fr" ? "Pour toute réservation de table ou d'événement :" : "For table reservations or special events:"}
+                    {lang === "fr" ? "Pour toute réservation de table (8+ personnes uniquement) ou d'événement :" : "For table reservations (groups of 8+ only) or special events:"}
                   </p>
                   <p className="text-sm">
                     {lang === "fr" ? "Appelez-nous au" : "Call us at"}{" "}
