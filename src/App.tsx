@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import HomePage from './HomePage';
 import ReviewPage from './ReviewPage';
 import ClosedPage from './ClosedPage';
@@ -15,6 +16,7 @@ export default function App() {
           <Route path="/thank-you" element={<ThankYouPage />} />
         </Routes>
       </main>
+      <Analytics />
     </div>
   );
 }
