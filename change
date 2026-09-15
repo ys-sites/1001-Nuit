@@ -1,0 +1,249 @@
+# 1001 NUITS — MENU SCAN & AUDIT REPORT (QuickPOSHub vs Website)
+
+Scan Date: September 15, 2026  
+Source URL: https://cloud.quickposhub.com/onlineorder/#/pages/order/index?hotelid=127200&tableid=019e4618-9152-7228-b90c-4251a424d7aa&dinsecret=17857503&scanId=019f44da-8f3c-70df-bebe-0e28ce5adee5
+
+---
+
+## 🚨 1. MAJOR DISCOVERY: NEW ALL-YOU-CAN-EAT (AYCE) BUFFET SYSTEM
+
+QuickPOSHub now features an **All-You-Can-Eat (AYCE) Buffet** pricing model alongside the à la carte **All Day Menu**:
+
+| Service | Price | Details & Conditions |
+| :--- | :--- | :--- |
+| **AYCE Lunch** | **$28.99** | Complete buffet selection (Appetizers, Fried Favorites, Hot Kitchen, Tempura, Sushi Rolls, Nigiri, select Sashimi, Desserts) |
+| **AYCE Dinner** | **$43.99** | Full premium buffet selection including expanded Sashimi (Tuna, Escolar, Surf Clam, Tobiko), Soup of the Week, Kimchi, and specialty items |
+| **Kids (Under 5)** | **FREE** | Age under 5 eat free |
+| **Ice Cream** | **Self-Service** | Included for dine-in buffet guests |
+| **Leftover Policy** | — | Customers will be charged for excessive leftover food (*les clients devront payer des frais en cas de gaspillage excessif de nourriture*) |
+| **Gratuity** | **15%** | Added for groups of 6 or more |
+
+---
+
+## 🆕 2. NEW DISHES & DRINKS IN QUICKPOS (NOT CURRENTLY ON WEBSITE)
+
+These items are actively available on the QuickPOSHub menu but are **missing from `HomePage.tsx`**:
+
+| Category in POS | Item Name / Code | POS Price | Notes / Status |
+| :--- | :--- | :--- | :--- |
+| **Snacks & Sides** | **B05 Chicken wing with Fries** | **$13.99** | New snack & side combo |
+| **Snacks & Sides** | **Chicken wings\*Fries** | **$14.99** | Alternative wings & fries dish |
+| **Combo (Sushi)** | **California Roll 10 PCS** | **$9.99** | Missing from website sushi combo list |
+| **Drink / Dessert** | **coconut water** | **$3.99** | New beverage |
+| **Drink / Dessert** | **Oolong Tea (no sugar)** | **$4.99** | New beverage |
+| **Drink / Dessert** | **Milkis** | **$3.99** | New beverage (popular Asian carbonated milk drink) |
+| **Drink / Dessert** | **Sparkling Water** | **$6.99** | New beverage (San Pellegrino bottle) |
+| **Drink / Dessert** | **Cheese cake Yuzu** | **$7.99** | New dessert |
+| **Signature Snack / Drink** | **Matcha Mochi** | **$4.99** | New dessert (in both Signature Snack & Drink tabs) |
+| **Signature Snack / Drink** | **Strawberry Mochi** | **$4.99** | New dessert (in both Signature Snack & Drink tabs) |
+
+---
+
+## ⚠️ 3. ITEMS ON WEBSITE BUT NOT FOUND IN QUICKPOS ALL DAY MENU
+
+These dishes currently appear on the website, but were **NOT present** in the live QuickPOSHub All Day Menu (they may have been retired, sold out, or moved exclusively to the AYCE menu):
+
+| Category on Website | Item Name / Code | Website Price | Status in QuickPOSHub |
+| :--- | :--- | :--- | :--- |
+| **Main Dish** | **C04 Prawns Beef Scramble Eggs Rice** | $22.99 | Not found in POS All Day Menu |
+| **Main Dish** | **C13 Stir-fried Beef udon** | $23.99 | Not found in POS All Day Menu |
+| **Snacks & Sides** | **B03 General Tao's Shrimp** | $26.99 | Not found in POS Snacks & Sides |
+| **Signature Snack** | **Ice cream waffles** | $8.99 | Not found in POS Signature Snack |
+| **Sizzling Plates** | **SP01 Sizzling Lamb Chops** | $37.99 | Not found in POS Sizzling Plates |
+| **Sizzling Plates** | **SP04 Bread Sole & Chicken Chop** | $31.99 | Not found in POS Sizzling Plates |
+| **Dumplings** | **Lamb & Cilantro Soup Dumplings** | $16.99 | Not found in POS Dumplings |
+| **Baked HK Style** | **F02, F03, F05, F06** (All items) | $18.99–$24.99 | Whole category not in POS All Day Menu |
+| **Curry Style HK** | **E01, E08, E02** (Dishes without rice) | $27.99–$33.99 | Only E06 (Curry Beef on Rice $21.99) is in POS |
+| **Instant** | **M01, M02** (Lo Ding dishes) | $15.99–$18.99 | Whole category not in POS All Day Menu |
+
+---
+
+## 📋 4. COMPLETE LIVE ALL DAY MENU (À LA CARTE) WITH EXACT POS PRICES
+
+### 🍢 Signature Snack
+- **Takoyaki (4 pieces)** — $5.99
+- **Popcorn Chicken** — $14.99
+- **Condensed Milk Toast** — $7.99
+- **Ice cream toast** — $9.99
+- **Shrimp Toast** — $6.99
+- **Ice Cream** — $1.99
+- **Matcha Mochi** — $4.99 *(New)*
+- **Strawberry Mochi** — $4.99 *(New)*
+
+### 🧋 Drink
+- **Hong Kong Style Milk Tea** — $4.99
+- **Coffee** — $3.99
+- **Taro milk tea** — $5.99
+- **Strawberry matcha latte** — $5.99
+- **Mango matcha latte** — $5.99
+- **Mango passion slush** — $7.99
+- **Strawberry slush** — $7.99
+- **Limonade** — $4.99
+- **coconut water** — $3.99 *(New)*
+- **Oolong Tea(no sugar)** — $4.99 *(New)*
+- **Coca cola mexican bottled** — $4.99
+- **Diet Coke** — $3.00
+- **Milkis** — $3.99 *(New)*
+- **Sparkling Water** — $6.99 *(New)*
+- **Cheese cake Yuzu** — $7.99 *(New)*
+- **Matcha Mochi** — $4.99 *(New)*
+- **Strawberry Mochi** — $4.99 *(New)*
+
+### 🍟 Snacks & Sides
+- **B09 Spicy Chili Beef** — $13.99
+- **B01 Curry Beef Udon Soup** — $22.99
+- **B06 Chicken Udon Stir-Fry** — $19.99
+- **B16 General Tao's Chicken** — $23.99
+- **B05 Chicken wing with Fries** — $13.99 *(New)*
+- **Chicken wings\*Fries** — $14.99 *(New)*
+- **B04 Sesame Balls** — $5.99
+- **B18 Spring Rolls** — $6.99
+- **B19 Fried Scallops** — $6.99
+- **B17 Deep Fried Calamari** — $14.99
+
+### 🍲 Main Dish
+- **Broccoli Beef** — $16.99
+- **C01 Sakura Shrimp&Chicken FR** — $21.99
+- **B16 General Tao's Chicken** — $23.99
+- **C03 TakoyakiChicken on Rice** — $20.99
+- **C06 Spaghetti w/Beef BPSauce** — $22.99
+- **C09 AAA Beef Ribs SunnyEggRice** — $26.99
+- **C10 HK style Beef Noodles** — $22.99
+- **C11 Pad Thai** — $21.99
+- **C12 Pineapple Fried Rice** — $23.99
+
+### 🍱 Combo (Sushi & Platters)
+- **Mango roll 6PCS** — $5.99
+- **Avocado 6PCS** — $5.99
+- **Salmon & Avocado 6PCS** — $8.99
+- **Fried Chicken roll 10 PCS** — $11.99
+- **Dragon eye roll 10 PCS** — $12.99
+- **Spicy Salmon 6PCS** — $13.99
+- **California Roll 10 PCS** — $9.99 *(New)*
+- **SS1** — $15.99
+- **SS2** — $21.99
+- **SS3** — $34.99
+- **SS4** — $44.99
+- **Boat 1** — $97.99
+- **Boat2** — $111.99
+
+### ♨️ Sizzling Plates
+- **SP02 AAA Angus Beef Ribs** — $32.99
+- **SP03 Garlic Chicken Chop** — $28.99
+
+### 🥟 Dumplings
+- **Vegetables Dumpling** — $8.99
+
+### 🥗 Vegetarian
+- **V01 Veg Stir Vermicelli** — $15.99
+- **V02 Veg Fried Rice** — $13.99
+- **V05 Braised Tofu in Soy Sauce** — $13.99
+- **Stir-Fried Mixed Vegetables** — $12.95
+
+### 🍛 Curry Style HK
+- **E06 Curry Beef on Rice** — $21.99
+
+---
+
+## 🍣 5. COMPLETE ALL-YOU-CAN-EAT (AYCE) BUFFET MENU CATALOG
+
+*(Included at $0.00 for guests paying the $28.99 Lunch or $43.99 Dinner buffet)*
+
+### 🥣 Appetizers (A)
+- **Miso Soup** *(Lunch & Dinner)*
+- **Hot and Sour Soup** *(Lunch & Dinner)*
+- **Special Soup of the Week** *(Dinner Only)*
+- **Salted Edamame** *(Lunch & Dinner)*
+- **Ginger & Wasabi** *(Dinner Only)*
+- **Kimchi** *(Dinner Only)*
+- **Seaweed Salad** *(Lunch & Dinner)*
+
+### 🍗 Fried Favorites
+- **Fried Crab Stick (1pcs)**
+- **Fried Calamari (1 pcs)**
+- **Fried Vegetable Dumplings (1)**
+- **Curry Chicken**
+- **Teriyaki Chicken**
+- **Black pepper Chicken**
+- **Teriyaki Beef**
+- **Teriyaki Salmon**
+- **French Fries**
+- **Fried Chicken Wings (1)**
+- **Creamy Mussels (1)**
+- **Wasabi Cream Mussels (1pcs)**
+- **Takoyaki (1 pcs)**
+- **Spring Rolls (1 pcs)**
+- **Fried Scallops (1 pcs)**
+
+### 🍜 Hot Kitchen (A)
+- **Chicken Fried Rice**
+- **Chicken Pad Thai**
+- **General Tao Chicken**
+- **Chicken Udon**
+- **Black Pepper Chicken Spaghetti**
+- **Singapore Noodles**
+- **Vegetable Fried Rice**
+- **Curry Fried Rice**
+- **White Rice**
+
+### 🍤 Tempura Selection
+- **Tempura Broccoli (1pcs)**
+- **Tempura Mushroom (1pcs)**
+- **Tempura Sweet Potato (1pcs)**
+- **Tempura Eggplant (1pcs)**
+- **Tempura Zucchini (1pcs)**
+
+### 🍣 Small Roll (A)
+- **Avocado Roll (3)**
+- **Cucumber Roll (3)**
+- **Salmon Roll (3)**
+- **Tuna Roll (3)**
+- **Crab Roll (3)**
+
+### 🍙 Hand Roll (A)
+- **Avocado Hand Roll**
+- **Cucumber Hand Roll**
+- **Salmon Hand Roll**
+- **Spicy Salmon Hand Roll**
+- **Crab Stick Hand Roll**
+
+### 🍱 Maki Roll (A)
+- **Mango Roll (3)**
+- **California Roll (4)**
+- **Salmon Avocado Roll (3)**
+- **Kamikaze (4)**
+- **Spicy Salmon Roll (4)**
+- **Dragon eye (4)**
+- **Crispy Chicken Roll (4)**
+- **Spicy Salmon Gunkan (1)**
+- **Crab Stick Gunkan (1)**
+- **Vegetable Roll (4)**
+- **Mango Rice Paper Roll (4)**
+- **Chicken Rice Paper Roll (4)**
+
+### 🍣 Nigiri (A)
+- **Salmon Rose (1PCS)**
+- **Salmon Nigiri (1)**
+- **Tuna Nigiri (1)**
+- **Shrimp Nigiri (1)**
+- **Crab Stick Nigiri (1)**
+- **Unagi Nigiri (1)**
+- **Egg (Tamago) Nigiri (1)**
+- **Escolar Nigiri (1)**
+- **Surf Clam Nigiri (1)**
+
+### 🐟 Sashimi (A)
+- **Salmon Sashimi (1)** *(Lunch & Dinner)*
+- **Inari (1)** *(Lunch & Dinner)*
+- **Tamago (1)** *(Lunch & Dinner)*
+- **Surf Clam Sashimi (1)** *(Dinner Only)*
+- **Tobiko Cucumber (1)** *(Dinner Only)*
+- **Tuna Sashimi (1)** *(Dinner Only)*
+- **Escolar Sashimi (1)** *(Dinner Only)*
+
+### 🍨 Desserts (A)
+- **Mango Rice Paper Roll (4)** — $0.00
+- **Mango Roll (3)** — $0.00
+- **Golden Buns (1)** — $0.00
+- **Sesame Balls (1 pcs)** — $0.00
+- *(Paid extras available: Cheese cake Yuzu $7.99, Matcha Mochi $4.99, Strawberry Mochi $4.99)*

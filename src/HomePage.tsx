@@ -35,6 +35,7 @@ import ScrollTextReveal from "./components/ui/ScrollTextReveal";
 
 import NeighborhoodMap from "./components/NeighborhoodMap";
 import SocialFeedback from "./components/SocialFeedback";
+import CateringForm from "./components/CateringForm";
 
 
 const REVIEWS = [
@@ -1497,60 +1498,129 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Private Events Section */}
+      {/* Private Events & Catering Section */}
       <section id="private-events" className="py-24 md:py-32 w-full border-t border-[#1a1c19]/10 relative bg-[#1a1c19] text-[#efe7d2] content-visibility-lazy">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col lg:flex-row-reverse items-center gap-16 md:gap-24">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col gap-16 md:gap-20">
           
+          <div className="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-20">
+            <motion.div
+              initial={{ opacity: 0, y: 60, scale: 0.97 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              viewport={{ once: true, margin: "0px 0px -80px 0px" }}
+              transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+              className="w-full lg:w-1/2 relative"
+            >
+              <div className="relative w-full max-w-xl mx-auto lg:ml-auto rounded-[2.5rem] overflow-hidden border border-[#cfbe91]/30 shadow-2xl group">
+                <img
+                  src="/catering-events.jpg"
+                  alt="Private Dining & Catering Banquet"
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-auto object-cover transition-all duration-[4s] group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-black/20 pointer-events-none" />
+                <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 bg-[#0a0b0a]/85 backdrop-blur-md border border-[#cfbe91]/30 rounded-2xl p-4 text-xs text-[#efe7d2]/90 flex items-center justify-between shadow-xl">
+                  <div>
+                    <p className="font-serif text-[#cfbe91] font-semibold text-sm sm:text-base">
+                      {lang === "fr" ? "Festins & Réceptions d'Exception" : "Exceptional Feasts & Banquets"}
+                    </p>
+                    <p className="text-[11px] text-[#efe7d2]/70 mt-0.5">
+                      {lang === "fr" ? "100% Halal • Traiteur & Salles Privées" : "100% Halal • Catering & Private Dining"}
+                    </p>
+                  </div>
+                  <button
+                    onClick={() => {
+                      document.getElementById('catering-form')?.scrollIntoView({ behavior: 'smooth' });
+                    }}
+                    className="px-3.5 py-2 rounded-xl bg-[#cfbe91] text-[#0a0b0a] font-bold text-[11px] uppercase tracking-wider hover:bg-white transition-all shadow"
+                  >
+                    {lang === "fr" ? "Réserver" : "Book"}
+                  </button>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px 0px 0px 0px" }}
+              transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.12 }}
+              className="w-full lg:w-1/2 flex flex-col gap-6"
+            >
+              <ScrollTextReveal delay={0.3} textColor="#efe7d2">
+                <span className="text-[#cfbe91] uppercase tracking-[0.2em] font-bold text-sm mb-3 block">
+                  {lang === "fr" ? "Événements Privés & Service Traiteur" : "Private Events & Catering Services"}
+                </span>
+                <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-[#efe7d2] leading-tight text-balance">
+                  <ShinyText
+                    text={lang === "fr" ? "Des Célébrations Inoubliables & Plats Sur Mesure" : "Unforgettable Celebrations & Tailored Feasts"}
+                    color="#efe7d2"
+                    shineColor="#cfbe91"
+                    speed={3}
+                  />
+                </h2>
+                <div className="flex flex-col gap-4 text-[#efe7d2]/80 text-base sm:text-lg leading-relaxed mt-4">
+                  <p>
+                    {lang === "fr"
+                      ? "Mariage, remise de diplôme, anniversaire d'exception ou réception corporative : offrez à vos convives une expérience gastronomique mémorable. Que vous souhaitiez privatiser nos salles à manger ou faire livrer nos grands plateaux buffet et bateaux de sushis 100% halal sur le lieu de votre événement, notre équipe s'occupe de tout."
+                      : "Weddings, graduations, milestone birthdays, or corporate galas: treat your guests to a memorable dining experience. Whether you want to book our private dining rooms or have our large custom buffet trays and 100% Halal sushi boats delivered to your venue, our culinary team takes care of every detail."}
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-2 gap-4 mt-6 pt-4 border-t border-[#cfbe91]/20">
+                  <div>
+                    <span className="text-[#cfbe91] text-xs uppercase font-bold tracking-wider block mb-1">
+                      {lang === "fr" ? "Pour tout événement" : "Every Occasion"}
+                    </span>
+                    <p className="text-xs text-[#efe7d2]/70">
+                      {lang === "fr" ? "Mariages, anniversaires, remises de diplômes" : "Weddings, birthdays, graduation feasts"}
+                    </p>
+                  </div>
+                  <div>
+                    <span className="text-[#cfbe91] text-xs uppercase font-bold tracking-wider block mb-1">
+                      {lang === "fr" ? "Service Flexible" : "Flexible Service"}
+                    </span>
+                    <p className="text-xs text-[#efe7d2]/70">
+                      {lang === "fr" ? "Salle privée ou livraison traiteur" : "Private dining or venue delivery"}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="mt-8 flex flex-wrap items-center gap-4">
+                  <button
+                    onClick={(e) => {
+                      e.preventDefault();
+                      document.getElementById('catering-form')?.scrollIntoView({ behavior: 'smooth' });
+                    }}
+                    className="px-6 py-3 rounded-full bg-[#cfbe91] text-[#0a0b0a] uppercase tracking-[0.15em] text-xs sm:text-sm font-bold hover:bg-[#dbcb9d] transition-all shadow-lg hover:shadow-xl hover:scale-105"
+                  >
+                    {lang === "fr" ? "Demande de Traiteur" : "Request Catering Quote"}
+                  </button>
+                  <button
+                    onClick={(e) => {
+                      e.preventDefault();
+                      document.getElementById('reservation')?.scrollIntoView({ behavior: 'smooth' });
+                    }}
+                    className="px-6 py-3 rounded-full border border-[#cfbe91]/50 text-[#cfbe91] uppercase tracking-[0.15em] text-xs sm:text-sm font-bold hover:bg-[#cfbe91]/10 hover:border-[#cfbe91] transition-all"
+                  >
+                    {lang === "fr" ? "Réserver une table" : "Reserve a Table"}
+                  </button>
+                </div>
+              </ScrollTextReveal>
+            </motion.div>
+          </div>
+
+          {/* Interactive Catering & Private Events Booking Form */}
           <motion.div
-            initial={{ opacity: 0, y: 60, scale: 0.97 }}
-            whileInView={{ opacity: 1, y: 0, scale: 1 }}
-            viewport={{ once: true, margin: "0px 0px -80px 0px" }}
-            transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-            className="w-full lg:w-1/2 relative"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px 0px 0px 0px" }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            className="w-full"
           >
-              <div className="relative w-full max-w-lg mx-auto lg:ml-auto rounded-[2.5rem] overflow-hidden">
-               <img src="/hero.webp" alt="Private Dining Room" loading="lazy" decoding="async" className="w-full h-auto transition-all duration-[5s] hover:scale-105" />
-             </div>
+            <CateringForm lang={lang} />
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 60 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px 0px 0px 0px" }}
-            transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.12 }}
-            className="w-full lg:w-1/2 flex flex-col gap-8"
-          >
-            <ScrollTextReveal delay={0.3} textColor="#efe7d2">
-              <span className="text-[#cfbe91] uppercase tracking-[0.2em] font-bold text-sm mb-4 block">
-                {lang === "fr" ? "Événements Privés" : "Private Events"}
-              </span>
-              <h2 className="font-serif text-4xl md:text-5xl text-[#efe7d2] leading-tight text-balance">
-                <ShinyText text={lang === "fr" ? "Des Célébrations Inoubliables" : "Unforgettable Celebrations"} color="#efe7d2" shineColor="#cfbe91" speed={3} />
-              </h2>
-              <div className="flex flex-col gap-6 text-[#efe7d2]/70 text-lg leading-relaxed mt-6">
-                <BlurText
-                  text={lang === "fr"
-                    ? "Qu'il s'agisse d'une réunion d'affaires intime, d'un dîner de répétition ou d'une réception fastueuse, nos salles à manger privées offrent le cadre idéal. Nous proposons des menus personnalisés avec des ingrédients halal finement sélectionnés, et un service dédié pour faire de votre événement une expérience inouivilable."
-                    : "Whether it is an intimate business gathering, a rehearsal dinner, or a lavish reception, our private dining rooms provide the perfect backdrop. We offer custom menus crafted with the finest halal ingredients, and dedicated service to make your event an unforgettable experience."}
-                  delay={10}
-                  animateBy="words"
-                  className="text-[#efe7d2]/70"
-                />
-              </div>
-              <div className="mt-6">
-                <button
-                  onClick={(e) => {
-                    e.preventDefault();
-                    document.getElementById('reservation')?.scrollIntoView({ behavior: 'smooth' });
-                  }}
-                  className="inline-block uppercase tracking-[0.15em] text-sm font-bold border-b border-[#cfbe91] pb-1 text-[#cfbe91] hover:text-[#efe7d2] hover:border-[#efe7d2] transition-colors"
-                >
-                  {lang === "fr" ? "Se Renseigner" : "Inquire Now"}
-                </button>
-              </div>
-            </ScrollTextReveal>
-          </motion.div>
-        
         </div>
       </section>
 
