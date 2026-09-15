@@ -16,6 +16,8 @@ import {
   Cake, 
   PartyPopper,
   UtensilsCrossed,
+  MapPin,
+  Truck,
   Loader2
 } from 'lucide-react';
 
@@ -35,6 +37,7 @@ export default function CateringForm({ lang }: CateringFormProps) {
     phone: '',
     occasion: 'marriage',
     eventDate: '',
+    deliveryLocation: '',
     guestCount: '25',
     serviceType: 'catering_delivery',
     notes: ''
@@ -71,16 +74,16 @@ export default function CateringForm({ lang }: CateringFormProps) {
     };
 
     const serviceLabels: Record<string, { en: string; fr: string }> = {
-      catering_delivery: { en: 'Catering & Food Delivery', fr: 'Service traiteur / Livraison' },
-      private_dining: { en: 'Private Dining at Restaurant', fr: 'Salle privée au restaurant' },
-      buffet_platters: { en: 'Custom Buffet & Trays', fr: 'Buffet & plateaux sur mesure' },
-      sushi_boats: { en: 'Sushi Boats & Specialty Platters', fr: 'Bateaux de sushis & plateaux de fête' }
+      catering_delivery: { en: 'Catering Delivery to Venue / Celebration', fr: 'Livraison de repas sur le lieu de l’événement' },
+      buffet_platters: { en: 'Custom Hot Buffet & Party Trays', fr: 'Grands plateaux buffet & plats chauds traiteur' },
+      sushi_boats: { en: 'Sushi Boats & Signature Platters', fr: 'Bateaux de sushis & assortiments signatures' },
+      full_catering: { en: 'Complete Celebration Feast (Hot Dishes + Sushi Platters)', fr: 'Formule complète (Plats chauds + Plateaux de sushis)' }
     };
 
     const payload = {
       _subject: lang === 'fr' 
-        ? `[1001 Nuits] Demande de Traiteur pour ${occasionLabels[formData.occasion]?.fr || formData.occasion} - ${formData.name}`
-        : `[1001 Nuits] Catering Request for ${occasionLabels[formData.occasion]?.en || formData.occasion} - ${formData.name}`,
+        ? `[1001 Nuits] Demande de Devis Traiteur (${occasionLabels[formData.occasion]?.fr || formData.occasion}) - ${formData.name}`
+        : `[1001 Nuits] Catering Food Inquiry (${occasionLabels[formData.occasion]?.en || formData.occasion}) - ${formData.name}`,
       _template: 'table',
       _captcha: 'false',
       _replyto: formData.email,
@@ -88,10 +91,11 @@ export default function CateringForm({ lang }: CateringFormProps) {
       'Email / Courriel': formData.email,
       'Phone / Téléphone': formData.phone,
       'Occasion / Événement': lang === 'fr' ? occasionLabels[formData.occasion]?.fr : occasionLabels[formData.occasion]?.en,
-      'Event Date / Date': formData.eventDate || (lang === 'fr' ? 'À confirmer' : 'To be confirmed'),
+      'Event Date / Date de l’événement': formData.eventDate || (lang === 'fr' ? 'À confirmer' : 'To be confirmed'),
+      'Delivery Location / Lieu de livraison': formData.deliveryLocation || (lang === 'fr' ? 'Non spécifié' : 'Not specified'),
       'Estimated Guests / Nombre d’invités': formData.guestCount,
-      'Service Type / Type de service': lang === 'fr' ? serviceLabels[formData.serviceType]?.fr : serviceLabels[formData.serviceType]?.en,
-      'Special Requests & Dietary / Demandes & Régimes': formData.notes || (lang === 'fr' ? 'Aucune note' : 'None provided'),
+      'Food Style / Formule de repas': lang === 'fr' ? serviceLabels[formData.serviceType]?.fr : serviceLabels[formData.serviceType]?.en,
+      'Special Requests & Dietary / Préférences & Régimes': formData.notes || (lang === 'fr' ? 'Aucune note' : 'None provided'),
       'Submitted At': new Date().toLocaleString()
     };
 
@@ -136,6 +140,7 @@ export default function CateringForm({ lang }: CateringFormProps) {
       phone: '',
       occasion: 'marriage',
       eventDate: '',
+      deliveryLocation: '',
       guestCount: '25',
       serviceType: 'catering_delivery',
       notes: ''
@@ -179,18 +184,18 @@ export default function CateringForm({ lang }: CateringFormProps) {
         {/* Form Header */}
         <div className="text-center max-w-2xl mx-auto mb-10">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#cfbe91]/15 border border-[#cfbe91]/30 text-[#cfbe91] text-xs uppercase tracking-widest font-bold mb-4">
-            <UtensilsCrossed size={14} />
-            <span>{lang === 'fr' ? 'Service Traiteur & Réceptions' : 'Catering & Special Events'}</span>
+            <Truck size={14} />
+            <span>{lang === 'fr' ? 'Service Traiteur • Livraison sur vos Lieux' : 'Catering Service • Delivery to Your Venue'}</span>
           </div>
 
           <h3 className="font-serif text-3xl sm:text-4xl text-[#efe7d2] mb-3 leading-tight">
-            {lang === 'fr' ? 'Commandez pour votre Jour Spécial' : 'Order Food for Your Special Day'}
+            {lang === 'fr' ? 'Demande de Devis Traiteur pour votre Fête' : 'Inquire for Food Delivery to Your Celebration'}
           </h3>
 
           <p className="text-sm sm:text-base text-[#efe7d2]/70 leading-relaxed font-sans">
             {lang === 'fr'
-              ? 'Mariage, remise de diplôme, anniversaire ou réception privée : transmettez-nous vos informations et recevez une proposition sur mesure préparée avec notre cuisine 100% halal.'
-              : 'Marriage, graduation, birthday, or private celebration: share your event details with us and our culinary team will curate the perfect 100% Halal feast for your guests.'}
+              ? 'Mariage, remise de diplôme, anniversaire ou célébration : transmettez-nous les détails de votre événement et faites livrer un délicieux festin 100% halal directement sur le lieu de votre célébration.'
+              : 'Marriage, graduation, birthday, or private gathering: tell us about your event and our culinary team will deliver fresh, tailored 100% Halal feast platters directly to your venue or celebration.'}
           </p>
         </div>
 
@@ -239,19 +244,19 @@ export default function CateringForm({ lang }: CateringFormProps) {
               </div>
 
               <h4 className="font-serif text-3xl text-[#efe7d2] mb-3">
-                {lang === 'fr' ? 'Demande reçue avec succès !' : 'Request Received Successfully!'}
+                {lang === 'fr' ? 'Demande de traiteur reçue !' : 'Catering Inquiry Received!'}
               </h4>
 
               <p className="text-sm sm:text-base text-[#efe7d2]/80 leading-relaxed font-sans mb-4">
                 {lang === 'fr'
-                  ? `Merci ${formData.name || ''}. Votre demande de service traiteur pour votre événement a bien été transmise à notre équipe (info@1001nuit.com).`
-                  : `Thank you ${formData.name || ''}! Your catering inquiry for your special day has been sent to our team (info@1001nuit.com).`}
+                  ? `Merci ${formData.name || ''}. Votre demande de devis traiteur pour livraison sur votre lieu d'événement (${formData.deliveryLocation || 'lieu de réception'}) a bien été transmise à notre équipe (info@1001nuit.com).`
+                  : `Thank you ${formData.name || ''}! Your catering inquiry for food delivery to your venue (${formData.deliveryLocation || 'event location'}) has been delivered to our team (info@1001nuit.com).`}
               </p>
 
               <p className="text-xs text-[#cfbe91] font-medium mb-8">
                 {lang === 'fr'
-                  ? 'Nous examinerons vos besoins et vous recontacterons très rapidement pour confirmer le menu.'
-                  : 'We will review your requirements and reach out to you promptly to finalize your menu.'}
+                  ? 'Notre chef traiteur examinera votre demande et vous contactera rapidement pour confirmer le menu et le devis.'
+                  : 'Our catering chef will review your request and reach out promptly with a custom quote and menu breakdown.'}
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -276,7 +281,7 @@ export default function CateringForm({ lang }: CateringFormProps) {
             /* The Interactive Form */
             <form onSubmit={handleSubmit} className="space-y-6">
               <label className="block text-xs font-bold uppercase tracking-wider text-[#cfbe91] mb-2">
-                {lang === 'fr' ? '2. Coordonnées & Détails de l’événement' : '2. Contact Information & Event Details'}
+                {lang === 'fr' ? '2. Coordonnées & Lieu de Livraison' : '2. Contact & Delivery Details'}
               </label>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -347,6 +352,23 @@ export default function CateringForm({ lang }: CateringFormProps) {
                   />
                 </div>
 
+                {/* Venue / Delivery Location */}
+                <div className="space-y-2">
+                  <label className="text-xs font-semibold text-[#efe7d2]/80 flex items-center gap-2">
+                    <MapPin size={14} className="text-[#cfbe91]" />
+                    <span>{lang === 'fr' ? 'Lieu ou ville de livraison / réception *' : 'Venue / Delivery Location or City *'}</span>
+                  </label>
+                  <input
+                    type="text"
+                    required
+                    name="deliveryLocation"
+                    value={formData.deliveryLocation}
+                    onChange={handleInputChange}
+                    placeholder={lang === 'fr' ? 'Ex: DDO, Montréal, Laval, ou adresse de la salle' : 'Ex: DDO, Montreal, Laval, or venue address'}
+                    className="w-full bg-[#1f211e] border border-[#333330] rounded-xl px-4 py-3.5 text-[#efe7d2] placeholder:text-[#efe7d2]/30 focus:border-[#cfbe91] focus:outline-none focus:ring-1 focus:ring-[#cfbe91] transition-all text-sm"
+                  />
+                </div>
+
                 {/* Guest Count */}
                 <div className="space-y-2">
                   <label className="text-xs font-semibold text-[#efe7d2]/80 flex items-center gap-2">
@@ -367,11 +389,11 @@ export default function CateringForm({ lang }: CateringFormProps) {
                   </select>
                 </div>
 
-                {/* Service Type */}
-                <div className="space-y-2">
+                {/* Preferred Food / Service Style */}
+                <div className="space-y-2 md:col-span-2">
                   <label className="text-xs font-semibold text-[#efe7d2]/80 flex items-center gap-2">
                     <Sparkles size={14} className="text-[#cfbe91]" />
-                    <span>{lang === 'fr' ? 'Formule de service souhaitée' : 'Preferred Service Style'}</span>
+                    <span>{lang === 'fr' ? 'Formule de repas souhaitée' : 'Preferred Food Style'}</span>
                   </label>
                   <select
                     name="serviceType"
@@ -380,16 +402,16 @@ export default function CateringForm({ lang }: CateringFormProps) {
                     className="w-full bg-[#1f211e] border border-[#333330] rounded-xl px-4 py-3.5 text-[#efe7d2] focus:border-[#cfbe91] focus:outline-none focus:ring-1 focus:ring-[#cfbe91] transition-all text-sm cursor-pointer"
                   >
                     <option value="catering_delivery">
-                      {lang === 'fr' ? 'Traiteur & Livraison sur les lieux' : 'Catering & Venue Delivery'}
-                    </option>
-                    <option value="private_dining">
-                      {lang === 'fr' ? 'Salle privée au restaurant 1001 Nuits' : 'Private Dining Room at 1001 Nuits'}
+                      {lang === 'fr' ? 'Livraison traiteur sur le lieu de l’événement' : 'Catering Food Delivery to Venue / Celebration'}
                     </option>
                     <option value="buffet_platters">
-                      {lang === 'fr' ? 'Grands plateaux buffet & plats chauds' : 'Large Buffet Trays & Hot Specialties'}
+                      {lang === 'fr' ? 'Grands plateaux buffet & plats chauds traiteur' : 'Large Hot Food Buffet & Party Trays'}
                     </option>
                     <option value="sushi_boats">
                       {lang === 'fr' ? 'Bateaux de sushis & assortiments signatures' : 'Sushi Boats & Signature Platters'}
+                    </option>
+                    <option value="full_catering">
+                      {lang === 'fr' ? 'Formule festin complète (Plats chauds + Plateaux de sushis)' : 'Complete Celebration Feast (Hot Dishes + Sushi Platters)'}
                     </option>
                   </select>
                 </div>
@@ -400,8 +422,8 @@ export default function CateringForm({ lang }: CateringFormProps) {
                     <MessageSquare size={14} className="text-[#cfbe91]" />
                     <span>
                       {lang === 'fr'
-                        ? 'Détails, préférences culinaires ou restrictions'
-                        : 'Food Preferences, Special Requests or Dietary Needs'}
+                        ? 'Envies de menu, préférences culinaires ou restrictions'
+                        : 'Menu Ideas, Food Preferences or Dietary Needs'}
                     </span>
                   </label>
                   <textarea
@@ -411,8 +433,8 @@ export default function CateringForm({ lang }: CateringFormProps) {
                     onChange={handleInputChange}
                     placeholder={
                       lang === 'fr'
-                        ? 'Décrivez vos envies de menu (bœuf, poulet, sushis, végétarien), allergies ou demandes particulières…'
-                        : 'Describe your menu ideas (beef, chicken, sushi platters, vegetarian options), allergies, or specific schedule…'
+                        ? 'Décrivez vos envies de menu (poulet général tao, bœuf, sushis, nouilles, végétarien), allergies ou heure de livraison souhaitée…'
+                        : 'Describe your food ideas (general tao chicken, beef ribs, sushi platters, noodles, vegetarian dishes), allergies, or desired delivery time…'
                     }
                     className="w-full bg-[#1f211e] border border-[#333330] rounded-xl px-4 py-3 text-[#efe7d2] placeholder:text-[#efe7d2]/30 focus:border-[#cfbe91] focus:outline-none focus:ring-1 focus:ring-[#cfbe91] transition-all text-sm resize-none"
                   />
@@ -426,7 +448,7 @@ export default function CateringForm({ lang }: CateringFormProps) {
                   <div className="flex-1">
                     <p>{errorMessage}</p>
                     <p className="mt-1 opacity-80">
-                      {lang === 'fr' ? 'Vous pouvez nous joindre directement au :' : 'You can also reach us directly at:'}{' '}
+                      {lang === 'fr' ? 'Vous pouvez également nous joindre directement au :' : 'You can also reach our catering line directly at:'}{' '}
                       <a href="tel:+15144211114" className="underline font-bold text-[#cfbe91]">
                         (514) 421-1114
                       </a>
@@ -439,8 +461,8 @@ export default function CateringForm({ lang }: CateringFormProps) {
               <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4">
                 <p className="text-[11px] text-[#efe7d2]/50 order-2 sm:order-1 text-center sm:text-left">
                   {lang === 'fr'
-                    ? '🔒 Les demandes sont envoyées directement à info@1001nuit.com.'
-                    : '🔒 Inquiries are delivered directly to info@1001nuit.com.'}
+                    ? '🔒 Les demandes de devis sont envoyées directement à info@1001nuit.com.'
+                    : '🔒 Catering inquiries are delivered directly to info@1001nuit.com.'}
                 </p>
 
                 <button
@@ -455,11 +477,11 @@ export default function CateringForm({ lang }: CateringFormProps) {
                   {status === 'submitting' ? (
                     <>
                       <Loader2 size={16} className="animate-spin" />
-                      <span>{lang === 'fr' ? 'Envoi en cours…' : 'Sending Inquiry…'}</span>
+                      <span>{lang === 'fr' ? 'Envoi du devis…' : 'Sending Inquiry…'}</span>
                     </>
                   ) : (
                     <>
-                      <span>{lang === 'fr' ? 'Envoyer la demande traiteur' : 'Send Catering Inquiry'}</span>
+                      <span>{lang === 'fr' ? 'Demander un devis traiteur' : 'Send Catering Inquiry'}</span>
                       <Send size={15} />
                     </>
                   )}

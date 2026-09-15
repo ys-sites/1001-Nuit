@@ -71,7 +71,7 @@ export default function Navbar({
             onClick={() => scrollTo("private-events")}
             className="transition-colors hover-underline-animation hover:text-[#cfbe91]"
           >
-            {lang === "fr" ? "Événements & Traiteur" : "Events & Catering"}
+            {lang === "fr" ? "Traiteur" : "Catering"}
           </button>
           <button
             onClick={() => scrollTo("reservation")}
@@ -139,7 +139,7 @@ export default function Navbar({
               { id: "menu", en: "Menu", fr: "Menu" },
               { id: "testimonials", en: "Testimonials", fr: "Avis" },
               { id: "about", en: "Our Restaurant", fr: "Notre Restaurant" },
-              { id: "private-events", en: "Events & Catering", fr: "Événements & Traiteur" },
+              { id: "private-events", en: "Catering", fr: "Service Traiteur" },
               { id: "reservation", en: "Reservation", fr: "Réservation" },
             ].map((item) => (
               <button

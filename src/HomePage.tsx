@@ -1522,10 +1522,10 @@ export default function HomePage() {
                 <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 bg-[#0a0b0a]/85 backdrop-blur-md border border-[#cfbe91]/30 rounded-2xl p-4 text-xs text-[#efe7d2]/90 flex items-center justify-between shadow-xl">
                   <div>
                     <p className="font-serif text-[#cfbe91] font-semibold text-sm sm:text-base">
-                      {lang === "fr" ? "Festins & Réceptions d'Exception" : "Exceptional Feasts & Banquets"}
+                      {lang === "fr" ? "Service Traiteur & Réceptions" : "Catering Feasts & Celebrations"}
                     </p>
                     <p className="text-[11px] text-[#efe7d2]/70 mt-0.5">
-                      {lang === "fr" ? "100% Halal • Traiteur & Salles Privées" : "100% Halal • Catering & Private Dining"}
+                      {lang === "fr" ? "100% Halal • Livraison sur le lieu de votre fête" : "100% Halal • Delivered directly to your venue"}
                     </p>
                   </div>
                   <button
@@ -1534,7 +1534,7 @@ export default function HomePage() {
                     }}
                     className="px-3.5 py-2 rounded-xl bg-[#cfbe91] text-[#0a0b0a] font-bold text-[11px] uppercase tracking-wider hover:bg-white transition-all shadow"
                   >
-                    {lang === "fr" ? "Réserver" : "Book"}
+                    {lang === "fr" ? "Devis" : "Quote"}
                   </button>
                 </div>
               </div>
@@ -1549,11 +1549,11 @@ export default function HomePage() {
             >
               <ScrollTextReveal delay={0.3} textColor="#efe7d2">
                 <span className="text-[#cfbe91] uppercase tracking-[0.2em] font-bold text-sm mb-3 block">
-                  {lang === "fr" ? "Événements Privés & Service Traiteur" : "Private Events & Catering Services"}
+                  {lang === "fr" ? "Service Traiteur & Livraison de Repas" : "Catering & Venue Food Delivery"}
                 </span>
                 <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-[#efe7d2] leading-tight text-balance">
                   <ShinyText
-                    text={lang === "fr" ? "Des Célébrations Inoubliables & Plats Sur Mesure" : "Unforgettable Celebrations & Tailored Feasts"}
+                    text={lang === "fr" ? "Votre Festin Délicieux Livré sur les Lieux de votre Fête" : "Delicious Feasts Delivered Directly to Your Celebration"}
                     color="#efe7d2"
                     shineColor="#cfbe91"
                     speed={3}
@@ -1562,15 +1562,15 @@ export default function HomePage() {
                 <div className="flex flex-col gap-4 text-[#efe7d2]/80 text-base sm:text-lg leading-relaxed mt-4">
                   <p>
                     {lang === "fr"
-                      ? "Mariage, remise de diplôme, anniversaire d'exception ou réception corporative : offrez à vos convives une expérience gastronomique mémorable. Que vous souhaitiez privatiser nos salles à manger ou faire livrer nos grands plateaux buffet et bateaux de sushis 100% halal sur le lieu de votre événement, notre équipe s'occupe de tout."
-                      : "Weddings, graduations, milestone birthdays, or corporate galas: treat your guests to a memorable dining experience. Whether you want to book our private dining rooms or have our large custom buffet trays and 100% Halal sushi boats delivered to your venue, our culinary team takes care of every detail."}
+                      ? "Offrez à vos invités une expérience culinaire inoubliable sans le stress de la préparation. Qu'il s'agisse d'un mariage, d'une remise de diplôme, d'un anniversaire ou d'une fête spéciale, nous préparons et livrons nos grands plateaux buffet chauds, nos bateaux de sushis et nos spécialités asiatiques 100% halal directement sur le lieu de votre événement."
+                      : "Treat your guests to an unforgettable culinary experience delivered straight to your event. Whether for a wedding, graduation, birthday party, or special celebration, we prepare and deliver generous hot buffet trays, handcrafted sushi boats, and 100% Halal Asian fusion dishes directly to your venue or gathering."}
                   </p>
                 </div>
 
                 <div className="grid grid-cols-2 gap-4 mt-6 pt-4 border-t border-[#cfbe91]/20">
                   <div>
                     <span className="text-[#cfbe91] text-xs uppercase font-bold tracking-wider block mb-1">
-                      {lang === "fr" ? "Pour tout événement" : "Every Occasion"}
+                      {lang === "fr" ? "Pour tout événement" : "Every Celebration"}
                     </span>
                     <p className="text-xs text-[#efe7d2]/70">
                       {lang === "fr" ? "Mariages, anniversaires, remises de diplômes" : "Weddings, birthdays, graduation feasts"}
@@ -1578,10 +1578,10 @@ export default function HomePage() {
                   </div>
                   <div>
                     <span className="text-[#cfbe91] text-xs uppercase font-bold tracking-wider block mb-1">
-                      {lang === "fr" ? "Service Flexible" : "Flexible Service"}
+                      {lang === "fr" ? "Livraison sur Place" : "Venue Delivery"}
                     </span>
                     <p className="text-xs text-[#efe7d2]/70">
-                      {lang === "fr" ? "Salle privée ou livraison traiteur" : "Private dining or venue delivery"}
+                      {lang === "fr" ? "Plateaux prêts à servir livrés à votre lieu" : "Ready-to-serve trays delivered to your event"}
                     </p>
                   </div>
                 </div>
@@ -1594,23 +1594,21 @@ export default function HomePage() {
                     }}
                     className="px-6 py-3 rounded-full bg-[#cfbe91] text-[#0a0b0a] uppercase tracking-[0.15em] text-xs sm:text-sm font-bold hover:bg-[#dbcb9d] transition-all shadow-lg hover:shadow-xl hover:scale-105"
                   >
-                    {lang === "fr" ? "Demande de Traiteur" : "Request Catering Quote"}
+                    {lang === "fr" ? "Demander un devis traiteur" : "Request Catering Quote"}
                   </button>
-                  <button
-                    onClick={(e) => {
-                      e.preventDefault();
-                      document.getElementById('reservation')?.scrollIntoView({ behavior: 'smooth' });
-                    }}
-                    className="px-6 py-3 rounded-full border border-[#cfbe91]/50 text-[#cfbe91] uppercase tracking-[0.15em] text-xs sm:text-sm font-bold hover:bg-[#cfbe91]/10 hover:border-[#cfbe91] transition-all"
+                  <a
+                    href="tel:+15144211114"
+                    className="px-6 py-3 rounded-full border border-[#cfbe91]/50 text-[#cfbe91] uppercase tracking-[0.15em] text-xs sm:text-sm font-bold hover:bg-[#cfbe91]/10 hover:border-[#cfbe91] transition-all inline-flex items-center gap-2"
                   >
-                    {lang === "fr" ? "Réserver une table" : "Reserve a Table"}
-                  </button>
+                    <Phone size={14} />
+                    <span>(514) 421-1114</span>
+                  </a>
                 </div>
               </ScrollTextReveal>
             </motion.div>
           </div>
 
-          {/* Interactive Catering & Private Events Booking Form */}
+          {/* Interactive Catering Request Form */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
