@@ -1410,8 +1410,8 @@ export default function HomePage() {
             {/* Image Composition */}
             <div className="relative w-full aspect-[4/5] max-w-md mx-auto lg:mx-0 mt-8 mb-16 lg:my-0">
               <img
-                src="/menu/SIZZLING PLATES/Sizzling Lamb Chops.jpeg"
-                alt="Sizzling Lamb Chops"
+                src="/heritage.jpg"
+                alt="1001 Nuits Halal Culinary Masterpiece"
                 loading="lazy"
                 decoding="async"
                 className="w-full h-full object-cover rounded-[2.5rem] shadow-xl"
