@@ -22,9 +22,9 @@ export default function ReservationForm({ lang }: ReservationFormProps) {
     requests: ''
   });
 
-  const tomorrow = new Date();
-  tomorrow.setDate(tomorrow.getDate() + 1);
-  const minDate = tomorrow.toISOString().split('T')[0];
+  const leadDate = new Date();
+  leadDate.setDate(leadDate.getDate() + 7);
+  const minDate = leadDate.toISOString().split('T')[0];
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;

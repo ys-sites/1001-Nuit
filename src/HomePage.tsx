@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { motion, useScroll, useSpring } from "motion/react";
+import { motion, AnimatePresence, useScroll, useSpring } from "motion/react";
 import {
   ArrowRight,
   Instagram,
@@ -10,6 +10,7 @@ import {
   Calendar,
   ShoppingBag,
   MapPin,
+  X,
 } from "lucide-react";
 
 const RESTAURANT_ADDRESS = "11602-A Boulevard de Salaberry, Dollard-des-Ormeaux, QC H9B 2R8";
@@ -956,6 +957,7 @@ const MENU_CATEGORIES = [
 export default function HomePage() {
   const [activeCategory, setActiveCategory] = useState(0);
   const [lang, setLang] = useState<"en" | "fr">("en");
+  const [showPromo, setShowPromo] = useState(true);
   const [hoveredSocial, setHoveredSocial] = useState<number | null>(null);
 
   const handleOrderOnline = () => {
@@ -1416,7 +1418,7 @@ export default function HomePage() {
             <div className="relative w-full aspect-[4/5] max-w-md mx-auto lg:mx-0 mt-8 mb-16 lg:my-0">
               <img
                 src="/heritage-dish.webp"
-                alt="1001 Nuits AAA Angus Beef Ribs"
+                alt="1001 Nuits Steamed Dim Sum Delicacies"
                 loading="lazy"
                 decoding="async"
                 className="w-full h-full object-cover rounded-[2.5rem] shadow-xl"
@@ -1533,7 +1535,7 @@ export default function HomePage() {
                       {lang === "fr" ? "Service Traiteur & Réceptions" : "Catering Feasts & Celebrations"}
                     </p>
                     <p className="text-[11px] text-[#efe7d2]/70 mt-0.5">
-                      {lang === "fr" ? "100% Halal • Livraison sur le lieu de votre fête" : "100% Halal • Delivered directly to your venue"}
+                      {lang === "fr" ? "Service Traiteur • Livraison sur le lieu de votre fête" : "Bespoke Catering • Delivered directly to your venue"}
                     </p>
                   </div>
                   <button
@@ -1570,8 +1572,8 @@ export default function HomePage() {
                 <div className="flex flex-col gap-4 text-[#efe7d2]/80 text-base sm:text-lg leading-relaxed mt-4">
                   <p>
                     {lang === "fr"
-                      ? "Offrez à vos invités une expérience culinaire inoubliable sans le stress de la préparation. Qu'il s'agisse d'un mariage, d'une remise de diplôme, d'un anniversaire ou d'une fête spéciale, nous préparons et livrons nos grands plateaux buffet chauds, nos bateaux de sushis et nos spécialités asiatiques 100% halal directement sur le lieu de votre événement."
-                      : "Treat your guests to an unforgettable culinary experience delivered straight to your event. Whether for a wedding, graduation, birthday party, or special celebration, we prepare and deliver generous hot buffet trays, handcrafted sushi boats, and 100% Halal Asian fusion dishes directly to your venue or gathering."}
+                      ? "Offrez à vos invités une expérience culinaire inoubliable sans le stress de la préparation. Qu'il s'agisse d'un mariage, d'une remise de diplôme, d'un anniversaire ou d'une fête spéciale, nous préparons et livrons nos grands plateaux buffet chauds, nos bateaux de sushis et nos spécialités asiatiques raffinées directement sur le lieu de votre événement."
+                      : "Treat your guests to an unforgettable culinary experience delivered straight to your event. Whether for a wedding, graduation, birthday party, or special celebration, we prepare and deliver generous hot buffet trays, handcrafted sushi boats, and signature Asian fusion dishes directly to your venue or gathering."}
                   </p>
                 </div>
 
@@ -1855,6 +1857,53 @@ export default function HomePage() {
           </a>
         </div>
       </motion.footer>
+
+      {/* Promotional Buffet Popup Modal */}
+      <AnimatePresence>
+        {showPromo && (
+          <div className="fixed inset-0 z-[250] flex items-center justify-center p-4">
+            {/* Backdrop Blur/Overlay */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setShowPromo(false)}
+              className="absolute inset-0 bg-[#0a0b0a]/90 backdrop-blur-none md:backdrop-blur-md md:bg-[#0a0b0a]/85 cursor-pointer"
+            />
+
+            {/* Modal Card */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.9, y: 20 }}
+              transition={{ type: "spring", damping: 25, stiffness: 220 }}
+              className="relative max-w-lg w-full bg-[#1a1c19] border border-[#cfbe91]/40 rounded-3xl md:rounded-[2rem] overflow-hidden shadow-[0_24px_60px_rgba(0,0,0,0.8)] z-10 flex flex-col items-center"
+            >
+              {/* Close Button */}
+              <button
+                onClick={() => setShowPromo(false)}
+                className="absolute top-4 right-4 z-20 p-2.5 rounded-full bg-[#0a0b0a]/70 text-[#efe7d2] hover:bg-[#cfbe91] hover:text-[#0a0b0a] border border-[#cfbe91]/30 transition-colors cursor-pointer shadow-lg"
+                aria-label="Close promotion"
+              >
+                <X size={20} />
+              </button>
+
+              {/* Image Container */}
+              <div className="w-full flex items-center justify-center bg-[#0a0b0a]">
+                <img
+                  src="/buffet-popup.webp"
+                  onError={(e) => {
+                    (e.currentTarget as HTMLImageElement).src = "/buffet.png";
+                  }}
+                  alt="1001 Nuits Buffet Promotion"
+                  decoding="async"
+                  className="w-full h-auto max-h-[80vh] object-contain select-none"
+                />
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
 
     </div>
   );

@@ -40,10 +40,10 @@ export default function CateringForm({ lang }: CateringFormProps) {
     notes: ''
   });
 
-  // Calculate minimum selectable date (tomorrow)
-  const tomorrow = new Date();
-  tomorrow.setDate(tomorrow.getDate() + 1);
-  const minDate = tomorrow.toISOString().split('T')[0];
+  // Calculate minimum selectable date (requires at least 1 week / 7 days advance notice)
+  const minBookingDate = new Date();
+  minBookingDate.setDate(minBookingDate.getDate() + 7);
+  const minDate = minBookingDate.toISOString().split('T')[0];
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
@@ -183,8 +183,8 @@ export default function CateringForm({ lang }: CateringFormProps) {
 
           <p className="text-sm sm:text-base text-[#efe7d2]/70 leading-relaxed font-sans">
             {lang === 'fr'
-              ? 'Mariages, remises de diplômes, réceptions privées ou événements d’entreprise : nos artisans culinaires préparent et livrent des festins 100% halal d’exception directement sur le lieu de votre célébration. Transmettez-nous vos détails pour recevoir une proposition personnalisée.'
-              : 'From weddings and milestone celebrations to graduations and corporate events, our culinary team curates and delivers exceptional 100% Halal feasts directly to your venue. Share your event details below to receive a personalized catering proposal.'}
+              ? 'Mariages, remises de diplômes, réceptions privées ou événements d’entreprise : nos artisans culinaires préparent et livrent des festins d’exception directement sur le lieu de votre célébration. Transmettez-nous vos détails pour recevoir une proposition personnalisée.'
+              : 'From weddings and milestone celebrations to graduations and corporate events, our culinary team curates and delivers exceptional feasts directly to your venue. Share your event details below to receive a personalized catering proposal.'}
           </p>
         </div>
 
@@ -327,18 +327,29 @@ export default function CateringForm({ lang }: CateringFormProps) {
 
                 {/* Event Date */}
                 <div className="space-y-2">
-                  <label className="text-xs font-semibold text-[#efe7d2]/80 flex items-center gap-2">
-                    <Calendar size={14} className="text-[#cfbe91]" />
-                    <span>{lang === 'fr' ? 'Date de l’événement' : 'Event Date'}</span>
-                  </label>
+                  <div className="flex items-center justify-between">
+                    <label className="text-xs font-semibold text-[#efe7d2]/80 flex items-center gap-2">
+                      <Calendar size={14} className="text-[#cfbe91]" />
+                      <span>{lang === 'fr' ? 'Date de l’événement *' : 'Event Date *'}</span>
+                    </label>
+                    <span className="text-[10px] text-[#cfbe91] font-semibold bg-[#cfbe91]/10 px-2 py-0.5 rounded-full border border-[#cfbe91]/20">
+                      {lang === 'fr' ? 'Min. 7 jours à l’avance' : 'Min. 7 days in advance'}
+                    </span>
+                  </div>
                   <input
                     type="date"
+                    required
                     min={minDate}
                     name="eventDate"
                     value={formData.eventDate}
                     onChange={handleInputChange}
                     className="w-full bg-[#1f211e] border border-[#333330] rounded-xl px-4 py-3.5 text-[#efe7d2] focus:border-[#cfbe91] focus:outline-none focus:ring-1 focus:ring-[#cfbe91] transition-all text-sm"
                   />
+                  <p className="text-[11px] text-[#efe7d2]/60 font-sans">
+                    {lang === 'fr'
+                      ? 'Pour nous permettre de préparer votre festin traiteur avec le plus grand soin, les réservations doivent être effectuées au moins 7 jours à l’avance.'
+                      : 'To allow our kitchen time to curate and prepare your catering feast, orders require at least 1 week advance notice.'}
+                  </p>
                 </div>
 
                 {/* Venue / Delivery Location */}
