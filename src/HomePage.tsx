@@ -1891,13 +1891,9 @@ export default function HomePage() {
               {/* Image Container */}
               <div className="w-full flex items-center justify-center bg-[#0a0b0a]">
                 <img
-                  src="/buffet-popup.webp"
-                  onError={(e) => {
-                    (e.currentTarget as HTMLImageElement).src = "/buffet.png";
-                  }}
-                  alt="1001 Nuits Buffet Promotion"
-                  decoding="async"
-                  className="w-full h-auto max-h-[80vh] object-contain select-none"
+                  src="/buffet.png"
+                  alt="1001 Nuits Buffet All You Can Eat Promotion"
+                  className="w-full h-auto max-h-[85vh] object-contain select-none"
                 />
               </div>
             </motion.div>
