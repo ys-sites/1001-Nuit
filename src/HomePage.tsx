@@ -1415,7 +1415,7 @@ export default function HomePage() {
             {/* Image Composition */}
             <div className="relative w-full aspect-[4/5] max-w-md mx-auto lg:mx-0 mt-8 mb-16 lg:my-0">
               <img
-                src={encodeURI("/menu/SIZZLING PLATES/SP02 AAA Angus Beef Ribs.png")}
+                src="/heritage-dish.webp"
                 alt="1001 Nuits AAA Angus Beef Ribs"
                 loading="lazy"
                 decoding="async"
@@ -1429,7 +1429,7 @@ export default function HomePage() {
                 className="absolute -bottom-6 -right-4 sm:-bottom-10 sm:-right-10 w-1/2 sm:w-2/3 max-w-[180px] sm:max-w-[240px] aspect-square rounded-[2rem] overflow-hidden border-[8px] sm:border-[12px] border-[#faf8f5] shadow-2xl"
               >
                 <img
-                  src={encodeURI("/menu/Sushi Combo/Boat 1.png")}
+                  src="/heritage-sushi.webp"
                   alt="1001 Nuits Sushi Boat"
                   loading="lazy"
                   decoding="async"
@@ -1517,7 +1517,10 @@ export default function HomePage() {
             >
               <div className="relative w-full max-w-xl mx-auto lg:ml-auto rounded-[2.5rem] overflow-hidden border border-[#cfbe91]/30 shadow-2xl group">
                 <img
-                  src="/catering-events.jpg"
+                  src="/catering-events.webp"
+                  onError={(e) => {
+                    (e.currentTarget as HTMLImageElement).src = "/catering-events.jpg";
+                  }}
                   alt="Private Dining & Catering Banquet"
                   loading="lazy"
                   decoding="async"

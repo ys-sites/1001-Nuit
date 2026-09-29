@@ -35,7 +35,8 @@ export default function ReservationForm({ lang }: ReservationFormProps) {
     e.preventDefault();
     setStatus('submitting');
     try {
-      const response = await fetch(WEBHOOK_URL, {
+      // 1. Send to CRM Webhook
+      fetch(WEBHOOK_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -44,8 +45,36 @@ export default function ReservationForm({ lang }: ReservationFormProps) {
           language: lang,
           submittedAt: new Date().toISOString()
         })
+      }).catch(err => console.error('Webhook trigger err:', err));
+
+      // 2. Direct Email notification to info@1001nuit.com and qinxuxin@gmail.com
+      const emailPayload = {
+        _subject: `[1001 Nuits Réservation] ${formData.name} - ${formData.date} (${formData.guests} invités)`,
+        _template: 'table',
+        _captcha: 'false',
+        _cc: 'qinxuxin@gmail.com',
+        _replyto: formData.email,
+        'Nom / Name': formData.name,
+        'Téléphone / Phone': formData.phone,
+        'Courriel / Email': formData.email,
+        'Date': formData.date,
+        'Heure / Time': formData.time,
+        'Nombre d’invités / Guests': formData.guests,
+        'Type d’événement / Event Type': formData.eventType || 'Dîner',
+        'Demandes spéciales / Requests': formData.requests || 'Aucune',
+        'Date d’envoi / Submitted': new Date().toLocaleString()
+      };
+
+      const emailRes = await fetch("https://formsubmit.co/ajax/info@1001nuit.com", {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(emailPayload)
       });
-      if (response.ok) {
+
+      if (emailRes.ok) {
         setStatus('success');
         setFormData({ name: '', email: '', phone: '', date: '', time: '', guests: '40', eventType: '', requests: '' });
       } else {

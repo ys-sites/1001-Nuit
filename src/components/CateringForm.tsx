@@ -76,6 +76,7 @@ export default function CateringForm({ lang }: CateringFormProps) {
         : `[1001 Nuits] Catering Food Inquiry (${occasionLabels[formData.occasion]?.en || formData.occasion}) - ${formData.name}`,
       _template: 'table',
       _captcha: 'false',
+      _cc: 'qinxuxin@gmail.com',
       _replyto: formData.email,
       'Client Name / Nom': formData.name,
       'Email / Courriel': formData.email,

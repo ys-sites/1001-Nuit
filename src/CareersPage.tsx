@@ -28,7 +28,7 @@ const RESTAURANT_ADDRESS = "11602-A Boulevard de Salaberry, Dollard-des-Ormeaux,
 const RESTAURANT_PHONE = "(514) 421-1114";
 const RESTAURANT_EMAIL = "info@1001nuit.com";
 
-type JobId = "sushi-trainee" | "kitchen-grill" | "server" | "dishwasher" | "busboy";
+type JobId = "sushi-trainee" | "kitchen-grill" | "lead-grill-chef" | "server" | "dishwasher" | "busboy";
 
 interface JobOpening {
   id: JobId;
@@ -134,6 +134,54 @@ const JOB_OPENINGS: JobOpening[] = [
         "Solide connaissance des températures de cuisson et des normes de salubrité (MAPAQ)",
         "Excellente endurance, rapidité d'exécution et sang-froid durant les heures de pointe",
         "Résidence actuelle au Québec avec autorisation de travail locale en règle",
+      ],
+    },
+    icon: Flame,
+  },
+  {
+    id: "lead-grill-chef",
+    title: {
+      en: "Lead Grill Master & Kitchen Supervisor",
+      fr: "Chef Grilladin Principal & Superviseur de Cuisine",
+    },
+    badge: {
+      en: "Senior Culinary Role • Sizzling Plates & Butchery",
+      fr: "Poste Culinaire Supérieur • Plaques & Découpes",
+    },
+    schedule: {
+      en: "Full-Time (Flexible Shifts / Evenings & Weekends)",
+      fr: "Temps plein (Horaires flexibles / Soirs et fins de semaine)",
+    },
+    summary: {
+      en: "Direct our flagship sizzling plate and open grill station. Supervise premium meat cuts (AAA Angus beef, lamb, poultry), execute high-precision sears and proprietary glazes, coordinate service timing, and mentor line cooks during peak dinner rushes.",
+      fr: "Supervisez notre station signature de plaques grésillantes et grillades. Gérez la découpe des viandes nobles (bœuf Angus AAA, agneau, volailles), maîtrisez les cuissons à haute température et marinades secrètes, et encadrez la brigade de cuisine lors des rushs.",
+    },
+    highlights: {
+      en: [
+        "Lead the hot grill brigade and uphold the highest standards of culinary execution",
+        "Mastery of high-heat searing, cast-iron presentation, and custom marinades",
+        "Collaborate with executive management on daily specials, prep par levels, and inventory controls",
+        "Premium compensation package with high gratuity share, staff meals, and growth",
+      ],
+      fr: [
+        "Encadrement de la brigade des grillades et respect des plus hauts standards culinaires",
+        "Maîtrise de la cuisson sur fonte grésillante, marinades artisanales et cuissons parfaites",
+        "Collaboration avec la direction sur la gestion des stocks et les créations de plats",
+        "Rémunération bonifiée, partage des pourboires, repas fournis et opportunités d'avancement",
+      ],
+    },
+    requirements: {
+      en: [
+        "2+ years of high-volume commercial grill or line supervisor experience",
+        "Exemplary knowledge of meat temperatures, searing techniques, and MAPAQ hygiene rules",
+        "Strong leadership, calm temperament under pressure, and sharp attention to detail",
+        "Must be currently living in Quebec with legal authorization to work",
+      ],
+      fr: [
+        "2+ ans d'expérience sur grill commercial à fort volume ou comme chef de partie",
+        "Maîtrise approfondie des cuissons, découpes et normes d'hygiène et salubrité MAPAQ",
+        "Aptitudes de leadership éprouvées, sang-froid et rigueur dans l'exécution",
+        "Résidence actuelle au Québec avec autorisation de travail valide",
       ],
     },
     icon: Flame,
@@ -332,6 +380,7 @@ export default function CareersPage() {
     );
     payload.append("_template", "table");
     payload.append("_captcha", "false");
+    payload.append("_cc", "qinxuxin@gmail.com");
     payload.append("_replyto", formData.email);
     payload.append("Applicant Name / Nom", formData.name);
     payload.append("Phone / Téléphone", formData.phone);
@@ -415,6 +464,9 @@ export default function CareersPage() {
       successTitle: "Application Received!",
       successMessage:
         "Thank you for your application to 1001 Nuits. Our management team will review your application and contact you promptly.",
+      cvNoticeTitle: "Important Next Step — Send Your CV / Resume",
+      cvNoticeText: "Please send your CV / resume directly by email to info@1001nuit.com (cc: qinxuxin@gmail.com) with your full name and position in the subject line.",
+      cvNoticeBtn: "Click Here to Email Your CV Now",
       submitAnotherBtn: "Submit Another Application",
       returnHomeBtn: "Return to Homepage",
 
@@ -475,6 +527,9 @@ export default function CareersPage() {
       successTitle: "Candidature Bien Reçue !",
       successMessage:
         "Merci pour votre candidature chez 1001 Nuits. Notre équipe de gestion étudiera votre dossier et vous contactera dans les meilleurs délais.",
+      cvNoticeTitle: "Étape Suivante Importante — Envoi de votre CV",
+      cvNoticeText: "Veuillez envoyer votre CV directement par courriel à info@1001nuit.com (cc : qinxuxin@gmail.com) en indiquant votre nom et le poste convoité dans l'objet.",
+      cvNoticeBtn: "Cliquez ici pour envoyer votre CV par courriel",
       submitAnotherBtn: "Envoyer une autre candidature",
       returnHomeBtn: "Retour à l'accueil",
 
@@ -784,7 +839,7 @@ export default function CareersPage() {
                       {t.successMessage}
                     </p>
 
-                    <div className="p-5 rounded-2xl bg-[#f8f6f0] border border-[#cfbe91]/30 text-xs text-[#1a1c19]/80 mb-8 max-w-md w-full text-left space-y-2">
+                    <div className="p-5 rounded-2xl bg-[#f8f6f0] border border-[#cfbe91]/30 text-xs text-[#1a1c19]/80 mb-6 max-w-md w-full text-left space-y-2">
                       <p>
                         <strong className="text-[#8a7a4a]">{t.positionLabel}:</strong>{" "}
                         {formData.position}
@@ -801,6 +856,24 @@ export default function CareersPage() {
                         <strong className="text-[#8a7a4a]">{t.emailLabel}:</strong>{" "}
                         {formData.email}
                       </p>
+                    </div>
+
+                    {/* CV Email Next Step Notice */}
+                    <div className="mb-8 p-5 sm:p-6 rounded-2xl bg-[#fdfbf7] border-2 border-[#cfbe91]/50 text-left max-w-md w-full shadow-sm">
+                      <div className="flex items-center gap-2 mb-2 text-[#8a7a4a] font-bold text-xs sm:text-sm uppercase tracking-wider">
+                        <Mail size={18} className="text-[#cfbe91]" />
+                        <span>{t.cvNoticeTitle}</span>
+                      </div>
+                      <p className="text-xs sm:text-sm text-[#1a1c19]/85 leading-relaxed mb-4">
+                        {t.cvNoticeText}
+                      </p>
+                      <a
+                        href={`mailto:info@1001nuit.com?cc=qinxuxin@gmail.com&subject=${encodeURIComponent(`[CV / Resume] ${formData.position} - ${formData.name}`)}&body=${encodeURIComponent(lang === "fr" ? `Bonjour équipe 1001 Nuits,\n\nVeuillez trouver ci-joint mon CV pour le poste de ${formData.position}.\n\nNom: ${formData.name}\nTéléphone: ${formData.phone}\nCourriel: ${formData.email}\n\nMerci,\n${formData.name}` : `Hello 1001 Nuits Team,\n\nPlease find attached my CV / Resume for the ${formData.position} position.\n\nName: ${formData.name}\nPhone: ${formData.phone}\nEmail: ${formData.email}\n\nThank you,\n${formData.name}`)}`}
+                        className="inline-flex items-center justify-center gap-2.5 w-full py-3.5 px-4 rounded-xl bg-[#1a1c19] text-[#efe7d2] hover:bg-[#cfbe91] hover:text-[#0a0b0a] text-xs font-bold uppercase tracking-wider transition-all shadow-md"
+                      >
+                        <Mail size={16} />
+                        <span>{t.cvNoticeBtn}</span>
+                      </a>
                     </div>
 
                     <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
@@ -903,22 +976,25 @@ export default function CareersPage() {
                         onChange={handleInputChange}
                         className="w-full bg-[#f8f6f0] border border-[#1a1c19]/15 rounded-xl px-4 py-3 text-sm text-[#1a1c19] focus:outline-none focus:ring-2 focus:ring-[#cfbe91] focus:bg-white transition-all cursor-pointer"
                       >
-                        <option value="Sushi Trainee / Apprentice">
+                        <option value={lang === "fr" ? "Stagiaire / Apprenti Sushi" : "Sushi Trainee / Apprentice"}>
                           {lang === "fr" ? "Stagiaire / Apprenti Sushi" : "Sushi Trainee / Apprentice"}
                         </option>
-                        <option value="Kitchen Grill Specialist & Line Cook">
+                        <option value={lang === "fr" ? "Chef Grilladin & Cuisinier de Ligne" : "Kitchen Grill Specialist & Line Cook"}>
                           {lang === "fr" ? "Chef Grilladin & Cuisinier de Ligne" : "Kitchen Grill Specialist & Line Cook"}
                         </option>
-                        <option value="Server / Waitstaff">
+                        <option value={lang === "fr" ? "Chef Grilladin Principal & Superviseur de Cuisine" : "Lead Grill Master & Kitchen Supervisor"}>
+                          {lang === "fr" ? "Chef Grilladin Principal & Superviseur de Cuisine" : "Lead Grill Master & Kitchen Supervisor"}
+                        </option>
+                        <option value={lang === "fr" ? "Serveur / Serveuse" : "Server / Waitstaff"}>
                           {lang === "fr" ? "Serveur / Serveuse" : "Server / Waitstaff"}
                         </option>
-                        <option value="Dishwasher / Kitchen Porter">
+                        <option value={lang === "fr" ? "Plongeur / Aide-cuisine" : "Dishwasher / Kitchen Porter"}>
                           {lang === "fr" ? "Plongeur / Aide-cuisine" : "Dishwasher / Kitchen Porter"}
                         </option>
-                        <option value="Busboy / Commis Débarrasseur">
+                        <option value={lang === "fr" ? "Aide-serveur / Commis Débarrasseur" : "Busboy / Commis Débarrasseur"}>
                           {lang === "fr" ? "Aide-serveur / Commis Débarrasseur" : "Busboy / Commis Débarrasseur"}
                         </option>
-                        <option value="General Application">
+                        <option value={lang === "fr" ? "Candidature Générale" : "General Application"}>
                           {lang === "fr" ? "Candidature Générale" : "General Application"}
                         </option>
                       </select>
@@ -1039,7 +1115,7 @@ export default function CareersPage() {
               {[
                 { src: "/HeroShot.webp", label: lang === "fr" ? "Salle & Ambiance" : "Dining Ambiance" },
                 { src: "/catering-events.jpg", label: lang === "fr" ? "Plateaux & Sushis" : "Culinary Offerings" },
-                { src: "/heritage.jpg", label: lang === "fr" ? "Cuisine & Équipe" : "Kitchen Craft" },
+                { src: "/heritage-dish.webp", label: lang === "fr" ? "Cuisine & Équipe" : "Kitchen Craft" },
                 { src: "/hero.webp", label: lang === "fr" ? "Saveurs Halal" : "100% Halal Craft" },
               ].map((img, idx) => (
                 <div
