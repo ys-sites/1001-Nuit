@@ -28,7 +28,7 @@ const RESTAURANT_ADDRESS = "11602-A Boulevard de Salaberry, Dollard-des-Ormeaux,
 const RESTAURANT_PHONE = "(514) 421-1114";
 const RESTAURANT_EMAIL = "info@1001nuit.com";
 
-type JobId = "sushi-trainee" | "server" | "dishwasher" | "busboy";
+type JobId = "sushi-trainee" | "kitchen-grill" | "server" | "dishwasher" | "busboy";
 
 interface JobOpening {
   id: JobId;
@@ -86,6 +86,54 @@ const JOB_OPENINGS: JobOpening[] = [
         "Désir sincère d'apprendre l'art culinaire du sushi",
         "Capacité à travailler avec cadence lors des coups de feu",
         "Résidence actuelle au Québec avec autorisation légale de travail",
+      ],
+    },
+    icon: Sparkles,
+  },
+  {
+    id: "kitchen-grill",
+    title: {
+      en: "Kitchen Grill Specialist & Line Cook",
+      fr: "Chef Grilladin & Cuisinier de Ligne",
+    },
+    badge: {
+      en: "Hot Kitchen & Grill Station • Full-Time / Part-Time",
+      fr: "Poste Grillades & Ligne Chaude • Temps plein / partiel",
+    },
+    schedule: {
+      en: "Full-Time / Part-Time (Evenings & Weekends)",
+      fr: "Temps plein / Temps partiel (Soirs et fins de semaine)",
+    },
+    summary: {
+      en: "Take command of our high-heat culinary station. Expertly prepare our signature sizzling plates, AAA Angus beef ribs, lamb chops, and hot Asian specialties to exact temperature, sear, and presentation standards.",
+      fr: "Prenez les commandes de notre station de cuisson à haute température. Maîtrisez la préparation de nos plaques grésillantes réputées, côtes de bœuf Angus AAA, côtelettes d'agneau et spécialités chaudes asiatiques selon des standards rigoureux de cuisson et de présentation.",
+    },
+    highlights: {
+      en: [
+        "Command the grill, flattop, and hot culinary line with precision searing, timing, and plating",
+        "Showcase premium halal meats, sizzling platters, skewers, and wok specialties",
+        "Collaborate closely with head chefs in a well-equipped, fast-moving kitchen brigade",
+        "Competitive hourly compensation with tip sharing, staff meals, and growth opportunities",
+      ],
+      fr: [
+        "Maîtrise de la cuisson sur grill, plancha et ligne chaude avec précision et rapidité",
+        "Mise en valeur de viandes halal de première qualité, plats grésillants et spécialités au wok",
+        "Collaboration étroite avec les chefs au sein d'une brigade de cuisine moderne et dynamique",
+        "Rémunération compétitive avec partage des pourboires, repas fournis et perspectives d'évolution",
+      ],
+    },
+    requirements: {
+      en: [
+        "Prior experience on a commercial grill, flattop, or hot restaurant line",
+        "Sound knowledge of meat temperatures, cooking times, and food safety standards (MAPAQ)",
+        "High stamina, speed, and composure during busy dinner and weekend rushes",
+        "Must be currently residing in Quebec with valid local work authorization",
+      ],
+      fr: [
+        "Expérience préalable sur grill commercial, plancha ou ligne de cuisson chaude",
+        "Solide connaissance des températures de cuisson et des normes de salubrité (MAPAQ)",
+        "Excellente endurance, rapidité d'exécution et sang-froid durant les heures de pointe",
+        "Résidence actuelle au Québec avec autorisation de travail locale en règle",
       ],
     },
     icon: Flame,
@@ -857,6 +905,9 @@ export default function CareersPage() {
                       >
                         <option value="Sushi Trainee / Apprentice">
                           {lang === "fr" ? "Stagiaire / Apprenti Sushi" : "Sushi Trainee / Apprentice"}
+                        </option>
+                        <option value="Kitchen Grill Specialist & Line Cook">
+                          {lang === "fr" ? "Chef Grilladin & Cuisinier de Ligne" : "Kitchen Grill Specialist & Line Cook"}
                         </option>
                         <option value="Server / Waitstaff">
                           {lang === "fr" ? "Serveur / Serveuse" : "Server / Waitstaff"}
