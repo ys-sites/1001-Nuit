@@ -1317,7 +1317,7 @@ export default function HomePage() {
                     />
                   </div>
                 )}
-                <div className="flex-1 p-4 sm:p-5 flex flex-col justify-between min-w-0">
+                <div className="flex-1 p-4 sm:p-5 flex flex-col justify-center min-w-0">
                   <div className="min-w-0">
                     <h4 className="font-sans font-bold text-[#1a1c19] text-sm sm:text-base md:text-lg leading-snug line-clamp-2">
                       {lang === "fr" ? item.name_fr : item.name_en}
@@ -1327,11 +1327,6 @@ export default function HomePage() {
                         {lang === "fr" ? item.desc_fr : item.desc_en}
                       </p>
                     )}
-                  </div>
-                  <div className="flex justify-end items-end mt-auto">
-                    <span className="font-sans font-extrabold text-[#1a1c19] text-sm sm:text-base md:text-lg">
-                      {item.price}
-                    </span>
                   </div>
                 </div>
               </motion.div>
