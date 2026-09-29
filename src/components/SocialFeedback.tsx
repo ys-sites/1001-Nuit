@@ -84,6 +84,7 @@ function VideoCard({
       <video
         ref={videoRef}
         src={`${video.src}#t=1.0`}
+        poster={video.src.replace(/\.mp4$/, ".webp")}
         loop
         playsInline
         preload="none"
