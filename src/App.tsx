@@ -1,10 +1,11 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/react';
 import HomePage from './HomePage';
 import ReviewPage from './ReviewPage';
 import ClosedPage from './ClosedPage';
 import ThankYouPage from './ThankYouPage';
+import CareersPage from './CareersPage';
 
 export default function App() {
   return (
@@ -12,6 +13,9 @@ export default function App() {
       <main className="flex-grow flex flex-col">
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/careers" element={<CareersPage />} />
+          <Route path="/carrieres" element={<Navigate to="/careers" replace />} />
+          <Route path="/jobs" element={<Navigate to="/careers" replace />} />
           <Route path="/review" element={<ReviewPage />} />
           <Route path="/closed" element={<ClosedPage />} />
           <Route path="/thank-you" element={<ThankYouPage />} />

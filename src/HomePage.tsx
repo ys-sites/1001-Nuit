@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { motion, AnimatePresence, useScroll, useSpring } from "motion/react";
+import { Link, useLocation } from "react-router-dom";
+import { motion, useScroll, useSpring } from "motion/react";
 import {
   ArrowRight,
   Instagram,
@@ -8,7 +8,6 @@ import {
   Phone,
   Star,
   Calendar,
-  X,
   ShoppingBag,
   MapPin,
 } from "lucide-react";
@@ -960,16 +959,30 @@ const MENU_CATEGORIES = [
 export default function HomePage() {
   const [activeCategory, setActiveCategory] = useState(0);
   const [lang, setLang] = useState<"en" | "fr">("en");
-  const [showPromo, setShowPromo] = useState(true);
   const [hoveredSocial, setHoveredSocial] = useState<number | null>(null);
 
   const handleOrderOnline = () => {
     window.open('https://cloud.quickposhub.com/onlineorder/#/pages/order/tableurl?code=E9IPN247Bx', '_blank');
   };
 
+  const location = useLocation();
+
   useEffect(() => {
     document.documentElement.lang = lang;
   }, [lang]);
+
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace("#", "");
+      const timer = setTimeout(() => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 150);
+      return () => clearTimeout(timer);
+    }
+  }, [location.hash]);
 
   const reviewLoop = [...REVIEWS, ...REVIEWS];
 
@@ -1808,13 +1821,20 @@ export default function HomePage() {
         
         
 
-        <div className="text-[12px] opacity-80 mb-4">
+        <div className="flex flex-wrap justify-center items-center gap-3 md:gap-4 text-[12px] opacity-80 mb-4">
           <a
             href="mailto:info@1001nuit.com"
             className="text-[#cfbe91] hover:text-[#efe7d2] transition-colors"
           >
             info@1001nuit.com
           </a>
+          <span className="text-[#333330]">•</span>
+          <Link
+            to="/careers"
+            className="text-[#efe7d2]/80 hover:text-[#cfbe91] transition-colors font-medium tracking-wider uppercase text-[11px]"
+          >
+            {lang === "fr" ? "Rejoindre l'équipe • Carrières" : "Join Our Team • Careers"}
+          </Link>
         </div>
         <p className="text-[10px] uppercase tracking-widest opacity-30">
           © {new Date().getFullYear()} 1001 Nuits.{" "}
@@ -1841,49 +1861,6 @@ export default function HomePage() {
         </div>
       </motion.footer>
 
-      {/* Promotional Popup Modal */}
-      <AnimatePresence>
-        {showPromo && (
-          <div className="fixed inset-0 z-[250] flex items-center justify-center p-4">
-            {/* Backdrop Blur/Overlay */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setShowPromo(false)}
-              className="absolute inset-0 bg-[#0a0b0a]/90 backdrop-blur-none md:backdrop-blur-md md:bg-[#0a0b0a]/85 cursor-pointer"
-            />
-
-            {/* Modal Card */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.9, y: 20 }}
-              transition={{ type: "spring", damping: 25, stiffness: 220 }}
-              className="relative max-w-lg w-full bg-[#1a1c19] border border-[#cfbe91]/30 rounded-3xl md:rounded-[2rem] overflow-hidden shadow-[0_24px_60px_rgba(0,0,0,0.6)] z-10 flex flex-col items-center"
-            >
-              {/* Close Button */}
-              <button
-                onClick={() => setShowPromo(false)}
-                className="absolute top-4 right-4 z-20 p-2.5 rounded-full bg-[#0a0b0a]/60 text-[#efe7d2] hover:bg-white hover:text-black border border-white/10 transition-colors cursor-pointer"
-                aria-label="Close promotion"
-              >
-                <X size={20} />
-              </button>
-
-              {/* Image Container */}
-              <div className="w-full aspect-auto flex items-center justify-center bg-[#0a0b0a]">
-                <img
-                  src={encodeURI("/buffet promotion.png")}
-                  alt="Promotion"
-                  decoding="async"
-                  className="w-full h-auto max-h-[75vh] object-contain select-none"
-                />
-              </div>
-            </motion.div>
-          </div>
-        )}
-      </AnimatePresence>
     </div>
   );
 }

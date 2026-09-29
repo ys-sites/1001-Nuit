@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { createPortal } from "react-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { cn } from "../lib/utils";
 
@@ -13,11 +14,27 @@ export default function Navbar({
   setLang?: (lang: "en" | "fr") => void;
 }) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const scrollTo = (id: string) => {
+    if (location.pathname !== "/") {
+      navigate(`/#${id}`);
+      setMenuOpen(false);
+      return;
+    }
     const el = document.getElementById(id);
     if (el) {
       el.scrollIntoView({ behavior: "smooth" });
+    }
+    setMenuOpen(false);
+  };
+
+  const handleLogoClick = () => {
+    if (location.pathname !== "/") {
+      navigate("/");
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
     setMenuOpen(false);
   };
@@ -42,13 +59,13 @@ export default function Navbar({
 
           <div
             className="font-serif text-[18px] md:text-xl xl:text-2xl whitespace-nowrap tracking-[0.2em] uppercase mr-3 xl:mr-10 text-[#efe7d2] hover:opacity-80 transition-opacity cursor-pointer flex items-baseline gap-1"
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            onClick={handleLogoClick}
           >
             <span className="lining-nums">1001</span> <span>NUITS</span>
           </div>
         </div>
 
-        <div className="hidden xl:flex items-center gap-6 xl:gap-10 text-[11px] xl:text-[13px] font-bold tracking-[0.15em] xl:tracking-[0.18em] uppercase text-[#efe7d2] whitespace-nowrap">
+        <div className="hidden xl:flex items-center gap-6 xl:gap-8 text-[11px] xl:text-[13px] font-bold tracking-[0.15em] xl:tracking-[0.18em] uppercase text-[#efe7d2] whitespace-nowrap">
           <button
             onClick={() => scrollTo("menu")}
             className="transition-colors hover-underline-animation hover:text-[#cfbe91]"
@@ -79,6 +96,15 @@ export default function Navbar({
           >
             {lang === "fr" ? "Réservation" : "Reservation"}
           </button>
+          <Link
+            to="/careers"
+            className={cn(
+              "transition-colors hover-underline-animation hover:text-[#cfbe91]",
+              location.pathname === "/careers" && "text-[#cfbe91]"
+            )}
+          >
+            {lang === "fr" ? "Carrières" : "Careers"}
+          </Link>
         </div>
 
         <div className="flex items-center gap-2 md:gap-3 ml-auto shrink-0">
@@ -121,7 +147,7 @@ export default function Navbar({
               
               <div
                 className="font-serif text-xl tracking-[0.2em] uppercase text-[#efe7d2] cursor-pointer flex items-baseline gap-1"
-                onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); setMenuOpen(false); }}
+                onClick={handleLogoClick}
               >
                 <span className="lining-nums">1001</span> <span>NUITS</span>
               </div>
@@ -150,6 +176,16 @@ export default function Navbar({
                 {lang === "fr" ? item.fr : item.en}
               </button>
             ))}
+            <Link
+              to="/careers"
+              onClick={() => setMenuOpen(false)}
+              className={cn(
+                "font-serif text-left text-3xl sm:text-4xl text-[#efe7d2] hover:text-[#cfbe91] transition-colors tracking-wide",
+                location.pathname === "/careers" && "text-[#cfbe91]"
+              )}
+            >
+              {lang === "fr" ? "Carrières" : "Careers"}
+            </Link>
           </nav>
 
           {setLang && (

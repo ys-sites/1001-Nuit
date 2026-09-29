@@ -7,15 +7,13 @@ import {
   Mail, 
   Phone, 
   MessageSquare, 
-  Sparkles, 
   CheckCircle2, 
   AlertCircle, 
   Send, 
   Heart, 
   GraduationCap, 
   Cake, 
-  PartyPopper,
-  UtensilsCrossed,
+  PartyPopper, 
   MapPin,
   Truck,
   Loader2
@@ -39,7 +37,6 @@ export default function CateringForm({ lang }: CateringFormProps) {
     eventDate: '',
     deliveryLocation: '',
     guestCount: '25',
-    serviceType: 'catering_delivery',
     notes: ''
   });
 
@@ -70,14 +67,7 @@ export default function CateringForm({ lang }: CateringFormProps) {
       birthday: { en: 'Birthday Party', fr: 'Fête d’anniversaire' },
       corporate: { en: 'Corporate / Business Event', fr: 'Événement d’entreprise' },
       family: { en: 'Family Celebration', fr: 'Fête de famille' },
-      other: { en: 'Other Special Celebration', fr: 'Autre célébration spéciale' }
-    };
-
-    const serviceLabels: Record<string, { en: string; fr: string }> = {
-      catering_delivery: { en: 'Catering Delivery to Venue / Celebration', fr: 'Livraison de repas sur le lieu de l’événement' },
-      buffet_platters: { en: 'Custom Hot Buffet & Party Trays', fr: 'Grands plateaux buffet & plats chauds traiteur' },
-      sushi_boats: { en: 'Sushi Boats & Signature Platters', fr: 'Bateaux de sushis & assortiments signatures' },
-      full_catering: { en: 'Complete Celebration Feast (Hot Dishes + Sushi Platters)', fr: 'Formule complète (Plats chauds + Plateaux de sushis)' }
+      other: { en: 'Celebration & Other', fr: 'Célébration & Autre' }
     };
 
     const payload = {
@@ -94,7 +84,6 @@ export default function CateringForm({ lang }: CateringFormProps) {
       'Event Date / Date de l’événement': formData.eventDate || (lang === 'fr' ? 'À confirmer' : 'To be confirmed'),
       'Delivery Location / Lieu de livraison': formData.deliveryLocation || (lang === 'fr' ? 'Non spécifié' : 'Not specified'),
       'Estimated Guests / Nombre d’invités': formData.guestCount,
-      'Food Style / Formule de repas': lang === 'fr' ? serviceLabels[formData.serviceType]?.fr : serviceLabels[formData.serviceType]?.en,
       'Special Requests & Dietary / Préférences & Régimes': formData.notes || (lang === 'fr' ? 'Aucune note' : 'None provided'),
       'Submitted At': new Date().toLocaleString()
     };
@@ -142,7 +131,6 @@ export default function CateringForm({ lang }: CateringFormProps) {
       eventDate: '',
       deliveryLocation: '',
       guestCount: '25',
-      serviceType: 'catering_delivery',
       notes: ''
     });
   };
@@ -169,8 +157,8 @@ export default function CateringForm({ lang }: CateringFormProps) {
     {
       id: 'other',
       icon: PartyPopper,
-      titleEn: 'Any Celebration',
-      titleFr: 'Autre Célébration'
+      titleEn: 'Celebration & Other',
+      titleFr: 'Célébration & Autre'
     }
   ];
 
@@ -185,24 +173,24 @@ export default function CateringForm({ lang }: CateringFormProps) {
         <div className="text-center max-w-2xl mx-auto mb-10">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#cfbe91]/15 border border-[#cfbe91]/30 text-[#cfbe91] text-xs uppercase tracking-widest font-bold mb-4">
             <Truck size={14} />
-            <span>{lang === 'fr' ? 'Service Traiteur • Livraison sur vos Lieux' : 'Catering Service • Delivery to Your Venue'}</span>
+            <span>{lang === 'fr' ? 'Service Traiteur Premium • Livraison Sur Place' : 'Premium Catering • Direct Venue Delivery'}</span>
           </div>
 
           <h3 className="font-serif text-3xl sm:text-4xl text-[#efe7d2] mb-3 leading-tight">
-            {lang === 'fr' ? 'Demande de Devis Traiteur pour votre Fête' : 'Inquire for Food Delivery to Your Celebration'}
+            {lang === 'fr' ? 'Demande de Devis Traiteur & Menus Sur Mesure' : 'Catering Inquiries & Bespoke Menus'}
           </h3>
 
           <p className="text-sm sm:text-base text-[#efe7d2]/70 leading-relaxed font-sans">
             {lang === 'fr'
-              ? 'Mariage, remise de diplôme, anniversaire ou célébration : transmettez-nous les détails de votre événement et faites livrer un délicieux festin 100% halal directement sur le lieu de votre célébration.'
-              : 'Marriage, graduation, birthday, or private gathering: tell us about your event and our culinary team will deliver fresh, tailored 100% Halal feast platters directly to your venue or celebration.'}
+              ? 'Mariages, remises de diplômes, réceptions privées ou événements d’entreprise : nos artisans culinaires préparent et livrent des festins 100% halal d’exception directement sur le lieu de votre célébration. Transmettez-nous vos détails pour recevoir une proposition personnalisée.'
+              : 'From weddings and milestone celebrations to graduations and corporate events, our culinary team curates and delivers exceptional 100% Halal feasts directly to your venue. Share your event details below to receive a personalized catering proposal.'}
           </p>
         </div>
 
         {/* Occasion Quick-Select Pills */}
         <div className="mb-8">
           <label className="block text-xs font-bold uppercase tracking-wider text-[#cfbe91] mb-3 text-center sm:text-left">
-            {lang === 'fr' ? '1. Choisissez votre type d’occasion' : '1. Choose your special occasion'}
+            {lang === 'fr' ? '1. Sélectionnez le type d’événement' : '1. Select Your Event Type'}
           </label>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
             {occasions.map((occ) => {
@@ -389,33 +377,6 @@ export default function CateringForm({ lang }: CateringFormProps) {
                   </select>
                 </div>
 
-                {/* Preferred Food / Service Style */}
-                <div className="space-y-2 md:col-span-2">
-                  <label className="text-xs font-semibold text-[#efe7d2]/80 flex items-center gap-2">
-                    <Sparkles size={14} className="text-[#cfbe91]" />
-                    <span>{lang === 'fr' ? 'Formule de repas souhaitée' : 'Preferred Food Style'}</span>
-                  </label>
-                  <select
-                    name="serviceType"
-                    value={formData.serviceType}
-                    onChange={handleInputChange}
-                    className="w-full bg-[#1f211e] border border-[#333330] rounded-xl px-4 py-3.5 text-[#efe7d2] focus:border-[#cfbe91] focus:outline-none focus:ring-1 focus:ring-[#cfbe91] transition-all text-sm cursor-pointer"
-                  >
-                    <option value="catering_delivery">
-                      {lang === 'fr' ? 'Livraison traiteur sur le lieu de l’événement' : 'Catering Food Delivery to Venue / Celebration'}
-                    </option>
-                    <option value="buffet_platters">
-                      {lang === 'fr' ? 'Grands plateaux buffet & plats chauds traiteur' : 'Large Hot Food Buffet & Party Trays'}
-                    </option>
-                    <option value="sushi_boats">
-                      {lang === 'fr' ? 'Bateaux de sushis & assortiments signatures' : 'Sushi Boats & Signature Platters'}
-                    </option>
-                    <option value="full_catering">
-                      {lang === 'fr' ? 'Formule festin complète (Plats chauds + Plateaux de sushis)' : 'Complete Celebration Feast (Hot Dishes + Sushi Platters)'}
-                    </option>
-                  </select>
-                </div>
-
                 {/* Special Requests / Notes */}
                 <div className="space-y-2 md:col-span-2">
                   <label className="text-xs font-semibold text-[#efe7d2]/80 flex items-center gap-2">
@@ -477,11 +438,11 @@ export default function CateringForm({ lang }: CateringFormProps) {
                   {status === 'submitting' ? (
                     <>
                       <Loader2 size={16} className="animate-spin" />
-                      <span>{lang === 'fr' ? 'Envoi du devis…' : 'Sending Inquiry…'}</span>
+                      <span>{lang === 'fr' ? 'Envoi de votre demande…' : 'Preparing Proposal Request…'}</span>
                     </>
                   ) : (
                     <>
-                      <span>{lang === 'fr' ? 'Demander un devis traiteur' : 'Send Catering Inquiry'}</span>
+                      <span>{lang === 'fr' ? 'Demander une proposition traiteur' : 'Request Catering Proposal'}</span>
                       <Send size={15} />
                     </>
                   )}
