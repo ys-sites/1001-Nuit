@@ -20,9 +20,6 @@ import {
   Phone,
   Mail,
   ChevronRight,
-  Upload,
-  FileText,
-  X,
 } from "lucide-react";
 import { cn } from "./lib/utils";
 
@@ -249,10 +246,6 @@ export default function CareersPage() {
     position: "Sushi Trainee / Apprentice",
   });
 
-  // CV File state and drag-and-drop state
-  const [cvFile, setCvFile] = useState<File | null>(null);
-  const [isDragging, setIsDragging] = useState(false);
-
   const handleRoleSelection = (roleId: JobId) => {
     setSelectedRole(roleId);
     const job = JOB_OPENINGS.find((j) => j.id === roleId);
@@ -277,49 +270,11 @@ export default function CareersPage() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files && e.target.files[0]) {
-      setCvFile(e.target.files[0]);
-    }
-  };
-
-  const handleDrop = (e: React.DragEvent<HTMLDivElement>) => {
-    e.preventDefault();
-    setIsDragging(false);
-    if (e.dataTransfer.files && e.dataTransfer.files[0]) {
-      setCvFile(e.dataTransfer.files[0]);
-    }
-  };
-
-  const handleDragOver = (e: React.DragEvent<HTMLDivElement>) => {
-    e.preventDefault();
-    setIsDragging(true);
-  };
-
-  const handleDragLeave = () => {
-    setIsDragging(false);
-  };
-
-  const removeCvFile = () => {
-    setCvFile(null);
-  };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("submitting");
     setErrorMessage("");
 
-    /*
-     * ── FORMSUBMIT ATTACHMENT EXPLANATION ──────────────────────────────────────────
-     * FormSubmit (https://formsubmit.co) natively supports file attachments using FormData.
-     * 1. By sending a 'multipart/form-data' payload via FormData with the field name 'attachment',
-     *    FormSubmit automatically captures the uploaded CV document (PDF, Word, etc.).
-     * 2. FormSubmit then forwards the file as a direct email attachment delivered
-     *    straight to the recipient mailbox (info@1001nuit.com).
-     * 3. When using fetch with FormData, we deliberately omit the 'Content-Type' header so
-     *    the browser automatically creates the multipart boundary headers.
-     * ─────────────────────────────────────────────────────────────────────────────
-     */
     const payload = new FormData();
     payload.append(
       "_subject",
@@ -335,11 +290,6 @@ export default function CareersPage() {
     payload.append("Email / Courriel", formData.email);
     payload.append("Position Applied For / Poste", formData.position);
     payload.append("Submitted At", new Date().toLocaleString());
-
-    // Push the attached CV document directly to FormSubmit
-    if (cvFile) {
-      payload.append("attachment", cvFile, cvFile.name);
-    }
 
     try {
       const response = await fetch(FORMSUBMIT_URL, {
@@ -402,7 +352,7 @@ export default function CareersPage() {
       // Simplified Application Form (Theme Color Background)
       formBadge: "Simple Quick Application",
       formTitle: "Submit Your Application",
-      formSubtitle: "Enter your details and upload your CV. We will review your application and get in touch.",
+      formSubtitle: "Enter your details below. We will review your application and get in touch.",
       fullNameLabel: "Full Name",
       fullNamePlaceholder: "e.g., Sarah Tremblay",
       phoneLabel: "Phone Number",
@@ -410,17 +360,13 @@ export default function CareersPage() {
       emailLabel: "Email Address",
       emailPlaceholder: "sarah.tremblay@example.com",
       positionLabel: "Position Applying For",
-      cvLabel: "Drop Your CV / Resume (Optional)",
-      cvDropPrompt: "Drag & drop your CV file here, or click to browse",
-      cvFormats: "Supports PDF, DOC, DOCX (Up to 10MB)",
-      removeFile: "Remove file",
       submitBtn: "Submit Application",
       submittingBtn: "Sending Application...",
 
       // Success screen
       successTitle: "Application Received!",
       successMessage:
-        "Thank you for your application to 1001 Nuits. Our management team will review your CV and contact you promptly.",
+        "Thank you for your application to 1001 Nuits. Our management team will review your application and contact you promptly.",
       submitAnotherBtn: "Submit Another Application",
       returnHomeBtn: "Return to Homepage",
 
@@ -466,7 +412,7 @@ export default function CareersPage() {
       // Simplified Application Form (Theme Color Background)
       formBadge: "Candidature Rapide",
       formTitle: "Formulaire de Candidature",
-      formSubtitle: "Renseignez vos coordonnées et déposez votre CV. Notre équipe étudiera votre dossier sous peu.",
+      formSubtitle: "Renseignez vos coordonnées ci-dessous. Notre équipe étudiera votre dossier sous peu.",
       fullNameLabel: "Nom Complet",
       fullNamePlaceholder: "ex. : Sarah Tremblay",
       phoneLabel: "Numéro de Téléphone",
@@ -474,17 +420,13 @@ export default function CareersPage() {
       emailLabel: "Adresse Courriel",
       emailPlaceholder: "sarah.tremblay@example.com",
       positionLabel: "Poste Souhaité",
-      cvLabel: "Déposez votre CV (Optionnel)",
-      cvDropPrompt: "Glissez-déposez votre CV ici, ou cliquez pour parcourir",
-      cvFormats: "Formats acceptés : PDF, DOC, DOCX (Jusqu'à 10 Mo)",
-      removeFile: "Supprimer le fichier",
       submitBtn: "Envoyer ma Candidature",
       submittingBtn: "Envoi de la candidature...",
 
       // Success screen
       successTitle: "Candidature Bien Reçue !",
       successMessage:
-        "Merci pour votre candidature chez 1001 Nuits. Notre équipe de gestion étudiera votre CV et vous contactera dans les meilleurs délais.",
+        "Merci pour votre candidature chez 1001 Nuits. Notre équipe de gestion étudiera votre dossier et vous contactera dans les meilleurs délais.",
       submitAnotherBtn: "Envoyer une autre candidature",
       returnHomeBtn: "Retour à l'accueil",
 
@@ -811,19 +753,12 @@ export default function CareersPage() {
                         <strong className="text-[#8a7a4a]">{t.emailLabel}:</strong>{" "}
                         {formData.email}
                       </p>
-                      {cvFile && (
-                        <p>
-                          <strong className="text-[#8a7a4a]">CV Attached:</strong>{" "}
-                          {cvFile.name} ({(cvFile.size / 1024).toFixed(0)} KB)
-                        </p>
-                      )}
                     </div>
 
                     <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
                       <button
                         onClick={() => {
                           setStatus("idle");
-                          setCvFile(null);
                           setFormData({
                             name: "",
                             phone: "",
@@ -938,71 +873,7 @@ export default function CareersPage() {
                       </select>
                     </div>
 
-                    {/* 5. Drop of CV onto the Contact Form (Drag & Drop + File Selector) */}
-                    <div>
-                      <label className="block text-xs font-bold uppercase tracking-wider text-[#1a1c19]/70 mb-2">
-                        {t.cvLabel}
-                      </label>
 
-                      <input
-                        type="file"
-                        id="cv-upload-input"
-                        accept=".pdf,.doc,.docx"
-                        onChange={handleFileChange}
-                        className="hidden"
-                      />
-
-                      {!cvFile ? (
-                        <div
-                          onDragOver={handleDragOver}
-                          onDragLeave={handleDragLeave}
-                          onDrop={handleDrop}
-                          onClick={() => document.getElementById("cv-upload-input")?.click()}
-                          className={cn(
-                            "border-2 border-dashed rounded-2xl p-6 text-center transition-all cursor-pointer flex flex-col items-center justify-center gap-2.5",
-                            isDragging
-                              ? "border-[#8a7a4a] bg-[#cfbe91]/25 scale-[0.99]"
-                              : "border-[#cfbe91]/70 bg-[#f8f6f0] hover:bg-[#f3efe4] hover:border-[#8a7a4a]"
-                          )}
-                        >
-                          <div className="w-12 h-12 rounded-full bg-[#cfbe91]/30 text-[#8a7a4a] flex items-center justify-center">
-                            <Upload size={20} />
-                          </div>
-                          <div>
-                            <p className="text-xs sm:text-sm font-semibold text-[#1a1c19]">
-                              {t.cvDropPrompt}
-                            </p>
-                            <p className="text-[11px] text-[#1a1c19]/50 mt-0.5">
-                              {t.cvFormats}
-                            </p>
-                          </div>
-                        </div>
-                      ) : (
-                        <div className="p-4 rounded-2xl bg-[#f8f6f0] border border-[#cfbe91] flex items-center justify-between gap-3">
-                          <div className="flex items-center gap-3 min-w-0">
-                            <div className="w-10 h-10 rounded-xl bg-[#cfbe91]/30 text-[#8a7a4a] flex items-center justify-center shrink-0">
-                              <FileText size={20} />
-                            </div>
-                            <div className="min-w-0">
-                              <p className="text-xs sm:text-sm font-semibold text-[#1a1c19] truncate">
-                                {cvFile.name}
-                              </p>
-                              <p className="text-[10px] text-[#1a1c19]/55">
-                                {(cvFile.size / 1024).toFixed(0)} KB
-                              </p>
-                            </div>
-                          </div>
-                          <button
-                            type="button"
-                            onClick={removeCvFile}
-                            className="p-1.5 rounded-full hover:bg-black/10 text-[#1a1c19]/60 hover:text-red-600 transition-colors"
-                            title={t.removeFile}
-                          >
-                            <X size={16} />
-                          </button>
-                        </div>
-                      )}
-                    </div>
 
                     {/* Submit Button */}
                     <div className="pt-2">
