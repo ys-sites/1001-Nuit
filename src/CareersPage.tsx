@@ -28,7 +28,7 @@ const RESTAURANT_ADDRESS = "11602-A Boulevard de Salaberry, Dollard-des-Ormeaux,
 const RESTAURANT_PHONE = "(514) 421-1114";
 const RESTAURANT_EMAIL = "info@1001nuit.com";
 
-type JobId = "sushi-trainee" | "kitchen-grill" | "lead-grill-chef" | "server" | "dishwasher" | "busboy";
+type JobId = "sushi-trainee" | "kitchen-grill" | "server" | "dishwasher" | "busboy";
 
 interface JobOpening {
   id: JobId;
@@ -134,54 +134,6 @@ const JOB_OPENINGS: JobOpening[] = [
         "Solide connaissance des températures de cuisson et des normes de salubrité (MAPAQ)",
         "Excellente endurance, rapidité d'exécution et sang-froid durant les heures de pointe",
         "Résidence actuelle au Québec avec autorisation de travail locale en règle",
-      ],
-    },
-    icon: Flame,
-  },
-  {
-    id: "lead-grill-chef",
-    title: {
-      en: "Lead Grill Master & Kitchen Supervisor",
-      fr: "Chef Grilladin Principal & Superviseur de Cuisine",
-    },
-    badge: {
-      en: "Senior Culinary Role • Sizzling Plates & Butchery",
-      fr: "Poste Culinaire Supérieur • Plaques & Découpes",
-    },
-    schedule: {
-      en: "Full-Time (Flexible Shifts / Evenings & Weekends)",
-      fr: "Temps plein (Horaires flexibles / Soirs et fins de semaine)",
-    },
-    summary: {
-      en: "Direct our flagship sizzling plate and open grill station. Supervise premium meat cuts (AAA Angus beef, lamb, poultry), execute high-precision sears and proprietary glazes, coordinate service timing, and mentor line cooks during peak dinner rushes.",
-      fr: "Supervisez notre station signature de plaques grésillantes et grillades. Gérez la découpe des viandes nobles (bœuf Angus AAA, agneau, volailles), maîtrisez les cuissons à haute température et marinades secrètes, et encadrez la brigade de cuisine lors des rushs.",
-    },
-    highlights: {
-      en: [
-        "Lead the hot grill brigade and uphold the highest standards of culinary execution",
-        "Mastery of high-heat searing, cast-iron presentation, and custom marinades",
-        "Collaborate with executive management on daily specials, prep par levels, and inventory controls",
-        "Premium compensation package with high gratuity share, staff meals, and growth",
-      ],
-      fr: [
-        "Encadrement de la brigade des grillades et respect des plus hauts standards culinaires",
-        "Maîtrise de la cuisson sur fonte grésillante, marinades artisanales et cuissons parfaites",
-        "Collaboration avec la direction sur la gestion des stocks et les créations de plats",
-        "Rémunération bonifiée, partage des pourboires, repas fournis et opportunités d'avancement",
-      ],
-    },
-    requirements: {
-      en: [
-        "2+ years of high-volume commercial grill or line supervisor experience",
-        "Exemplary knowledge of meat temperatures, searing techniques, and MAPAQ hygiene rules",
-        "Strong leadership, calm temperament under pressure, and sharp attention to detail",
-        "Must be currently living in Quebec with legal authorization to work",
-      ],
-      fr: [
-        "2+ ans d'expérience sur grill commercial à fort volume ou comme chef de partie",
-        "Maîtrise approfondie des cuissons, découpes et normes d'hygiène et salubrité MAPAQ",
-        "Aptitudes de leadership éprouvées, sang-froid et rigueur dans l'exécution",
-        "Résidence actuelle au Québec avec autorisation de travail valide",
       ],
     },
     icon: Flame,
@@ -981,9 +933,6 @@ export default function CareersPage() {
                         </option>
                         <option value={lang === "fr" ? "Chef Grilladin & Cuisinier de Ligne" : "Kitchen Grill Specialist & Line Cook"}>
                           {lang === "fr" ? "Chef Grilladin & Cuisinier de Ligne" : "Kitchen Grill Specialist & Line Cook"}
-                        </option>
-                        <option value={lang === "fr" ? "Chef Grilladin Principal & Superviseur de Cuisine" : "Lead Grill Master & Kitchen Supervisor"}>
-                          {lang === "fr" ? "Chef Grilladin Principal & Superviseur de Cuisine" : "Lead Grill Master & Kitchen Supervisor"}
                         </option>
                         <option value={lang === "fr" ? "Serveur / Serveuse" : "Server / Waitstaff"}>
                           {lang === "fr" ? "Serveur / Serveuse" : "Server / Waitstaff"}
