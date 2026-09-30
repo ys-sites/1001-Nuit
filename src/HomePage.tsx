@@ -740,8 +740,8 @@ export default function HomePage() {
             {/* Image Composition */}
             <div className="relative w-full aspect-[4/5] max-w-md mx-auto lg:mx-0 mt-8 mb-16 lg:my-0">
               <img
-                src="/heritage-dish.webp"
-                alt="1001 Nuits Steamed Dim Sum Delicacies"
+                src="/heritage-sushi-boat.webp"
+                alt="1001 Nuits Sushi Boat"
                 loading="lazy"
                 decoding="async"
                 className="w-full h-full object-cover rounded-[2.5rem] shadow-xl"
@@ -754,8 +754,8 @@ export default function HomePage() {
                 className="absolute -bottom-6 -right-4 sm:-bottom-10 sm:-right-10 w-1/2 sm:w-2/3 max-w-[180px] sm:max-w-[240px] aspect-square rounded-[2rem] overflow-hidden border-[8px] sm:border-[12px] border-[#faf8f5] shadow-2xl"
               >
                 <img
-                  src="/heritage-sushi.webp"
-                  alt="1001 Nuits Sushi Boat"
+                  src="/heritage-dumplings.webp"
+                  alt="1001 Nuits Steamed Soup Dumplings"
                   loading="lazy"
                   decoding="async"
                   className="w-full h-full object-cover"
