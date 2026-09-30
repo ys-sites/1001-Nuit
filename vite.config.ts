@@ -17,6 +17,9 @@ export default defineConfig(({ mode }) => {
     },
     server: {
       hmr: process.env.DISABLE_HMR !== 'true',
+      watch: {
+        ignored: ['**/public/**', '**/.git/**'],
+      },
     },
     build: {
       target: 'es2020',
