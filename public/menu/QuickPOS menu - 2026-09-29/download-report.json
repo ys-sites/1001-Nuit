@@ -1,0 +1,996 @@
+{
+  "source": "https://cloud.quickposhub.com/onlineorder/#/pages/order/index?hotelid=127200&fc=emenu&languageindex=1&urlPriceLevel=1&menu=4",
+  "capturedAt": "2026-09-30T02:49:42.136Z",
+  "destination": "C:\\Users\\Sharafath\\Desktop\\Website\\1001 Nuit\\1001-Nuit\\public\\menu\\QuickPOS menu - 2026-09-29",
+  "itemCount": 109,
+  "downloadedItemImages": 108,
+  "noImageUrlCount": 1,
+  "failedItemImages": 0,
+  "totalBytes": 11350611,
+  "logo": {
+    "status": "downloaded",
+    "bytes": 24567
+  },
+  "items": [
+    {
+      "category": "New Item",
+      "name": "Seared Salmon Nigiri(1pcs)",
+      "itemcode": "4001",
+      "source": "https://stream.quickposhub.com/12720020260919063760060.jpg",
+      "localFile": "New Item\\4001 - Seared Salmon Nigiri(1pcs).jpg",
+      "bytes": 113655,
+      "status": "downloaded"
+    },
+    {
+      "category": "New Item",
+      "name": "Curry Chicken Cutlet",
+      "itemcode": "4002",
+      "source": "https://stream.quickposhub.com/1272002026091906375EF1F.jpg",
+      "localFile": "New Item\\4002 - Curry Chicken Cutlet.jpg",
+      "bytes": 89794,
+      "status": "downloaded"
+    },
+    {
+      "category": "New Item",
+      "name": "Philadelphia Roll (4 pcs)",
+      "itemcode": "4003",
+      "source": "https://stream.quickposhub.com/127200202609190637ADB68.jpg",
+      "localFile": "New Item\\4003 - Philadelphia Roll (4 pcs).jpg",
+      "bytes": 120121,
+      "status": "downloaded"
+    },
+    {
+      "category": "New Item",
+      "name": "Sweet Shrimp Nigiri（1pcs）",
+      "itemcode": "4004",
+      "source": "https://stream.quickposhub.com/127200202609190638034DD.jpg",
+      "localFile": "New Item\\4004 - Sweet Shrimp Nigiri（1pcs）.jpg",
+      "bytes": 166019,
+      "status": "downloaded"
+    },
+    {
+      "category": "New Item",
+      "name": "Curry Chicken Skewers",
+      "itemcode": "4005",
+      "source": "https://stream.quickposhub.com/1272002026092108345D75E.png",
+      "localFile": "New Item\\4005 - Curry Chicken Skewers.png",
+      "bytes": 166360,
+      "status": "downloaded"
+    },
+    {
+      "category": "Appertizers(A)",
+      "name": "Miso Soup",
+      "itemcode": "1813",
+      "source": "https://stream.quickposhub.com/127200202607110445CB045.png",
+      "localFile": "Appertizers(A)\\1813 - Miso Soup.png",
+      "bytes": 59298,
+      "status": "downloaded"
+    },
+    {
+      "category": "Appertizers(A)",
+      "name": "Hot and Sour Soup",
+      "itemcode": "1817",
+      "source": "https://stream.quickposhub.com/127200202607130059A65A1.png",
+      "localFile": "Appertizers(A)\\1817 - Hot and Sour Soup.png",
+      "bytes": 69127,
+      "status": "downloaded"
+    },
+    {
+      "category": "Appertizers(A)",
+      "name": "Special Soup of the Week",
+      "itemcode": "1833",
+      "source": "https://stream.quickposhub.com/1272002026090723570D4BD.png",
+      "localFile": "Appertizers(A)\\1833 - Special Soup of the Week.png",
+      "bytes": 148108,
+      "status": "downloaded"
+    },
+    {
+      "category": "Appertizers(A)",
+      "name": "Salted Edamame",
+      "itemcode": "1826",
+      "source": "https://stream.quickposhub.com/12720020260801055844B82.png",
+      "localFile": "Appertizers(A)\\1826 - Salted Edamame.png",
+      "bytes": 116407,
+      "status": "downloaded"
+    },
+    {
+      "category": "Appertizers(A)",
+      "name": "Ginger & Wasabi",
+      "itemcode": "1829",
+      "source": "https://stream.quickposhub.com/1272002026081208293EA9A.png",
+      "localFile": "Appertizers(A)\\1829 - Ginger & Wasabi.png",
+      "bytes": 67812,
+      "status": "downloaded"
+    },
+    {
+      "category": "Appertizers(A)",
+      "name": "Kimchi",
+      "itemcode": "1830",
+      "source": "https://stream.quickposhub.com/127200202609050530C5DB7.png",
+      "localFile": "Appertizers(A)\\1830 - Kimchi.png",
+      "bytes": 121808,
+      "status": "downloaded"
+    },
+    {
+      "category": "Fried Favorites",
+      "name": "Fried Crab Stick(1pcs)",
+      "itemcode": "1827",
+      "source": "https://stream.quickposhub.com/1272002026080907365B6E5.png",
+      "localFile": "Fried Favorites\\1827 - Fried Crab Stick(1pcs).png",
+      "bytes": 131471,
+      "status": "downloaded"
+    },
+    {
+      "category": "Fried Favorites",
+      "name": "Fried Calamari(1 pcs)",
+      "itemcode": "1804",
+      "source": "https://stream.quickposhub.com/127200202607090636CFF47.png",
+      "localFile": "Fried Favorites\\1804 - Fried Calamari(1 pcs).png",
+      "bytes": 104460,
+      "status": "downloaded"
+    },
+    {
+      "category": "Fried Favorites",
+      "name": "Fried Vegetable Dumplings(1)",
+      "itemcode": "1816",
+      "source": "https://stream.quickposhub.com/12720020260711054400037.jpg",
+      "localFile": "Fried Favorites\\1816 - Fried Vegetable Dumplings(1).jpg",
+      "bytes": 71770,
+      "status": "downloaded"
+    },
+    {
+      "category": "Fried Favorites",
+      "name": "Teriyaki Chicken",
+      "itemcode": "1818",
+      "source": "https://stream.quickposhub.com/1272002026071502573F41E.png",
+      "localFile": "Fried Favorites\\1818 - Teriyaki Chicken.png",
+      "bytes": 157244,
+      "status": "downloaded"
+    },
+    {
+      "category": "Fried Favorites",
+      "name": "Teriyaki Salmon",
+      "itemcode": "1824",
+      "source": "https://stream.quickposhub.com/1272002026071803084C654.png",
+      "localFile": "Fried Favorites\\1824 - Teriyaki Salmon.png",
+      "bytes": 161391,
+      "status": "downloaded"
+    },
+    {
+      "category": "Fried Favorites",
+      "name": "Salt & Pepper Shrimp(2pcs)",
+      "itemcode": "1835",
+      "source": "https://stream.quickposhub.com/12720020260918043068F58.png",
+      "localFile": "Fried Favorites\\1835 - Salt & Pepper Shrimp(2pcs).png",
+      "bytes": 141014,
+      "status": "downloaded"
+    },
+    {
+      "category": "Fried Favorites",
+      "name": "Creamy Mussels(1pcs)",
+      "itemcode": "1822",
+      "source": "https://stream.quickposhub.com/127200202607180307E39B4.png",
+      "localFile": "Fried Favorites\\1822 - Creamy Mussels(1pcs).png",
+      "bytes": 159759,
+      "status": "downloaded"
+    },
+    {
+      "category": "Fried Favorites",
+      "name": "Wasabi Cream Mussels(1pcs)",
+      "itemcode": "1828",
+      "source": "https://stream.quickposhub.com/1272002026081208153B39C.jpg",
+      "localFile": "Fried Favorites\\1828 - Wasabi Cream Mussels(1pcs).jpg",
+      "bytes": 171363,
+      "status": "downloaded"
+    },
+    {
+      "category": "Fried Favorites",
+      "name": "Fried Chicken Wings(1pcs)",
+      "itemcode": "1825",
+      "source": "https://stream.quickposhub.com/1272002026091905224216A.jpg",
+      "localFile": "Fried Favorites\\1825 - Fried Chicken Wings(1pcs).jpg",
+      "bytes": 173937,
+      "status": "downloaded"
+    },
+    {
+      "category": "Fried Favorites",
+      "name": "Spring Rolls(1 pcs)",
+      "itemcode": "1801",
+      "source": "https://stream.quickposhub.com/127200202607090628EA480.png",
+      "localFile": "Fried Favorites\\1801 - Spring Rolls(1 pcs).png",
+      "bytes": 100807,
+      "status": "downloaded"
+    },
+    {
+      "category": "Fried Favorites",
+      "name": "Fried Scallops(1 pcs)",
+      "itemcode": "1803",
+      "source": "https://stream.quickposhub.com/1272002026070906389DD33.png",
+      "localFile": "Fried Favorites\\1803 - Fried Scallops(1 pcs).png",
+      "bytes": 93848,
+      "status": "downloaded"
+    },
+    {
+      "category": "Fried Favorites",
+      "name": "French Fries",
+      "itemcode": "1809",
+      "source": "https://stream.quickposhub.com/12720020260709065703FBF.png",
+      "localFile": "Fried Favorites\\1809 - French Fries.png",
+      "bytes": 69982,
+      "status": "downloaded"
+    },
+    {
+      "category": "Fried Favorites",
+      "name": "Takoyaki(1 pcs)",
+      "itemcode": "1805",
+      "source": "https://stream.quickposhub.com/1272002026070906391B3E4.png",
+      "localFile": "Fried Favorites\\1805 - Takoyaki(1 pcs).png",
+      "bytes": 112786,
+      "status": "downloaded"
+    },
+    {
+      "category": "Hot Kitchen(A)",
+      "name": "Curry Chicken Cutlet",
+      "itemcode": "4002",
+      "source": "https://stream.quickposhub.com/1272002026091906375EF1F.jpg",
+      "localFile": "Hot Kitchen(A)\\4002 - Curry Chicken Cutlet.jpg",
+      "bytes": 89794,
+      "status": "downloaded"
+    },
+    {
+      "category": "Hot Kitchen(A)",
+      "name": "Beef with Broccoli",
+      "itemcode": "1901",
+      "source": "https://stream.quickposhub.com/12720020260709074838D92.png",
+      "localFile": "Hot Kitchen(A)\\1901 - Beef with Broccoli.png",
+      "bytes": 91369,
+      "status": "downloaded"
+    },
+    {
+      "category": "Hot Kitchen(A)",
+      "name": "Chicken Fried Rice",
+      "itemcode": "1902",
+      "source": "https://stream.quickposhub.com/127200202607090739588C2.png",
+      "localFile": "Hot Kitchen(A)\\1902 - Chicken Fried Rice.png",
+      "bytes": 92657,
+      "status": "downloaded"
+    },
+    {
+      "category": "Hot Kitchen(A)",
+      "name": "Chicken Pad Thai",
+      "itemcode": "1903",
+      "source": "https://stream.quickposhub.com/127200202607090732DF519.png",
+      "localFile": "Hot Kitchen(A)\\1903 - Chicken Pad Thai.png",
+      "bytes": 90961,
+      "status": "downloaded"
+    },
+    {
+      "category": "Hot Kitchen(A)",
+      "name": "General Tao Chicken",
+      "itemcode": "1904",
+      "source": "https://stream.quickposhub.com/127200202607090741B9506.png",
+      "localFile": "Hot Kitchen(A)\\1904 - General Tao Chicken.png",
+      "bytes": 97904,
+      "status": "downloaded"
+    },
+    {
+      "category": "Hot Kitchen(A)",
+      "name": "Chicken Udon",
+      "itemcode": "1905",
+      "source": "https://stream.quickposhub.com/127200202607090746D1B23.png",
+      "localFile": "Hot Kitchen(A)\\1905 - Chicken Udon.png",
+      "bytes": 102954,
+      "status": "downloaded"
+    },
+    {
+      "category": "Hot Kitchen(A)",
+      "name": "Black Pepper Chicken Spaghetti",
+      "itemcode": "1906",
+      "source": "https://stream.quickposhub.com/127200202607090743151C0.png",
+      "localFile": "Hot Kitchen(A)\\1906 - Black Pepper Chicken Spaghetti.png",
+      "bytes": 97129,
+      "status": "downloaded"
+    },
+    {
+      "category": "Hot Kitchen(A)",
+      "name": "Singapore Noodles",
+      "itemcode": "1908",
+      "source": "https://stream.quickposhub.com/127200202608121009E0A46.png",
+      "localFile": "Hot Kitchen(A)\\1908 - Singapore Noodles.png",
+      "bytes": 83897,
+      "status": "downloaded"
+    },
+    {
+      "category": "Hot Kitchen(A)",
+      "name": "Vegetable Fried Rice",
+      "itemcode": "1907",
+      "source": "https://stream.quickposhub.com/127200202607090739588C2.png",
+      "localFile": "Hot Kitchen(A)\\1907 - Vegetable Fried Rice.png",
+      "bytes": 92657,
+      "status": "downloaded"
+    },
+    {
+      "category": "Hot Kitchen(A)",
+      "name": "Curry Fried Rice",
+      "itemcode": "1910",
+      "source": "https://stream.quickposhub.com/12720020260828060923828.png",
+      "localFile": "Hot Kitchen(A)\\1910 - Curry Fried Rice.png",
+      "bytes": 111570,
+      "status": "downloaded"
+    },
+    {
+      "category": "Hot Kitchen(A)",
+      "name": "White Rice",
+      "itemcode": "1909",
+      "source": "https://stream.quickposhub.com/127200202608210945F7EF2.png",
+      "localFile": "Hot Kitchen(A)\\1909 - White Rice.png",
+      "bytes": 47121,
+      "status": "downloaded"
+    },
+    {
+      "category": "Tempura Selection",
+      "name": "Tempura Broccoli (1pcs)",
+      "itemcode": "1810",
+      "source": "https://stream.quickposhub.com/127200202607100154EBAAC.png",
+      "localFile": "Tempura Selection\\1810 - Tempura Broccoli (1pcs).png",
+      "bytes": 108752,
+      "status": "downloaded"
+    },
+    {
+      "category": "Tempura Selection",
+      "name": "Tempura Mushroom (1pcs)",
+      "itemcode": "1811",
+      "source": "https://stream.quickposhub.com/127200202607100150DF393.png",
+      "localFile": "Tempura Selection\\1811 - Tempura Mushroom (1pcs).png",
+      "bytes": 100062,
+      "status": "downloaded"
+    },
+    {
+      "category": "Tempura Selection",
+      "name": "Tempura Sweet Potato(1pcs)",
+      "itemcode": "1812",
+      "source": "https://stream.quickposhub.com/127200202607100157F95D1.png",
+      "localFile": "Tempura Selection\\1812 - Tempura Sweet Potato(1pcs).png",
+      "bytes": 99107,
+      "status": "downloaded"
+    },
+    {
+      "category": "Tempura Selection",
+      "name": "Tempura Eggplant(1pcs)",
+      "itemcode": "1814",
+      "source": "https://stream.quickposhub.com/127200202607110502FFD67.png",
+      "localFile": "Tempura Selection\\1814 - Tempura Eggplant(1pcs).png",
+      "bytes": 73470,
+      "status": "downloaded"
+    },
+    {
+      "category": "Tempura Selection",
+      "name": "Tempura Zucchini(1pcs)",
+      "itemcode": "1815",
+      "source": "https://stream.quickposhub.com/1272002026071105029CFAA.png",
+      "localFile": "Tempura Selection\\1815 - Tempura Zucchini(1pcs).png",
+      "bytes": 78924,
+      "status": "downloaded"
+    },
+    {
+      "category": "Tempura Selection",
+      "name": "Tempura Shrimp(1 pcs)",
+      "itemcode": "1808",
+      "source": "https://stream.quickposhub.com/127200202607090644D4A65.png",
+      "localFile": "Tempura Selection\\1808 - Tempura Shrimp(1 pcs).png",
+      "bytes": 109071,
+      "status": "downloaded"
+    },
+    {
+      "category": "Small Roll(A)",
+      "name": "Avocado Roll(3)",
+      "itemcode": "2001",
+      "source": "https://stream.quickposhub.com/127200202607090550EE11F.png",
+      "localFile": "Small Roll(A)\\2001 - Avocado Roll(3).png",
+      "bytes": 87316,
+      "status": "downloaded"
+    },
+    {
+      "category": "Small Roll(A)",
+      "name": "Cucumber Roll(3)",
+      "itemcode": "2002",
+      "source": "https://stream.quickposhub.com/1272002026070905472401F.png",
+      "localFile": "Small Roll(A)\\2002 - Cucumber Roll(3).png",
+      "bytes": 96507,
+      "status": "downloaded"
+    },
+    {
+      "category": "Small Roll(A)",
+      "name": "Salmon Roll(3)",
+      "itemcode": "2003",
+      "source": "https://stream.quickposhub.com/12720020260709053982F59.png",
+      "localFile": "Small Roll(A)\\2003 - Salmon Roll(3).png",
+      "bytes": 95484,
+      "status": "downloaded"
+    },
+    {
+      "category": "Small Roll(A)",
+      "name": "Tuna Roll(3)",
+      "itemcode": "2004",
+      "source": "https://stream.quickposhub.com/12720020260709054101AA3.png",
+      "localFile": "Small Roll(A)\\2004 - Tuna Roll(3).png",
+      "bytes": 97582,
+      "status": "downloaded"
+    },
+    {
+      "category": "Small Roll(A)",
+      "name": "Crab Roll(3)",
+      "itemcode": "2005",
+      "source": "https://stream.quickposhub.com/127200202607090555364C7.png",
+      "localFile": "Small Roll(A)\\2005 - Crab Roll(3).png",
+      "bytes": 88462,
+      "status": "downloaded"
+    },
+    {
+      "category": "Hand Roll(A)",
+      "name": "Avocado Hand Roll",
+      "itemcode": "9905",
+      "source": "https://stream.quickposhub.com/127200202607110201E5356.jpg",
+      "localFile": "Hand Roll(A)\\9905 - Avocado Hand Roll.jpg",
+      "bytes": 87542,
+      "status": "downloaded"
+    },
+    {
+      "category": "Hand Roll(A)",
+      "name": "Cucumber Hand Roll",
+      "itemcode": "9906",
+      "source": "https://stream.quickposhub.com/127200202607110205B3554.png",
+      "localFile": "Hand Roll(A)\\9906 - Cucumber Hand Roll.png",
+      "bytes": 107837,
+      "status": "downloaded"
+    },
+    {
+      "category": "Hand Roll(A)",
+      "name": "Salmon Hand Roll",
+      "itemcode": "9907",
+      "source": "https://stream.quickposhub.com/1272002026071102086239A.png",
+      "localFile": "Hand Roll(A)\\9907 - Salmon Hand Roll.png",
+      "bytes": 102654,
+      "status": "downloaded"
+    },
+    {
+      "category": "Hand Roll(A)",
+      "name": "Spicy Salmon Hand Roll",
+      "itemcode": "9908",
+      "source": "https://stream.quickposhub.com/12720020260711020340DB3.png",
+      "localFile": "Hand Roll(A)\\9908 - Spicy Salmon Hand Roll.png",
+      "bytes": 102418,
+      "status": "downloaded"
+    },
+    {
+      "category": "Hand Roll(A)",
+      "name": "Crab Stick Hand Roll",
+      "itemcode": "9904",
+      "source": "https://stream.quickposhub.com/12720020260711020177394.jpg",
+      "localFile": "Hand Roll(A)\\9904 - Crab Stick Hand Roll.jpg",
+      "bytes": 82849,
+      "status": "downloaded"
+    },
+    {
+      "category": "Sushi Pizza",
+      "name": "Pizza sushi croustillante",
+      "itemcode": "OFEE02",
+      "source": "https://stream.quickposhub.com/12720020260809073942190.jpg",
+      "localFile": "Sushi Pizza\\OFEE02 - Pizza sushi croustillante.jpg",
+      "bytes": 106410,
+      "status": "downloaded"
+    },
+    {
+      "category": "Sushi Pizza",
+      "name": "Crab Stick Sushi Pizza",
+      "itemcode": "OFEE01",
+      "source": "https://stream.quickposhub.com/1272002026080907430C512.png",
+      "localFile": "Sushi Pizza\\OFEE01 - Crab Stick Sushi Pizza.png",
+      "bytes": 87564,
+      "status": "downloaded"
+    },
+    {
+      "category": "Maki Roll (A)",
+      "name": "Philadelphia Roll (4 pcs)",
+      "itemcode": "4003",
+      "source": "https://stream.quickposhub.com/127200202609190637ADB68.jpg",
+      "localFile": "Maki Roll (A)\\4003 - Philadelphia Roll (4 pcs).jpg",
+      "bytes": 120121,
+      "status": "downloaded"
+    },
+    {
+      "category": "Maki Roll (A)",
+      "name": "Mango Roll(3)",
+      "itemcode": "1701",
+      "source": "https://stream.quickposhub.com/12720020260709015210D49.png",
+      "localFile": "Maki Roll (A)\\1701 - Mango Roll(3).png",
+      "bytes": 100150,
+      "status": "downloaded"
+    },
+    {
+      "category": "Maki Roll (A)",
+      "name": "California Roll(4)",
+      "itemcode": "1702",
+      "source": "https://stream.quickposhub.com/127200202607090613B4489.png",
+      "localFile": "Maki Roll (A)\\1702 - California Roll(4).png",
+      "bytes": 92006,
+      "status": "downloaded"
+    },
+    {
+      "category": "Maki Roll (A)",
+      "name": "Salmon Avocado Roll(3)",
+      "itemcode": "1706",
+      "source": "https://stream.quickposhub.com/12720020260709014987427.png",
+      "localFile": "Maki Roll (A)\\1706 - Salmon Avocado Roll(3).png",
+      "bytes": 94189,
+      "status": "downloaded"
+    },
+    {
+      "category": "Maki Roll (A)",
+      "name": "Kamikaze(4)",
+      "itemcode": "1703",
+      "source": "https://stream.quickposhub.com/127200202607100128031F5.png",
+      "localFile": "Maki Roll (A)\\1703 - Kamikaze(4).png",
+      "bytes": 97753,
+      "status": "downloaded"
+    },
+    {
+      "category": "Maki Roll (A)",
+      "name": "Volcano(4)",
+      "itemcode": "1704",
+      "source": "https://stream.quickposhub.com/12720020260710012867C1F.png",
+      "localFile": "Maki Roll (A)\\1704 - Volcano(4).png",
+      "bytes": 83567,
+      "status": "downloaded"
+    },
+    {
+      "category": "Maki Roll (A)",
+      "name": "Spicy Salmon Roll(4)",
+      "itemcode": "1705",
+      "source": "https://stream.quickposhub.com/127200202607090615A4D06.png",
+      "localFile": "Maki Roll (A)\\1705 - Spicy Salmon Roll(4).png",
+      "bytes": 88972,
+      "status": "downloaded"
+    },
+    {
+      "category": "Maki Roll (A)",
+      "name": "Rain bow Roll(4)",
+      "itemcode": "1709",
+      "source": "https://stream.quickposhub.com/12720020260710012957110.png",
+      "localFile": "Maki Roll (A)\\1709 - Rain bow Roll(4).png",
+      "bytes": 99432,
+      "status": "downloaded"
+    },
+    {
+      "category": "Maki Roll (A)",
+      "name": "1001 Nuit (4)",
+      "itemcode": "1707",
+      "source": "https://stream.quickposhub.com/1272002026071001332E88B.png",
+      "localFile": "Maki Roll (A)\\1707 - 1001 Nuit (4).png",
+      "bytes": 96885,
+      "status": "downloaded"
+    },
+    {
+      "category": "Maki Roll (A)",
+      "name": "Dynamite(4)",
+      "itemcode": "1708",
+      "source": "https://stream.quickposhub.com/127200202607100132B1BE8.png",
+      "localFile": "Maki Roll (A)\\1708 - Dynamite(4).png",
+      "bytes": 100590,
+      "status": "downloaded"
+    },
+    {
+      "category": "Maki Roll (A)",
+      "name": "Dragon eye(4)",
+      "itemcode": "1710",
+      "source": "https://stream.quickposhub.com/12720020260709044383E89.png",
+      "localFile": "Maki Roll (A)\\1710 - Dragon eye(4).png",
+      "bytes": 81642,
+      "status": "downloaded"
+    },
+    {
+      "category": "Maki Roll (A)",
+      "name": "Crispy Chicken Roll(4)",
+      "itemcode": "1711",
+      "source": "https://stream.quickposhub.com/1272002026070902047231D.png",
+      "localFile": "Maki Roll (A)\\1711 - Crispy Chicken Roll(4).png",
+      "bytes": 103529,
+      "status": "downloaded"
+    },
+    {
+      "category": "Maki Roll (A)",
+      "name": "Spicy Salmon Gunka(1)",
+      "itemcode": "1712",
+      "source": "https://stream.quickposhub.com/1272002026071105246AC1D.png",
+      "localFile": "Maki Roll (A)\\1712 - Spicy Salmon Gunka(1).png",
+      "bytes": 84860,
+      "status": "downloaded"
+    },
+    {
+      "category": "Maki Roll (A)",
+      "name": "Crab Stick Gunkan(1)",
+      "itemcode": "1713",
+      "source": "https://stream.quickposhub.com/127200202607110524E2ECE.png",
+      "localFile": "Maki Roll (A)\\1713 - Crab Stick Gunkan(1).png",
+      "bytes": 87466,
+      "status": "downloaded"
+    },
+    {
+      "category": "Maki Roll (A)",
+      "name": "Vegetable Roll(4)",
+      "itemcode": "1714",
+      "source": "https://stream.quickposhub.com/127200202607110548024AC.png",
+      "localFile": "Maki Roll (A)\\1714 - Vegetable Roll(4).png",
+      "bytes": 77789,
+      "status": "downloaded"
+    },
+    {
+      "category": "Maki Roll (A)",
+      "name": "Mango Rice Paper Roll(4)",
+      "itemcode": "1715",
+      "source": "https://stream.quickposhub.com/12720020260718034424503.png",
+      "localFile": "Maki Roll (A)\\1715 - Mango Rice Paper Roll(4).png",
+      "bytes": 90239,
+      "status": "downloaded"
+    },
+    {
+      "category": "Maki Roll (A)",
+      "name": "Chicken Rice Paper Roll(4)",
+      "itemcode": "1716",
+      "source": "https://stream.quickposhub.com/12720020260718034764A59.png",
+      "localFile": "Maki Roll (A)\\1716 - Chicken Rice Paper Roll(4).png",
+      "bytes": 132447,
+      "status": "downloaded"
+    },
+    {
+      "category": "Nigiri(A)",
+      "name": "Seared Salmon Nigiri(1pcs)",
+      "itemcode": "4001",
+      "source": "https://stream.quickposhub.com/12720020260919063760060.jpg",
+      "localFile": "Nigiri(A)\\4001 - Seared Salmon Nigiri(1pcs).jpg",
+      "bytes": 113655,
+      "status": "downloaded"
+    },
+    {
+      "category": "Nigiri(A)",
+      "name": "Sweet Shrimp Nigiri（1pcs）",
+      "itemcode": "4004",
+      "source": "https://stream.quickposhub.com/127200202609190638034DD.jpg",
+      "localFile": "Nigiri(A)\\4004 - Sweet Shrimp Nigiri（1pcs）.jpg",
+      "bytes": 166019,
+      "status": "downloaded"
+    },
+    {
+      "category": "Nigiri(A)",
+      "name": "Salmon Rose (1PCS)",
+      "itemcode": "1612",
+      "source": "https://stream.quickposhub.com/1272002026090306446EBD4.jpg",
+      "localFile": "Nigiri(A)\\1612 - Salmon Rose (1PCS).jpg",
+      "bytes": 129621,
+      "status": "downloaded"
+    },
+    {
+      "category": "Nigiri(A)",
+      "name": "Salmon Nigiri (1pcs)",
+      "itemcode": "1601",
+      "source": "https://stream.quickposhub.com/127200202607090512164A7.png",
+      "localFile": "Nigiri(A)\\1601 - Salmon Nigiri (1pcs).png",
+      "bytes": 91391,
+      "status": "downloaded"
+    },
+    {
+      "category": "Nigiri(A)",
+      "name": "Tuna Nigiri (1pcs)",
+      "itemcode": "1602",
+      "source": "https://stream.quickposhub.com/127200202607090519CEAD0.png",
+      "localFile": "Nigiri(A)\\1602 - Tuna Nigiri (1pcs).png",
+      "bytes": 96163,
+      "status": "downloaded"
+    },
+    {
+      "category": "Nigiri(A)",
+      "name": "Shrimp Nigiri (1pcs)",
+      "itemcode": "1603",
+      "source": "https://stream.quickposhub.com/127200202607090515DB58E.png",
+      "localFile": "Nigiri(A)\\1603 - Shrimp Nigiri (1pcs).png",
+      "bytes": 103025,
+      "status": "downloaded"
+    },
+    {
+      "category": "Nigiri(A)",
+      "name": "Crab Stick Nigiri (1pcs)",
+      "itemcode": "1604",
+      "source": "https://stream.quickposhub.com/127200202607090513004BE.png",
+      "localFile": "Nigiri(A)\\1604 - Crab Stick Nigiri (1pcs).png",
+      "bytes": 105470,
+      "status": "downloaded"
+    },
+    {
+      "category": "Nigiri(A)",
+      "name": "Unagi Nigiri(1pcs)",
+      "itemcode": "1605",
+      "source": "https://stream.quickposhub.com/1272002026070905170A58F.png",
+      "localFile": "Nigiri(A)\\1605 - Unagi Nigiri(1pcs).png",
+      "bytes": 102861,
+      "status": "downloaded"
+    },
+    {
+      "category": "Nigiri(A)",
+      "name": "Egg (Tamago) Nigiri (1pcs)",
+      "itemcode": "1606",
+      "source": "https://stream.quickposhub.com/12720020260709053327FC4.png",
+      "localFile": "Nigiri(A)\\1606 - Egg (Tamago) Nigiri (1pcs).png",
+      "bytes": 93228,
+      "status": "downloaded"
+    },
+    {
+      "category": "Nigiri(A)",
+      "name": "Escolar Nigiri(1pcs)",
+      "itemcode": "1608",
+      "source": "https://stream.quickposhub.com/127200202607110126BB387.png",
+      "localFile": "Nigiri(A)\\1608 - Escolar Nigiri(1pcs).png",
+      "bytes": 94480,
+      "status": "downloaded"
+    },
+    {
+      "category": "Nigiri(A)",
+      "name": "Surf Clam Nigiri(1pcs)",
+      "itemcode": "1607",
+      "source": "https://stream.quickposhub.com/127200202607090532C4B2E.png",
+      "localFile": "Nigiri(A)\\1607 - Surf Clam Nigiri(1pcs).png",
+      "bytes": 94956,
+      "status": "downloaded"
+    },
+    {
+      "category": "SASHIMI(A)",
+      "name": "Salmon Sashimi(1pcs)",
+      "itemcode": "1403",
+      "source": "https://stream.quickposhub.com/127200202607110341516EA.png",
+      "localFile": "SASHIMI(A)\\1403 - Salmon Sashimi(1pcs).png",
+      "bytes": 115318,
+      "status": "downloaded"
+    },
+    {
+      "category": "SASHIMI(A)",
+      "name": "Surf Clam Sashimi(1pcs)",
+      "itemcode": "1404",
+      "source": "https://stream.quickposhub.com/1272002026071103419124F.png",
+      "localFile": "SASHIMI(A)\\1404 - Surf Clam Sashimi(1pcs).png",
+      "bytes": 113301,
+      "status": "downloaded"
+    },
+    {
+      "category": "SASHIMI(A)",
+      "name": "Inari(1pcs)",
+      "itemcode": "1405",
+      "source": "https://stream.quickposhub.com/1272002026071103414EB82.png",
+      "localFile": "SASHIMI(A)\\1405 - Inari(1pcs).png",
+      "bytes": 117051,
+      "status": "downloaded"
+    },
+    {
+      "category": "SASHIMI(A)",
+      "name": "Tamago(1pcs)",
+      "itemcode": "1406",
+      "source": "https://stream.quickposhub.com/127200202608120835417A7.png",
+      "localFile": "SASHIMI(A)\\1406 - Tamago(1pcs).png",
+      "bytes": 99675,
+      "status": "downloaded"
+    },
+    {
+      "category": "SASHIMI(A)",
+      "name": "Tobiko Cucumber(1pcs)",
+      "itemcode": "1407",
+      "source": "https://stream.quickposhub.com/12720020260711034256922.png",
+      "localFile": "SASHIMI(A)\\1407 - Tobiko Cucumber(1pcs).png",
+      "bytes": 206932,
+      "status": "downloaded"
+    },
+    {
+      "category": "SASHIMI(A)",
+      "name": "Tuna Sashimi(1pcs)",
+      "itemcode": "1410",
+      "source": "https://stream.quickposhub.com/127200202608280620CCD6B.png",
+      "localFile": "SASHIMI(A)\\1410 - Tuna Sashimi(1pcs).png",
+      "bytes": 104237,
+      "status": "downloaded"
+    },
+    {
+      "category": "SASHIMI(A)",
+      "name": "Crab Stick Sashimi(1PCS)",
+      "itemcode": "1412",
+      "source": "https://stream.quickposhub.com/1272002026091904568DF81.jpg",
+      "localFile": "SASHIMI(A)\\1412 - Crab Stick Sashimi(1PCS).jpg",
+      "bytes": 198851,
+      "status": "downloaded"
+    },
+    {
+      "category": "SASHIMI(A)",
+      "name": "Escolar Sashimi (1pcs)",
+      "itemcode": "1411",
+      "source": "https://stream.quickposhub.com/127200202608280624B0178.png",
+      "localFile": "SASHIMI(A)\\1411 - Escolar Sashimi (1pcs).png",
+      "bytes": 100093,
+      "status": "downloaded"
+    },
+    {
+      "category": "Desserts(A)",
+      "name": "Mango Rice Paper Roll(4)",
+      "itemcode": "1715",
+      "source": "https://stream.quickposhub.com/12720020260718034424503.png",
+      "localFile": "Desserts(A)\\1715 - Mango Rice Paper Roll(4).png",
+      "bytes": 90239,
+      "status": "downloaded"
+    },
+    {
+      "category": "Desserts(A)",
+      "name": "Mango Roll(3)",
+      "itemcode": "1701",
+      "source": "https://stream.quickposhub.com/12720020260709015210D49.png",
+      "localFile": "Desserts(A)\\1701 - Mango Roll(3).png",
+      "bytes": 100150,
+      "status": "downloaded"
+    },
+    {
+      "category": "Desserts(A)",
+      "name": "Golden Buns(1)",
+      "itemcode": "1820",
+      "source": "https://stream.quickposhub.com/127200202607150311C523F.png",
+      "localFile": "Desserts(A)\\1820 - Golden Buns(1).png",
+      "bytes": 188886,
+      "status": "downloaded"
+    },
+    {
+      "category": "Desserts(A)",
+      "name": "Sesame Balls(1 pcs)",
+      "itemcode": "1802",
+      "source": "https://stream.quickposhub.com/127200202607090634E9CEE.png",
+      "localFile": "Desserts(A)\\1802 - Sesame Balls(1 pcs).png",
+      "bytes": 98132,
+      "status": "downloaded"
+    },
+    {
+      "category": "Desserts(A)",
+      "name": "Steamed Mini Buns(1pcs)",
+      "itemcode": "2108",
+      "source": "https://stream.quickposhub.com/1272002026091804277D119.png",
+      "localFile": "Desserts(A)\\2108 - Steamed Mini Buns(1pcs).png",
+      "bytes": 176882,
+      "status": "downloaded"
+    },
+    {
+      "category": "Desserts(A)",
+      "name": "Cheese cake Yuzu",
+      "itemcode": "2101",
+      "source": "https://stream.quickposhub.com/127200202609131035E4F8D.png",
+      "localFile": "Desserts(A)\\2101 - Cheese cake Yuzu.png",
+      "bytes": 55460,
+      "status": "downloaded"
+    },
+    {
+      "category": "Desserts(A)",
+      "name": "Strawberry Mochi",
+      "itemcode": "2106",
+      "source": "https://stream.quickposhub.com/127200202608280557B49F0.png",
+      "localFile": "Desserts(A)\\2106 - Strawberry Mochi.png",
+      "bytes": 115998,
+      "status": "downloaded"
+    },
+    {
+      "category": "Desserts(A)",
+      "name": "ice cream",
+      "itemcode": "2107",
+      "source": "",
+      "localFile": null,
+      "status": "no-image-url"
+    },
+    {
+      "category": "Drink",
+      "name": "Hong Kong Style Milk Tea",
+      "itemcode": "G03",
+      "source": "https://stream.quickposhub.com/12720020260709083346092.png",
+      "localFile": "Drink\\G03 - Hong Kong Style Milk Tea.png",
+      "bytes": 77243,
+      "status": "downloaded"
+    },
+    {
+      "category": "Drink",
+      "name": "Coffee",
+      "itemcode": "G04",
+      "source": "https://stream.quickposhub.com/12720020260709083346092.png",
+      "localFile": "Drink\\G04 - Coffee.png",
+      "bytes": 77243,
+      "status": "downloaded"
+    },
+    {
+      "category": "Drink",
+      "name": "Strawberry matcha latte",
+      "itemcode": "0604",
+      "source": "https://stream.quickposhub.com/127200202607090813BC9A8.png",
+      "localFile": "Drink\\0604 - Strawberry matcha latte.png",
+      "bytes": 88907,
+      "status": "downloaded"
+    },
+    {
+      "category": "Drink",
+      "name": "Mango matcha latte",
+      "itemcode": "0605",
+      "source": "https://stream.quickposhub.com/1272002026070908189A55B.png",
+      "localFile": "Drink\\0605 - Mango matcha latte.png",
+      "bytes": 92809,
+      "status": "downloaded"
+    },
+    {
+      "category": "Drink",
+      "name": "Limonade",
+      "itemcode": "0611",
+      "source": "https://stream.quickposhub.com/12720020260709110244E67.png",
+      "localFile": "Drink\\0611 - Limonade.png",
+      "bytes": 76509,
+      "status": "downloaded"
+    },
+    {
+      "category": "Drink",
+      "name": "Taro milk tea",
+      "itemcode": "0603",
+      "source": "https://stream.quickposhub.com/127200202607091101CDF68.png",
+      "localFile": "Drink\\0603 - Taro milk tea.png",
+      "bytes": 60467,
+      "status": "downloaded"
+    },
+    {
+      "category": "Drink",
+      "name": "coconut water",
+      "itemcode": "06015",
+      "source": "https://stream.quickposhub.com/127200202608020616DD59E.png",
+      "localFile": "Drink\\06015 - coconut water.png",
+      "bytes": 81422,
+      "status": "downloaded"
+    },
+    {
+      "category": "Drink",
+      "name": "Oolong Tea(no sugar)",
+      "itemcode": "06018",
+      "source": "https://stream.quickposhub.com/1272002026081209490CFD7.png",
+      "localFile": "Drink\\06018 - Oolong Tea(no sugar).png",
+      "bytes": 114720,
+      "status": "downloaded"
+    },
+    {
+      "category": "Drink",
+      "name": "Sparkling Water",
+      "itemcode": "06016",
+      "source": "https://stream.quickposhub.com/127200202608120955D8197.jpg",
+      "localFile": "Drink\\06016 - Sparkling Water.jpg",
+      "bytes": 112462,
+      "status": "downloaded"
+    },
+    {
+      "category": "Drink",
+      "name": "Milkis",
+      "itemcode": "06017",
+      "source": "https://stream.quickposhub.com/127200202608121001DE205.png",
+      "localFile": "Drink\\06017 - Milkis.png",
+      "bytes": 113653,
+      "status": "downloaded"
+    },
+    {
+      "category": "Drink",
+      "name": "Diet Coke",
+      "itemcode": "0610",
+      "source": "https://stream.quickposhub.com/127200202607100123A0CFB.jpg",
+      "localFile": "Drink\\0610 - Diet Coke.jpg",
+      "bytes": 78324,
+      "status": "downloaded"
+    },
+    {
+      "category": "Drink",
+      "name": "Coca cola mexican bottled",
+      "itemcode": "0608",
+      "source": "https://stream.quickposhub.com/12720020260709110546BC0.png",
+      "localFile": "Drink\\0608 - Coca cola mexican bottled.png",
+      "bytes": 74776,
+      "status": "downloaded"
+    }
+  ]
+}

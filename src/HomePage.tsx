@@ -36,6 +36,7 @@ import ScrollTextReveal from "./components/ui/ScrollTextReveal";
 import NeighborhoodMap from "./components/NeighborhoodMap";
 import SocialFeedback from "./components/SocialFeedback";
 import CateringForm from "./components/CateringForm";
+import { AYCE_MENU_CATEGORIES, ALACARTE_MENU_CATEGORIES } from "./data/menuData";
 
 
 const REVIEWS = [
@@ -198,767 +199,22 @@ const REVIEWS = [
 
 const SHOW_MENU_IMAGES = true;
 
-const MENU_CATEGORIES = [
-  {
-    "title_en": "MAIN DISH",
-    "title_fr": "PLATS PRINCIPAUX",
-    "items": [
-      {
-        "id": "",
-        "name_fr": "Bœuf au brocoli",
-        "name_en": "Broccoli Beef",
-        "name_zh": "西蘭花牛肉",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/Main Dish/Broccoli Beef.png"
-      },
-      {
-        "id": "C01",
-        "name_fr": "Riz frit aux crevettes sakura et poulet",
-        "name_en": "C01 Sakura Shrimp & Chicken Fried Rice",
-        "name_zh": "櫻花蝦雞粒炒飯",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/Main Dish/C01 Sakura Shrimp&Chicken FR.png"
-      },
-      {
-        "id": "B16",
-        "name_fr": "Poulet Général Tao (Plat)",
-        "name_en": "B16 General Tao's Chicken (Main)",
-        "name_zh": "左宗棠雞飯",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/Main Dish/B16 General Tao's Chicken - Main Dish.png"
-      },
-      {
-        "id": "C03",
-        "name_fr": "Poulet takoyaki sur riz",
-        "name_en": "C03 Takoyaki Chicken on Rice",
-        "name_zh": "章魚燒雞飯",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/Main Dish/C03 TakoyakiChicken on Rice.jpg"
-      },
-      {
-        "id": "C06",
-        "name_fr": "Spaghetti sauté au bœuf sauce poivre noir",
-        "name_en": "C06 Spaghetti w/Beef BP Sauce",
-        "name_zh": "黑椒牛肉炒意粉",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/Main Dish/C06 Spaghetti w-Beef BPSauce.png"
-      },
-      {
-        "id": "C09",
-        "name_fr": "Côtes de bœuf AAA sauce poivre noir avec œuf au plat sur riz",
-        "name_en": "C09 AAA Beef Ribs Sunny Egg Rice",
-        "name_zh": "AAA 黑椒牛仔骨煎蛋飯",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/Main Dish/C09 AAA Beef Ribs SunnyEggRice.png"
-      },
-      {
-        "id": "C10",
-        "name_fr": "Nouilles de riz plates sautées au bœuf style Hong Kong",
-        "name_en": "C10 HK style Beef Noodles",
-        "name_zh": "干炒牛河",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/Main Dish/C10 HK style Beef Noodles.png"
-      },
-      {
-        "id": "C11",
-        "name_fr": "Pad thaï",
-        "name_en": "C11 Pad Thai",
-        "name_zh": "炒泰式河粉",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/Main Dish/C11 Pad Thai.png"
-      },
-      {
-        "id": "C12",
-        "name_fr": "Riz frit à l'ananas",
-        "name_en": "C12 Pineapple Fried Rice",
-        "name_zh": "菠蘿炒飯",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/Main Dish/C12 Pineapple Fried Rice.png"
-      },
-      {
-        "id": "C13",
-        "name_fr": "Udon sauté au bœuf",
-        "name_en": "C13 Stir-fried Beef udon",
-        "name_zh": "乾炒牛肉烏冬",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/Main Dish/Stir-fried Beef udon.jpg"
-      }
-    ]
-  },
-  {
-    "title_en": "SUSHI COMBO",
-    "title_fr": "COMBOS SUSHI",
-    "items": [
-      {
-        "id": "",
-        "name_fr": "Rouleau à la mangue (6 mcx)",
-        "name_en": "Mango roll 6 PCS",
-        "name_zh": "芒果卷",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/Sushi Combo/Mango roll 6PCS.png"
-      },
-      {
-        "id": "",
-        "name_fr": "Rouleau à l'avocat (6 mcx)",
-        "name_en": "Avocado 6 PCS",
-        "name_zh": "牛油果卷",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/Sushi Combo/Avocado 6PCS.png"
-      },
-      {
-        "id": "",
-        "name_fr": "Saumon & Avocat (6 mcx)",
-        "name_en": "Salmon & Avocado 6 PCS",
-        "name_zh": "三文魚牛油果卷",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/Sushi Combo/Salmon & Avocado 6PCS.png"
-      },
-      {
-        "id": "",
-        "name_fr": "Rouleau au poulet frit (10 mcx)",
-        "name_en": "Fried Chicken roll 10 PCS",
-        "name_zh": "炸雞卷",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/Sushi Combo/Fried Chicken roll 10 PCS.png"
-      },
-      {
-        "id": "",
-        "name_fr": "Rouleau Dragon Eye (10 mcx)",
-        "name_en": "Dragon eye roll 10 PCS",
-        "name_zh": "龍眼卷",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/Sushi Combo/Dragon eye roll 10 PCS.png"
-      },
-      {
-        "id": "",
-        "name_fr": "Saumon épicé (6 mcx)",
-        "name_en": "Spicy Salmon 6 PCS",
-        "name_zh": "辣三文魚卷",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/Sushi Combo/Spicy Salmon 6PCS.png"
-      },
-      {
-        "id": "",
-        "name_fr": "Rouleau Californie (10 mcx)",
-        "name_en": "California Roll 10 PCS",
-        "name_zh": "加州卷",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/Sushi Combo/California Roll 10 PCS.png"
-      },
-      {
-        "id": "SS1",
-        "name_fr": "Combo SS1 (14 mcx)",
-        "name_en": "SS1 (14 PCS)",
-        "name_zh": "壽司套餐 SS1",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/Sushi Combo/SS1.png"
-      },
-      {
-        "id": "SS2",
-        "name_fr": "Combo SS2 (16 mcx)",
-        "name_en": "SS2 (16 PCS)",
-        "name_zh": "壽司套餐 SS2",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/Sushi Combo/SS2.png"
-      },
-      {
-        "id": "SS3",
-        "name_fr": "Combo SS3 (28 mcx)",
-        "name_en": "SS3 (28 PCS)",
-        "name_zh": "壽司套餐 SS3",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/Sushi Combo/SS3.png"
-      },
-      {
-        "id": "SS4",
-        "name_fr": "Combo SS4 (34 mcx)",
-        "name_en": "SS4 (34 PCS)",
-        "name_zh": "壽司套餐 SS4",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/Sushi Combo/SS4.png"
-      },
-      {
-        "id": "Boat 1",
-        "name_fr": "Bateau Sushi 1 (74 mcx)",
-        "name_en": "Boat 1 (74 PCS)",
-        "name_zh": "壽司船 1",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/Sushi Combo/Boat 1.png"
-      },
-      {
-        "id": "Boat 2",
-        "name_fr": "Bateau Sushi 2 (88 mcx)",
-        "name_en": "Boat 2 (88 PCS)",
-        "name_zh": "壽司船 2",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/Sushi Combo/Boat2.png"
-      }
-    ]
-  },
-  {
-    "title_en": "SIZZLING PLATES",
-    "title_fr": "PLAQUES CHAUFFANTES",
-    "items": [
-      {
-        "id": "SP01",
-        "name_fr": "Côtelettes d'agneau grésillantes",
-        "name_en": "SP01 Sizzling Lamb Chops",
-        "name_zh": "SP01 鐵板羊扒",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/SIZZLING PLATES/SP01 Sizzling Lamb Chops.png"
-      },
-      {
-        "id": "SP02",
-        "name_fr": "Côtes de bœuf Angus AAA",
-        "name_en": "SP02 AAA Angus Beef Ribs",
-        "name_zh": "SP02 AAA 鐵板牛仔骨",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/SIZZLING PLATES/SP02 AAA Angus Beef Ribs.png"
-      },
-      {
-        "id": "SP03",
-        "name_fr": "Côtelette de poulet à l'ail",
-        "name_en": "SP03 Garlic Chicken Chop",
-        "name_zh": "SP03 蒜香雞扒",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/SIZZLING PLATES/SP03 Garlic Chicken Chop.jpg"
-      },
-      {
-        "id": "SP04",
-        "name_fr": "Filet de sole et côtelette de poulet",
-        "name_en": "SP04 Bread Sole & Chicken Chop",
-        "name_zh": "SP04 龍利柳配雞扒",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/SIZZLING PLATES/SP04 BreadSole&ChickenChop.jpg"
-      }
-    ]
-  },
-  {
-    "title_en": "DUMPLINGS",
-    "title_fr": "DUMPLINGS",
-    "items": [
-      {
-        "id": "",
-        "name_fr": "Dumplings à la soupe d'agneau et coriandre",
-        "name_en": "Lamb & Cilantro Soup Dumplings",
-        "name_zh": "羊肉香菜小籠包",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/DUMPLINGS/Lamb&Cilantro Soup Dumplings.jpg"
-      },
-      {
-        "id": "",
-        "name_fr": "Dumplings crevettes, œufs et courgettes",
-        "name_en": "Shrimp, Egg & Zucchini Dumplings",
-        "name_zh": "蝦仁雞蛋西葫蘆水餃",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/DUMPLINGS/Shrimp egg & zucchini.jpg"
-      },
-      {
-        "id": "",
-        "name_fr": "Dumpling aux légumes",
-        "name_en": "Vegetables Dumpling",
-        "name_zh": "蔬菜餃子",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/DUMPLINGS/Vegetables Dumpling.jpg"
-      }
-    ]
-  },
-  {
-    "title_en": "VEGETARIAN",
-    "title_fr": "VÉGÉTARIEN",
-    "items": [
-      {
-        "id": "V01",
-        "name_fr": "Vermicelles sautés aux légumes",
-        "name_en": "V01 Veg Stir Vermicelli",
-        "name_zh": "雜菜炒粉絲",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/VEGETARIAN/V01 Veg Stir Vermicelli.jpg"
-      },
-      {
-        "id": "V02",
-        "name_fr": "Riz frit aux légumes",
-        "name_en": "V02 Veg Fried Rice",
-        "name_zh": "雜菜炒飯",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/VEGETARIAN/V02 Veg Fried Rice.png"
-      },
-      {
-        "id": "V05",
-        "name_fr": "Tofu braisé à la sauce soja",
-        "name_en": "V05 Braised Tofu in Soy Sauce",
-        "name_zh": "紅燒豆腐",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/VEGETARIAN/V05 Braised Tofu in Soy Sauce.png"
-      },
-      {
-        "id": "",
-        "name_fr": "Légumes assortis sautés",
-        "name_en": "Stir-fried Mixed Vegetables",
-        "name_zh": "清炒時蔬",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/VEGETARIAN/Stir-Fried Mixed Vegetables.jpg"
-      }
-    ]
-  },
-  {
-    "title_en": "CURRY STYLE HK",
-    "title_fr": "CARI STYLE HK",
-    "items": [
-      {
-        "id": "E06",
-        "name_fr": "Bœuf au cari sur riz",
-        "name_en": "E06 Curry Beef on Rice",
-        "name_zh": "咖哩牛肉飯",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/CURRY STYLE HK/E06 Curry Beef on Rice.jpg"
-      },
-      {
-        "id": "E08",
-        "name_fr": "Côtelettes d'agneau au cari sur riz",
-        "name_en": "E08 Curry Lamb Chops on Rice",
-        "name_zh": "咖哩羊扒飯",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/CURRY STYLE HK/E08 Curry Lamb Chops on Rice.jpg"
-      }
-    ]
-  },
-  {
-    "title_en": "Instant",
-    "title_fr": "LO DING",
-    "items": [
-      {
-        "id": "M01",
-        "name_fr": "Ragoût de bœuf au cari Lo Ding",
-        "name_en": "M01 Curry Beef Brisket Lo Ding",
-        "name_zh": "咖哩牛腩撈丁",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/Curry Beef Brisket Lo Ding - Copy.jpeg"
-      },
-      {
-        "id": "M02",
-        "name_fr": "Poulet et œufs brouillés Lo Ding",
-        "name_en": "M02 Chicken & Scramble Egg Lo Ding",
-        "name_zh": "滑蛋雞肉撈丁",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/Chicken & ScrambleEgg LoDing.jpeg"
-      }
-    ]
-  },
-  {
-    "title_en": "SIGNATURE SNACK",
-    "title_fr": "COLLATIONS SIGNATURE",
-    "items": [
-      {
-        "id": "",
-        "name_fr": "Takoyaki (4 morceaux)",
-        "name_en": "Takoyaki (4 pieces)",
-        "name_zh": "章魚燒 (4粒)",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/Signature Snacks/Takoyaki (4 pieces).png"
-      },
-      {
-        "id": "",
-        "name_fr": "Poulet pop-corn",
-        "name_en": "Popcorn Chicken",
-        "name_zh": "鹽酥雞",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/Signature Snacks/Popcorn Chicken.png"
-      },
-      {
-        "id": "",
-        "name_fr": "Pain doré au lait condensé",
-        "name_en": "Condensed Milk Toast",
-        "name_zh": "奶油多士",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/Signature Snacks/Condensed Milk Toast.png"
-      },
-      {
-        "id": "",
-        "name_fr": "Pain doré avec crème glacée",
-        "name_en": "Ice cream toast",
-        "name_zh": "雪糕多士",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/Signature Snacks/Ice cream toast.png"
-      },
-      {
-        "id": "",
-        "name_fr": "Pain doré aux crevettes",
-        "name_en": "Shrimp Toast",
-        "name_zh": "蝦多士",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/Signature Snacks/Shrimp Toast.png"
-      },
-      {
-        "id": "",
-        "name_fr": "Crème glacée",
-        "name_en": "Ice Cream",
-        "name_zh": "雪糕",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/Signature Snacks/Ice Cream.jpg"
-      },
-      {
-        "id": "",
-        "name_fr": "Gaufres avec crème glacée",
-        "name_en": "ice cream waffles",
-        "name_zh": "雪糕格仔餅",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/Signature Snacks/ice cream waffles.png"
-      },
-      {
-        "id": "",
-        "name_fr": "Mochi au thé matcha",
-        "name_en": "Matcha Mochi",
-        "name_zh": "抹茶麻糬",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/Signature Snacks/Matcha Mochi - Signature Snack.png"
-      },
-      {
-        "id": "",
-        "name_fr": "Mochi aux fraises",
-        "name_en": "Strawberry Mochi",
-        "name_zh": "草莓麻糬",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/Signature Snacks/Strawberry Mochi - Signature Snack.png"
-      },
-      {
-        "id": "",
-        "name_fr": "Mochi à la mangue",
-        "name_en": "Mango Mochi",
-        "name_zh": "芒果麻糬",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/Signature Snacks/Mango Mochi - Signature Snack.png"
-      }
-    ]
-  },
-  {
-    "title_en": "SNACKS & SIDES",
-    "title_fr": "COLLATIONS & ACCOMPAGNEMENTS",
-    "items": [
-      {
-        "id": "B09",
-        "name_fr": "Bœuf piquant aux piments",
-        "name_en": "B09 Spicy Chili Beef",
-        "name_zh": "辣牛肉",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/SNACKS & SIDES/B09 Spicy Chill Beef.png"
-      },
-      {
-        "id": "B01",
-        "name_fr": "Soupe udon au bœuf au cari",
-        "name_en": "B01 Curry Beef Udon Soup",
-        "name_zh": "咖哩牛肉烏冬湯麵",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/SNACKS & SIDES/B01 Curry Beef Udon Soup.jpg"
-      },
-      {
-        "id": "B06",
-        "name_fr": "Udon sauté au poulet",
-        "name_en": "B06 Chicken Udon Stir-Fry",
-        "name_zh": "雞肉炒烏冬",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/SNACKS & SIDES/B06 Chicken Udon Stir-Fry.jpg"
-      },
-      {
-        "id": "B03",
-        "name_fr": "Crevettes Général Tao",
-        "name_en": "B03 General Tao's Shrimp",
-        "name_zh": "左宗棠蝦",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/SNACKS & SIDES/B03 General Tao’s Shrimp.jpg"
-      },
-      {
-        "id": "B16",
-        "name_fr": "Poulet Général Tao (Collation)",
-        "name_en": "B16 General Tao's Chicken (Snack)",
-        "name_zh": "左宗棠雞",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/SNACKS & SIDES/B16 General Tao's Chicken - Snacks & Sides.png"
-      },
-      {
-        "id": "B04",
-        "name_fr": "Boules de sésame frites",
-        "name_en": "B04 Sesame Balls",
-        "name_zh": "煎堆",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/SNACKS & SIDES/B04 Sesame Balls.png"
-      },
-      {
-        "id": "B05",
-        "name_fr": "Ailes de poulet avec frites",
-        "name_en": "B05 Chicken wing with Fries",
-        "name_zh": "炸雞翼配薯條",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/SNACKS & SIDES/B05Chicken wing with Fries.jpg"
-      },
-      {
-        "id": "",
-        "name_fr": "Ailes de poulet & frites maison",
-        "name_en": "Chicken wings & Fries",
-        "name_zh": "雞翼拼薯條",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/SNACKS & SIDES/Chicken wings-Fries.jpg"
-      },
-      {
-        "id": "B17",
-        "name_fr": "Calamars frits croustillants",
-        "name_en": "B17 Deep Fried Calamari",
-        "name_zh": "酥炸魷魚圈",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/SNACKS & SIDES/B17 Deep Fried Calamari.png"
-      },
-      {
-        "id": "B18",
-        "name_fr": "Rouleaux de printemps",
-        "name_en": "B18 Spring Rolls",
-        "name_zh": "炸春卷",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/SNACKS & SIDES/B18 Spring Rolls.png"
-      },
-      {
-        "id": "B19",
-        "name_fr": "Pétoncles frits",
-        "name_en": "B19 Fried Scallops",
-        "name_zh": "炸帶子",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/SNACKS & SIDES/B19 Fried Scallops.png"
-      }
-    ]
-  },
-  {
-    "title_en": "DRINK",
-    "title_fr": "BOISSONS",
-    "items": [
-      {
-        "id": "",
-        "name_fr": "Thé au lait à la hongkongaise",
-        "name_en": "Hong Kong Style Milk Tea",
-        "name_zh": "港式奶茶",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/Drinks/Hong Kong Style Milk Tea.png"
-      },
-      {
-        "id": "",
-        "name_fr": "Thé au lait au taro",
-        "name_en": "Taro milk tea",
-        "name_zh": "芋頭奶茶",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/Drinks/Taro milk tea.png"
-      },
-      {
-        "id": "",
-        "name_fr": "Café",
-        "name_en": "Coffee",
-        "name_zh": "咖啡",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/Drinks/Coffee.png"
-      },
-      {
-        "id": "",
-        "name_fr": "Latte au matcha et fraises",
-        "name_en": "Strawberry matcha latte",
-        "name_zh": "草莓抹茶拿鐵",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/Drinks/Strawberry matcha latte.png"
-      },
-      {
-        "id": "",
-        "name_fr": "Latte au matcha et mangue",
-        "name_en": "Mango matcha latte",
-        "name_zh": "芒果抹茶拿鐵",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/Drinks/Mango matcha latte.png"
-      },
-      {
-        "id": "",
-        "name_fr": "Barbotine mangue et fruits de la passion",
-        "name_en": "Mango passion slush",
-        "name_zh": "芒果百香果冰沙",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/Drinks/Mango passion slush.png"
-      },
-      {
-        "id": "",
-        "name_fr": "Barbotine aux fraises",
-        "name_en": "Strawberry slush",
-        "name_zh": "草莓冰沙",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/Drinks/Strawberry slush.png"
-      },
-      {
-        "id": "",
-        "name_fr": "Limonade maison",
-        "name_en": "Limonade",
-        "name_zh": "青檸檬水",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/Drinks/Limonade.png"
-      },
-      {
-        "id": "",
-        "name_fr": "Eau de coco naturelle",
-        "name_en": "coconut water",
-        "name_zh": "天然椰子水",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/Drinks/coconut water.png"
-      },
-      {
-        "id": "",
-        "name_fr": "Thé Oolong (sans sucre)",
-        "name_en": "Oolong Tea (no sugar)",
-        "name_zh": "無糖烏龍茶",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/Drinks/Oolong Tea(no sugar).png"
-      },
-      {
-        "id": "",
-        "name_fr": "Coca-Cola mexicain en bouteille en verre",
-        "name_en": "Coca cola mexican bottled",
-        "name_zh": "墨西哥玻璃瓶可樂",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/Drinks/Coca cola mexican bottled.png"
-      },
-      {
-        "id": "",
-        "name_fr": "Coke Diète",
-        "name_en": "Diet Coke",
-        "name_zh": "健怡可樂",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/Drinks/Diet Coke.jpg"
-      },
-      {
-        "id": "",
-        "name_fr": "Milkis (boisson gazeuse au lait)",
-        "name_en": "Milkis",
-        "name_zh": "米爾奇斯乳酸碳酸飲",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/Drinks/Milkis.png"
-      },
-      {
-        "id": "",
-        "name_fr": "Eau pétillante San Pellegrino",
-        "name_en": "Sparkling Water",
-        "name_zh": "氣泡礦泉水",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/Drinks/Sparkling Water.jpg"
-      },
-      {
-        "id": "",
-        "name_fr": "Gâteau au fromage Yuzu",
-        "name_en": "Cheese cake Yuzu",
-        "name_zh": "柚子芝士蛋糕",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/Drinks/Cheese cake Yuzu.png"
-      },
-      {
-        "id": "",
-        "name_fr": "Red Bull Zéro",
-        "name_en": "Red Bull Zero",
-        "name_zh": "紅牛無糖能量飲料",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/Drinks/Red Bull Zero.jpg"
-      },
-      {
-        "id": "",
-        "name_fr": "Mochi au thé matcha (Boisson/Dessert)",
-        "name_en": "Matcha Mochi (Drink/Dessert)",
-        "name_zh": "抹茶麻糬",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/Drinks/Matcha Mochi - Drink.png"
-      },
-      {
-        "id": "",
-        "name_fr": "Mochi aux fraises (Boisson/Dessert)",
-        "name_en": "Strawberry Mochi (Drink/Dessert)",
-        "name_zh": "草莓麻糬",
-        "desc_fr": "",
-        "desc_en": "",
-        "image": "/menu/Drinks/Strawberry Mochi - Drink.png"
-      }
-    ]
-  }
-];
 
 export default function HomePage() {
+  const [menuType, setMenuType] = useState<"ayce" | "alacarte">("ayce");
   const [activeCategory, setActiveCategory] = useState(0);
+  const currentCategories = menuType === "ayce" ? AYCE_MENU_CATEGORIES : ALACARTE_MENU_CATEGORIES;
   const [lang, setLang] = useState<"en" | "fr">("en");
   const [showPromo, setShowPromo] = useState(true);
   const [hoveredSocial, setHoveredSocial] = useState<number | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const handleOrderOnline = () => {
     window.open('https://cloud.quickposhub.com/onlineorder/#/pages/order/tableurl?code=E9IPN247Bx', '_blank');
@@ -1179,13 +435,13 @@ export default function HomePage() {
       {/* Menu Section */}
       <section
         id="menu"
-        className="min-h-screen bg-[#faf8f5] text-[#1a1c19] pt-24 pb-24 w-full relative content-visibility-lazy"
+        className="min-h-screen bg-[#faf8f5] text-[#1a1c19] pt-24 pb-24 w-full relative"
       >
         <div className="max-w-5xl mx-auto px-6 md:px-12">
           {/* Order Online CTA */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={isMobile ? false : { opacity: 0, y: 30 }}
+            whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "0px 0px -80px 0px" }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="w-full flex flex-col sm:flex-row flex-wrap items-center justify-center gap-8 sm:gap-12 mb-12"
@@ -1247,22 +503,84 @@ export default function HomePage() {
             </div>
           </motion.div>
 
-          {/* Tabs */}
-          <motion.div 
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "0px 0px -80px 0px" }}
-            transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-            className="grid grid-cols-2 md:flex md:flex-wrap md:justify-center gap-3 md:gap-4 mb-16 md:mb-20 max-w-lg md:max-w-none mx-auto"
+          {/* Menu Experience Selector (AYCE vs À La Carte) */}
+          <motion.div
+            initial={isMobile ? false : { opacity: 0, y: 20 }}
+            whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="flex flex-col items-center mb-12 md:mb-16"
           >
-            {MENU_CATEGORIES.map((cat, idx) => (
+            {/* Elegant Section Label */}
+            <div className="flex items-center gap-3 mb-3">
+              <div className="w-6 h-[1px] bg-[#c8b88a]/50"></div>
+              <p className="text-[#1a1c19]/60 text-[11px] sm:text-xs uppercase tracking-[0.28em] font-bold">
+                {lang === "fr" ? "Formule du Menu" : "Menu Experience"}
+              </p>
+              <div className="w-6 h-[1px] bg-[#c8b88a]/50"></div>
+            </div>
+
+            {/* Luxury Obsidian & Gold Segmented Control */}
+            <div className="p-1.5 sm:p-2 bg-[#1a1c19] rounded-full flex items-center gap-1.5 sm:gap-2 shadow-[0_12px_36px_rgba(0,0,0,0.18)] border border-[#c8b88a]/40 w-full sm:w-auto max-w-xl">
               <button
-                key={idx}
+                id="menu-type-ayce-btn"
+                type="button"
+                onClick={() => {
+                  setMenuType("ayce");
+                  setActiveCategory(0);
+                }}
+                className={`flex-1 sm:flex-initial sm:min-w-[210px] py-3 sm:py-3.5 px-5 sm:px-8 rounded-full text-xs sm:text-[13px] font-bold tracking-[0.18em] uppercase transition-all duration-300 cursor-pointer flex items-center justify-center gap-2 select-none ${
+                  menuType === "ayce"
+                    ? "bg-gradient-to-r from-[#d9be75] via-[#c8b88a] to-[#bda061] text-[#1a1c19] shadow-[0_2px_16px_rgba(200,184,138,0.55)] scale-[1.02]"
+                    : "text-[#efe7d2]/75 hover:text-white hover:bg-white/10"
+                }`}
+              >
+                <span className={`w-1.5 h-1.5 rounded-full transition-colors duration-300 ${menuType === "ayce" ? "bg-[#1a1c19]" : "bg-[#c8b88a]/60"}`}></span>
+                <span>{lang === "fr" ? "Buffet À Volonté (AYCE)" : "All-You-Can-Eat (AYCE)"}</span>
+              </button>
+
+              <button
+                id="menu-type-alacarte-btn"
+                type="button"
+                onClick={() => {
+                  setMenuType("alacarte");
+                  setActiveCategory(0);
+                }}
+                className={`flex-1 sm:flex-initial sm:min-w-[210px] py-3 sm:py-3.5 px-5 sm:px-8 rounded-full text-xs sm:text-[13px] font-bold tracking-[0.18em] uppercase transition-all duration-300 cursor-pointer flex items-center justify-center gap-2 select-none ${
+                  menuType === "alacarte"
+                    ? "bg-gradient-to-r from-[#d9be75] via-[#c8b88a] to-[#bda061] text-[#1a1c19] shadow-[0_2px_16px_rgba(200,184,138,0.55)] scale-[1.02]"
+                    : "text-[#efe7d2]/75 hover:text-white hover:bg-white/10"
+                }`}
+              >
+                <span className={`w-1.5 h-1.5 rounded-full transition-colors duration-300 ${menuType === "alacarte" ? "bg-[#1a1c19]" : "bg-[#c8b88a]/60"}`}></span>
+                <span>{lang === "fr" ? "À La Carte" : "À La Carte"}</span>
+              </button>
+            </div>
+
+            {/* Subtitle Description */}
+            <p className="text-[#1a1c19]/65 text-[11px] sm:text-xs tracking-wider uppercase mt-3.5 font-medium text-center px-4 max-w-lg">
+              {menuType === "ayce"
+                ? (lang === "fr" ? "Formule buffet à volonté — Entrées, sushis, grillades, tempura et desserts" : "All-you-can-eat buffet — Appetizers, sushi, hot kitchen, tempura & desserts")
+                : (lang === "fr" ? "Plats à la carte — Spécialités maison, combos sushi, plaques grésillantes et nouilles" : "À la carte selection — House specials, sushi combos, sizzling plates & noodles")}
+            </p>
+          </motion.div>
+
+          {/* Sub-category Tabs */}
+          <motion.div 
+            initial={isMobile ? false : { opacity: 0, y: 30 }}
+            whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "0px 0px -40px 0px" }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            className="flex flex-wrap justify-center gap-2 sm:gap-2.5 md:gap-3 mb-12 md:mb-16 max-w-5xl mx-auto px-2"
+          >
+            {currentCategories.map((cat, idx) => (
+              <button
+                key={`${menuType}-${idx}`}
                 onClick={() => setActiveCategory(idx)}
-                className={`py-3 px-2 md:px-5 md:py-2.5 rounded-[12px] md:rounded-lg border text-[10px] sm:text-xs font-bold md:tracking-[0.1em] transition-colors uppercase leading-tight ${
+                className={`py-2 px-3 sm:px-4 sm:py-2.5 rounded-full border text-[11px] sm:text-xs font-semibold tracking-wider transition-all duration-200 uppercase whitespace-nowrap cursor-pointer ${
                   activeCategory === idx
-                    ? "border-[#c8b88a] bg-[#c8b88a] text-[#1a1c19] shadow-sm"
-                    : "border-[#1a1c19]/20 text-[#1a1c19] hover:border-[#c8b88a] hover:text-[#1a1c19]"
+                    ? "border-[#c8b88a] bg-[#c8b88a] text-[#1a1c19] shadow-md font-bold scale-[1.02]"
+                    : "border-[#1a1c19]/15 bg-white/70 text-[#1a1c19]/80 hover:border-[#c8b88a] hover:text-[#1a1c19] hover:bg-white"
                 }`}
               >
                 {lang === "fr" ? cat.title_fr : cat.title_en}
@@ -1271,58 +589,63 @@ export default function HomePage() {
           </motion.div>
 
           {/* Category Header */}
-          <motion.div
-            key={`header-${activeCategory}`}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "0px 0px -80px 0px" }}
-            transition={{ duration: 0.5 }}
-            className="flex items-center justify-center gap-4 mb-16"
-          >
-            <div className="w-10 h-[1px] bg-[#1a1c19]/30 hidden sm:block"></div>
-            <span className="text-[#1a1c19]/40 rotate-45 transform text-[10px] hidden sm:block">
-              ◆
-            </span>
-            <h3 className="font-serif text-3xl md:text-5xl tracking-widest text-[#1a1c19] uppercase text-center mx-4">
-              {lang === "fr"
-                ? MENU_CATEGORIES[activeCategory].title_fr
-                : MENU_CATEGORIES[activeCategory].title_en}
-            </h3>
-            <span className="text-[#1a1c19]/40 rotate-45 transform text-[10px] hidden sm:block">
-              ◆
-            </span>
-            <div className="w-10 h-[1px] bg-[#1a1c19]/30 hidden sm:block"></div>
-          </motion.div>
+          {currentCategories[Math.min(activeCategory, currentCategories.length - 1)] && (
+            <motion.div
+              key={`header-${menuType}-${activeCategory}`}
+              initial={isMobile ? false : { opacity: 0, y: 15 }}
+              animate={isMobile ? false : { opacity: 1, y: 0 }}
+              transition={{ duration: 0.35 }}
+              className="flex items-center justify-center gap-4 mb-12 md:mb-16"
+            >
+              <div className="w-10 h-[1px] bg-[#1a1c19]/30 hidden sm:block"></div>
+              <span className="text-[#1a1c19]/40 rotate-45 transform text-[10px] hidden sm:block">
+                ◆
+              </span>
+              <h3 className="font-serif text-2xl sm:text-3xl md:text-5xl tracking-widest text-[#1a1c19] uppercase text-center mx-4">
+                {lang === "fr"
+                  ? currentCategories[Math.min(activeCategory, currentCategories.length - 1)].title_fr
+                  : currentCategories[Math.min(activeCategory, currentCategories.length - 1)].title_en}
+              </h3>
+              <span className="text-[#1a1c19]/40 rotate-45 transform text-[10px] hidden sm:block">
+                ◆
+              </span>
+              <div className="w-10 h-[1px] bg-[#1a1c19]/30 hidden sm:block"></div>
+            </motion.div>
+          )}
 
           {/* Menu Items Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {MENU_CATEGORIES[activeCategory].items.map((item, idx) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 min-h-[400px]">
+            {(currentCategories[Math.min(activeCategory, currentCategories.length - 1)]?.items || []).map((item, idx) => (
               <motion.div
-                key={`${activeCategory}-${idx}`}
-                initial={{ opacity: 0, y: 25 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "0px 0px -80px 0px" }}
-                transition={{ delay: idx * 0.05, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-                className="bg-white rounded-2xl border border-gray-100 shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)] transition-all duration-300 flex overflow-hidden h-[120px] sm:h-[140px] md:h-[150px] group"
+                key={`${menuType}-${activeCategory}-${item.name_en}`}
+                initial={isMobile ? false : { opacity: 0, y: 15 }}
+                animate={isMobile ? false : { opacity: 1, y: 0 }}
+                transition={isMobile ? { duration: 0 } : { delay: Math.min(idx * 0.02, 0.2), duration: 0.35, ease: "easeOut" }}
+                className="bg-white rounded-2xl border border-gray-100/90 shadow-[0_2px_8px_rgba(0,0,0,0.04)] md:hover:shadow-[0_6px_20px_rgba(0,0,0,0.08)] md:transition-shadow md:duration-300 flex overflow-hidden h-[120px] sm:h-[135px] md:h-[145px] group"
               >
                 {SHOW_MENU_IMAGES && item.image && (
-                  <div className="w-[120px] sm:w-[150px] md:w-[180px] shrink-0 h-full relative overflow-hidden">
+                  <div className="w-[120px] sm:w-[145px] md:w-[170px] shrink-0 h-full relative overflow-hidden bg-[#f7f4ee]">
                     <img
-                      src={encodeURI(item.image)}
+                      src={item.image}
                       alt={lang === "fr" ? item.name_fr : item.name_en}
                       loading="lazy"
                       decoding="async"
-                      className="absolute inset-0 w-full h-full object-cover rounded-l-2xl transition-transform duration-500 group-hover:scale-105"
+                      width={170}
+                      height={145}
+                      className="absolute inset-0 w-full h-full object-cover rounded-l-2xl md:transition-transform md:duration-500 md:group-hover:scale-105"
+                      onError={(e) => {
+                        (e.currentTarget as HTMLElement).style.display = 'none';
+                      }}
                     />
                   </div>
                 )}
-                <div className="flex-1 p-4 sm:p-5 flex flex-col justify-center min-w-0">
+                <div className="flex-1 p-3.5 sm:p-4 md:p-5 flex flex-col justify-center min-w-0">
                   <div className="min-w-0">
                     <h4 className="font-sans font-bold text-[#1a1c19] text-sm sm:text-base md:text-lg leading-snug line-clamp-2">
                       {lang === "fr" ? item.name_fr : item.name_en}
                     </h4>
                     {(lang === "fr" ? item.desc_fr : item.desc_en) && (
-                      <p className="text-[10px] sm:text-xs text-[#1a1c19]/60 mt-1 line-clamp-2 leading-relaxed">
+                      <p className="text-[11px] sm:text-xs text-[#1a1c19]/65 mt-1 line-clamp-2 leading-relaxed font-normal">
                         {lang === "fr" ? item.desc_fr : item.desc_en}
                       </p>
                     )}
