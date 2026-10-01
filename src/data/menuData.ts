@@ -62,6 +62,103 @@ export const AYCE_MENU_CATEGORIES: MenuCategory[] = [
     ]
   },
   {
+    "title_en": "FRIED FAVORITES",
+    "title_fr": "FRITURES FAVORITES",
+    "items": [
+      {
+        "name_en": "Fried Calamari",
+        "name_fr": "Calmars Frits Croustillants",
+        "desc_en": "Tender calamari rings lightly dusted and golden fried with dip",
+        "desc_fr": "Anneaux de calmar croustillants servis dorés avec trempette",
+        "image": "/menu/optimized/ayce/fried-calamari.webp"
+      },
+      {
+        "name_en": "Fried Chicken Wings",
+        "name_fr": "Ailes de Poulet Frites",
+        "desc_en": "Extra crispy seasoned jumbo chicken wings (1 pc)",
+        "desc_fr": "Aile de poulet croustillante assaisonnée à la perfection (1 mc)",
+        "image": "/menu/optimized/ayce/fried-chicken-wings.webp"
+      },
+      {
+        "name_en": "Teriyaki Chicken",
+        "name_fr": "Poulet Teriyaki",
+        "desc_en": "Grilled juicy chicken glazed in sweet savory house teriyaki sauce",
+        "desc_fr": "Morceaux de poulet grillés nappés de sauce teriyaki maison",
+        "image": "/menu/optimized/ayce/teriyaki-chicken.webp"
+      },
+      {
+        "name_en": "Teriyaki Salmon",
+        "name_fr": "Saumon Teriyaki",
+        "desc_en": "Seared Atlantic salmon fillet drizzled with rich teriyaki glaze",
+        "desc_fr": "Filet de saumon atlantique poêlé et laqué au teriyaki",
+        "image": "/menu/optimized/ayce/teriyaki-salmon.webp"
+      },
+      {
+        "name_en": "Salt & Pepper Shrimp",
+        "name_fr": "Crevettes Sel & Poivre",
+        "desc_en": "Wok-tossed jumbo prawns with five-spice sea salt, garlic, and chilies (2 pcs)",
+        "desc_fr": "Grosses crevettes sautées au wok au sel épicé, ail et piments (2 mcx)",
+        "image": "/menu/optimized/ayce/salt-and-pepper-shrimp.webp"
+      },
+      {
+        "name_en": "Creamy Mussels",
+        "name_fr": "Moules Crémeuses",
+        "desc_en": "Baked half-shell green mussels baked in decadent savory cream sauce (1 pc)",
+        "desc_fr": "Moule gratinée nappée d'une sauce crémeuse savoureuse (1 mc)",
+        "image": "/menu/optimized/ayce/creamy-mussels.webp"
+      },
+      {
+        "name_en": "Wasabi Cream Mussels",
+        "name_fr": "Moules à la Crème Wasabi",
+        "desc_en": "Baked green mussel with a gentle zesty wasabi garlic aioli (1 pc)",
+        "desc_fr": "Moule cuite au four avec aïoli parfumé au wasabi doux (1 mc)",
+        "image": "/menu/optimized/ayce/wasabi-cream-mussels.webp"
+      },
+      {
+        "name_en": "Spring Rolls",
+        "name_fr": "Rouleaux de Printemps Croustillants",
+        "desc_en": "Crispy fried golden vegetable spring roll with sweet plum sauce (1 pc)",
+        "desc_fr": "Rouleau croustillant aux légumes frais et sauce aux prunes (1 mc)",
+        "image": "/menu/optimized/ayce/spring-rolls.webp"
+      },
+      {
+        "name_en": "Fried Crab Stick",
+        "name_fr": "Goberge de Crabe Frite",
+        "desc_en": "Golden crispy tempura-battered premium crab stick (1 pc)",
+        "desc_fr": "Bâtonnet de goberge de crabe enrobé de chapelure croustillante (1 mc)",
+        "image": "/menu/optimized/ayce/fried-crab-stick.webp"
+      },
+      {
+        "name_en": "Fried Scallops",
+        "name_fr": "Pétoncles Frits",
+        "desc_en": "Breaded deep-fried sea scallop with house dipping sauce (1 pc)",
+        "desc_fr": "Pétoncle doré et croustillant servi avec sauce d'accompagnement (1 mc)",
+        "image": "/menu/optimized/ayce/fried-scallops.webp"
+      },
+      {
+        "name_en": "Fried Vegetable Dumplings",
+        "name_fr": "Raviolis Végétariens Frits (Gyoza)",
+        "desc_en": "Pan-crisped dumpling packed with seasoned minced garden vegetables (1 pc)",
+        "desc_fr": "Ravioli japonais poêlé croustillant farci aux légumes frais (1 mc)",
+        "image": "/menu/optimized/ayce/fried-vegetable-dumplings.webp"
+      },
+      {
+        "name_en": "Takoyaki",
+        "name_fr": "Takoyaki (Boulettes de Poulpe)",
+        "desc_en": "Savory Japanese octopus ball topped with sweet eel glaze and kewpie mayo (1 pc)",
+        "desc_fr": "Bouchée japonaise au poulpe garnie de sauce sucrée et bonite (1 mc)",
+        "image": "/menu/optimized/ayce/takoyaki.webp"
+      },
+      {
+        "name_en": "French Fries",
+        "name_fr": "Frites Dorées",
+        "desc_en": "Crisp golden potato fries seasoned with sea salt",
+        "desc_fr": "Frites croustillantes assaisonnées au sel fin",
+        "image": "/menu/optimized/ayce/french-fries.webp"
+      }
+    ]
+  },
+  {
     "title_en": "HOT KITCHEN",
     "title_fr": "PLATS CHAUDS",
     "items": [
@@ -122,6 +219,13 @@ export const AYCE_MENU_CATEGORIES: MenuCategory[] = [
         "image": "/menu/optimized/ayce/curry-chicken-cutlet.webp"
       },
       {
+        "name_en": "Curry Chicken Skewers",
+        "name_fr": "Brochettes de Poulet au Curry",
+        "desc_en": "Tender grilled chicken skewers infused with aromatic curry spices",
+        "desc_fr": "Brochettes de poulet grillées et marinées aux épices douces de curry",
+        "image": "/menu/optimized/ayce/curry-chicken-skewers.webp"
+      },
+      {
         "name_en": "Vegetable Fried Rice",
         "name_fr": "Riz frit aux légumes",
         "desc_en": "Fragrant fried rice packed with colorful fresh garden vegetables",
@@ -145,423 +249,56 @@ export const AYCE_MENU_CATEGORIES: MenuCategory[] = [
     ]
   },
   {
-    "title_en": "FRIED FAVORITES",
-    "title_fr": "FRITURES & FAVORIS",
-    "items": [
-      {
-        "name_en": "Fried Calamari",
-        "name_fr": "Calamar Frit Croustillant",
-        "desc_en": "Tender seasoned calamari rings flash-fried until golden (1 pc)",
-        "desc_fr": "Anneaux de calamar marinés dorés et frits à la perfection (1 mc)",
-        "image": "/menu/optimized/ayce/fried-calamari.webp"
-      },
-      {
-        "name_en": "Fried Chicken Wings",
-        "name_fr": "Ailes de Poulet Croustillantes",
-        "desc_en": "Crispy golden chicken wings seasoned with house spices (1 pc)",
-        "desc_fr": "Ailes de poulet croustillantes et juteuses aux épices maison (1 mc)",
-        "image": "/menu/optimized/ayce/fried-chicken-wings.webp"
-      },
-      {
-        "name_en": "Teriyaki Chicken",
-        "name_fr": "Poulet Teriyaki",
-        "desc_en": "Grilled chicken fillet glazed with sweet savory homemade teriyaki sauce",
-        "desc_fr": "Tendres filets de poulet laqués à notre sauce teriyaki artisanale",
-        "image": "/menu/optimized/ayce/teriyaki-chicken.webp"
-      },
-      {
-        "name_en": "Teriyaki Salmon",
-        "name_fr": "Saumon Teriyaki",
-        "desc_en": "Pan-seared Atlantic salmon fillet coated in rich teriyaki glaze",
-        "desc_fr": "Pavé de saumon poêlé et nappé d'un savoureux glaçage teriyaki",
-        "image": "/menu/optimized/ayce/teriyaki-salmon.webp"
-      },
-      {
-        "name_en": "Salt & Pepper Shrimp",
-        "name_fr": "Crevettes Sel & Poivre",
-        "desc_en": "Crispy battered shrimp tossed with sea salt and cracked pepper (2 pcs)",
-        "desc_fr": "Crevettes croustillantes sautées au sel de mer et poivre (2 mcx)",
-        "image": "/menu/optimized/ayce/salt-and-pepper-shrimp.webp"
-      },
-      {
-        "name_en": "Creamy Mussels",
-        "name_fr": "Moules Sauce Crémeuse",
-        "desc_en": "Half-shell ocean mussels baked with rich savory garlic cream (1 pc)",
-        "desc_fr": "Moules gratinées nappées d'une onctueuse crème à l'ail (1 mc)",
-        "image": "/menu/optimized/ayce/creamy-mussels.webp"
-      },
-      {
-        "name_en": "Wasabi Cream Mussels",
-        "name_fr": "Moules Crème de Wasabi",
-        "desc_en": "Baked mussels topped with velvety wasabi-infused cream sauce (1 pc)",
-        "desc_fr": "Moules au four relevées d'une crème douce au wasabi (1 mc)",
-        "image": "/menu/optimized/ayce/wasabi-cream-mussels.webp"
-      },
-      {
-        "name_en": "Spring Rolls",
-        "name_fr": "Rouleaux de Printemps",
-        "desc_en": "Crispy golden spring roll stuffed with shredded vegetables (1 pc)",
-        "desc_fr": "Rouleau croustillant farci de légumes finement émincés (1 mc)",
-        "image": "/menu/optimized/ayce/spring-rolls.webp"
-      },
-      {
-        "name_en": "Fried Crab Stick",
-        "name_fr": "Bâtonnets de Crabe Frits",
-        "desc_en": "Golden panko-crusted crab sticks served hot and crispy (1 pc)",
-        "desc_fr": "Bâtonnets de crabe panés au panko et dorés à point (1 mc)",
-        "image": "/menu/optimized/ayce/fried-crab-stick.webp"
-      },
-      {
-        "name_en": "Fried Scallops",
-        "name_fr": "Pétoncles Frits",
-        "desc_en": "Plump tender scallops breaded in Japanese breadcrumbs (1 pc)",
-        "desc_fr": "Pétoncles tendres enrobés d'une chapelure japonaise légère (1 mc)",
-        "image": "/menu/optimized/ayce/fried-scallops.webp"
-      },
-      {
-        "name_en": "Fried Vegetable Dumplings",
-        "name_fr": "Raviolis aux Légumes Frits",
-        "desc_en": "Pan-fried crispy dumplings filled with minced fresh vegetables (1 pc)",
-        "desc_fr": "Raviolis croustillants farcis de légumes du marché (1 mc)",
-        "image": "/menu/optimized/ayce/fried-vegetable-dumplings.webp"
-      },
-      {
-        "name_en": "Takoyaki",
-        "name_fr": "Takoyaki Japonais",
-        "desc_en": "Japanese octopus pancake balls with bonito flakes and sweet glaze (1 pc)",
-        "desc_fr": "Boulettes japonaises chaudes au poulpe avec flocons de bonite (1 mc)",
-        "image": "/menu/optimized/ayce/takoyaki.webp"
-      },
-      {
-        "name_en": "French Fries",
-        "name_fr": "Frites Dorées",
-        "desc_en": "Crispy golden french fries sprinkled with sea salt",
-        "desc_fr": "Frites dorées et croustillantes saupoudrées de sel fin",
-        "image": "/menu/optimized/ayce/french-fries.webp"
-      }
-    ]
-  },
-  {
     "title_en": "TEMPURA SELECTION",
     "title_fr": "SÉLECTION TEMPURA",
     "items": [
       {
         "name_en": "Tempura Shrimp",
         "name_fr": "Tempura de Crevette",
-        "desc_en": "Succulent shrimp fried in airy Japanese tempura batter (1 pc)",
-        "desc_fr": "Crevette enrobée d'une pâte tempura légère et croustillante (1 mc)",
+        "desc_en": "Lightly battered crisp jumbo shrimp fried to airy perfection (1 pc)",
+        "desc_fr": "Crevette géante panée tempura légère et croustillante (1 mc)",
         "image": "/menu/optimized/ayce/tempura-shrimp.webp"
       },
       {
         "name_en": "Tempura Sweet Potato",
         "name_fr": "Tempura de Patate Douce",
-        "desc_en": "Sweet and tender golden sweet potato slice in light batter (1 pc)",
-        "desc_fr": "Tranche fondante de patate douce sous panure japonaise (1 mc)",
+        "desc_en": "Golden slices of sweet potato enveloped in delicate crispy tempura (1 pc)",
+        "desc_fr": "Tranche de patate douce fondante dans une panure tempura dorée (1 mc)",
         "image": "/menu/optimized/ayce/tempura-sweet-potato.webp"
       },
       {
         "name_en": "Tempura Broccoli",
         "name_fr": "Tempura de Brocoli",
-        "desc_en": "Fresh broccoli florets flash-fried in delicate tempura batter (1 pc)",
-        "desc_fr": "Fleurons de brocoli frais frits dans une pâte tempura fine (1 mc)",
+        "desc_en": "Fresh green broccoli florets fried in crunchy golden tempura batter (1 pc)",
+        "desc_fr": "Fleurette de brocoli frais enrobée de pâte tempura croquante (1 mc)",
         "image": "/menu/optimized/ayce/tempura-broccoli.webp"
       },
       {
         "name_en": "Tempura Mushroom",
-        "name_fr": "Tempura de Champignons",
-        "desc_en": "Whole fresh mushroom coated in crispy tempura coat (1 pc)",
-        "desc_fr": "Champignon croustillant et fondant à cœur (1 mc)",
+        "name_fr": "Tempura de Champignon",
+        "desc_en": "Juicy whole mushroom cap enveloped in delicate Japanese batter (1 pc)",
+        "desc_fr": "Champignon juteux frit dans une légère panure japonaise (1 mc)",
         "image": "/menu/optimized/ayce/tempura-mushroom.webp"
       },
       {
         "name_en": "Tempura Eggplant",
         "name_fr": "Tempura d'Aubergine",
-        "desc_en": "Silky tender eggplant encased in crisp Japanese batter (1 pc)",
-        "desc_fr": "Aubergine fondante enveloppée d'une fine tempura (1 mc)",
+        "desc_en": "Tender Japanese eggplant slice coated in airy golden tempura (1 pc)",
+        "desc_fr": "Tranche d'aubergine tendre et fondante sous panure croustillante (1 mc)",
         "image": "/menu/optimized/ayce/tempura-eggplant.webp"
       },
       {
         "name_en": "Tempura Zucchini",
         "name_fr": "Tempura de Courgette",
-        "desc_en": "Juicy garden zucchini medallions fried to golden perfection (1 pc)",
-        "desc_fr": "Rondelles de courgette fraîches dorées et croustillantes (1 mc)",
+        "desc_en": "Fresh sliced zucchini fried in crisp savory tempura coating (1 pc)",
+        "desc_fr": "Rondelle de courgette fraîche frite à la perfection (1 mc)",
         "image": "/menu/optimized/ayce/tempura-zucchini.webp"
       }
     ]
   },
   {
-    "title_en": "MAKI ROLLS",
-    "title_fr": "ROULEAUX MAKI",
-    "items": [
-      {
-        "name_en": "1001 Nuit Signature Roll",
-        "name_fr": "Rouleau Signature 1001 Nuit",
-        "desc_en": "House signature specialty roll crafted with chef's premium selection (4 pcs)",
-        "desc_fr": "Création signature du chef aux saveurs fusion raffinées (4 mcx)",
-        "image": "/menu/optimized/ayce/1001-nuit.webp"
-      },
-      {
-        "name_en": "Philadelphia Roll",
-        "name_fr": "Rouleau Philadelphia",
-        "desc_en": "Smoked salmon, silky cream cheese, and avocado (4 pcs)",
-        "desc_fr": "Saumon fumé, fromage à la crème onctueux et avocat (4 mcx)",
-        "image": "/menu/optimized/ayce/philadelphia-roll.webp"
-      },
-      {
-        "name_en": "Dynamite Roll",
-        "name_fr": "Rouleau Dynamite",
-        "desc_en": "Crispy shrimp tempura, avocado, cucumber, and spicy sauce (4 pcs)",
-        "desc_fr": "Crevette tempura croustillante, avocat et sauce épicée (4 mcx)",
-        "image": "/menu/optimized/ayce/dynamite.webp"
-      },
-      {
-        "name_en": "Dragon Eye Roll",
-        "name_fr": "Rouleau Œil de Dragon",
-        "desc_en": "Deep-fried specialty maki with fresh salmon, whitefish, and scallions (4 pcs)",
-        "desc_fr": "Maki doré et croustillant au saumon, poisson blanc et oignons verts (4 mcx)",
-        "image": "/menu/optimized/ayce/dragon-eye.webp"
-      },
-      {
-        "name_en": "Volcano Roll",
-        "name_fr": "Rouleau Volcano",
-        "desc_en": "Spicy roll topped with toasted tempura crunch and spicy mayo drizzle (4 pcs)",
-        "desc_fr": "Rouleau relevé avec flocons de tempura croustillants et mayo épicée (4 mcx)",
-        "image": "/menu/optimized/ayce/volcano.webp"
-      },
-      {
-        "name_en": "Kamikaze Roll",
-        "name_fr": "Rouleau Kamikaze",
-        "desc_en": "Tuna, spicy sauce, tempura flakes, and avocado (4 pcs)",
-        "desc_fr": "Thon frais, sauce relevée, flocons de tempura et avocat (4 mcx)",
-        "image": "/menu/optimized/ayce/kamikaze.webp"
-      },
-      {
-        "name_en": "California Roll",
-        "name_fr": "Rouleau Californie",
-        "desc_en": "Crab stick, creamy avocado, crisp cucumber, and masago (4 pcs)",
-        "desc_fr": "Goberge de crabe, avocat crémeux, concombre croquant et masago (4 mcx)",
-        "image": "/menu/optimized/ayce/california-roll.webp"
-      },
-      {
-        "name_en": "Salmon Avocado Roll",
-        "name_fr": "Rouleau Saumon & Avocat",
-        "desc_en": "Fresh Atlantic salmon paired with ripe Haas avocado (3 pcs)",
-        "desc_fr": "Saumon frais de l'Atlantique et avocat mûr (3 mcx)",
-        "image": "/menu/optimized/ayce/salmon-avocado-roll.webp"
-      },
-      {
-        "name_en": "Spicy Salmon Roll",
-        "name_fr": "Rouleau Saumon Épicé",
-        "desc_en": "Diced fresh salmon tossed with spicy mayo and crunchy tempura (4 pcs)",
-        "desc_fr": "Tartare de saumon assaisonné à la mayo épicée et tempura (4 mcx)",
-        "image": "/menu/optimized/ayce/spicy-salmon-roll.webp"
-      },
-      {
-        "name_en": "Rainbow Roll",
-        "name_fr": "Rouleau Arc-en-ciel",
-        "desc_en": "California roll draped with assortment of fresh sashimi cuts (4 pcs)",
-        "desc_fr": "Rouleau Californie garni d'un éventail de sashimis frais (4 mcx)",
-        "image": "/menu/optimized/ayce/rain-bow-roll.webp"
-      },
-      {
-        "name_en": "Crispy Chicken Roll",
-        "name_fr": "Rouleau Poulet Croustillant",
-        "desc_en": "Tender fried chicken breast with crisp lettuce and teriyaki glaze (4 pcs)",
-        "desc_fr": "Poulet croustillant, salade fraîche et glaçage teriyaki (4 mcx)",
-        "image": "/menu/optimized/ayce/crispy-chicken-roll.webp"
-      },
-      {
-        "name_en": "Mango Roll",
-        "name_fr": "Rouleau Mangue",
-        "desc_en": "Sweet tropical mango, avocado, and crisp cucumber (3 pcs)",
-        "desc_fr": "Mangue tropicale sucrée, avocat et concombre frais (3 mcx)",
-        "image": "/menu/optimized/ayce/mango-roll.webp"
-      },
-      {
-        "name_en": "Vegetable Roll",
-        "name_fr": "Rouleau Végétarien",
-        "desc_en": "Avocado, cucumber, pickled radish, and crisp asparagus (4 pcs)",
-        "desc_fr": "Avocat, concombre, radis mariné et asperges croquantes (4 mcx)",
-        "image": "/menu/optimized/ayce/vegetable-roll.webp"
-      },
-      {
-        "name_en": "Mango Rice Paper Roll",
-        "name_fr": "Rouleau de Riz à la Mangue",
-        "desc_en": "Fresh mango and garden vegetables wrapped in delicate rice paper (4 pcs)",
-        "desc_fr": "Mangue fraîche et légumes croquants dans une feuille de riz (4 mcx)",
-        "image": "/menu/optimized/ayce/mango-rice-paper-roll.webp"
-      },
-      {
-        "name_en": "Chicken Rice Paper Roll",
-        "name_fr": "Rouleau de Riz au Poulet",
-        "desc_en": "Tender seasoned chicken and herbs rolled in light rice paper (4 pcs)",
-        "desc_fr": "Poulet émincé et fines herbes dans une feuille de riz légère (4 mcx)",
-        "image": "/menu/optimized/ayce/chicken-rice-paper-roll.webp"
-      },
-      {
-        "name_en": "Spicy Salmon Gunkan",
-        "name_fr": "Gunkan Saumon Épicé",
-        "desc_en": "Battleship sushi topped with spicy salmon tartare (1 pc)",
-        "desc_fr": "Bouchée d'algue garnie de tartare de saumon relevé (1 mc)",
-        "image": "/menu/optimized/ayce/spicy-salmon-gunka.webp"
-      },
-      {
-        "name_en": "Crab Stick Gunkan",
-        "name_fr": "Gunkan Goberge de Crabe",
-        "desc_en": "Nori cup filled with creamy crab stick salad (1 pc)",
-        "desc_fr": "Algue nori garnie d'effiloché de crabe assaisonné (1 mc)",
-        "image": "/menu/optimized/ayce/crab-stick-gunkan.webp"
-      }
-    ]
-  },
-  {
-    "title_en": "NIGIRI",
-    "title_fr": "NIGIRI",
-    "items": [
-      {
-        "name_en": "Seared Salmon Nigiri",
-        "name_fr": "Nigiri Saumon Flambé",
-        "desc_en": "Flame-torched Atlantic salmon over pressed sushi rice (1 pc)",
-        "desc_fr": "Tranche de saumon saisie à la flamme sur riz vinaigré (1 mc)",
-        "image": "/menu/optimized/ayce/seared-salmon-nigiri.webp"
-      },
-      {
-        "name_en": "Sweet Shrimp Nigiri",
-        "name_fr": "Nigiri Crevette Douce (Amaebi)",
-        "desc_en": "Delicate sweet spot prawn gently layered on sushi rice (1 pc)",
-        "desc_fr": "Crevette douce délicate posée sur lit de riz à sushi (1 mc)",
-        "image": "/menu/optimized/ayce/sweet-shrimp-nigiri.webp"
-      },
-      {
-        "name_en": "Salmon Rose",
-        "name_fr": "Rose de Saumon",
-        "desc_en": "Delicate salmon sashimi petals formed into an edible rose bloom (1 pc)",
-        "desc_fr": "Pétales de saumon frais sculptés en une élégante rose (1 mc)",
-        "image": "/menu/optimized/ayce/salmon-rose.webp"
-      },
-      {
-        "name_en": "Salmon Nigiri",
-        "name_fr": "Nigiri Saumon",
-        "desc_en": "Premium fresh raw Atlantic salmon over seasoned sushi rice (1 pc)",
-        "desc_fr": "Tranche de saumon frais de première qualité sur riz vinaigré (1 mc)",
-        "image": "/menu/optimized/ayce/salmon-nigiri.webp"
-      },
-      {
-        "name_en": "Tuna Nigiri",
-        "name_fr": "Nigiri Thon Rouge",
-        "desc_en": "Ruby red tuna loin cut served over seasoned sushi rice (1 pc)",
-        "desc_fr": "Thon rouge fondant sur riz vinaigré traditionnel (1 mc)",
-        "image": "/menu/optimized/ayce/tuna-nigiri.webp"
-      },
-      {
-        "name_en": "Shrimp Nigiri",
-        "name_fr": "Nigiri Crevette (Ebi)",
-        "desc_en": "Cooked butterfly black tiger shrimp over sushi rice (1 pc)",
-        "desc_fr": "Crevette cuite ouverte en papillon sur riz pressé (1 mc)",
-        "image": "/menu/optimized/ayce/shrimp-nigiri.webp"
-      },
-      {
-        "name_en": "Unagi Nigiri",
-        "name_fr": "Nigiri Anguille Grillée (Unagi)",
-        "desc_en": "Caramelized freshwater eel brushed with sweet kabayaki tare (1 pc)",
-        "desc_fr": "Anguille grillée laquée à la sauce tare sucrée (1 mc)",
-        "image": "/menu/optimized/ayce/unagi-nigiri.webp"
-      },
-      {
-        "name_en": "Crab Stick Nigiri",
-        "name_fr": "Nigiri Goberge de Crabe",
-        "desc_en": "Tender crab stick bound with a thin ribbon of nori seaweed (1 pc)",
-        "desc_fr": "Bâtonnet de goberge ceinturé d'une fine lanière de nori (1 mc)",
-        "image": "/menu/optimized/ayce/crab-stick-nigiri.webp"
-      },
-      {
-        "name_en": "Egg (Tamago) Nigiri",
-        "name_fr": "Nigiri Omelette Japonaise (Tamago)",
-        "desc_en": "Sweet layered Japanese rolled omelette tied with nori (1 pc)",
-        "desc_fr": "Omelette japonaise douce et dorée liée au nori (1 mc)",
-        "image": "/menu/optimized/ayce/egg-tamago-nigiri.webp"
-      },
-      {
-        "name_en": "Escolar Nigiri",
-        "name_fr": "Nigiri Escolar (Thon Blanc)",
-        "desc_en": "Silky, buttery white tuna cut over seasoned sushi rice (1 pc)",
-        "desc_fr": "Thon blanc à la chair tendre et beurrée sur riz vinaigré (1 mc)",
-        "image": "/menu/optimized/ayce/escolar-nigiri.webp"
-      },
-      {
-        "name_en": "Surf Clam Nigiri",
-        "name_fr": "Nigiri Mactre de l'Atlantique (Hokkigai)",
-        "desc_en": "Sweet crimson Arctic surf clam served over sushi rice (1 pc)",
-        "desc_fr": "Mactre rouge de l'Atlantique à la texture croquante (1 mc)",
-        "image": "/menu/optimized/ayce/surf-clam-nigiri.webp"
-      }
-    ]
-  },
-  {
-    "title_en": "SASHIMI",
-    "title_fr": "SASHIMI",
-    "items": [
-      {
-        "name_en": "Salmon Sashimi",
-        "name_fr": "Sashimi Saumon",
-        "desc_en": "Hand-carved thick slice of pristine Atlantic salmon (1 pc)",
-        "desc_fr": "Épaisse tranche fondante de saumon frais de l'Atlantique (1 mc)",
-        "image": "/menu/optimized/ayce/salmon-sashimi.webp"
-      },
-      {
-        "name_en": "Tuna Sashimi",
-        "name_fr": "Sashimi Thon Rouge",
-        "desc_en": "Selected cuts of ruby red sashimi-grade tuna (1 pc)",
-        "desc_fr": "Tranche sélectionnée de thon rouge de première fraîcheur (1 mc)",
-        "image": "/menu/optimized/ayce/tuna-sashimi.webp"
-      },
-      {
-        "name_en": "Escolar Sashimi",
-        "name_fr": "Sashimi Escolar",
-        "desc_en": "Melt-in-your-mouth white tuna sashimi (1 pc)",
-        "desc_fr": "Délicieuse tranche de thon blanc escolar très fondant (1 mc)",
-        "image": "/menu/optimized/ayce/escolar-sashimi.webp"
-      },
-      {
-        "name_en": "Surf Clam Sashimi",
-        "name_fr": "Sashimi Mactre (Hokkigai)",
-        "desc_en": "Tender arctic surf clam slice with marine sweetness (1 pc)",
-        "desc_fr": "Mactre arctique délicatement parfumée aux notes iodées (1 mc)",
-        "image": "/menu/optimized/ayce/surf-clam-sashimi.webp"
-      },
-      {
-        "name_en": "Inari",
-        "name_fr": "Sashimi Inari Tofu",
-        "desc_en": "Seasoned sweet fried bean curd pouch (1 pc)",
-        "desc_fr": "Poche de tofu frite et marinée aux notes douces (1 mc)",
-        "image": "/menu/optimized/ayce/inari.webp"
-      },
-      {
-        "name_en": "Tamago Sashimi",
-        "name_fr": "Sashimi Tamago",
-        "desc_en": "Sweet and fluffy Japanese layered rolled omelette (1 pc)",
-        "desc_fr": "Tranche d'omelette japonaise moelleuse et sucrée (1 mc)",
-        "image": "/menu/optimized/ayce/tamago.webp"
-      },
-      {
-        "name_en": "Tobiko Cucumber",
-        "name_fr": "Tobiko & Concombre",
-        "desc_en": "Flying fish roe nestled in crisp refreshing cucumber cups (1 pc)",
-        "desc_fr": "Œufs de poisson volant croquants dans un concombre frais (1 mc)",
-        "image": "/menu/optimized/ayce/tobiko-cucumber.webp"
-      },
-      {
-        "name_en": "Crab Stick Sashimi",
-        "name_fr": "Sashimi Goberge de Crabe",
-        "desc_en": "Lightly seasoned crab stick served sashimi style (1 pc)",
-        "desc_fr": "Bâtonnet de goberge servi en sashimi léger (1 mc)",
-        "image": "/menu/optimized/ayce/crab-stick-sashimi.webp"
-      }
-    ]
-  },
-  {
-    "title_en": "SMALL & HAND ROLLS",
-    "title_fr": "PETITS ROULEAUX & CORNETS",
+    "title_en": "SMALL ROLLS",
+    "title_fr": "PETITS ROULEAUX",
     "items": [
       {
         "name_en": "Avocado Roll",
@@ -597,7 +334,13 @@ export const AYCE_MENU_CATEGORIES: MenuCategory[] = [
         "desc_en": "Sweet tender crab meat rolled in nori (3 pcs)",
         "desc_fr": "Bâtonnet de crabe tendre roulé dans le nori (3 mcx)",
         "image": "/menu/optimized/ayce/crab-roll.webp"
-      },
+      }
+    ]
+  },
+  {
+    "title_en": "HAND ROLLS",
+    "title_fr": "CORNETS TEMAKI",
+    "items": [
       {
         "name_en": "Salmon Hand Roll",
         "name_fr": "Cornet au Saumon (Temaki)",
@@ -656,6 +399,276 @@ export const AYCE_MENU_CATEGORIES: MenuCategory[] = [
     ]
   },
   {
+    "title_en": "MAKI ROLLS",
+    "title_fr": "ROULEAUX MAKI",
+    "items": [
+      {
+        "name_en": "1001 Nuit Signature Roll",
+        "name_fr": "Rouleau Signature 1001 Nuit",
+        "desc_en": "House specialty maki crowned with fresh fish, tobiko, avocado, and sauces (4 pcs)",
+        "desc_fr": "Maki signature du chef garni de poissons fins, avocat et tobiko (4 mcx)",
+        "image": "/menu/optimized/ayce/1001-nuit.webp"
+      },
+      {
+        "name_en": "Philadelphia Roll",
+        "name_fr": "Rouleau Philadelphie",
+        "desc_en": "Rich Philadelphia cream cheese paired with silky fresh salmon and avocado (4 pcs)",
+        "desc_fr": "Saumon délicat, fromage à la crème onctueux et avocat frais (4 mcx)",
+        "image": "/menu/optimized/ayce/philadelphia-roll.webp"
+      },
+      {
+        "name_en": "Dynamite Roll",
+        "name_fr": "Rouleau Dynamite",
+        "desc_en": "Crispy tempura shrimp, avocado, cucumber, and spicy mayo drizzle (4 pcs)",
+        "desc_fr": "Crevette tempura croustillante, avocat, concombre et mayo épicée (4 mcx)",
+        "image": "/menu/optimized/ayce/dynamite.webp"
+      },
+      {
+        "name_en": "Dragon Eye Roll",
+        "name_fr": "Rouleau Œil de Dragon",
+        "desc_en": "Lightly fried crispy specialty roll featuring salmon and white fish (4 pcs)",
+        "desc_fr": "Rouleau frit croustillant garni de saumon frais et poisson blanc (4 mcx)",
+        "image": "/menu/optimized/ayce/dragon-eye.webp"
+      },
+      {
+        "name_en": "Volcano Roll",
+        "name_fr": "Rouleau Volcan",
+        "desc_en": "Warm torched spicy seafood lava mix erupting over a seasoned California roll base (4 pcs)",
+        "desc_fr": "Mélange de fruits de mer épicés gratinés sur rouleau californien (4 mcx)",
+        "image": "/menu/optimized/ayce/volcano.webp"
+      },
+      {
+        "name_en": "Kamikaze Roll",
+        "name_fr": "Rouleau Kamikaze",
+        "desc_en": "Zesty spicy tuna or salmon tartare with crisp tempura crunch and avocado (4 pcs)",
+        "desc_fr": "Tartare épicé relevé, flocons de tempura croustillants et avocat (4 mcx)",
+        "image": "/menu/optimized/ayce/kamikaze.webp"
+      },
+      {
+        "name_en": "California Roll",
+        "name_fr": "Rouleau Californie",
+        "desc_en": "Classic combination of crab meat, ripe avocado, cucumber, and toasted sesame (4 pcs)",
+        "desc_fr": "Crabe savoureux, avocat mûr, concombre et graines de sésame (4 mcx)",
+        "image": "/menu/optimized/ayce/california-roll.webp"
+      },
+      {
+        "name_en": "Salmon Avocado Roll",
+        "name_fr": "Rouleau Saumon & Avocat",
+        "desc_en": "Silky fresh Atlantic salmon with creamy sliced avocado (3 pcs)",
+        "desc_fr": "Alliance classique de saumon atlantique frais et avocat onctueux (3 mcx)",
+        "image": "/menu/optimized/ayce/salmon-avocado-roll.webp"
+      },
+      {
+        "name_en": "Spicy Salmon Roll",
+        "name_fr": "Rouleau Saumon Épicé",
+        "desc_en": "Hand-chopped fresh salmon tossed in spicy sriracha mayo and tempura crunch (4 pcs)",
+        "desc_fr": "Saumon frais haché en sauce épicée avec flocons tempura (4 mcx)",
+        "image": "/menu/optimized/ayce/spicy-salmon-roll.webp"
+      },
+      {
+        "name_en": "Rainbow Roll",
+        "name_fr": "Rouleau Arc-en-Ciel",
+        "desc_en": "California roll blanketed with assorted fresh sashimi salmon, tuna, and avocado (4 pcs)",
+        "desc_fr": "Californie drapé de tranches variées de saumon, thon et avocat (4 mcx)",
+        "image": "/menu/optimized/ayce/rain-bow-roll.webp"
+      },
+      {
+        "name_en": "Crispy Chicken Roll",
+        "name_fr": "Rouleau Poulet Croustillant",
+        "desc_en": "Golden crispy chicken breast with cucumber and sweet teriyaki drizzle (4 pcs)",
+        "desc_fr": "Morceaux de poulet pané doré, concombre et sauce teriyaki douce (4 mcx)",
+        "image": "/menu/optimized/ayce/crispy-chicken-roll.webp"
+      },
+      {
+        "name_en": "Mango Roll",
+        "name_fr": "Rouleau à la Mangue",
+        "desc_en": "Refreshing ripe mango slices wrapped with crab stick and cream cheese (3 pcs)",
+        "desc_fr": "Tranches de mangue douce enveloppant un cœur gourmand et frais (3 mcx)",
+        "image": "/menu/optimized/ayce/mango-roll.webp"
+      },
+      {
+        "name_en": "Vegetable Roll",
+        "name_fr": "Rouleau Végétarien",
+        "desc_en": "Crisp assorted garden vegetables rolled in seasoned sushi rice (4 pcs)",
+        "desc_fr": "Légumes du marché frais et croquants roulés dans le nori (4 mcx)",
+        "image": "/menu/optimized/ayce/vegetable-roll.webp"
+      },
+      {
+        "name_en": "Mango Rice Paper Roll",
+        "name_fr": "Rouleau Feuille de Riz à la Mangue",
+        "desc_en": "Delicate Vietnamese rice paper rolled with sweet mango, avocado, and greens (4 pcs)",
+        "desc_fr": "Feuille de riz légère garnie de mangue fraîche, avocat et herbes (4 mcx)",
+        "image": "/menu/optimized/ayce/mango-rice-paper-roll.webp"
+      },
+      {
+        "name_en": "Chicken Rice Paper Roll",
+        "name_fr": "Rouleau Feuille de Riz au Poulet",
+        "desc_en": "Grilled chicken and crisp salad greens tightly wrapped in translucent rice paper (4 pcs)",
+        "desc_fr": "Poulet émincé et salade fraîche dans une galette de riz transparente (4 mcx)",
+        "image": "/menu/optimized/ayce/chicken-rice-paper-roll.webp"
+      },
+      {
+        "name_en": "Spicy Salmon Gunkan",
+        "name_fr": "Gunkan Saumon Épicé",
+        "desc_en": "Battleship nori wrap filled with overflowing spicy salmon tartare (1 pc)",
+        "desc_fr": "Bouchée gunkan débordante de tartare de saumon piquant (1 mc)",
+        "image": "/menu/optimized/ayce/spicy-salmon-gunka.webp"
+      },
+      {
+        "name_en": "Crab Stick Gunkan",
+        "name_fr": "Gunkan Goberge de Crabe",
+        "desc_en": "Nori wrapped sushi boat topped with creamy crab meat salad (1 pc)",
+        "desc_fr": "Bouchée gunkan garnie de salade de crabe crémeuse (1 mc)",
+        "image": "/menu/optimized/ayce/crab-stick-gunkan.webp"
+      }
+    ]
+  },
+  {
+    "title_en": "NIGIRI",
+    "title_fr": "NIGIRI",
+    "items": [
+      {
+        "name_en": "Seared Salmon Nigiri",
+        "name_fr": "Nigiri Saumon Flambé",
+        "desc_en": "Flame-torched Atlantic salmon over sushi rice with caramelised teriyaki glaze (1 pc)",
+        "desc_fr": "Saumon atlantique légèrement saisi à la flamme et glacé au teriyaki (1 mc)",
+        "image": "/menu/optimized/ayce/seared-salmon-nigiri.webp"
+      },
+      {
+        "name_en": "Sweet Shrimp Nigiri",
+        "name_fr": "Nigiri Crevette Douce (Amaebi)",
+        "desc_en": "Delicate sweet raw shrimp delicately placed atop hand-pressed sushi rice (1 pc)",
+        "desc_fr": "Crevette douce crue posée sur riz vinaigré façonné à la main (1 mc)",
+        "image": "/menu/optimized/ayce/sweet-shrimp-nigiri.webp"
+      },
+      {
+        "name_en": "Salmon Rose",
+        "name_fr": "Rose de Saumon",
+        "desc_en": "Artfully rolled salmon petals shaped into a blooming rose with spicy mayo and tobiko (1 pc)",
+        "desc_fr": "Pétales de saumon frais sculptés en forme de rose avec tobiko (1 mc)",
+        "image": "/menu/optimized/ayce/salmon-rose.webp"
+      },
+      {
+        "name_en": "Salmon Nigiri",
+        "name_fr": "Nigiri au Saumon",
+        "desc_en": "Prime cut fresh Atlantic salmon over seasoned sushi rice (1 pc)",
+        "desc_fr": "Tranche de saumon atlantique frais posée sur riz vinaigré (1 mc)",
+        "image": "/menu/optimized/ayce/salmon-nigiri.webp"
+      },
+      {
+        "name_en": "Tuna Nigiri",
+        "name_fr": "Nigiri au Thon",
+        "desc_en": "Ruby red fresh yellowfin tuna over vinegared rice (1 pc)",
+        "desc_fr": "Pavé de thon rouge fin posé délicatement sur riz à sushi (1 mc)",
+        "image": "/menu/optimized/ayce/tuna-nigiri.webp"
+      },
+      {
+        "name_en": "Shrimp Nigiri",
+        "name_fr": "Nigiri à la Crevette (Ebi)",
+        "desc_en": "Butterflied cooked tiger prawn draped over sushi rice (1 pc)",
+        "desc_fr": "Crevette cuite ouverte en papillon sur riz pressé (1 mc)",
+        "image": "/menu/optimized/ayce/shrimp-nigiri.webp"
+      },
+      {
+        "name_en": "Unagi Nigiri",
+        "name_fr": "Nigiri à l'Anguille Grillée (Unagi)",
+        "desc_en": "Rich caramelized barbecue freshwater eel tied with a ribbon of nori (1 pc)",
+        "desc_fr": "Anguille laquée grillée au barbecue avec ruban d'algue (1 mc)",
+        "image": "/menu/optimized/ayce/unagi-nigiri.webp"
+      },
+      {
+        "name_en": "Crab Stick Nigiri",
+        "name_fr": "Nigiri Goberge de Crabe",
+        "desc_en": "Sweet Japanese crab stick over hand-formed sushi rice (1 pc)",
+        "desc_fr": "Bâtonnet de crabe doux sur riz vinaigré (1 mc)",
+        "image": "/menu/optimized/ayce/crab-stick-nigiri.webp"
+      },
+      {
+        "name_en": "Egg (Tamago) Nigiri",
+        "name_fr": "Nigiri Omelette Japonaise (Tamago)",
+        "desc_en": "Sweet layered Japanese rolled omelette over sushi rice (1 pc)",
+        "desc_fr": "Omelette japonaise sucrée traditionnelle sur lit de riz (1 mc)",
+        "image": "/menu/optimized/ayce/egg-tamago-nigiri.webp"
+      },
+      {
+        "name_en": "Escolar Nigiri",
+        "name_fr": "Nigiri Escolar (Thon Blanc)",
+        "desc_en": "Buttery smooth white escolar sashimi over pressed rice (1 pc)",
+        "desc_fr": "Tranche de poisson blanc fondant à souhait sur riz à sushi (1 mc)",
+        "image": "/menu/optimized/ayce/escolar-nigiri.webp"
+      },
+      {
+        "name_en": "Surf Clam Nigiri",
+        "name_fr": "Nigiri Mactre Rouge (Hokkigai)",
+        "desc_en": "Sweet and tender arctic surf clam over sushi rice (1 pc)",
+        "desc_fr": "Mactre rouge de l'Arctique douce et croquante sur riz (1 mc)",
+        "image": "/menu/optimized/ayce/surf-clam-nigiri.webp"
+      }
+    ]
+  },
+  {
+    "title_en": "SASHIMI",
+    "title_fr": "SASHIMI",
+    "items": [
+      {
+        "name_en": "Salmon Sashimi",
+        "name_fr": "Sashimi de Saumon",
+        "desc_en": "Thick hand-sliced premium Atlantic salmon sashimi (1 pc)",
+        "desc_fr": "Épaisse tranche de saumon atlantique d'une grande fraîcheur (1 mc)",
+        "image": "/menu/optimized/ayce/salmon-sashimi.webp"
+      },
+      {
+        "name_en": "Tuna Sashimi",
+        "name_fr": "Sashimi de Thon",
+        "desc_en": "Tender ruby-red fresh tuna sashimi cut (1 pc)",
+        "desc_fr": "Tranche de thon rouge délicatement tranchée au couteau (1 mc)",
+        "image": "/menu/optimized/ayce/tuna-sashimi.webp"
+      },
+      {
+        "name_en": "Escolar Sashimi",
+        "name_fr": "Sashimi d'Escolar",
+        "desc_en": "Velvety smooth white tuna escolar sashimi slice (1 pc)",
+        "desc_fr": "Tranche de thon blanc escolar à la texture de beurre (1 mc)",
+        "image": "/menu/optimized/ayce/escolar-sashimi.webp"
+      },
+      {
+        "name_en": "Surf Clam Sashimi",
+        "name_fr": "Sashimi Mactre Rouge (Hokkigai)",
+        "desc_en": "Sweet and crunchy arctic surf clam sashimi (1 pc)",
+        "desc_fr": "Mactre rouge douce et croquante préparée en sashimi (1 mc)",
+        "image": "/menu/optimized/ayce/surf-clam-sashimi.webp"
+      },
+      {
+        "name_en": "Inari",
+        "name_fr": "Poche de Tofu Doux (Inari)",
+        "desc_en": "Sweet simmered seasoned tofu pocket (1 pc)",
+        "desc_fr": "Poche de tofu japonais mijotée et assaisonnée (1 mc)",
+        "image": "/menu/optimized/ayce/inari.webp"
+      },
+      {
+        "name_en": "Tamago Sashimi",
+        "name_fr": "Sashimi Omelette Japonaise",
+        "desc_en": "Sweet rolled Japanese omelette slices (1 pc)",
+        "desc_fr": "Tranche d'omelette japonaise traditionnelle sucrée (1 mc)",
+        "image": "/menu/optimized/ayce/tamago.webp"
+      },
+      {
+        "name_en": "Tobiko Cucumber",
+        "name_fr": "Tobiko & Concombre",
+        "desc_en": "Crunchy flying fish roe served in a crisp cucumber boat (1 pc)",
+        "desc_fr": "Œufs de poisson volant croquants dans un berceau de concombre (1 mc)",
+        "image": "/menu/optimized/ayce/tobiko-cucumber.webp"
+      },
+      {
+        "name_en": "Crab Stick Sashimi",
+        "name_fr": "Sashimi Goberge de Crabe",
+        "desc_en": "Sweet Japanese crab stick slices (1 pc)",
+        "desc_fr": "Délicieux bâtonnet de goberge de crabe au goût doux et léger (1 mc)",
+        "image": "/menu/optimized/ayce/crab-stick-sashimi.webp"
+      }
+    ]
+  },
+  {
     "title_en": "DESSERTS",
     "title_fr": "DESSERTS",
     "items": [
@@ -699,7 +712,7 @@ export const AYCE_MENU_CATEGORIES: MenuCategory[] = [
         "name_fr": "Crème Glacée Artisanale",
         "desc_en": "Refreshing premium ice cream scoop in choice of classic and Asian flavors",
         "desc_fr": "Boule de crème glacée onctueuse aux saveurs traditionnelles et asiatiques",
-        "image": "/menu/optimized/alacarte/ice-cream.webp"
+        "image": ""
       }
     ]
   },
@@ -718,77 +731,77 @@ export const AYCE_MENU_CATEGORIES: MenuCategory[] = [
         "name_en": "Taro Milk Tea",
         "name_fr": "Thé au Lait de Taro",
         "desc_en": "Creamy sweet purple taro infused milk tea served cold",
-        "desc_fr": "Boisson douce et crémeuse au taro violet parfumée au thé",
+        "desc_fr": "Thé au lait onctueux au taro violet doux servi glacé",
         "image": "/menu/optimized/ayce/taro-milk-tea.webp"
       },
       {
         "name_en": "Strawberry Matcha Latte",
-        "name_fr": "Latte Matcha à la Fraise",
-        "desc_en": "Layered beverage with real strawberry puree, whole milk, and stone-ground Japanese matcha",
-        "desc_fr": "Boisson étagée avec purée de fraises fraîches, lait frais et matcha pur",
+        "name_fr": "Matcha Latte à la Fraise",
+        "desc_en": "Artisanal layered Japanese Uji matcha with sweet strawberry puree and milk",
+        "desc_fr": "Matcha japonais de qualité supérieure superposé de purée de fraise",
         "image": "/menu/optimized/ayce/strawberry-matcha-latte.webp"
       },
       {
         "name_en": "Mango Matcha Latte",
-        "name_fr": "Latte Matcha à la Mangue",
-        "desc_en": "Vibrant combination of sweet mango nectar, creamy milk, and premium matcha green tea",
-        "desc_fr": "Cocktail gourmand au nectar de mangue, lait onctueux et thé vert matcha",
+        "name_fr": "Matcha Latte à la Mangue",
+        "desc_en": "Vibrant green matcha green tea blended with tropical ripe mango nectar",
+        "desc_fr": "Matcha vert japonais combiné à la douceur de la mangue mûre",
         "image": "/menu/optimized/ayce/mango-matcha-latte.webp"
       },
       {
         "name_en": "Fresh Lemonade",
-        "name_fr": "Limonade Fraîche Maison",
-        "desc_en": "Hand-squeezed refreshing citrus lemonade served over ice",
-        "desc_fr": "Limonade rafraîchissante pressée à la main et servie bien glacée",
+        "name_fr": "Limonade Maison Fraîche",
+        "desc_en": "Crisp hand-squeezed citrus lemonade with light sweetness",
+        "desc_fr": "Limonade fraîche pressée à la main désaltérante",
         "image": "/menu/optimized/ayce/limonade.webp"
       },
       {
         "name_en": "Fresh Coconut Water",
-        "name_fr": "Eau de Coco Naturelle",
-        "desc_en": "Pure hydrating natural coconut water chilled to perfection",
-        "desc_fr": "Eau de coco naturelle 100% pure, désaltérante et bien fraîche",
+        "name_fr": "Eau de Coco Fraîche",
+        "desc_en": "Pure hydrating sweet natural young coconut water",
+        "desc_fr": "Eau de jeune noix de coco naturelle et rafraîchissante",
         "image": "/menu/optimized/ayce/coconut-water.webp"
       },
       {
         "name_en": "Unsweetened Oolong Tea",
         "name_fr": "Thé Oolong Sans Sucre",
-        "desc_en": "Crisp and roasted chilled premium whole-leaf oolong tea",
-        "desc_fr": "Infusion de thé oolong torréfié sans sucre ajouté",
+        "desc_en": "Fragrant chilled premium brewed roasted oolong tea with zero sugar",
+        "desc_fr": "Thé oolong torréfié supérieur pur et sans sucre",
         "image": "/menu/optimized/ayce/oolong-teano-sugar.webp"
       },
       {
         "name_en": "Sparkling Mineral Water",
         "name_fr": "Eau Minérale Pétillante",
-        "desc_en": "Chilled bottle of premium sparkling mineral water",
-        "desc_fr": "Bouteille en verre d'eau minérale pétillante d'Italie",
+        "desc_en": "Chilled effervescent European sparkling mineral water bottle",
+        "desc_fr": "Bouteille d'eau minérale gazeuse fraîche et pétillante",
         "image": "/menu/optimized/ayce/sparkling-water.webp"
       },
       {
         "name_en": "Milkis Korean Drink",
-        "name_fr": "Milkis Soda Coréen au Lait",
-        "desc_en": "Sparkling milk soda combining fizzy carbonation with smooth yogurt sweetness",
-        "desc_fr": "Célèbre soda coréen pétillant et doux au goût lacté",
+        "name_fr": "Boisson Coréenne Milkis",
+        "desc_en": "Famous creamy and fizzy Korean yogurt carbonated soft drink",
+        "desc_fr": "Boisson gazeuse coréenne pétillante au yogourt doux et rafraîchissant",
         "image": "/menu/optimized/ayce/milkis.webp"
       },
       {
         "name_en": "Mexican Coca-Cola",
-        "name_fr": "Coca-Cola Mexicain (Bouteille en Verre)",
-        "desc_en": "Authentic imported Coca-Cola sweetened with 100% real cane sugar",
-        "desc_fr": "Authentique Coca-Cola importé pur sucre de canne en bouteille de verre",
+        "name_fr": "Coca-Cola Mexicain (Bouteille de Verre)",
+        "desc_en": "Classic Coca-Cola imported in glass bottle made with pure cane sugar",
+        "desc_fr": "Bouteille en verre au sucre de canne naturel traditionnel",
         "image": "/menu/optimized/ayce/coca-cola-mexican-bottled.webp"
       },
       {
         "name_en": "Diet Coke",
         "name_fr": "Coke Diète",
-        "desc_en": "Zero calorie refreshing crisp carbonated soft drink",
-        "desc_fr": "Boisson gazeuse rafraîchissante sans calories",
+        "desc_en": "Chilled crisp zero-calorie cola",
+        "desc_fr": "Canette de boisson gazeuse diète sans calories",
         "image": "/menu/optimized/ayce/diet-coke.webp"
       },
       {
         "name_en": "Fresh Brewed Coffee",
-        "name_fr": "Café Fraîchement Infusé",
-        "desc_en": "Rich and dark roasted aromatic hot brewed coffee",
-        "desc_fr": "Tasse de café noir fraîchement préparé aux grains torréfiés",
+        "name_fr": "Café Fraîchement Moulu",
+        "desc_en": "Aromatic rich roasted coffee brewed fresh daily",
+        "desc_fr": "Café torréfié riche et aromatique préparé sur place",
         "image": "/menu/optimized/ayce/coffee.webp"
       }
     ]

@@ -637,6 +637,9 @@ export default function HomePage() {
                       className="absolute inset-0 w-full h-full object-cover rounded-l-2xl md:transition-transform md:duration-500 md:group-hover:scale-105"
                       onError={(e) => {
                         (e.currentTarget as HTMLElement).style.display = 'none';
+                        if (e.currentTarget.parentElement) {
+                          e.currentTarget.parentElement.style.display = 'none';
+                        }
                       }}
                     />
                   </div>
