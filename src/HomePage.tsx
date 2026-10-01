@@ -207,7 +207,9 @@ export default function HomePage() {
   const [lang, setLang] = useState<"en" | "fr">("en");
   const [showPromo, setShowPromo] = useState(true);
   const [hoveredSocial, setHoveredSocial] = useState<number | null>(null);
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState<boolean>(
+    () => typeof window !== "undefined" && window.innerWidth < 768
+  );
 
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 768);
@@ -217,7 +219,7 @@ export default function HomePage() {
   }, []);
 
   const handleOrderOnline = () => {
-    window.open('https://cloud.quickposhub.com/onlineorder/#/pages/order/tableurl?code=E9IPN247Bx', '_blank');
+    window.open('https://order.1001nuit.com', '_blank');
   };
 
   const location = useLocation();
@@ -419,7 +421,7 @@ export default function HomePage() {
             />
             <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 z-10 bg-[#0a0b0a]/85 backdrop-blur-none md:backdrop-blur-md md:bg-[#0a0b0a]/80 border border-[#333330] rounded-full pl-6 py-2.5 pr-2.5 flex items-center gap-5 group-hover:bg-white group-hover:text-black group-hover:border-white transition-all duration-300">
               <span className="text-[10px] tracking-[0.2em] font-medium uppercase mt-0.5">
-                {lang === "fr" ? "Commander en ligne — À emporter" : "Order Online — Pickup"}
+                {lang === "fr" ? "Commander en ligne — À emporter / Livraison" : "Order Online — Pickup / Delivery"}
               </span>
               <div className="w-8 h-8 rounded-full border border-current flex items-center justify-center">
                 <ArrowRight size={14} />
