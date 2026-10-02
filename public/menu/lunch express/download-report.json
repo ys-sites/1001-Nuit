@@ -1,0 +1,706 @@
+{
+  "source": "https://cloud.quickposhub.com/onlineorder/#/pages/order/index?hotelid=127200&fc=emenu&languageindex=1&urlPriceLevel=1&menu=6",
+  "capturedAt": "2026-10-02T21:05:06.928Z",
+  "destination": "C:\\Users\\Sharafath\\Desktop\\Website\\1001 Nuit\\1001-Nuit\\public\\menu\\lunch express",
+  "itemCount": 74,
+  "downloadedItemImages": 23,
+  "noImageUrlCount": 51,
+  "failedItemImages": 0,
+  "totalBytes": 2780405,
+  "logo": {
+    "status": "downloaded",
+    "bytes": 24567,
+    "error": ""
+  },
+  "items": [
+    {
+      "category": "Poke Bowl",
+      "classcode": "03",
+      "itemcode": "S09",
+      "name": "Sashimi Poke Bowl",
+      "src": "https://stream.quickposhub.com/127200202610011158E8AA4.jpg",
+      "localFile": "Poke Bowl\\S09 - Sashimi Poke Bowl.jpg",
+      "bytes": 174394,
+      "status": "downloaded"
+    },
+    {
+      "category": "Poke Bowl",
+      "classcode": "03",
+      "itemcode": "S20",
+      "name": "Eel Poke Bowl",
+      "src": "https://stream.quickposhub.com/127200202610020953AE65D.jpg",
+      "localFile": "Poke Bowl\\S20 - Eel Poke Bowl.jpg",
+      "bytes": 123696,
+      "status": "downloaded"
+    },
+    {
+      "category": "Poke Bowl",
+      "classcode": "03",
+      "itemcode": "S14",
+      "name": "Spicy Salmon Poke Bowl",
+      "src": "https://stream.quickposhub.com/127200202610011158AD7BF.png",
+      "localFile": "Poke Bowl\\S14 - Spicy Salmon Poke Bowl.png",
+      "bytes": 196425,
+      "status": "downloaded"
+    },
+    {
+      "category": "Poke Bowl",
+      "classcode": "03",
+      "itemcode": "S19",
+      "name": "Tuna Poke Bowl",
+      "src": "https://stream.quickposhub.com/12720020261001120083A70.png",
+      "localFile": "Poke Bowl\\S19 - Tuna Poke Bowl.png",
+      "bytes": 191140,
+      "status": "downloaded"
+    },
+    {
+      "category": "Poke Bowl",
+      "classcode": "03",
+      "itemcode": "0301",
+      "name": "Vegetarian Poke Bowl",
+      "src": "https://stream.quickposhub.com/1272002026100111593FAB4.png",
+      "localFile": "Poke Bowl\\0301 - Vegetarian Poke Bowl.png",
+      "bytes": 199712,
+      "status": "downloaded"
+    },
+    {
+      "category": "Snacks & Sides",
+      "classcode": "02",
+      "itemcode": "0101",
+      "name": "Takoyaki (4 pieces)",
+      "src": "",
+      "localFile": null,
+      "status": "no-image-url"
+    },
+    {
+      "category": "Snacks & Sides",
+      "classcode": "02",
+      "itemcode": "0205",
+      "name": "Salted Edamame",
+      "src": "",
+      "localFile": null,
+      "status": "no-image-url"
+    },
+    {
+      "category": "Snacks & Sides",
+      "classcode": "02",
+      "itemcode": "0109",
+      "name": "Popcorn Chicken",
+      "src": "",
+      "localFile": null,
+      "status": "no-image-url"
+    },
+    {
+      "category": "Snacks & Sides",
+      "classcode": "02",
+      "itemcode": "0201",
+      "name": "Chicken Skewers",
+      "src": "",
+      "localFile": null,
+      "status": "no-image-url"
+    },
+    {
+      "category": "Snacks & Sides",
+      "classcode": "02",
+      "itemcode": "0202",
+      "name": "Beef Skewers",
+      "src": "",
+      "localFile": null,
+      "status": "no-image-url"
+    },
+    {
+      "category": "Snacks & Sides",
+      "classcode": "02",
+      "itemcode": "0203",
+      "name": "Lamb Skewers",
+      "src": "",
+      "localFile": null,
+      "status": "no-image-url"
+    },
+    {
+      "category": "Snacks & Sides",
+      "classcode": "02",
+      "itemcode": "0204",
+      "name": "Mixed Meat Skewers",
+      "src": "",
+      "localFile": null,
+      "status": "no-image-url"
+    },
+    {
+      "category": "Snacks & Sides",
+      "classcode": "02",
+      "itemcode": "B02",
+      "name": "Chicken wings*Fries",
+      "src": "",
+      "localFile": null,
+      "status": "no-image-url"
+    },
+    {
+      "category": "Snacks & Sides",
+      "classcode": "02",
+      "itemcode": "B04",
+      "name": "B04 Sesame Balls",
+      "src": "",
+      "localFile": null,
+      "status": "no-image-url"
+    },
+    {
+      "category": "Snacks & Sides",
+      "classcode": "02",
+      "itemcode": "B09",
+      "name": "B09 Spicy Chill Beef",
+      "src": "",
+      "localFile": null,
+      "status": "no-image-url"
+    },
+    {
+      "category": "Snacks & Sides",
+      "classcode": "02",
+      "itemcode": "B17",
+      "name": "B17 Deep Fried Calamari",
+      "src": "",
+      "localFile": null,
+      "status": "no-image-url"
+    },
+    {
+      "category": "Snacks & Sides",
+      "classcode": "02",
+      "itemcode": "B18",
+      "name": "B18 Spring Rolls",
+      "src": "",
+      "localFile": null,
+      "status": "no-image-url"
+    },
+    {
+      "category": "Snacks & Sides",
+      "classcode": "02",
+      "itemcode": "B19",
+      "name": "B19 Fried Scallops",
+      "src": "",
+      "localFile": null,
+      "status": "no-image-url"
+    },
+    {
+      "category": "Snacks & Sides",
+      "classcode": "02",
+      "itemcode": "0104",
+      "name": "Condensed Milk Toast",
+      "src": "",
+      "localFile": null,
+      "status": "no-image-url"
+    },
+    {
+      "category": "Snacks & Sides",
+      "classcode": "02",
+      "itemcode": "0208",
+      "name": "French Fries",
+      "src": "",
+      "localFile": null,
+      "status": "no-image-url"
+    },
+    {
+      "category": "Snacks & Sides",
+      "classcode": "02",
+      "itemcode": "0209",
+      "name": "Sweet Potato Fries",
+      "src": "",
+      "localFile": null,
+      "status": "no-image-url"
+    },
+    {
+      "category": "Snacks & Sides",
+      "classcode": "02",
+      "itemcode": "0102",
+      "name": "ice cream waffles",
+      "src": "",
+      "localFile": null,
+      "status": "no-image-url"
+    },
+    {
+      "category": "Snacks & Sides",
+      "classcode": "02",
+      "itemcode": "0110",
+      "name": "Ice Cream",
+      "src": "",
+      "localFile": null,
+      "status": "no-image-url"
+    },
+    {
+      "category": "Main Dish",
+      "classcode": "07",
+      "itemcode": "0704",
+      "name": "Soy Sauce Fried Rice",
+      "src": "",
+      "localFile": null,
+      "status": "no-image-url"
+    },
+    {
+      "category": "Main Dish",
+      "classcode": "07",
+      "itemcode": "C01",
+      "name": "C01 Sakura Shrimp&Chicken FR",
+      "src": "",
+      "localFile": null,
+      "status": "no-image-url"
+    },
+    {
+      "category": "Main Dish",
+      "classcode": "07",
+      "itemcode": "C12",
+      "name": "C12 Pineapple Fried Rice",
+      "src": "",
+      "localFile": null,
+      "status": "no-image-url"
+    },
+    {
+      "category": "Main Dish",
+      "classcode": "07",
+      "itemcode": "B06",
+      "name": "B06 Chicken Udon Stir-Fry",
+      "src": "",
+      "localFile": null,
+      "status": "no-image-url"
+    },
+    {
+      "category": "Main Dish",
+      "classcode": "07",
+      "itemcode": "C13",
+      "name": "Stir-fried Beef udon",
+      "src": "",
+      "localFile": null,
+      "status": "no-image-url"
+    },
+    {
+      "category": "Main Dish",
+      "classcode": "07",
+      "itemcode": "0703",
+      "name": "Chicken Katsu Rice",
+      "src": "",
+      "localFile": null,
+      "status": "no-image-url"
+    },
+    {
+      "category": "Main Dish",
+      "classcode": "07",
+      "itemcode": "B16",
+      "name": "B16 General Tao's Chicken",
+      "src": "",
+      "localFile": null,
+      "status": "no-image-url"
+    },
+    {
+      "category": "Main Dish",
+      "classcode": "07",
+      "itemcode": "B03",
+      "name": "B03 General Tao’s Shrimp",
+      "src": "",
+      "localFile": null,
+      "status": "no-image-url"
+    },
+    {
+      "category": "Main Dish",
+      "classcode": "07",
+      "itemcode": "C11",
+      "name": "C11 Pad Thai",
+      "src": "",
+      "localFile": null,
+      "status": "no-image-url"
+    },
+    {
+      "category": "Main Dish",
+      "classcode": "07",
+      "itemcode": "C10",
+      "name": "C10 HK style Beef Noodles",
+      "src": "",
+      "localFile": null,
+      "status": "no-image-url"
+    },
+    {
+      "category": "Main Dish",
+      "classcode": "07",
+      "itemcode": "0701",
+      "name": "Broccoli Beef",
+      "src": "",
+      "localFile": null,
+      "status": "no-image-url"
+    },
+    {
+      "category": "Main Dish",
+      "classcode": "07",
+      "itemcode": "C06",
+      "name": "C06 Spaghetti w/Beef BPSauce",
+      "src": "",
+      "localFile": null,
+      "status": "no-image-url"
+    },
+    {
+      "category": "Main Dish",
+      "classcode": "07",
+      "itemcode": "0705",
+      "name": "White Rice",
+      "src": "",
+      "localFile": null,
+      "status": "no-image-url"
+    },
+    {
+      "category": "Sushi",
+      "classcode": "13",
+      "itemcode": "1512",
+      "name": "Mango roll 6PCS",
+      "src": "",
+      "localFile": null,
+      "status": "no-image-url"
+    },
+    {
+      "category": "Sushi",
+      "classcode": "13",
+      "itemcode": "1508",
+      "name": "Avocado 6PCS",
+      "src": "",
+      "localFile": null,
+      "status": "no-image-url"
+    },
+    {
+      "category": "Sushi",
+      "classcode": "13",
+      "itemcode": "1505",
+      "name": "Salmon & Avocado 6PCS",
+      "src": "",
+      "localFile": null,
+      "status": "no-image-url"
+    },
+    {
+      "category": "Sushi",
+      "classcode": "13",
+      "itemcode": "1506",
+      "name": "Fried Chicken roll 10 PCS",
+      "src": "",
+      "localFile": null,
+      "status": "no-image-url"
+    },
+    {
+      "category": "Sushi",
+      "classcode": "13",
+      "itemcode": "1507",
+      "name": "Dragon eye roll 10 PCS",
+      "src": "",
+      "localFile": null,
+      "status": "no-image-url"
+    },
+    {
+      "category": "Sushi",
+      "classcode": "13",
+      "itemcode": "1511",
+      "name": "Spicy Salmon 6PCS",
+      "src": "",
+      "localFile": null,
+      "status": "no-image-url"
+    },
+    {
+      "category": "Sushi",
+      "classcode": "13",
+      "itemcode": "1513",
+      "name": "California Roll 10 PCS",
+      "src": "",
+      "localFile": null,
+      "status": "no-image-url"
+    },
+    {
+      "category": "Sushi",
+      "classcode": "13",
+      "itemcode": "0207",
+      "name": "Philadelphia Roll",
+      "src": "",
+      "localFile": null,
+      "status": "no-image-url"
+    },
+    {
+      "category": "Sushi",
+      "classcode": "13",
+      "itemcode": "1501",
+      "name": "SS1",
+      "src": "",
+      "localFile": null,
+      "status": "no-image-url"
+    },
+    {
+      "category": "Sushi",
+      "classcode": "13",
+      "itemcode": "1502",
+      "name": "SS2",
+      "src": "",
+      "localFile": null,
+      "status": "no-image-url"
+    },
+    {
+      "category": "Sushi",
+      "classcode": "13",
+      "itemcode": "1503",
+      "name": "SS3",
+      "src": "",
+      "localFile": null,
+      "status": "no-image-url"
+    },
+    {
+      "category": "Sushi",
+      "classcode": "13",
+      "itemcode": "1504",
+      "name": "SS4",
+      "src": "",
+      "localFile": null,
+      "status": "no-image-url"
+    },
+    {
+      "category": "Sushi",
+      "classcode": "13",
+      "itemcode": "1509",
+      "name": "Boat 1",
+      "src": "https://stream.quickposhub.com/127200202607090143C615A.png",
+      "localFile": "Sushi\\1509 - Boat 1.png",
+      "bytes": 78305,
+      "status": "downloaded"
+    },
+    {
+      "category": "Sushi",
+      "classcode": "13",
+      "itemcode": "1510",
+      "name": "Boat2",
+      "src": "https://stream.quickposhub.com/1272002026070901428EBEA.png",
+      "localFile": "Sushi\\1510 - Boat2.png",
+      "bytes": 78680,
+      "status": "downloaded"
+    },
+    {
+      "category": "Vegetarian",
+      "classcode": "09",
+      "itemcode": "V01",
+      "name": "V01 Veg Stir Vermicelli",
+      "src": "https://stream.quickposhub.com/1272002026100105126C240.jpg",
+      "localFile": "Vegetarian\\V01 - V01 Veg Stir Vermicelli.jpg",
+      "bytes": 216777,
+      "status": "downloaded"
+    },
+    {
+      "category": "Vegetarian",
+      "classcode": "09",
+      "itemcode": "V02",
+      "name": "V02 Veg Fried Rice",
+      "src": "https://stream.quickposhub.com/127200202607091134D660A.png",
+      "localFile": "Vegetarian\\V02 - V02 Veg Fried Rice.png",
+      "bytes": 99183,
+      "status": "downloaded"
+    },
+    {
+      "category": "Vegetarian",
+      "classcode": "09",
+      "itemcode": "V05",
+      "name": "V05 Braised Tofu in Soy Sauce",
+      "src": "https://stream.quickposhub.com/127200202607091134F45B2.png",
+      "localFile": "Vegetarian\\V05 - V05 Braised Tofu in Soy Sauce.png",
+      "bytes": 107841,
+      "status": "downloaded"
+    },
+    {
+      "category": "Vegetarian",
+      "classcode": "09",
+      "itemcode": "0901",
+      "name": "Stir-Fried Mixed Vegetables",
+      "src": "https://stream.quickposhub.com/127200202606050533DEF8F.jpg",
+      "localFile": "Vegetarian\\0901 - Stir-Fried Mixed Vegetables.jpg",
+      "bytes": 164793,
+      "status": "downloaded"
+    },
+    {
+      "category": "Vegetarian",
+      "classcode": "09",
+      "itemcode": "1204",
+      "name": "Vegetables Dumpling",
+      "src": "https://stream.quickposhub.com/1272002026061104526AEF8.jpg",
+      "localFile": "Vegetarian\\1204 - Vegetables Dumpling.jpg",
+      "bytes": 91260,
+      "status": "downloaded"
+    },
+    {
+      "category": "Drink",
+      "classcode": "06",
+      "itemcode": "G03",
+      "name": "Hong Kong Style Milk Tea",
+      "src": "",
+      "localFile": null,
+      "status": "no-image-url"
+    },
+    {
+      "category": "Drink",
+      "classcode": "06",
+      "itemcode": "G04",
+      "name": "Coffee",
+      "src": "",
+      "localFile": null,
+      "status": "no-image-url"
+    },
+    {
+      "category": "Drink",
+      "classcode": "06",
+      "itemcode": "0603",
+      "name": "Taro milk tea",
+      "src": "",
+      "localFile": null,
+      "status": "no-image-url"
+    },
+    {
+      "category": "Drink",
+      "classcode": "06",
+      "itemcode": "0604",
+      "name": "Strawberry matcha latte",
+      "src": "",
+      "localFile": null,
+      "status": "no-image-url"
+    },
+    {
+      "category": "Drink",
+      "classcode": "06",
+      "itemcode": "0605",
+      "name": "Mango matcha latte",
+      "src": "",
+      "localFile": null,
+      "status": "no-image-url"
+    },
+    {
+      "category": "Drink",
+      "classcode": "06",
+      "itemcode": "0606",
+      "name": "Mango passion slush",
+      "src": "",
+      "localFile": null,
+      "status": "no-image-url"
+    },
+    {
+      "category": "Drink",
+      "classcode": "06",
+      "itemcode": "0607",
+      "name": "Strawberry slush",
+      "src": "",
+      "localFile": null,
+      "status": "no-image-url"
+    },
+    {
+      "category": "Drink",
+      "classcode": "06",
+      "itemcode": "0611",
+      "name": "Limonade",
+      "src": "",
+      "localFile": null,
+      "status": "no-image-url"
+    },
+    {
+      "category": "Drink",
+      "classcode": "06",
+      "itemcode": "06015",
+      "name": "coconut water",
+      "src": "https://stream.quickposhub.com/127200202608020616DD59E.png",
+      "localFile": "Drink\\06015 - coconut water.png",
+      "bytes": 81422,
+      "status": "downloaded"
+    },
+    {
+      "category": "Drink",
+      "classcode": "06",
+      "itemcode": "06018",
+      "name": "Oolong Tea(no sugar)",
+      "src": "https://stream.quickposhub.com/1272002026081209490CFD7.png",
+      "localFile": "Drink\\06018 - Oolong Tea(no sugar).png",
+      "bytes": 114720,
+      "status": "downloaded"
+    },
+    {
+      "category": "Drink",
+      "classcode": "06",
+      "itemcode": "0608",
+      "name": "Coca cola mexican bottled",
+      "src": "https://stream.quickposhub.com/12720020260709110546BC0.png",
+      "localFile": "Drink\\0608 - Coca cola mexican bottled.png",
+      "bytes": 74776,
+      "status": "downloaded"
+    },
+    {
+      "category": "Drink",
+      "classcode": "06",
+      "itemcode": "0610",
+      "name": "Diet Coke",
+      "src": "https://stream.quickposhub.com/127200202607100123A0CFB.jpg",
+      "localFile": "Drink\\0610 - Diet Coke.jpg",
+      "bytes": 78324,
+      "status": "downloaded"
+    },
+    {
+      "category": "Drink",
+      "classcode": "06",
+      "itemcode": "06017",
+      "name": "Milkis",
+      "src": "https://stream.quickposhub.com/127200202608121001DE205.png",
+      "localFile": "Drink\\06017 - Milkis.png",
+      "bytes": 113653,
+      "status": "downloaded"
+    },
+    {
+      "category": "Drink",
+      "classcode": "06",
+      "itemcode": "06016",
+      "name": "Sparkling Water",
+      "src": "https://stream.quickposhub.com/127200202608120955D8197.jpg",
+      "localFile": "Drink\\06016 - Sparkling Water.jpg",
+      "bytes": 112462,
+      "status": "downloaded"
+    },
+    {
+      "category": "Drink",
+      "classcode": "06",
+      "itemcode": "2101",
+      "name": "Cheese cake Yuzu",
+      "src": "https://stream.quickposhub.com/127200202609131035E4F8D.png",
+      "localFile": "Drink\\2101 - Cheese cake Yuzu.png",
+      "bytes": 55460,
+      "status": "downloaded"
+    },
+    {
+      "category": "Drink",
+      "classcode": "06",
+      "itemcode": "2104",
+      "name": "Mango Mochi",
+      "src": "https://stream.quickposhub.com/12720020260913103623AA4.png",
+      "localFile": "Drink\\2104 - Mango Mochi.png",
+      "bytes": 63692,
+      "status": "downloaded"
+    },
+    {
+      "category": "Drink",
+      "classcode": "06",
+      "itemcode": "2105",
+      "name": "Matcha Mochi",
+      "src": "https://stream.quickposhub.com/127200202608280554EECF3.png",
+      "localFile": "Drink\\2105 - Matcha Mochi.png",
+      "bytes": 122033,
+      "status": "downloaded"
+    },
+    {
+      "category": "Drink",
+      "classcode": "06",
+      "itemcode": "06021",
+      "name": "Ayran",
+      "src": "https://stream.quickposhub.com/127200202610011056F8BC7.png",
+      "localFile": "Drink\\06021 - Ayran.png",
+      "bytes": 125659,
+      "status": "downloaded"
+    },
+    {
+      "category": "Drink",
+      "classcode": "06",
+      "itemcode": "2106",
+      "name": "Strawberry Mochi",
+      "src": "https://stream.quickposhub.com/127200202608280557B49F0.png",
+      "localFile": "Drink\\2106 - Strawberry Mochi.png",
+      "bytes": 115998,
+      "status": "downloaded"
+    }
+  ]
+}

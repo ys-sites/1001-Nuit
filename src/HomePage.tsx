@@ -36,7 +36,7 @@ import ScrollTextReveal from "./components/ui/ScrollTextReveal";
 import NeighborhoodMap from "./components/NeighborhoodMap";
 import SocialFeedback from "./components/SocialFeedback";
 import CateringForm from "./components/CateringForm";
-import { AYCE_MENU_CATEGORIES, ALACARTE_MENU_CATEGORIES } from "./data/menuData";
+import { AYCE_MENU_CATEGORIES, ALACARTE_MENU_CATEGORIES, LUNCH_EXPRESS_MENU_CATEGORIES } from "./data/menuData";
 
 
 const REVIEWS = [
@@ -201,9 +201,14 @@ const SHOW_MENU_IMAGES = true;
 
 
 export default function HomePage() {
-  const [menuType, setMenuType] = useState<"ayce" | "alacarte">("ayce");
+  const [menuType, setMenuType] = useState<"ayce" | "alacarte" | "lunch">("ayce");
   const [activeCategory, setActiveCategory] = useState(0);
-  const currentCategories = menuType === "ayce" ? AYCE_MENU_CATEGORIES : ALACARTE_MENU_CATEGORIES;
+  const currentCategories =
+    menuType === "ayce"
+      ? AYCE_MENU_CATEGORIES
+      : menuType === "alacarte"
+      ? ALACARTE_MENU_CATEGORIES
+      : LUNCH_EXPRESS_MENU_CATEGORIES;
   const [lang, setLang] = useState<"en" | "fr">("en");
   const [showPromo, setShowPromo] = useState(true);
   const [hoveredSocial, setHoveredSocial] = useState<number | null>(null);
@@ -532,7 +537,7 @@ export default function HomePage() {
             </div>
 
             {/* Luxury Champagne & Gold Segmented Control */}
-            <div className="p-1.5 sm:p-2 bg-[#efe7d2]/70 backdrop-blur-sm rounded-full flex items-center gap-1.5 sm:gap-2 shadow-[0_6px_24px_rgba(200,184,138,0.25)] border border-[#c8b88a] w-full sm:w-auto max-w-xl">
+            <div className="p-1.5 sm:p-2 bg-[#efe7d2]/70 backdrop-blur-sm rounded-full flex flex-wrap sm:flex-nowrap items-center justify-center gap-1.5 sm:gap-2 shadow-[0_6px_24px_rgba(200,184,138,0.25)] border border-[#c8b88a] w-full sm:w-auto max-w-3xl">
               <button
                 id="menu-type-ayce-btn"
                 type="button"
@@ -540,7 +545,7 @@ export default function HomePage() {
                   setMenuType("ayce");
                   setActiveCategory(0);
                 }}
-                className={`flex-1 sm:flex-initial sm:min-w-[210px] py-3 sm:py-3.5 px-5 sm:px-8 rounded-full text-xs sm:text-[13px] font-bold tracking-[0.18em] uppercase transition-all duration-300 cursor-pointer flex items-center justify-center gap-2 select-none ${
+                className={`flex-1 sm:flex-initial sm:min-w-[170px] md:min-w-[200px] py-3 sm:py-3.5 px-4 sm:px-6 rounded-full text-xs sm:text-[13px] font-bold tracking-[0.15em] sm:tracking-[0.18em] uppercase transition-all duration-300 cursor-pointer flex items-center justify-center gap-2 select-none ${
                   menuType === "ayce"
                     ? "bg-gradient-to-r from-[#d9be75] via-[#c8b88a] to-[#bda061] text-[#1a1c19] shadow-[0_2px_14px_rgba(200,184,138,0.5)] scale-[1.02]"
                     : "text-[#1a1c19]/75 hover:text-[#1a1c19] hover:bg-white/60"
@@ -557,7 +562,7 @@ export default function HomePage() {
                   setMenuType("alacarte");
                   setActiveCategory(0);
                 }}
-                className={`flex-1 sm:flex-initial sm:min-w-[210px] py-3 sm:py-3.5 px-5 sm:px-8 rounded-full text-xs sm:text-[13px] font-bold tracking-[0.18em] uppercase transition-all duration-300 cursor-pointer flex items-center justify-center gap-2 select-none ${
+                className={`flex-1 sm:flex-initial sm:min-w-[150px] md:min-w-[170px] py-3 sm:py-3.5 px-4 sm:px-6 rounded-full text-xs sm:text-[13px] font-bold tracking-[0.15em] sm:tracking-[0.18em] uppercase transition-all duration-300 cursor-pointer flex items-center justify-center gap-2 select-none ${
                   menuType === "alacarte"
                     ? "bg-gradient-to-r from-[#d9be75] via-[#c8b88a] to-[#bda061] text-[#1a1c19] shadow-[0_2px_14px_rgba(200,184,138,0.5)] scale-[1.02]"
                     : "text-[#1a1c19]/75 hover:text-[#1a1c19] hover:bg-white/60"
@@ -566,13 +571,32 @@ export default function HomePage() {
                 <span className={`w-1.5 h-1.5 rounded-full transition-colors duration-300 ${menuType === "alacarte" ? "bg-[#1a1c19]" : "bg-[#c8b88a]"}`}></span>
                 <span>{lang === "fr" ? "À La Carte" : "À La Carte"}</span>
               </button>
+
+              <button
+                id="menu-type-lunch-btn"
+                type="button"
+                onClick={() => {
+                  setMenuType("lunch");
+                  setActiveCategory(0);
+                }}
+                className={`flex-1 sm:flex-initial sm:min-w-[150px] md:min-w-[170px] py-3 sm:py-3.5 px-4 sm:px-6 rounded-full text-xs sm:text-[13px] font-bold tracking-[0.15em] sm:tracking-[0.18em] uppercase transition-all duration-300 cursor-pointer flex items-center justify-center gap-2 select-none ${
+                  menuType === "lunch"
+                    ? "bg-gradient-to-r from-[#d9be75] via-[#c8b88a] to-[#bda061] text-[#1a1c19] shadow-[0_2px_14px_rgba(200,184,138,0.5)] scale-[1.02]"
+                    : "text-[#1a1c19]/75 hover:text-[#1a1c19] hover:bg-white/60"
+                }`}
+              >
+                <span className={`w-1.5 h-1.5 rounded-full transition-colors duration-300 ${menuType === "lunch" ? "bg-[#1a1c19]" : "bg-[#c8b88a]"}`}></span>
+                <span>{lang === "fr" ? "Lunch Express" : "Lunch Express"}</span>
+              </button>
             </div>
 
             {/* Subtitle Description */}
-            <p className="text-[#1a1c19]/65 text-[11px] sm:text-xs tracking-wider uppercase mt-3.5 font-medium text-center px-4 max-w-lg">
+            <p className="text-[#1a1c19]/65 text-[11px] sm:text-xs tracking-wider uppercase mt-3.5 font-medium text-center px-4 max-w-xl">
               {menuType === "ayce"
                 ? (lang === "fr" ? "Formule buffet à volonté — Entrées, sushis, grillades, tempura et desserts" : "All-you-can-eat buffet — Appetizers, sushi, hot kitchen, tempura & desserts")
-                : (lang === "fr" ? "Plats à la carte — Spécialités maison, combos sushi, plaques grésillantes et nouilles" : "À la carte selection — House specials, sushi combos, sizzling plates & noodles")}
+                : menuType === "alacarte"
+                ? (lang === "fr" ? "Plats à la carte — Spécialités maison, combos sushi, plats végétariens et boissons" : "À la carte selection — House specials, sushi combos, vegetarian dishes & beverages")
+                : (lang === "fr" ? "Menu midi express — Bols poke, spécialités au wok, sushis frais et boissons" : "Lunch express special — Poke bowls, chef wok specials, fresh sushi & drinks")}
             </p>
           </motion.div>
 
@@ -655,9 +679,16 @@ export default function HomePage() {
                 )}
                 <div className="flex-1 p-3.5 sm:p-4 md:p-5 flex flex-col justify-center min-w-0">
                   <div className="min-w-0">
-                    <h4 className="font-sans font-bold text-[#1a1c19] text-sm sm:text-base md:text-lg leading-snug line-clamp-2">
-                      {lang === "fr" ? item.name_fr : item.name_en}
-                    </h4>
+                    <div className="flex items-start justify-between gap-2">
+                      <h4 className="font-sans font-bold text-[#1a1c19] text-sm sm:text-base md:text-lg leading-snug line-clamp-2">
+                        {lang === "fr" ? item.name_fr : item.name_en}
+                      </h4>
+                      {item.price && (
+                        <span className="font-serif font-bold text-sm sm:text-base md:text-lg text-[#9a7d3b] shrink-0 tracking-tight ml-2">
+                          {item.price}
+                        </span>
+                      )}
+                    </div>
                     {(lang === "fr" ? item.desc_fr : item.desc_en) && (
                       <p className="text-[11px] sm:text-xs text-[#1a1c19]/65 mt-1 line-clamp-2 leading-relaxed font-normal">
                         {lang === "fr" ? item.desc_fr : item.desc_en}
