@@ -218,10 +218,6 @@ export default function HomePage() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  const handleOrderOnline = () => {
-    window.open('https://order.1001nuit.com', '_blank');
-  };
-
   const location = useLocation();
 
   useEffect(() => {
@@ -297,64 +293,67 @@ export default function HomePage() {
 
 
 
-          {/* Location Badge bottom left */}
-          <a
-            href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(RESTAURANT_ADDRESS)}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={(e) => {
-              const isIOS =
-                /iPad|iPhone|iPod/.test(navigator.userAgent) ||
-                (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
-              if (isIOS) {
-                e.preventDefault();
-                window.open(
-                  `https://maps.apple.com/?daddr=${encodeURIComponent(RESTAURANT_ADDRESS)}`,
-                  "_blank",
-                  "noopener,noreferrer"
-                );
-              }
-            }}
-            className="group/loc absolute bottom-5 left-5 md:bottom-10 md:left-10 z-20 flex items-center gap-2.5 md:gap-3 bg-[#0a0b0a]/85 backdrop-blur-none md:backdrop-blur-md md:bg-[#0a0b0a]/60 border border-[#333330] hover:border-[#cfbe91]/60 rounded-full py-1.5 pl-1.5 pr-4 md:py-2 md:pl-2 md:pr-5 transition-all duration-300"
-          >
-            <span className="w-8 h-8 md:w-9 md:h-9 flex-shrink-0 flex items-center justify-center rounded-full bg-[#cfbe91]/15 text-[#cfbe91] group-hover/loc:bg-[#cfbe91] group-hover/loc:text-[#0a0b0a] transition-colors duration-300">
-              <MapPin size={15} strokeWidth={1.75} />
-            </span>
-            <span className="text-[9px] md:text-xs font-bold tracking-wide text-white leading-tight max-w-[150px] md:max-w-none md:whitespace-nowrap">
-              11602-A Bd de Salaberry, Dollard-des-Ormeaux
-            </span>
-          </a>
+          {/* Bottom Bar: Location Badge & Social Badges */}
+          <div className="absolute bottom-4 left-4 right-4 md:bottom-10 md:left-10 md:right-10 z-20 flex flex-col-reverse sm:flex-row items-start sm:items-center justify-between gap-2.5 sm:gap-4 pointer-events-none">
+            {/* Location Badge */}
+            <a
+              href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(RESTAURANT_ADDRESS)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => {
+                const isIOS =
+                  /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+                  (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+                if (isIOS) {
+                  e.preventDefault();
+                  window.open(
+                    `https://maps.apple.com/?daddr=${encodeURIComponent(RESTAURANT_ADDRESS)}`,
+                    "_blank",
+                    "noopener,noreferrer"
+                  );
+                }
+              }}
+              className="pointer-events-auto group/loc flex items-center gap-2.5 md:gap-3 bg-[#0a0b0a]/85 backdrop-blur-none md:backdrop-blur-md md:bg-[#0a0b0a]/60 border border-[#333330] hover:border-[#cfbe91]/60 rounded-full py-1.5 pl-1.5 pr-4 md:py-2 md:pl-2 md:pr-5 transition-all duration-300 max-w-full"
+            >
+              <span className="w-8 h-8 md:w-9 md:h-9 flex-shrink-0 flex items-center justify-center rounded-full bg-[#cfbe91]/15 text-[#cfbe91] group-hover/loc:bg-[#cfbe91] group-hover/loc:text-[#0a0b0a] transition-colors duration-300">
+                <MapPin size={15} strokeWidth={1.75} />
+              </span>
+              <span className="text-[10px] sm:text-[11px] md:text-xs font-bold tracking-wide text-white leading-tight max-w-[calc(100vw-5rem)] truncate sm:max-w-none sm:whitespace-nowrap">
+                11602-A Bd de Salaberry, Dollard-des-Ormeaux
+              </span>
+            </a>
 
-          {/* Social Badges bottom right */}
-          <div className="absolute bottom-5 right-5 md:bottom-10 md:right-10 z-20 flex items-center gap-2 md:gap-3">
-            {[
-              { icon: Instagram as any, link: "https://www.instagram.com/1001nu1t/", color: "#E4405F" },
-              { icon: Facebook as any, link: "https://www.facebook.com/share/1J1KukJuHs/?mibextid=wwXIfr", color: "#1877F2" },
-              { icon: TiktokIcon as any, link: "https://www.tiktok.com/@1001nu1t", color: "#25F4EE" },
-            ].map((social, idx) => (
-              <a
-                key={idx}
-                href={social.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                onMouseEnter={() => setHoveredSocial(idx)}
-                onMouseLeave={() => setHoveredSocial(null)}
-                className="w-10 h-10 md:w-[52px] md:h-[52px] flex items-center justify-center rounded-full bg-[#0a0b0a]/85 backdrop-blur-none md:backdrop-blur-md md:bg-[#0a0b0a]/60 border border-[#333330] transition-colors duration-300"
-                style={{
-                  backgroundColor: hoveredSocial === idx ? social.color : undefined,
-                  borderColor: hoveredSocial === idx ? social.color : undefined,
-                }}
-              >
-                <social.icon
-                  size={16}
-                  strokeWidth={1.5}
+            {/* Social Badges */}
+            <div className="pointer-events-auto self-end sm:self-auto flex items-center gap-2 md:gap-3">
+              {[
+                { icon: Instagram as any, link: "https://www.instagram.com/1001nu1t/", color: "#E4405F" },
+                { icon: Facebook as any, link: "https://www.facebook.com/share/1J1KukJuHs/?mibextid=wwXIfr", color: "#1877F2" },
+                { icon: TiktokIcon as any, link: "https://www.tiktok.com/@1001nu1t", color: "#25F4EE" },
+              ].map((social, idx) => (
+                <a
+                  key={idx}
+                  href={social.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onMouseEnter={() => setHoveredSocial(idx)}
+                  onMouseLeave={() => setHoveredSocial(null)}
+                  className="w-10 h-10 md:w-[52px] md:h-[52px] flex items-center justify-center rounded-full bg-[#0a0b0a]/85 backdrop-blur-none md:backdrop-blur-md md:bg-[#0a0b0a]/60 border border-[#333330] transition-colors duration-300"
                   style={{
-                    color: hoveredSocial === idx ? "#ffffff" : social.color,
-                    transition: "color 0.3s ease",
+                    backgroundColor: hoveredSocial === idx ? social.color : undefined,
+                    borderColor: hoveredSocial === idx ? social.color : undefined,
                   }}
-                />
-              </a>
-            ))}
+                >
+                  <social.icon
+                    size={16}
+                    strokeWidth={1.5}
+                    style={{
+                      color: hoveredSocial === idx ? "#ffffff" : social.color,
+                      transition: "color 0.3s ease",
+                    }}
+                  />
+                </a>
+              ))}
+            </div>
           </div>
         </motion.div>
 
@@ -407,8 +406,10 @@ export default function HomePage() {
           </motion.div>
 
           {/* Order Online Block */}
-          <motion.div
-            onClick={handleOrderOnline}
+          <motion.a
+            href="https://order.1001nuit.com"
+            target="_blank"
+            rel="noopener noreferrer"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
@@ -427,7 +428,7 @@ export default function HomePage() {
                 <ArrowRight size={14} />
               </div>
             </div>
-          </motion.div>
+          </motion.a>
         </div>
       </section>
 
@@ -453,13 +454,15 @@ export default function HomePage() {
               <p className="text-[#1a1c19]/50 text-[11px] uppercase tracking-[0.25em] font-bold">
                 {lang === "fr" ? "Commande à emporter" : "Pickup Order"}
               </p>
-              <button
+              <a
                 id="order-online-menu-cta"
-                onClick={handleOrderOnline}
-                className="px-8 py-3.5 bg-[#c8b88a] text-[#1a1c19] text-[11px] tracking-[0.25em] font-bold uppercase rounded-full hover:bg-[#efe7d2] transition-all duration-300 shadow-md"
+                href="https://order.1001nuit.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-3.5 bg-[#c8b88a] text-[#1a1c19] text-[11px] tracking-[0.25em] font-bold uppercase rounded-full hover:bg-[#efe7d2] transition-all duration-300 shadow-md inline-block text-center cursor-pointer select-none"
               >
                 {lang === "fr" ? "Commander en ligne" : "Order Online"}
-              </button>
+              </a>
             </div>
 
             {/* Uber Eats Delivery Order */}
@@ -467,13 +470,15 @@ export default function HomePage() {
               <p className="text-[#1a1c19]/50 text-[11px] uppercase tracking-[0.25em] font-bold">
                 {lang === "fr" ? "Livraison Uber Eats" : "Uber Eats Delivery"}
               </p>
-              <button
+              <a
                 id="uber-eats-menu-cta"
-                onClick={() => window.open('https://www.order.store/store/1001-nuit-authentic-chinese-restaurant/3pM54vb0RuSg-0QNzFABEQ', '_blank')}
-                className="px-8 py-3.5 bg-[#06C167] text-white text-[11px] tracking-[0.25em] font-bold uppercase rounded-full hover:bg-[#05a85c] transition-all duration-300 shadow-md"
+                href="https://www.order.store/store/1001-nuit-authentic-chinese-restaurant/3pM54vb0RuSg-0QNzFABEQ"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-3.5 bg-[#06C167] text-white text-[11px] tracking-[0.25em] font-bold uppercase rounded-full hover:bg-[#05a85c] transition-all duration-300 shadow-md inline-block text-center cursor-pointer select-none"
               >
                 {lang === "fr" ? "Commander sur Uber Eats" : "Order Uber Eats"}
-              </button>
+              </a>
             </div>
 
             {/* DoorDash Delivery Order */}
@@ -481,13 +486,15 @@ export default function HomePage() {
               <p className="text-[#1a1c19]/50 text-[11px] uppercase tracking-[0.25em] font-bold">
                 {lang === "fr" ? "Livraison DoorDash" : "DoorDash Delivery"}
               </p>
-              <button
+              <a
                 id="doordash-menu-cta"
-                onClick={() => window.open('https://order.online/business/1001-nuit-21950545', '_blank')}
-                className="px-8 py-3.5 bg-[#FF3008] text-white text-[11px] tracking-[0.25em] font-bold uppercase rounded-full hover:bg-[#E02600] transition-all duration-300 shadow-md"
+                href="https://order.online/business/1001-nuit-21950545"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-3.5 bg-[#FF3008] text-white text-[11px] tracking-[0.25em] font-bold uppercase rounded-full hover:bg-[#E02600] transition-all duration-300 shadow-md inline-block text-center cursor-pointer select-none"
               >
                 {lang === "fr" ? "Commander sur DoorDash" : "Order DoorDash"}
-              </button>
+              </a>
             </div>
 
             {/* Fantuan Delivery Order */}
@@ -495,13 +502,15 @@ export default function HomePage() {
               <p className="text-[#1a1c19]/50 text-[11px] uppercase tracking-[0.25em] font-bold">
                 {lang === "fr" ? "Livraison Fantuan" : "Fantuan Delivery"}
               </p>
-              <button
+              <a
                 id="fantuan-menu-cta"
-                onClick={() => window.open('https://mwx.fantuan.ca/store/Restaurant/ca-4811988?f_promotion=157745&f_channel=198603&f_type=0&f_id=1', '_blank')}
-                className="px-8 py-3.5 bg-[#1CC4C4] text-black text-[11px] tracking-[0.25em] font-bold uppercase rounded-full hover:bg-[#16a8a8] transition-all duration-300 shadow-md"
+                href="https://mwx.fantuan.ca/store/Restaurant/ca-4811988?f_promotion=157745&f_channel=198603&f_type=0&f_id=1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-3.5 bg-[#1CC4C4] text-black text-[11px] tracking-[0.25em] font-bold uppercase rounded-full hover:bg-[#16a8a8] transition-all duration-300 shadow-md inline-block text-center cursor-pointer select-none"
               >
                 {lang === "fr" ? "Commander sur Fantuan" : "Order Fantuan"}
-              </button>
+              </a>
             </div>
           </motion.div>
 
@@ -522,8 +531,8 @@ export default function HomePage() {
               <div className="w-6 h-[1px] bg-[#c8b88a]/50"></div>
             </div>
 
-            {/* Luxury Obsidian & Gold Segmented Control */}
-            <div className="p-1.5 sm:p-2 bg-[#1a1c19] rounded-full flex items-center gap-1.5 sm:gap-2 shadow-[0_12px_36px_rgba(0,0,0,0.18)] border border-[#c8b88a]/40 w-full sm:w-auto max-w-xl">
+            {/* Luxury Champagne & Gold Segmented Control */}
+            <div className="p-1.5 sm:p-2 bg-[#efe7d2]/70 backdrop-blur-sm rounded-full flex items-center gap-1.5 sm:gap-2 shadow-[0_6px_24px_rgba(200,184,138,0.25)] border border-[#c8b88a] w-full sm:w-auto max-w-xl">
               <button
                 id="menu-type-ayce-btn"
                 type="button"
@@ -533,11 +542,11 @@ export default function HomePage() {
                 }}
                 className={`flex-1 sm:flex-initial sm:min-w-[210px] py-3 sm:py-3.5 px-5 sm:px-8 rounded-full text-xs sm:text-[13px] font-bold tracking-[0.18em] uppercase transition-all duration-300 cursor-pointer flex items-center justify-center gap-2 select-none ${
                   menuType === "ayce"
-                    ? "bg-gradient-to-r from-[#d9be75] via-[#c8b88a] to-[#bda061] text-[#1a1c19] shadow-[0_2px_16px_rgba(200,184,138,0.55)] scale-[1.02]"
-                    : "text-[#efe7d2]/75 hover:text-white hover:bg-white/10"
+                    ? "bg-gradient-to-r from-[#d9be75] via-[#c8b88a] to-[#bda061] text-[#1a1c19] shadow-[0_2px_14px_rgba(200,184,138,0.5)] scale-[1.02]"
+                    : "text-[#1a1c19]/75 hover:text-[#1a1c19] hover:bg-white/60"
                 }`}
               >
-                <span className={`w-1.5 h-1.5 rounded-full transition-colors duration-300 ${menuType === "ayce" ? "bg-[#1a1c19]" : "bg-[#c8b88a]/60"}`}></span>
+                <span className={`w-1.5 h-1.5 rounded-full transition-colors duration-300 ${menuType === "ayce" ? "bg-[#1a1c19]" : "bg-[#c8b88a]"}`}></span>
                 <span>{lang === "fr" ? "Buffet À Volonté (AYCE)" : "All-You-Can-Eat (AYCE)"}</span>
               </button>
 
@@ -550,11 +559,11 @@ export default function HomePage() {
                 }}
                 className={`flex-1 sm:flex-initial sm:min-w-[210px] py-3 sm:py-3.5 px-5 sm:px-8 rounded-full text-xs sm:text-[13px] font-bold tracking-[0.18em] uppercase transition-all duration-300 cursor-pointer flex items-center justify-center gap-2 select-none ${
                   menuType === "alacarte"
-                    ? "bg-gradient-to-r from-[#d9be75] via-[#c8b88a] to-[#bda061] text-[#1a1c19] shadow-[0_2px_16px_rgba(200,184,138,0.55)] scale-[1.02]"
-                    : "text-[#efe7d2]/75 hover:text-white hover:bg-white/10"
+                    ? "bg-gradient-to-r from-[#d9be75] via-[#c8b88a] to-[#bda061] text-[#1a1c19] shadow-[0_2px_14px_rgba(200,184,138,0.5)] scale-[1.02]"
+                    : "text-[#1a1c19]/75 hover:text-[#1a1c19] hover:bg-white/60"
                 }`}
               >
-                <span className={`w-1.5 h-1.5 rounded-full transition-colors duration-300 ${menuType === "alacarte" ? "bg-[#1a1c19]" : "bg-[#c8b88a]/60"}`}></span>
+                <span className={`w-1.5 h-1.5 rounded-full transition-colors duration-300 ${menuType === "alacarte" ? "bg-[#1a1c19]" : "bg-[#c8b88a]"}`}></span>
                 <span>{lang === "fr" ? "À La Carte" : "À La Carte"}</span>
               </button>
             </div>
