@@ -895,14 +895,14 @@ export const ALACARTE_MENU_CATEGORIES: MenuCategory[] = [
         "name_fr": "Grand Bateau Impérial (Boat 1)",
         "desc_en": "Spectacular wooden sushi boat laden with assorted premium nigiri, sashimi, and specialty rolls",
         "desc_fr": "Magnifique bateau de fête garni de nigiris fins, sashimis et rouleaux de prestige",
-        "image": "/menu/optimized/alacarte/boat-1.webp"
+        "image": "/menu/optimized/lunch-express/boat-1.webp"
       },
       {
         "name_en": "Sushi Boat Royal (Boat 2)",
         "name_fr": "Grand Bateau Royal (Boat 2)",
         "desc_en": "Elaborate multi-level wooden boat loaded with supreme maki collection and chef's cut sashimi",
         "desc_fr": "Somptueux bateau garni d'une abondance de makis raffinés et sashimis du chef",
-        "image": "/menu/optimized/alacarte/boat2.webp"
+        "image": "/menu/optimized/lunch-express/boat-2.webp"
       },
       {
         "name_en": "Signature Combo SS1",
@@ -992,28 +992,28 @@ export const ALACARTE_MENU_CATEGORIES: MenuCategory[] = [
         "name_fr": "Légumes assortis sautés au wok",
         "desc_en": "Medley of seasonal fresh vegetables wok-fried in light savory garlic glaze",
         "desc_fr": "Méli-mélo de légumes frais du marché sautés au wok dans un jus d'ail délicat",
-        "image": "/menu/optimized/alacarte/fried-mixed-vegetables.webp"
+        "image": "/menu/optimized/lunch-express/stir-fried-mixed-vegetables.webp"
       },
       {
         "name_en": "Vegetarian Stir Vermicelli",
         "name_fr": "Vermicelles sautés aux légumes",
         "desc_en": "Light wok-tossed vermicelli noodles loaded with crisp garden vegetables",
         "desc_fr": "Vermicelles légers sautés au wok avec petits légumes croquants",
-        "image": "/menu/optimized/alacarte/veg-stir-vermicelli.webp"
+        "image": "/menu/optimized/lunch-express/veg-stir-vermicelli.webp"
       },
       {
         "name_en": "Vegetarian Fried Rice",
         "name_fr": "Riz frit aux légumes du potager",
         "desc_en": "Fragrant fried rice packed with colorful fresh garden vegetables",
         "desc_fr": "Riz sauté savoureux et parfumé aux petits légumes",
-        "image": "/menu/optimized/alacarte/veg-fried-rice.webp"
+        "image": "/menu/optimized/lunch-express/veg-fried-rice.webp"
       },
       {
         "name_en": "Braised Tofu in Soy Sauce",
         "name_fr": "Tofu Braisé à la Sauce Soja",
         "desc_en": "Silken tofu squares lightly pan-fried and braised in aromatic soy sauce",
         "desc_fr": "Cubes de tofu dorés mijotés dans une sauce soja parfumée",
-        "image": "/menu/optimized/alacarte/braised-tofu-in-soy-sauce.webp"
+        "image": "/menu/optimized/lunch-express/braised-tofu-in-soy-sauce.webp"
       }
     ]
   },
@@ -1075,21 +1075,21 @@ export const ALACARTE_MENU_CATEGORIES: MenuCategory[] = [
         "name_fr": "Mochi au Matcha",
         "desc_en": "Chewy Japanese rice dessert infused with earthy stone-ground matcha green tea",
         "desc_fr": "Mochi traditionnel parfumé à la poudre fine de thé vert matcha",
-        "image": "/menu/optimized/alacarte/matcha-mochi.webp"
+        "image": "/menu/optimized/lunch-express/matcha-mochi.webp"
       },
       {
         "name_en": "Strawberry Mochi",
         "name_fr": "Mochi à la Fraise",
         "desc_en": "Soft and chewy Japanese rice cake filled with sweet strawberry creme",
         "desc_fr": "Gâteau de riz gluant moelleux et fondant farci à la crème de fraise",
-        "image": "/menu/optimized/alacarte/strawberry-mochi.webp"
+        "image": "/menu/optimized/lunch-express/strawberry-mochi.webp"
       },
       {
         "name_en": "Mango Mochi",
         "name_fr": "Mochi à la Mangue",
         "desc_en": "Soft glutinous rice cake filled with luscious sweet mango filling",
         "desc_fr": "Mochi japonais moelleux garni d'une crème fondante à la mangue douce",
-        "image": "/menu/optimized/alacarte/mango-mochi.webp"
+        "image": "/menu/optimized/lunch-express/mango-mochi.webp"
       }
     ]
   },
@@ -1234,42 +1234,42 @@ export const ALACARTE_MENU_CATEGORIES: MenuCategory[] = [
         "name_fr": "Eau de Coco Naturelle",
         "desc_en": "Pure hydrating natural coconut water chilled to perfection",
         "desc_fr": "Eau de coco naturelle 100% pure, désaltérante et bien fraîche",
-        "image": "/menu/optimized/alacarte/coconut-water.webp"
+        "image": "/menu/optimized/lunch-express/coconut-water.webp"
       },
       {
         "name_en": "Unsweetened Oolong Tea",
         "name_fr": "Thé Oolong Sans Sucre",
         "desc_en": "Crisp and roasted chilled premium whole-leaf oolong tea",
         "desc_fr": "Infusion de thé oolong torréfié sans sucre ajouté, légère et désaltérante",
-        "image": "/menu/optimized/alacarte/oolong-teano-sugar.webp"
+        "image": "/menu/optimized/lunch-express/oolong-tea.webp"
       },
       {
         "name_en": "Sparkling Mineral Water",
         "name_fr": "Eau Minérale Pétillante",
         "desc_en": "Chilled bottle of premium sparkling mineral water",
         "desc_fr": "Bouteille en verre d'eau minérale pétillante d'Italie",
-        "image": "/menu/optimized/alacarte/sparkling-water.webp"
+        "image": "/menu/optimized/lunch-express/sparkling-water.webp"
       },
       {
         "name_en": "Milkis Korean Drink",
         "name_fr": "Milkis Soda Coréen au Lait",
         "desc_en": "Sparkling milk soda combining fizzy carbonation with smooth yogurt sweetness",
         "desc_fr": "Célèbre soda coréen pétillant et doux au goût lacté et fruité",
-        "image": "/menu/optimized/alacarte/milkis.webp"
+        "image": "/menu/optimized/lunch-express/milkis.webp"
       },
       {
         "name_en": "Mexican Coca-Cola",
         "name_fr": "Coca-Cola Mexicain (Bouteille en Verre)",
         "desc_en": "Authentic imported Coca-Cola sweetened with 100% real cane sugar",
         "desc_fr": "Authentique Coca-Cola importé pur sucre de canne en bouteille de verre",
-        "image": "/menu/optimized/alacarte/coca-cola-mexican-bottled.webp"
+        "image": "/menu/optimized/lunch-express/coca-cola-mexican-bottled.webp"
       },
       {
         "name_en": "Diet Coke",
         "name_fr": "Coke Diète",
         "desc_en": "Zero calorie refreshing crisp carbonated soft drink",
         "desc_fr": "Boisson gazeuse rafraîchissante sans calories",
-        "image": "/menu/optimized/alacarte/diet-coke.webp"
+        "image": "/menu/optimized/lunch-express/diet-coke.webp"
       },
       {
         "name_en": "Red Bull Energy Drink",
@@ -1333,6 +1333,38 @@ export const LUNCH_EXPRESS_MENU_CATEGORIES: MenuCategory[] = [
     "title_en": "SNACKS & SIDES",
     "title_fr": "SNACKS & EN-CAS",
     "items": [
+      {
+        "name_en": "Takoyaki (4 pcs)",
+        "name_fr": "Takoyaki (4 mcx)",
+        "desc_en": "Traditional Japanese crispy octopus balls drizzled with sweet savory sauce and Japanese mayo",
+        "desc_fr": "Bouchées croustillantes japonaises traditionnelles au poulpe avec mayonnaise japonaise",
+        "price": "$5.99",
+        "image": "/menu/optimized/ayce/takoyaki.webp"
+      },
+      {
+        "name_en": "Salted Edamame",
+        "name_fr": "Edamame Salé",
+        "desc_en": "Warm steamed young soybeans sprinkled with coarse mineral sea salt",
+        "desc_fr": "Fèves de soya fraîches à la vapeur saupoudrées de gros sel marin",
+        "price": "$4.99",
+        "image": "/menu/optimized/ayce/salted-edamame.webp"
+      },
+      {
+        "name_en": "Popcorn Chicken",
+        "name_fr": "Bouchées de Poulet Popcorn",
+        "desc_en": "Taiwanese style crispy bite-sized fried chicken bites tossed in five-spice seasoning",
+        "desc_fr": "Morceaux de poulet croustillants frits au style taïwanais parfumés aux cinq épices",
+        "price": "$14.99",
+        "image": "/menu/optimized/alacarte/popcorn-chicken.webp"
+      },
+      {
+        "name_en": "Chicken Skewers",
+        "name_fr": "Brochettes de Poulet Grillées",
+        "desc_en": "Tender flame-grilled chicken skewers seasoned with roasted cumin and Asian spices",
+        "desc_fr": "Brochettes de poulet tendre grillées aux épices parfumées et cumin",
+        "price": "$13.99",
+        "image": "/menu/optimized/ayce/curry-chicken-skewers.webp"
+      },
       {
         "name_en": "Beef Skewers",
         "name_fr": "Brochettes de Bœuf Grillées",
@@ -1663,7 +1695,7 @@ export const LUNCH_EXPRESS_MENU_CATEGORIES: MenuCategory[] = [
         "desc_en": "Spectacular wooden sushi boat laden with assorted premium nigiri, sashimi, and specialty rolls",
         "desc_fr": "Magnifique bateau de fête garni de nigiris fins, sashimis et rouleaux de prestige",
         "price": "$97.99",
-        "image": "/menu/optimized/alacarte/boat-1.webp"
+        "image": "/menu/optimized/lunch-express/boat-1.webp"
       },
       {
         "name_en": "Sushi Boat Royal (Boat 2)",
@@ -1671,7 +1703,7 @@ export const LUNCH_EXPRESS_MENU_CATEGORIES: MenuCategory[] = [
         "desc_en": "Elaborate multi-level wooden boat loaded with supreme maki collection and chef's cut sashimi",
         "desc_fr": "Somptueux bateau garni d'une abondance de makis raffinés et sashimis du chef",
         "price": "$111.99",
-        "image": "/menu/optimized/alacarte/boat2.webp"
+        "image": "/menu/optimized/lunch-express/boat-2.webp"
       }
     ]
   },
@@ -1685,7 +1717,7 @@ export const LUNCH_EXPRESS_MENU_CATEGORIES: MenuCategory[] = [
         "desc_en": "Light wok-tossed vermicelli noodles loaded with crisp garden vegetables",
         "desc_fr": "Vermicelles légers sautés au wok avec petits légumes croquants",
         "price": "$15.99",
-        "image": "/menu/optimized/alacarte/veg-stir-vermicelli.webp"
+        "image": "/menu/optimized/lunch-express/veg-stir-vermicelli.webp"
       },
       {
         "name_en": "Vegetarian Fried Rice (V02)",
@@ -1693,7 +1725,7 @@ export const LUNCH_EXPRESS_MENU_CATEGORIES: MenuCategory[] = [
         "desc_en": "Fragrant fried rice packed with colorful fresh garden vegetables",
         "desc_fr": "Riz sauté savoureux et parfumé aux petits légumes",
         "price": "$13.99",
-        "image": "/menu/optimized/alacarte/veg-fried-rice.webp"
+        "image": "/menu/optimized/lunch-express/veg-fried-rice.webp"
       },
       {
         "name_en": "Braised Tofu in Soy Sauce (V05)",
@@ -1701,7 +1733,7 @@ export const LUNCH_EXPRESS_MENU_CATEGORIES: MenuCategory[] = [
         "desc_en": "Silken tofu squares lightly pan-fried and braised in aromatic soy sauce",
         "desc_fr": "Cubes de tofu dorés mijotés dans une sauce soja parfumée",
         "price": "$13.99",
-        "image": "/menu/optimized/alacarte/braised-tofu-in-soy-sauce.webp"
+        "image": "/menu/optimized/lunch-express/braised-tofu-in-soy-sauce.webp"
       },
       {
         "name_en": "Stir-Fried Mixed Vegetables",
@@ -1709,7 +1741,7 @@ export const LUNCH_EXPRESS_MENU_CATEGORIES: MenuCategory[] = [
         "desc_en": "Medley of seasonal fresh vegetables wok-fried in light savory garlic glaze",
         "desc_fr": "Méli-mélo de légumes frais du marché sautés au wok dans un jus d'ail délicat",
         "price": "$12.95",
-        "image": "/menu/optimized/alacarte/fried-mixed-vegetables.webp"
+        "image": "/menu/optimized/lunch-express/stir-fried-mixed-vegetables.webp"
       },
       {
         "name_en": "Vegetable Dumplings",
@@ -1717,7 +1749,7 @@ export const LUNCH_EXPRESS_MENU_CATEGORIES: MenuCategory[] = [
         "desc_en": "Steamed thin-wrapper dumplings filled with cabbage, wood ear mushrooms, and greens",
         "desc_fr": "Raviolis vapeur légers farcis aux champignons asiatiques et légumes verts",
         "price": "$8.99",
-        "image": "/menu/optimized/alacarte/vegetables-dumpling.webp"
+        "image": "/menu/optimized/lunch-express/vegetables-dumpling.webp"
       }
     ]
   },
@@ -1795,7 +1827,7 @@ export const LUNCH_EXPRESS_MENU_CATEGORIES: MenuCategory[] = [
         "desc_en": "Pure hydrating natural coconut water chilled to perfection",
         "desc_fr": "Eau de coco naturelle 100% pure, désaltérante et bien fraîche",
         "price": "$3.99",
-        "image": "/menu/optimized/alacarte/coconut-water.webp"
+        "image": "/menu/optimized/lunch-express/coconut-water.webp"
       },
       {
         "name_en": "Unsweetened Oolong Tea",
@@ -1803,7 +1835,7 @@ export const LUNCH_EXPRESS_MENU_CATEGORIES: MenuCategory[] = [
         "desc_en": "Crisp and roasted chilled premium whole-leaf oolong tea",
         "desc_fr": "Infusion de thé oolong torréfié sans sucre ajouté, légère et désaltérante",
         "price": "$4.99",
-        "image": "/menu/optimized/alacarte/oolong-teano-sugar.webp"
+        "image": "/menu/optimized/lunch-express/oolong-tea.webp"
       },
       {
         "name_en": "Mexican Coca-Cola",
@@ -1811,7 +1843,7 @@ export const LUNCH_EXPRESS_MENU_CATEGORIES: MenuCategory[] = [
         "desc_en": "Authentic imported Coca-Cola sweetened with 100% real cane sugar",
         "desc_fr": "Authentique Coca-Cola importé pur sucre de canne en bouteille de verre",
         "price": "$4.99",
-        "image": "/menu/optimized/alacarte/coca-cola-mexican-bottled.webp"
+        "image": "/menu/optimized/lunch-express/coca-cola-mexican-bottled.webp"
       },
       {
         "name_en": "Diet Coke",
@@ -1819,7 +1851,7 @@ export const LUNCH_EXPRESS_MENU_CATEGORIES: MenuCategory[] = [
         "desc_en": "Zero calorie refreshing crisp carbonated soft drink",
         "desc_fr": "Boisson gazeuse rafraîchissante sans calories",
         "price": "$3.00",
-        "image": "/menu/optimized/alacarte/diet-coke.webp"
+        "image": "/menu/optimized/lunch-express/diet-coke.webp"
       },
       {
         "name_en": "Milkis Korean Drink",
@@ -1827,7 +1859,7 @@ export const LUNCH_EXPRESS_MENU_CATEGORIES: MenuCategory[] = [
         "desc_en": "Sparkling milk soda combining fizzy carbonation with smooth yogurt sweetness",
         "desc_fr": "Célèbre soda coréen pétillant et doux au goût lacté et fruité",
         "price": "$3.99",
-        "image": "/menu/optimized/alacarte/milkis.webp"
+        "image": "/menu/optimized/lunch-express/milkis.webp"
       },
       {
         "name_en": "Sparkling Mineral Water",
@@ -1835,7 +1867,7 @@ export const LUNCH_EXPRESS_MENU_CATEGORIES: MenuCategory[] = [
         "desc_en": "Chilled bottle of premium sparkling mineral water",
         "desc_fr": "Bouteille en verre d'eau minérale pétillante d'Italie",
         "price": "$6.99",
-        "image": "/menu/optimized/alacarte/sparkling-water.webp"
+        "image": "/menu/optimized/lunch-express/sparkling-water.webp"
       },
       {
         "name_en": "Yuzu Cheesecake",
@@ -1843,7 +1875,7 @@ export const LUNCH_EXPRESS_MENU_CATEGORIES: MenuCategory[] = [
         "desc_en": "Silky Japanese cheesecake infused with fragrant yuzu citrus zest",
         "desc_fr": "Gâteau au fromage onctueux parfumé aux zestes raffinés de yuzu japonais",
         "price": "$7.99",
-        "image": "/menu/optimized/alacarte/cheese-cake-yuzu.webp"
+        "image": "/menu/optimized/lunch-express/cheese-cake-yuzu.webp"
       },
       {
         "name_en": "Mango Mochi",
@@ -1851,7 +1883,7 @@ export const LUNCH_EXPRESS_MENU_CATEGORIES: MenuCategory[] = [
         "desc_en": "Soft glutinous rice cake filled with luscious sweet mango filling",
         "desc_fr": "Mochi japonais moelleux garni d'une crème fondante à la mangue douce",
         "price": "$4.99",
-        "image": "/menu/optimized/alacarte/mango-mochi.webp"
+        "image": "/menu/optimized/lunch-express/mango-mochi.webp"
       },
       {
         "name_en": "Matcha Mochi",
@@ -1859,7 +1891,7 @@ export const LUNCH_EXPRESS_MENU_CATEGORIES: MenuCategory[] = [
         "desc_en": "Chewy Japanese rice dessert infused with earthy stone-ground matcha green tea",
         "desc_fr": "Mochi traditionnel parfumé à la poudre fine de thé vert matcha",
         "price": "$4.99",
-        "image": "/menu/optimized/alacarte/matcha-mochi.webp"
+        "image": "/menu/optimized/lunch-express/matcha-mochi.webp"
       },
       {
         "name_en": "Ayran Turkish Yogurt Drink",
@@ -1875,7 +1907,7 @@ export const LUNCH_EXPRESS_MENU_CATEGORIES: MenuCategory[] = [
         "desc_en": "Soft and chewy Japanese rice cake filled with sweet strawberry creme",
         "desc_fr": "Gâteau de riz gluant moelleux et fondant farci à la crème de fraise",
         "price": "$4.99",
-        "image": "/menu/optimized/alacarte/strawberry-mochi.webp"
+        "image": "/menu/optimized/lunch-express/strawberry-mochi.webp"
       }
     ]
   }
