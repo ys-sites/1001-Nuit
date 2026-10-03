@@ -658,16 +658,9 @@ export default function HomePage() {
                 )}
                 <div className="flex-1 p-3.5 sm:p-4 md:p-5 flex flex-col justify-center min-w-0">
                   <div className="min-w-0">
-                    <div className="flex items-start justify-between gap-2">
-                      <h4 className="font-sans font-bold text-[#1a1c19] text-sm sm:text-base md:text-lg leading-snug line-clamp-2">
-                        {lang === "fr" ? item.name_fr : item.name_en}
-                      </h4>
-                      {item.price && (
-                        <span className="font-serif font-bold text-sm sm:text-base md:text-lg text-[#9a7d3b] shrink-0 tracking-tight ml-2">
-                          {item.price}
-                        </span>
-                      )}
-                    </div>
+                    <h4 className="font-sans font-bold text-[#1a1c19] text-sm sm:text-base md:text-lg leading-snug line-clamp-2">
+                      {lang === "fr" ? item.name_fr : item.name_en}
+                    </h4>
                     {(lang === "fr" ? item.desc_fr : item.desc_en) && (
                       <p className="text-[11px] sm:text-xs text-[#1a1c19]/65 mt-1 line-clamp-2 leading-relaxed font-normal">
                         {lang === "fr" ? item.desc_fr : item.desc_en}
