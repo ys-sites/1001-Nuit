@@ -1237,11 +1237,14 @@ export default function HomePage() {
 
               {/* Image Container */}
               <div className="w-full flex items-center justify-center bg-[#0a0b0a]">
-                <img
-                  src="/buffet%20update.png"
-                  alt="1001 Nuits Buffet All You Can Eat Promotion"
-                  className="w-full h-auto max-h-[85vh] object-contain select-none"
-                />
+                <picture>
+                  <source srcSet="/buffet-update.webp" type="image/webp" />
+                  <img
+                    src="/buffet%20update.png"
+                    alt="1001 Nuits Buffet All You Can Eat Promotion"
+                    className="w-full h-auto max-h-[85vh] object-contain select-none"
+                  />
+                </picture>
               </div>
             </motion.div>
           </div>
