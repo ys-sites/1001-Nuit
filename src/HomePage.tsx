@@ -36,7 +36,7 @@ import ScrollTextReveal from "./components/ui/ScrollTextReveal";
 import NeighborhoodMap from "./components/NeighborhoodMap";
 import SocialFeedback from "./components/SocialFeedback";
 import CateringForm from "./components/CateringForm";
-import { AYCE_MENU_CATEGORIES, ALACARTE_MENU_CATEGORIES, LUNCH_EXPRESS_MENU_CATEGORIES } from "./data/menuData";
+import { AYCE_MENU_CATEGORIES, LUNCH_EXPRESS_MENU_CATEGORIES } from "./data/menuData";
 
 
 const REVIEWS = [
@@ -201,13 +201,11 @@ const SHOW_MENU_IMAGES = true;
 
 
 export default function HomePage() {
-  const [menuType, setMenuType] = useState<"ayce" | "alacarte" | "lunch">("ayce");
+  const [menuType, setMenuType] = useState<"ayce" | "lunch">("ayce");
   const [activeCategory, setActiveCategory] = useState(0);
   const currentCategories =
     menuType === "ayce"
       ? AYCE_MENU_CATEGORIES
-      : menuType === "alacarte"
-      ? ALACARTE_MENU_CATEGORIES
       : LUNCH_EXPRESS_MENU_CATEGORIES;
   const [lang, setLang] = useState<"en" | "fr">("en");
   const [showPromo, setShowPromo] = useState(true);
@@ -373,7 +371,7 @@ export default function HomePage() {
             className="relative w-full flex-1 aspect-[16/9] md:aspect-auto rounded-[2rem] md:rounded-[2.5rem] overflow-hidden group block cursor-pointer"
           >
             <img
-              src={encodeURI("/menu/Sushi Combo/Boat2.png")}
+              src="/menu/optimized/lunch-express/boat-2.webp"
               alt="Menu"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-[10s] group-hover:scale-105"
             />
@@ -396,7 +394,7 @@ export default function HomePage() {
             className="relative w-full flex-1 aspect-[16/9] md:aspect-auto rounded-[2rem] md:rounded-[2.5rem] overflow-hidden group block cursor-pointer"
           >
             <img
-              src={encodeURI("/menu/Main Dish/C06 Spaghetti w-Beef BPSauce.png")}
+              src="/menu/optimized/lunch-express/c06-spaghetti-w-beef-bpsauce.webp"
               alt="Reservation"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-[10s] group-hover:scale-105"
             />
@@ -410,7 +408,7 @@ export default function HomePage() {
             </div>
           </motion.div>
 
-          {/* Order Online Block */}
+          {/* Order Online Block - Featuring Fresh Poke Bowl */}
           <motion.a
             href="https://order.1001nuit.com"
             target="_blank"
@@ -421,8 +419,8 @@ export default function HomePage() {
             className="relative w-full flex-1 aspect-[16/9] md:aspect-auto rounded-[2rem] md:rounded-[2.5rem] overflow-hidden group block cursor-pointer"
           >
             <img
-              src={encodeURI("/menu/SIZZLING PLATES/SP01 Sizzling Lamb Chops.png")}
-              alt="Order Online"
+              src="/menu/optimized/lunch-express/spicy-salmon-poke-bowl.webp"
+              alt="Order Online Poke Bowl"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-[10s] group-hover:scale-105"
             />
             <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 z-10 bg-[#0a0b0a]/85 backdrop-blur-none md:backdrop-blur-md md:bg-[#0a0b0a]/80 border border-[#333330] rounded-full pl-6 py-2.5 pr-2.5 flex items-center gap-5 group-hover:bg-white group-hover:text-black group-hover:border-white transition-all duration-300">
@@ -537,7 +535,7 @@ export default function HomePage() {
             </div>
 
             {/* Luxury Champagne & Gold Segmented Control */}
-            <div className="p-1.5 sm:p-2 bg-[#efe7d2]/70 backdrop-blur-sm rounded-full flex flex-wrap sm:flex-nowrap items-center justify-center gap-1.5 sm:gap-2 shadow-[0_6px_24px_rgba(200,184,138,0.25)] border border-[#c8b88a] w-full sm:w-auto max-w-3xl">
+            <div className="p-1.5 sm:p-2 bg-[#efe7d2]/70 backdrop-blur-sm rounded-full flex flex-wrap sm:flex-nowrap items-center justify-center gap-1.5 sm:gap-2 shadow-[0_6px_24px_rgba(200,184,138,0.25)] border border-[#c8b88a] w-full sm:w-auto max-w-2xl">
               <button
                 id="menu-type-ayce-btn"
                 type="button"
@@ -545,7 +543,7 @@ export default function HomePage() {
                   setMenuType("ayce");
                   setActiveCategory(0);
                 }}
-                className={`flex-1 sm:flex-initial sm:min-w-[170px] md:min-w-[200px] py-3 sm:py-3.5 px-4 sm:px-6 rounded-full text-xs sm:text-[13px] font-bold tracking-[0.15em] sm:tracking-[0.18em] uppercase transition-all duration-300 cursor-pointer flex items-center justify-center gap-2 select-none ${
+                className={`flex-1 sm:flex-initial sm:min-w-[180px] md:min-w-[210px] py-3 sm:py-3.5 px-4 sm:px-6 rounded-full text-xs sm:text-[13px] font-bold tracking-[0.15em] sm:tracking-[0.18em] uppercase transition-all duration-300 cursor-pointer flex items-center justify-center gap-2 select-none ${
                   menuType === "ayce"
                     ? "bg-gradient-to-r from-[#d9be75] via-[#c8b88a] to-[#bda061] text-[#1a1c19] shadow-[0_2px_14px_rgba(200,184,138,0.5)] scale-[1.02]"
                     : "text-[#1a1c19]/75 hover:text-[#1a1c19] hover:bg-white/60"
@@ -556,30 +554,13 @@ export default function HomePage() {
               </button>
 
               <button
-                id="menu-type-alacarte-btn"
-                type="button"
-                onClick={() => {
-                  setMenuType("alacarte");
-                  setActiveCategory(0);
-                }}
-                className={`flex-1 sm:flex-initial sm:min-w-[150px] md:min-w-[170px] py-3 sm:py-3.5 px-4 sm:px-6 rounded-full text-xs sm:text-[13px] font-bold tracking-[0.15em] sm:tracking-[0.18em] uppercase transition-all duration-300 cursor-pointer flex items-center justify-center gap-2 select-none ${
-                  menuType === "alacarte"
-                    ? "bg-gradient-to-r from-[#d9be75] via-[#c8b88a] to-[#bda061] text-[#1a1c19] shadow-[0_2px_14px_rgba(200,184,138,0.5)] scale-[1.02]"
-                    : "text-[#1a1c19]/75 hover:text-[#1a1c19] hover:bg-white/60"
-                }`}
-              >
-                <span className={`w-1.5 h-1.5 rounded-full transition-colors duration-300 ${menuType === "alacarte" ? "bg-[#1a1c19]" : "bg-[#c8b88a]"}`}></span>
-                <span>{lang === "fr" ? "À La Carte" : "À La Carte"}</span>
-              </button>
-
-              <button
                 id="menu-type-lunch-btn"
                 type="button"
                 onClick={() => {
                   setMenuType("lunch");
                   setActiveCategory(0);
                 }}
-                className={`flex-1 sm:flex-initial sm:min-w-[150px] md:min-w-[170px] py-3 sm:py-3.5 px-4 sm:px-6 rounded-full text-xs sm:text-[13px] font-bold tracking-[0.15em] sm:tracking-[0.18em] uppercase transition-all duration-300 cursor-pointer flex items-center justify-center gap-2 select-none ${
+                className={`flex-1 sm:flex-initial sm:min-w-[180px] md:min-w-[210px] py-3 sm:py-3.5 px-4 sm:px-6 rounded-full text-xs sm:text-[13px] font-bold tracking-[0.15em] sm:tracking-[0.18em] uppercase transition-all duration-300 cursor-pointer flex items-center justify-center gap-2 select-none ${
                   menuType === "lunch"
                     ? "bg-gradient-to-r from-[#d9be75] via-[#c8b88a] to-[#bda061] text-[#1a1c19] shadow-[0_2px_14px_rgba(200,184,138,0.5)] scale-[1.02]"
                     : "text-[#1a1c19]/75 hover:text-[#1a1c19] hover:bg-white/60"
@@ -594,8 +575,6 @@ export default function HomePage() {
             <p className="text-[#1a1c19]/65 text-[11px] sm:text-xs tracking-wider uppercase mt-3.5 font-medium text-center px-4 max-w-xl">
               {menuType === "ayce"
                 ? (lang === "fr" ? "Formule buffet à volonté — Entrées, sushis, grillades, tempura et desserts" : "All-you-can-eat buffet — Appetizers, sushi, hot kitchen, tempura & desserts")
-                : menuType === "alacarte"
-                ? (lang === "fr" ? "Plats à la carte — Spécialités maison, combos sushi, plats végétariens et boissons" : "À la carte selection — House specials, sushi combos, vegetarian dishes & beverages")
                 : (lang === "fr" ? "Menu midi express — Bols poke, spécialités au wok, sushis frais et boissons" : "Lunch express special — Poke bowls, chef wok specials, fresh sushi & drinks")}
             </p>
           </motion.div>
