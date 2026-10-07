@@ -13,7 +13,7 @@ import {
   X,
 } from "lucide-react";
 
-const RESTAURANT_ADDRESS = "11602-A Boulevard de Salaberry, Dollard-des-Ormeaux, QC H9B 2R8";
+const RESTAURANT_ADDRESS = "11602 A Bd de Salaberry, Dollard-des-Ormeaux, QC H9B 2R8";
 
 const TiktokIcon = ({ size = 24, className = "" }) => (
   <svg
@@ -328,7 +328,7 @@ export default function HomePage() {
                 <MapPin size={15} strokeWidth={1.75} />
               </span>
               <span className="text-[10px] sm:text-[11px] md:text-xs font-bold tracking-wide text-white leading-tight max-w-[calc(100vw-5rem)] truncate sm:max-w-none sm:whitespace-nowrap">
-                11602-A Bd de Salaberry, Dollard-des-Ormeaux
+                11602 A Bd de Salaberry, Dollard-des-Ormeaux
               </span>
             </a>
 

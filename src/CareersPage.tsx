@@ -24,7 +24,7 @@ import {
 import { cn } from "./lib/utils";
 
 const FORMSUBMIT_URL = "https://formsubmit.co/ajax/info@1001nuit.com";
-const RESTAURANT_ADDRESS = "11602-A Boulevard de Salaberry, Dollard-des-Ormeaux, QC H9B 2R8";
+const RESTAURANT_ADDRESS = "11602 A Bd de Salaberry, Dollard-des-Ormeaux, QC H9B 2R8";
 const RESTAURANT_PHONE = "(514) 421-1114";
 const RESTAURANT_EMAIL = "info@1001nuit.com";
 
