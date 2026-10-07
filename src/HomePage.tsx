@@ -283,7 +283,7 @@ export default function HomePage() {
           <div className="absolute inset-0">
             <img
               src="/HeroShot.webp"
-              alt="Ambiance"
+              alt="1001 Nuits halal Asian restaurant dining room in Montreal"
               fetchPriority="high"
               decoding="async"
               className="w-full h-full object-cover transition-transform duration-[20s] group-hover:scale-105"
@@ -378,7 +378,7 @@ export default function HomePage() {
           >
             <img
               src="/menu/optimized/lunch-express/boat-2.webp"
-              alt="Menu"
+              alt="1001 Nuits Asian fusion menu with sushi and buffet dishes in Montreal"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-[10s] group-hover:scale-105"
             />
             <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 z-10 bg-[#0a0b0a]/85 backdrop-blur-none md:backdrop-blur-md md:bg-[#0a0b0a]/80 border border-[#333330] rounded-full pl-6 py-2.5 pr-2.5 flex items-center gap-5 group-hover:bg-white group-hover:text-black group-hover:border-white transition-all duration-300">
