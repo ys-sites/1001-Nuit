@@ -266,6 +266,12 @@ export default function HomePage() {
 
       {/* Hero Section Container */}
       <section className="w-full p-3 md:p-4 flex flex-col md:flex-row gap-3 md:gap-4 box-border text-[#efe7d2] md:h-[100svh] min-h-[100svh]">
+        {/* SEO: primary headline for search engines */}
+        <h1 className="sr-only">
+          {lang === "fr"
+            ? "1001 Nuits – Restaurant asiatique halal à Montréal (Dollard-des-Ormeaux) : buffet à volonté et sushis"
+            : "1001 Nuits – Halal Asian Fusion Restaurant in Montreal (Dollard-des-Ormeaux): AYCE Buffet & Sushi"}
+        </h1>
         {/* Hero Left Section */}
         <motion.div
           initial={{ opacity: 0, scale: 0.98 }}
