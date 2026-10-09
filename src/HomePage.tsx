@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { motion, AnimatePresence, useScroll, useSpring } from "motion/react";
+import { motion, useScroll, useSpring } from "motion/react";
 import {
   ArrowRight,
   Instagram,
@@ -10,7 +10,6 @@ import {
   Calendar,
   ShoppingBag,
   MapPin,
-  X,
 } from "lucide-react";
 
 const RESTAURANT_ADDRESS = "11602 A Bd de Salaberry, Dollard-des-Ormeaux, QC H9B 2R8";
@@ -208,7 +207,6 @@ export default function HomePage() {
       ? AYCE_MENU_CATEGORIES
       : LUNCH_EXPRESS_MENU_CATEGORIES;
   const [lang, setLang] = useState<"en" | "fr">("en");
-  const [showPromo, setShowPromo] = useState(true);
   const [hoveredSocial, setHoveredSocial] = useState<number | null>(null);
   const [isMobile, setIsMobile] = useState<boolean>(
     () => typeof window !== "undefined" && window.innerWidth < 768
@@ -1204,51 +1202,6 @@ export default function HomePage() {
         </div>
       </motion.footer>
 
-      {/* Promotional Buffet Popup Modal */}
-      <AnimatePresence>
-        {showPromo && (
-          <div className="fixed inset-0 z-[250] flex items-center justify-center p-4">
-            {/* Backdrop Blur/Overlay */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setShowPromo(false)}
-              className="absolute inset-0 bg-[#0a0b0a]/90 backdrop-blur-none md:backdrop-blur-md md:bg-[#0a0b0a]/85 cursor-pointer"
-            />
-
-            {/* Modal Card */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.9, y: 20 }}
-              transition={{ type: "spring", damping: 25, stiffness: 220 }}
-              className="relative max-w-lg w-full bg-[#1a1c19] border border-[#cfbe91]/40 rounded-3xl md:rounded-[2rem] overflow-hidden shadow-[0_24px_60px_rgba(0,0,0,0.8)] z-10 flex flex-col items-center"
-            >
-              {/* Close Button */}
-              <button
-                onClick={() => setShowPromo(false)}
-                className="absolute top-4 right-4 z-20 p-2.5 rounded-full bg-[#0a0b0a]/70 text-[#efe7d2] hover:bg-[#cfbe91] hover:text-[#0a0b0a] border border-[#cfbe91]/30 transition-colors cursor-pointer shadow-lg"
-                aria-label="Close promotion"
-              >
-                <X size={20} />
-              </button>
-
-              {/* Image Container */}
-              <div className="w-full flex items-center justify-center bg-[#0a0b0a]">
-                <picture>
-                  <source srcSet="/buffet-update.webp" type="image/webp" />
-                  <img
-                    src="/buffet%20update.png"
-                    alt="1001 Nuits Buffet All You Can Eat Promotion"
-                    className="w-full h-auto max-h-[85vh] object-contain select-none"
-                  />
-                </picture>
-              </div>
-            </motion.div>
-          </div>
-        )}
-      </AnimatePresence>
 
     </div>
   );
